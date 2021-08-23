@@ -1,0 +1,2 @@
+# DRetailDesktop
+Aplicacion winform dretail
