@@ -172,7 +172,7 @@
             this.pnlMain.Location = new System.Drawing.Point(315, 30);
             this.pnlMain.Margin = new System.Windows.Forms.Padding(4);
             this.pnlMain.Name = "pnlMain";
-            this.pnlMain.Size = new System.Drawing.Size(1435, 930);
+            this.pnlMain.Size = new System.Drawing.Size(1435, 760);
             this.pnlMain.TabIndex = 2;
             // 
             // pnlBoxMenuPedidos
@@ -263,7 +263,7 @@
             this.pnlMenuLateral.Margin = new System.Windows.Forms.Padding(4);
             this.pnlMenuLateral.Name = "pnlMenuLateral";
             this.pnlMenuLateral.Quality = 2;
-            this.pnlMenuLateral.Size = new System.Drawing.Size(315, 930);
+            this.pnlMenuLateral.Size = new System.Drawing.Size(315, 760);
             this.pnlMenuLateral.TabIndex = 20;
             // 
             // pnlBoxMenuCSesion
@@ -955,7 +955,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(1750, 960);
+            this.ClientSize = new System.Drawing.Size(1750, 790);
             this.ControlBox = false;
             this.Controls.Add(this.pnlMain);
             this.Controls.Add(this.pnlMenuLateral);
@@ -965,7 +965,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.IsMdiContainer = true;
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.MinimumSize = new System.Drawing.Size(700, 950);
+            this.MinimumSize = new System.Drawing.Size(700, 726);
             this.Name = "frmMenuLateral";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DRetail";

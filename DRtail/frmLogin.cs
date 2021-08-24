@@ -400,8 +400,8 @@ namespace DRtail
 
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
         {
-           // if (InicioSesion() == true)
-            if (true)
+           if (InicioSesion() == true)
+            //if (true)
             {
                 //frmMenu menu = new frmMenu();
                 frmMenuLateral menu = new frmMenuLateral();

@@ -57,20 +57,7 @@ namespace DRtail
 
         private void btnCreaCrearCliente_Click(object sender, EventArgs e)
         {
-            if (CrearSocio())
-            {
-                txtCrearCodCli.ResetText();
-                txtCrearNombreCli.ResetText();
-                txtCreaDirCli.ResetText();
-                txtCreaCPCli.ResetText();
-                txtCreaTelCli.ResetText();
-                txtCreaRFCCli.ResetText();
-                txtCreaCelCli.ResetText();
-                txtCreaCiudadCli.ResetText();
-                txtCreaEmailCli.ResetText();
-                txtCreaCalleCli.ResetText();
-                txtCrearCodCli.Focus();
-            }
+            
         }
 
         public Boolean CrearSocio()
@@ -137,7 +124,23 @@ namespace DRtail
 
         private void btnCreaCrearCliente_Click_1(object sender, EventArgs e)
         {
-            MessageBox.Show("Se ha creado el usuario correctamente");
+            //MessageBox.Show("Se ha creado el usuario correctamente");
+
+            if (CrearSocio())
+            {
+                txtCrearCodCli.ResetText();
+                txtCrearNombreCli.ResetText();
+                txtCreaDirCli.ResetText();
+                txtCreaCPCli.ResetText();
+                txtCreaTelCli.ResetText();
+                txtCreaRFCCli.ResetText();
+                txtCreaCelCli.ResetText();
+                txtCreaCiudadCli.ResetText();
+                txtCreaEmailCli.ResetText();
+                txtCreaCalleCli.ResetText();
+                txtCrearCodCli.Focus();
+            }
+
         }
     }
 }
