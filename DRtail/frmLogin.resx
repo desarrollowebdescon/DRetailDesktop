@@ -289,7 +289,7 @@
     <value>75, 237</value>
   </data>
   <data name="lblError.Size" type="System.Drawing.Size, System.Drawing">
-    <value>0, 20</value>
+    <value>0, 17</value>
   </data>
   <data name="lblError.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>

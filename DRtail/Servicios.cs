@@ -11,6 +11,13 @@ namespace DRtail
 {
     class Servicios
     {
+        #region "Variables"
+
+        public static frmMenuLateral menuLateral;
+
+        #endregion
+
+
         public static List<DatosCotizacion> getCotizaciones()
         {
             try
@@ -48,12 +55,12 @@ namespace DRtail
                     return JsonConvert.DeserializeObject<List<DatosArticulos>>(json);
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
 
                 return new List<DatosArticulos>();
             }
-           
+
         }
         public static List<DatosSocios> getSocios()
         {
@@ -68,12 +75,11 @@ namespace DRtail
                     return JsonConvert.DeserializeObject<List<DatosSocios>>(json);
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 return new List<DatosSocios>();
             }
         }
-
         public static List<DatosFactura> getFacturas()
         {
             List<DatosFactura> facturas = new List<DatosFactura>();
@@ -113,7 +119,7 @@ namespace DRtail
 
 
             return facturas;
-           
+
         }
 
     }

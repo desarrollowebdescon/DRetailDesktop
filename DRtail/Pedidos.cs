@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Net;
+using System.IO;
+using Newtonsoft.Json;
 
 namespace DRtail
 {
@@ -27,13 +30,22 @@ namespace DRtail
         string tempDescuentoOld = "";
         string flagPago = "";
         #endregion
-        public Pedidos()
+        public Pedidos(string impCliente)
         {
             InitializeComponent();
             this.Dock = DockStyle.Fill;
             GetData();
             AutoCompletar(txtProducto, "DatosArticulos");
             AutoCompletar(txtCliente, "DatosSocios");
+            if (impCliente == "")
+            {
+                tabControlPedidos.SelectedIndex = 0;
+            }
+            else
+            {
+                tabControlPedidos.SelectedIndex = 1;
+                txtCliente.Text = impCliente;
+            }
         }
 
         private void GetData()
@@ -265,7 +277,35 @@ namespace DRtail
 
         private void btnGenerarCotizacion_Click(object sender, EventArgs e)
         {
-            btnCobrarCotizacion.Visible = true;
+
+            try
+            {
+                DatosPedido pedido = new DatosPedido();
+                //pedido.NoCotizacionRelacionada = 738.ToString(); //Cotizacion relacionada
+                pedido.Cliente = txtCliente.Text;
+                pedido.FechaContabilizacion = DateTime.Now;
+                pedido.FechaVencimiento = DateTime.Now.AddDays(3);
+                pedido.Moneda = "MXP";
+                pedido.Comentarios = "Pedido generado desde DRtail";
+
+                foreach (DataGridViewRow dRow in dgvProductosPed.Rows)
+                {
+                    ArticulosCotizacion articulosCotizacion = new ArticulosCotizacion();
+                    articulosCotizacion.Articulo = dRow.Cells[0].Value.ToString();
+                    articulosCotizacion.Cantidad = int.Parse(dRow.Cells[5].Value.ToString());
+                    pedido.articulosCotizaciones.Add(articulosCotizacion);
+                }
+
+                if (CrearPedido(pedido))
+                {
+                    btnCobrarCotizacion.Visible = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al Generar Pedido: " + ex.Message);
+            }
+
         }
 
         private void btnCobrarCancelar_Click(object sender, EventArgs e)
@@ -400,5 +440,41 @@ namespace DRtail
         {
             MessageBox.Show("Se ha generado correctamente");
         }
+
+        public Boolean CrearPedido(DatosPedido pedido)
+        {
+            Boolean generado = false;
+            try
+            {
+                var httpWebRequest = (HttpWebRequest)WebRequest.Create("http://54.39.26.9:62436/api/crearPedido");
+                httpWebRequest.ContentType = "application/json";
+                httpWebRequest.Method = "POST";
+                //ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12 | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls;
+
+                using (var streamWriter = new StreamWriter(httpWebRequest.GetRequestStream()))
+                {
+                    var json = JsonConvert.SerializeObject(pedido);
+                    streamWriter.Write(json);
+                    streamWriter.Flush();
+                    streamWriter.Close();
+                }
+
+                var httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();
+                using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
+                {
+                    var result = streamReader.ReadToEnd();
+                    var j = JsonConvert.DeserializeObject<RespuestaAPI>(result);
+                    MessageBox.Show(j.Message);
+                    if (j.Error == "false")
+                        generado = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al Crear Cotización:" + ex.Message);
+            }
+            return generado;
+        }
+
     }
 }

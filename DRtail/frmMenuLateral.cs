@@ -44,23 +44,23 @@ namespace DRtail
             btnMaxim.Visible = false;
             Rectangle wa = Screen.FromControl(this).WorkingArea;
             this.MaximumSize = new Size(wa.Width, wa.Height);
-            
+            Servicios.menuLateral = this;
         }
 
         private void btnClientesMenu_Click(object sender, EventArgs e)
-        {  
+        {
             pnlMain.Controls.Clear();
             pnlMain.Controls.Add(new Clientes());
             SelectedLineMenu();
             pnlLineClientes.Visible = true;
             this.LblTitle.Text = "CLIENTES";
-           
-         
+
+
         }
         private void btnCotizaMenu_Click(object sender, EventArgs e)
         {
             pnlMain.Controls.Clear();
-            pnlMain.Controls.Add(new Cotizaciones());
+            pnlMain.Controls.Add(new Cotizaciones(""));
             SelectedLineMenu();
             pnlLineCotizaciones.Visible = true;
             this.LblTitle.Text = "COTIZACIONES";
@@ -68,7 +68,7 @@ namespace DRtail
         private void btnPedidosMenu_Click(object sender, EventArgs e)
         {
             pnlMain.Controls.Clear();
-            pnlMain.Controls.Add(new Pedidos());
+            pnlMain.Controls.Add(new Pedidos(""));
             SelectedLineMenu();
             pnlLinePedidos.Visible = true;
             this.LblTitle.Text = "PEDIDOS";
@@ -81,11 +81,11 @@ namespace DRtail
             pnlLineProductos.Visible = true;
             this.LblTitle.Text = "PRODUCTOS";
         }
-        public  void  AgregarArticuloCotizacion(DatosArticulos da)
+        public void AgregarArticuloCotizacion(DatosArticulos da)
         {
             itemsCotizacion.Add(da);
         }
-        public  List<DatosArticulos> ObtenerArticulosCotizacion()
+        public List<DatosArticulos> ObtenerArticulosCotizacion()
         {
             return itemsCotizacion;
         }
@@ -165,30 +165,28 @@ namespace DRtail
             this.Text = this.Text;// + " - " + dtos.nombreC;
             frmMensaje mensaje = new frmMensaje();
             mensaje.lblMensaje.Text = mensaje.lblMensaje.Text;// + " " + dtos.nombreC + "!!!";
-           // mensaje.menu = this;
+                                                              // mensaje.menu = this;
             mensaje.ShowDialog();
-            
+
         }
 
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
         {
-            if(pnlMenuLateral.Width == pnlMenuLat)
+            if (pnlMenuLateral.Width == pnlMenuLat)
             {
                 pnlMenuLateral.Width = 90;
                 MiniButons();
-                
             }
             else
             {
                 pnlMenuLateral.Width = pnlMenuLat;
                 MaxiButton();
-               
             }
         }
 
         private void MaxiButton()
         {
-            Size minS =  new Size(296, 60);
+            Size minS = new Size(296, 60);
             pnlBoxMenuClientes.Size = minS;
             pnlBoxMenuCotizaciones.Size = minS;
             pnlBoxMenuCSesion.Size = minS;
@@ -223,7 +221,7 @@ namespace DRtail
 
         }
 
-              
+
 
         private void btnVenta_Click(object sender, EventArgs e)
         {
@@ -235,18 +233,18 @@ namespace DRtail
             Application.Restart();
         }
 
-        private void SelectedLineMenu()
+        public void SelectedLineMenu()
         {
-            pnlLineClientes.Visible         = false;
-            pnlLineCotizaciones.Visible     = false;
-            pnlLinePedidos.Visible          = false;
-            pnlLineProductos.Visible        = false;
-            pnlLineInventario.Visible       = false;
-            pnlLineFacturas.Visible         = false;
-            pnlLineReportes.Visible         = false;
-            pnlLineCorte.Visible            = false;
-            pnlLinePLealtad.Visible         = false;
-            pnlLineConfiguracion.Visible    = false;
+            pnlLineClientes.Visible = false;
+            pnlLineCotizaciones.Visible = false;
+            pnlLinePedidos.Visible = false;
+            pnlLineProductos.Visible = false;
+            pnlLineInventario.Visible = false;
+            pnlLineFacturas.Visible = false;
+            pnlLineReportes.Visible = false;
+            pnlLineCorte.Visible = false;
+            pnlLinePLealtad.Visible = false;
+            pnlLineConfiguracion.Visible = false;
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -281,6 +279,11 @@ namespace DRtail
             btnMaxim.Visible = true;
             ReleaseCapture();
             SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
+        }
+
+        private void picMenuLogo_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://cafeetrusca.com");
         }
     }
 }

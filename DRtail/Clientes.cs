@@ -142,5 +142,28 @@ namespace DRtail
             }
 
         }
+
+        private void bfgSocios_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 7)
+            {
+                //MessageBox.Show(bfgSocios.Rows[bfgSocios.CurrentRow.Index].Cells[0].Value.ToString());
+                Servicios.menuLateral.pnlMain.Controls.Clear();
+                Servicios.menuLateral.pnlMain.Controls.Add(new Cotizaciones(bfgSocios.Rows[bfgSocios.CurrentRow.Index].Cells[0].Value.ToString()));
+                Servicios.menuLateral.SelectedLineMenu();
+                Servicios.menuLateral.pnlLineCotizaciones.Visible = true;
+                Servicios.menuLateral.LblTitle.Text = "COTIZACIONES";
+            }
+            if (e.ColumnIndex == 6)
+            {
+                //MessageBox.Show(bfgSocios.Rows[bfgSocios.CurrentRow.Index].Cells[0].Value.ToString());
+                Servicios.menuLateral.pnlMain.Controls.Clear();
+                Servicios.menuLateral.pnlMain.Controls.Add(new Pedidos(bfgSocios.Rows[bfgSocios.CurrentRow.Index].Cells[0].Value.ToString()));
+                Servicios.menuLateral.SelectedLineMenu();
+                Servicios.menuLateral.pnlLinePedidos.Visible = true;
+                Servicios.menuLateral.LblTitle.Text = "COTIZACIONES";
+
+            }
+        }
     }
 }

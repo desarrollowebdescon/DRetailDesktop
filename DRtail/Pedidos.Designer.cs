@@ -42,26 +42,6 @@
             this.tabControlPedidos = new System.Windows.Forms.TabControl();
             this.tabPedidos = new System.Windows.Forms.TabPage();
             this.pnlBodyCot = new System.Windows.Forms.Panel();
-            this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
-            this.bdpInicio = new Bunifu.Framework.UI.BunifuDatepicker();
-            this.bdpFin = new Bunifu.Framework.UI.BunifuDatepicker();
-            this.txtBuscar = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.lblHeaderCotClie = new System.Windows.Forms.Label();
-            this.bddEstatus = new Bunifu.Framework.UI.BunifuDropdown();
-            this.label3 = new System.Windows.Forms.Label();
-            this.btnBuscarCot = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.label4 = new System.Windows.Forms.Label();
-            this.bdgPedidos = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.NoPedido = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NoCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NombreCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FechaDocumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Moneda = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Estatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Seleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.pnlFooter = new System.Windows.Forms.Panel();
             this.pnlPOAcciones = new System.Windows.Forms.Panel();
             this.pnlPOAccion = new System.Windows.Forms.Panel();
             this.lblMontoAcciones = new System.Windows.Forms.Label();
@@ -77,6 +57,26 @@
             this.btnAccionesGPedido = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnAccionReenviar = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnAccionesReimp = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.bdgPedidos = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.NoPedido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NoCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NombreCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FechaDocumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Moneda = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Seleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.bdpInicio = new Bunifu.Framework.UI.BunifuDatepicker();
+            this.bdpFin = new Bunifu.Framework.UI.BunifuDatepicker();
+            this.txtBuscar = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.lblHeaderCotClie = new System.Windows.Forms.Label();
+            this.bddEstatus = new Bunifu.Framework.UI.BunifuDropdown();
+            this.label3 = new System.Windows.Forms.Label();
+            this.btnBuscarCot = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.label4 = new System.Windows.Forms.Label();
+            this.pnlFooter = new System.Windows.Forms.Panel();
             this.pnlTabPedidos = new System.Windows.Forms.Panel();
             this.tabNuevo = new System.Windows.Forms.TabPage();
             this.pnlCotizacion = new System.Windows.Forms.Panel();
@@ -171,10 +171,10 @@
             this.tabControlPedidos.SuspendLayout();
             this.tabPedidos.SuspendLayout();
             this.pnlBodyCot.SuspendLayout();
-            this.bunifuGradientPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bdgPedidos)).BeginInit();
             this.pnlPOAcciones.SuspendLayout();
             this.pnlPOAccion.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bdgPedidos)).BeginInit();
+            this.bunifuGradientPanel1.SuspendLayout();
             this.tabNuevo.SuspendLayout();
             this.pnlCotizacion.SuspendLayout();
             this.pnlPagos.SuspendLayout();
@@ -204,7 +204,6 @@
             // 
             this.tabControlPedidos.Controls.Add(this.tabPedidos);
             this.tabControlPedidos.Controls.Add(this.tabNuevo);
-            this.tabControlPedidos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControlPedidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControlPedidos.ItemSize = new System.Drawing.Size(200, 30);
             this.tabControlPedidos.Location = new System.Drawing.Point(0, 0);
@@ -216,6 +215,7 @@
             // 
             // tabPedidos
             // 
+            this.tabPedidos.AutoScroll = true;
             this.tabPedidos.BackColor = System.Drawing.Color.LightGray;
             this.tabPedidos.Controls.Add(this.pnlBodyCot);
             this.tabPedidos.Controls.Add(this.pnlTabPedidos);
@@ -231,309 +231,16 @@
             this.pnlBodyCot.AutoScroll = true;
             this.pnlBodyCot.AutoSize = true;
             this.pnlBodyCot.BackColor = System.Drawing.Color.Gainsboro;
-            this.pnlBodyCot.Controls.Add(this.pnlPOAcciones);
             this.pnlBodyCot.Controls.Add(this.bdgPedidos);
             this.pnlBodyCot.Controls.Add(this.bunifuGradientPanel1);
             this.pnlBodyCot.Controls.Add(this.pnlFooter);
+            this.pnlBodyCot.Controls.Add(this.pnlPOAcciones);
             this.pnlBodyCot.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlBodyCot.Location = new System.Drawing.Point(3, 3);
             this.pnlBodyCot.Margin = new System.Windows.Forms.Padding(2);
             this.pnlBodyCot.Name = "pnlBodyCot";
-            this.pnlBodyCot.Size = new System.Drawing.Size(1439, 707);
+            this.pnlBodyCot.Size = new System.Drawing.Size(1439, 797);
             this.pnlBodyCot.TabIndex = 27;
-            // 
-            // bunifuGradientPanel1
-            // 
-            this.bunifuGradientPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.bunifuGradientPanel1.BackColor = System.Drawing.Color.BlanchedAlmond;
-            this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
-            this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuGradientPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bunifuGradientPanel1.Controls.Add(this.bdpInicio);
-            this.bunifuGradientPanel1.Controls.Add(this.bdpFin);
-            this.bunifuGradientPanel1.Controls.Add(this.txtBuscar);
-            this.bunifuGradientPanel1.Controls.Add(this.label5);
-            this.bunifuGradientPanel1.Controls.Add(this.lblHeaderCotClie);
-            this.bunifuGradientPanel1.Controls.Add(this.bddEstatus);
-            this.bunifuGradientPanel1.Controls.Add(this.label3);
-            this.bunifuGradientPanel1.Controls.Add(this.btnBuscarCot);
-            this.bunifuGradientPanel1.Controls.Add(this.label4);
-            this.bunifuGradientPanel1.GradientBottomLeft = System.Drawing.Color.SteelBlue;
-            this.bunifuGradientPanel1.GradientBottomRight = System.Drawing.Color.White;
-            this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.White;
-            this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.White;
-            this.bunifuGradientPanel1.Location = new System.Drawing.Point(8, 8);
-            this.bunifuGradientPanel1.Margin = new System.Windows.Forms.Padding(8);
-            this.bunifuGradientPanel1.MinimumSize = new System.Drawing.Size(1350, 134);
-            this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
-            this.bunifuGradientPanel1.Quality = 10;
-            this.bunifuGradientPanel1.Size = new System.Drawing.Size(1350, 134);
-            this.bunifuGradientPanel1.TabIndex = 26;
-            // 
-            // bdpInicio
-            // 
-            this.bdpInicio.BackColor = System.Drawing.Color.White;
-            this.bdpInicio.BorderRadius = 5;
-            this.bdpInicio.ForeColor = System.Drawing.Color.Black;
-            this.bdpInicio.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.bdpInicio.FormatCustom = null;
-            this.bdpInicio.Location = new System.Drawing.Point(275, 62);
-            this.bdpInicio.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
-            this.bdpInicio.MaximumSize = new System.Drawing.Size(320, 55);
-            this.bdpInicio.Name = "bdpInicio";
-            this.bdpInicio.Size = new System.Drawing.Size(274, 39);
-            this.bdpInicio.TabIndex = 31;
-            this.bdpInicio.Value = new System.DateTime(2021, 8, 23, 0, 0, 0, 0);
-            // 
-            // bdpFin
-            // 
-            this.bdpFin.BackColor = System.Drawing.Color.White;
-            this.bdpFin.BorderRadius = 10;
-            this.bdpFin.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bdpFin.ForeColor = System.Drawing.Color.Black;
-            this.bdpFin.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.bdpFin.FormatCustom = null;
-            this.bdpFin.Location = new System.Drawing.Point(565, 59);
-            this.bdpFin.Margin = new System.Windows.Forms.Padding(9, 11, 9, 11);
-            this.bdpFin.Name = "bdpFin";
-            this.bdpFin.Size = new System.Drawing.Size(275, 42);
-            this.bdpFin.TabIndex = 26;
-            this.bdpFin.Value = new System.DateTime(2021, 8, 22, 0, 0, 0, 0);
-            // 
-            // txtBuscar
-            // 
-            this.txtBuscar.BackColor = System.Drawing.Color.White;
-            this.txtBuscar.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtBuscar.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txtBuscar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtBuscar.HintForeColor = System.Drawing.Color.Empty;
-            this.txtBuscar.HintText = "";
-            this.txtBuscar.isPassword = false;
-            this.txtBuscar.LineFocusedColor = System.Drawing.Color.SlateGray;
-            this.txtBuscar.LineIdleColor = System.Drawing.Color.Gray;
-            this.txtBuscar.LineMouseHoverColor = System.Drawing.Color.SlateGray;
-            this.txtBuscar.LineThickness = 1;
-            this.txtBuscar.Location = new System.Drawing.Point(23, 62);
-            this.txtBuscar.Margin = new System.Windows.Forms.Padding(4);
-            this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(241, 39);
-            this.txtBuscar.TabIndex = 30;
-            this.txtBuscar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(850, 16);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(59, 19);
-            this.label5.TabIndex = 29;
-            this.label5.Text = "Estatus";
-            // 
-            // lblHeaderCotClie
-            // 
-            this.lblHeaderCotClie.AutoSize = true;
-            this.lblHeaderCotClie.BackColor = System.Drawing.Color.Transparent;
-            this.lblHeaderCotClie.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHeaderCotClie.Location = new System.Drawing.Point(19, 16);
-            this.lblHeaderCotClie.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblHeaderCotClie.Name = "lblHeaderCotClie";
-            this.lblHeaderCotClie.Size = new System.Drawing.Size(158, 19);
-            this.lblHeaderCotClie.TabIndex = 23;
-            this.lblHeaderCotClie.Text = "No.Pedido/No. Cliente";
-            // 
-            // bddEstatus
-            // 
-            this.bddEstatus.BackColor = System.Drawing.Color.Transparent;
-            this.bddEstatus.BorderRadius = 9;
-            this.bddEstatus.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bddEstatus.ForeColor = System.Drawing.Color.Black;
-            this.bddEstatus.Items = new string[] {
-        "SELECCIONE ESTATUS",
-        "Abierto",
-        "Cerrado",
-        "Cancelado"};
-            this.bddEstatus.Location = new System.Drawing.Point(854, 59);
-            this.bddEstatus.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.bddEstatus.Name = "bddEstatus";
-            this.bddEstatus.NomalColor = System.Drawing.Color.White;
-            this.bddEstatus.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.bddEstatus.selectedIndex = -1;
-            this.bddEstatus.Size = new System.Drawing.Size(250, 39);
-            this.bddEstatus.TabIndex = 28;
-            // 
-            // label3
-            // 
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(271, 16);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(90, 19);
-            this.label3.TabIndex = 24;
-            this.label3.Text = "Fecha Inicio";
-            // 
-            // btnBuscarCot
-            // 
-            this.btnBuscarCot.ActiveBorderThickness = 1;
-            this.btnBuscarCot.ActiveCornerRadius = 20;
-            this.btnBuscarCot.ActiveFillColor = System.Drawing.Color.SteelBlue;
-            this.btnBuscarCot.ActiveForecolor = System.Drawing.Color.White;
-            this.btnBuscarCot.ActiveLineColor = System.Drawing.Color.SteelBlue;
-            this.btnBuscarCot.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBuscarCot.BackColor = System.Drawing.Color.BlanchedAlmond;
-            this.btnBuscarCot.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBuscarCot.BackgroundImage")));
-            this.btnBuscarCot.ButtonText = "Buscar";
-            this.btnBuscarCot.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBuscarCot.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscarCot.ForeColor = System.Drawing.Color.SteelBlue;
-            this.btnBuscarCot.IdleBorderThickness = 1;
-            this.btnBuscarCot.IdleCornerRadius = 20;
-            this.btnBuscarCot.IdleFillColor = System.Drawing.Color.White;
-            this.btnBuscarCot.IdleForecolor = System.Drawing.Color.SteelBlue;
-            this.btnBuscarCot.IdleLineColor = System.Drawing.Color.SteelBlue;
-            this.btnBuscarCot.Location = new System.Drawing.Point(1156, 59);
-            this.btnBuscarCot.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
-            this.btnBuscarCot.Name = "btnBuscarCot";
-            this.btnBuscarCot.Size = new System.Drawing.Size(169, 39);
-            this.btnBuscarCot.TabIndex = 21;
-            this.btnBuscarCot.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(561, 16);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(90, 19);
-            this.label4.TabIndex = 27;
-            this.label4.Text = "Fecha Inicio";
-            // 
-            // bdgPedidos
-            // 
-            this.bdgPedidos.AllowUserToAddRows = false;
-            this.bdgPedidos.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Azure;
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            this.bdgPedidos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.bdgPedidos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.bdgPedidos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.bdgPedidos.BackgroundColor = System.Drawing.Color.White;
-            this.bdgPedidos.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.bdgPedidos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.bdgPedidos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.GradientActiveCaption;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.bdgPedidos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.bdgPedidos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.bdgPedidos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.NoPedido,
-            this.NoCliente,
-            this.NombreCliente,
-            this.FechaDocumento,
-            this.Total,
-            this.Moneda,
-            this.Estatus,
-            this.Seleccionar});
-            this.bdgPedidos.DoubleBuffered = true;
-            this.bdgPedidos.EnableHeadersVisualStyles = false;
-            this.bdgPedidos.GridColor = System.Drawing.Color.White;
-            this.bdgPedidos.HeaderBgColor = System.Drawing.Color.SteelBlue;
-            this.bdgPedidos.HeaderForeColor = System.Drawing.Color.White;
-            this.bdgPedidos.Location = new System.Drawing.Point(8, 150);
-            this.bdgPedidos.Margin = new System.Windows.Forms.Padding(8, 0, 8, 8);
-            this.bdgPedidos.MinimumSize = new System.Drawing.Size(1350, 447);
-            this.bdgPedidos.MultiSelect = false;
-            this.bdgPedidos.Name = "bdgPedidos";
-            this.bdgPedidos.ReadOnly = true;
-            this.bdgPedidos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.bdgPedidos.RowHeadersWidth = 51;
-            this.bdgPedidos.RowTemplate.Height = 24;
-            this.bdgPedidos.Size = new System.Drawing.Size(1350, 853);
-            this.bdgPedidos.TabIndex = 24;
-            this.bdgPedidos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.bdgPedidos_CellContentClick);
-            // 
-            // NoPedido
-            // 
-            this.NoPedido.HeaderText = "No. Pedido";
-            this.NoPedido.MinimumWidth = 6;
-            this.NoPedido.Name = "NoPedido";
-            this.NoPedido.ReadOnly = true;
-            // 
-            // NoCliente
-            // 
-            this.NoCliente.HeaderText = "No. Cliente";
-            this.NoCliente.MinimumWidth = 6;
-            this.NoCliente.Name = "NoCliente";
-            this.NoCliente.ReadOnly = true;
-            // 
-            // NombreCliente
-            // 
-            this.NombreCliente.HeaderText = "NombreCliente";
-            this.NombreCliente.MinimumWidth = 6;
-            this.NombreCliente.Name = "NombreCliente";
-            this.NombreCliente.ReadOnly = true;
-            // 
-            // FechaDocumento
-            // 
-            this.FechaDocumento.HeaderText = "Fecha Documento";
-            this.FechaDocumento.MinimumWidth = 6;
-            this.FechaDocumento.Name = "FechaDocumento";
-            this.FechaDocumento.ReadOnly = true;
-            // 
-            // Total
-            // 
-            this.Total.HeaderText = "Total";
-            this.Total.MinimumWidth = 6;
-            this.Total.Name = "Total";
-            this.Total.ReadOnly = true;
-            // 
-            // Moneda
-            // 
-            this.Moneda.HeaderText = "Moneda";
-            this.Moneda.MinimumWidth = 6;
-            this.Moneda.Name = "Moneda";
-            this.Moneda.ReadOnly = true;
-            // 
-            // Estatus
-            // 
-            this.Estatus.HeaderText = "Estatus";
-            this.Estatus.MinimumWidth = 6;
-            this.Estatus.Name = "Estatus";
-            this.Estatus.ReadOnly = true;
-            // 
-            // Seleccionar
-            // 
-            this.Seleccionar.HeaderText = "Acciones";
-            this.Seleccionar.MinimumWidth = 6;
-            this.Seleccionar.Name = "Seleccionar";
-            this.Seleccionar.ReadOnly = true;
-            this.Seleccionar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // pnlFooter
-            // 
-            this.pnlFooter.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlFooter.BackColor = System.Drawing.Color.White;
-            this.pnlFooter.Location = new System.Drawing.Point(8, 1019);
-            this.pnlFooter.Margin = new System.Windows.Forms.Padding(8, 4, 8, 8);
-            this.pnlFooter.MinimumSize = new System.Drawing.Size(1350, 41);
-            this.pnlFooter.Name = "pnlFooter";
-            this.pnlFooter.Size = new System.Drawing.Size(1350, 41);
-            this.pnlFooter.TabIndex = 25;
             // 
             // pnlPOAcciones
             // 
@@ -767,16 +474,312 @@
             this.btnAccionesReimp.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnAccionesReimp.Click += new System.EventHandler(this.btnAccionesReimp_Click);
             // 
+            // bdgPedidos
+            // 
+            this.bdgPedidos.AllowUserToAddRows = false;
+            this.bdgPedidos.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Azure;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.bdgPedidos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.bdgPedidos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.bdgPedidos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.bdgPedidos.BackgroundColor = System.Drawing.Color.White;
+            this.bdgPedidos.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.bdgPedidos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.bdgPedidos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.bdgPedidos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.bdgPedidos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.bdgPedidos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.NoPedido,
+            this.NoCliente,
+            this.NombreCliente,
+            this.FechaDocumento,
+            this.Total,
+            this.Moneda,
+            this.Estatus,
+            this.Seleccionar});
+            this.bdgPedidos.DoubleBuffered = true;
+            this.bdgPedidos.EnableHeadersVisualStyles = false;
+            this.bdgPedidos.GridColor = System.Drawing.Color.White;
+            this.bdgPedidos.HeaderBgColor = System.Drawing.Color.SteelBlue;
+            this.bdgPedidos.HeaderForeColor = System.Drawing.Color.White;
+            this.bdgPedidos.Location = new System.Drawing.Point(8, 150);
+            this.bdgPedidos.Margin = new System.Windows.Forms.Padding(8, 0, 8, 8);
+            this.bdgPedidos.MinimumSize = new System.Drawing.Size(1350, 447);
+            this.bdgPedidos.MultiSelect = false;
+            this.bdgPedidos.Name = "bdgPedidos";
+            this.bdgPedidos.ReadOnly = true;
+            this.bdgPedidos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.bdgPedidos.RowHeadersWidth = 51;
+            this.bdgPedidos.RowTemplate.Height = 24;
+            this.bdgPedidos.Size = new System.Drawing.Size(1384, 636);
+            this.bdgPedidos.TabIndex = 24;
+            this.bdgPedidos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.bdgPedidos_CellContentClick);
+            // 
+            // NoPedido
+            // 
+            this.NoPedido.HeaderText = "No. Pedido";
+            this.NoPedido.MinimumWidth = 6;
+            this.NoPedido.Name = "NoPedido";
+            this.NoPedido.ReadOnly = true;
+            // 
+            // NoCliente
+            // 
+            this.NoCliente.HeaderText = "No. Cliente";
+            this.NoCliente.MinimumWidth = 6;
+            this.NoCliente.Name = "NoCliente";
+            this.NoCliente.ReadOnly = true;
+            // 
+            // NombreCliente
+            // 
+            this.NombreCliente.HeaderText = "NombreCliente";
+            this.NombreCliente.MinimumWidth = 6;
+            this.NombreCliente.Name = "NombreCliente";
+            this.NombreCliente.ReadOnly = true;
+            // 
+            // FechaDocumento
+            // 
+            this.FechaDocumento.HeaderText = "Fecha Documento";
+            this.FechaDocumento.MinimumWidth = 6;
+            this.FechaDocumento.Name = "FechaDocumento";
+            this.FechaDocumento.ReadOnly = true;
+            // 
+            // Total
+            // 
+            this.Total.HeaderText = "Total";
+            this.Total.MinimumWidth = 6;
+            this.Total.Name = "Total";
+            this.Total.ReadOnly = true;
+            // 
+            // Moneda
+            // 
+            this.Moneda.HeaderText = "Moneda";
+            this.Moneda.MinimumWidth = 6;
+            this.Moneda.Name = "Moneda";
+            this.Moneda.ReadOnly = true;
+            // 
+            // Estatus
+            // 
+            this.Estatus.HeaderText = "Estatus";
+            this.Estatus.MinimumWidth = 6;
+            this.Estatus.Name = "Estatus";
+            this.Estatus.ReadOnly = true;
+            // 
+            // Seleccionar
+            // 
+            this.Seleccionar.HeaderText = "Acciones";
+            this.Seleccionar.MinimumWidth = 6;
+            this.Seleccionar.Name = "Seleccionar";
+            this.Seleccionar.ReadOnly = true;
+            this.Seleccionar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // bunifuGradientPanel1
+            // 
+            this.bunifuGradientPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.bunifuGradientPanel1.BackColor = System.Drawing.Color.BlanchedAlmond;
+            this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
+            this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuGradientPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.bunifuGradientPanel1.Controls.Add(this.bdpInicio);
+            this.bunifuGradientPanel1.Controls.Add(this.bdpFin);
+            this.bunifuGradientPanel1.Controls.Add(this.txtBuscar);
+            this.bunifuGradientPanel1.Controls.Add(this.label5);
+            this.bunifuGradientPanel1.Controls.Add(this.lblHeaderCotClie);
+            this.bunifuGradientPanel1.Controls.Add(this.bddEstatus);
+            this.bunifuGradientPanel1.Controls.Add(this.label3);
+            this.bunifuGradientPanel1.Controls.Add(this.btnBuscarCot);
+            this.bunifuGradientPanel1.Controls.Add(this.label4);
+            this.bunifuGradientPanel1.GradientBottomLeft = System.Drawing.Color.SteelBlue;
+            this.bunifuGradientPanel1.GradientBottomRight = System.Drawing.Color.White;
+            this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.White;
+            this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.White;
+            this.bunifuGradientPanel1.Location = new System.Drawing.Point(8, 8);
+            this.bunifuGradientPanel1.Margin = new System.Windows.Forms.Padding(8);
+            this.bunifuGradientPanel1.MinimumSize = new System.Drawing.Size(1350, 134);
+            this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
+            this.bunifuGradientPanel1.Quality = 10;
+            this.bunifuGradientPanel1.Size = new System.Drawing.Size(1384, 134);
+            this.bunifuGradientPanel1.TabIndex = 26;
+            // 
+            // bdpInicio
+            // 
+            this.bdpInicio.BackColor = System.Drawing.Color.White;
+            this.bdpInicio.BorderRadius = 5;
+            this.bdpInicio.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bdpInicio.ForeColor = System.Drawing.Color.Black;
+            this.bdpInicio.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.bdpInicio.FormatCustom = null;
+            this.bdpInicio.Location = new System.Drawing.Point(275, 62);
+            this.bdpInicio.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.bdpInicio.MaximumSize = new System.Drawing.Size(320, 55);
+            this.bdpInicio.Name = "bdpInicio";
+            this.bdpInicio.Size = new System.Drawing.Size(274, 39);
+            this.bdpInicio.TabIndex = 31;
+            this.bdpInicio.Value = new System.DateTime(2021, 8, 23, 0, 0, 0, 0);
+            // 
+            // bdpFin
+            // 
+            this.bdpFin.BackColor = System.Drawing.Color.White;
+            this.bdpFin.BorderRadius = 10;
+            this.bdpFin.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bdpFin.ForeColor = System.Drawing.Color.Black;
+            this.bdpFin.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.bdpFin.FormatCustom = null;
+            this.bdpFin.Location = new System.Drawing.Point(565, 59);
+            this.bdpFin.Margin = new System.Windows.Forms.Padding(9, 11, 9, 11);
+            this.bdpFin.Name = "bdpFin";
+            this.bdpFin.Size = new System.Drawing.Size(275, 42);
+            this.bdpFin.TabIndex = 26;
+            this.bdpFin.Value = new System.DateTime(2021, 8, 22, 0, 0, 0, 0);
+            // 
+            // txtBuscar
+            // 
+            this.txtBuscar.BackColor = System.Drawing.Color.White;
+            this.txtBuscar.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtBuscar.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtBuscar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtBuscar.HintForeColor = System.Drawing.Color.Empty;
+            this.txtBuscar.HintText = "";
+            this.txtBuscar.isPassword = false;
+            this.txtBuscar.LineFocusedColor = System.Drawing.Color.SlateGray;
+            this.txtBuscar.LineIdleColor = System.Drawing.Color.Gray;
+            this.txtBuscar.LineMouseHoverColor = System.Drawing.Color.SlateGray;
+            this.txtBuscar.LineThickness = 1;
+            this.txtBuscar.Location = new System.Drawing.Point(23, 62);
+            this.txtBuscar.Margin = new System.Windows.Forms.Padding(4);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(241, 39);
+            this.txtBuscar.TabIndex = 30;
+            this.txtBuscar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(850, 16);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(59, 19);
+            this.label5.TabIndex = 29;
+            this.label5.Text = "Estatus";
+            // 
+            // lblHeaderCotClie
+            // 
+            this.lblHeaderCotClie.AutoSize = true;
+            this.lblHeaderCotClie.BackColor = System.Drawing.Color.Transparent;
+            this.lblHeaderCotClie.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHeaderCotClie.Location = new System.Drawing.Point(19, 16);
+            this.lblHeaderCotClie.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblHeaderCotClie.Name = "lblHeaderCotClie";
+            this.lblHeaderCotClie.Size = new System.Drawing.Size(158, 19);
+            this.lblHeaderCotClie.TabIndex = 23;
+            this.lblHeaderCotClie.Text = "No.Pedido/No. Cliente";
+            // 
+            // bddEstatus
+            // 
+            this.bddEstatus.BackColor = System.Drawing.Color.Transparent;
+            this.bddEstatus.BorderRadius = 9;
+            this.bddEstatus.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bddEstatus.ForeColor = System.Drawing.Color.Black;
+            this.bddEstatus.Items = new string[] {
+        "SELECCIONE ESTATUS",
+        "Abierto",
+        "Cerrado",
+        "Cancelado"};
+            this.bddEstatus.Location = new System.Drawing.Point(854, 59);
+            this.bddEstatus.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.bddEstatus.Name = "bddEstatus";
+            this.bddEstatus.NomalColor = System.Drawing.Color.White;
+            this.bddEstatus.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.bddEstatus.selectedIndex = -1;
+            this.bddEstatus.Size = new System.Drawing.Size(250, 39);
+            this.bddEstatus.TabIndex = 28;
+            // 
+            // label3
+            // 
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(271, 16);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(90, 19);
+            this.label3.TabIndex = 24;
+            this.label3.Text = "Fecha Inicio";
+            // 
+            // btnBuscarCot
+            // 
+            this.btnBuscarCot.ActiveBorderThickness = 1;
+            this.btnBuscarCot.ActiveCornerRadius = 20;
+            this.btnBuscarCot.ActiveFillColor = System.Drawing.Color.SteelBlue;
+            this.btnBuscarCot.ActiveForecolor = System.Drawing.Color.White;
+            this.btnBuscarCot.ActiveLineColor = System.Drawing.Color.SteelBlue;
+            this.btnBuscarCot.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnBuscarCot.BackColor = System.Drawing.Color.BlanchedAlmond;
+            this.btnBuscarCot.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBuscarCot.BackgroundImage")));
+            this.btnBuscarCot.ButtonText = "Buscar";
+            this.btnBuscarCot.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBuscarCot.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscarCot.ForeColor = System.Drawing.Color.SteelBlue;
+            this.btnBuscarCot.IdleBorderThickness = 1;
+            this.btnBuscarCot.IdleCornerRadius = 20;
+            this.btnBuscarCot.IdleFillColor = System.Drawing.Color.White;
+            this.btnBuscarCot.IdleForecolor = System.Drawing.Color.SteelBlue;
+            this.btnBuscarCot.IdleLineColor = System.Drawing.Color.SteelBlue;
+            this.btnBuscarCot.Location = new System.Drawing.Point(1173, 59);
+            this.btnBuscarCot.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.btnBuscarCot.Name = "btnBuscarCot";
+            this.btnBuscarCot.Size = new System.Drawing.Size(169, 39);
+            this.btnBuscarCot.TabIndex = 21;
+            this.btnBuscarCot.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(561, 16);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(90, 19);
+            this.label4.TabIndex = 27;
+            this.label4.Text = "Fecha Inicio";
+            // 
+            // pnlFooter
+            // 
+            this.pnlFooter.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlFooter.BackColor = System.Drawing.Color.White;
+            this.pnlFooter.Location = new System.Drawing.Point(8, 1127);
+            this.pnlFooter.Margin = new System.Windows.Forms.Padding(8, 4, 8, 8);
+            this.pnlFooter.MinimumSize = new System.Drawing.Size(1350, 41);
+            this.pnlFooter.Name = "pnlFooter";
+            this.pnlFooter.Size = new System.Drawing.Size(1384, 41);
+            this.pnlFooter.TabIndex = 25;
+            // 
             // pnlTabPedidos
             // 
+            this.pnlTabPedidos.AutoScroll = true;
             this.pnlTabPedidos.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlTabPedidos.Location = new System.Drawing.Point(3, 710);
+            this.pnlTabPedidos.Location = new System.Drawing.Point(3, 800);
             this.pnlTabPedidos.Name = "pnlTabPedidos";
-            this.pnlTabPedidos.Size = new System.Drawing.Size(1439, 100);
+            this.pnlTabPedidos.Size = new System.Drawing.Size(1439, 10);
             this.pnlTabPedidos.TabIndex = 2;
             // 
             // tabNuevo
             // 
+            this.tabNuevo.AutoScroll = true;
             this.tabNuevo.Controls.Add(this.pnlCotizacion);
             this.tabNuevo.Location = new System.Drawing.Point(4, 34);
             this.tabNuevo.Name = "tabNuevo";
@@ -1354,6 +1357,9 @@
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.Azure;
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
             this.dgvProductosPed.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvProductosPed.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvProductosPed.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvProductosPed.BackgroundColor = System.Drawing.Color.White;
             this.dgvProductosPed.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -1456,6 +1462,7 @@
             // 
             this.bunifuGradientPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.bunifuGradientPanel2.AutoScroll = true;
             this.bunifuGradientPanel2.BackColor = System.Drawing.Color.BlanchedAlmond;
             this.bunifuGradientPanel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel2.BackgroundImage")));
             this.bunifuGradientPanel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -1486,9 +1493,8 @@
             this.btnAgregarProducto.ActiveFillColor = System.Drawing.Color.SteelBlue;
             this.btnAgregarProducto.ActiveForecolor = System.Drawing.Color.White;
             this.btnAgregarProducto.ActiveLineColor = System.Drawing.Color.SteelBlue;
-            this.btnAgregarProducto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAgregarProducto.BackColor = System.Drawing.Color.Transparent;
+            this.btnAgregarProducto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAgregarProducto.BackColor = System.Drawing.Color.BlanchedAlmond;
             this.btnAgregarProducto.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAgregarProducto.BackgroundImage")));
             this.btnAgregarProducto.ButtonText = "Agregar";
             this.btnAgregarProducto.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -1499,7 +1505,7 @@
             this.btnAgregarProducto.IdleFillColor = System.Drawing.Color.White;
             this.btnAgregarProducto.IdleForecolor = System.Drawing.Color.SteelBlue;
             this.btnAgregarProducto.IdleLineColor = System.Drawing.Color.SteelBlue;
-            this.btnAgregarProducto.Location = new System.Drawing.Point(683, 47);
+            this.btnAgregarProducto.Location = new System.Drawing.Point(654, 41);
             this.btnAgregarProducto.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.btnAgregarProducto.Name = "btnAgregarProducto";
             this.btnAgregarProducto.Size = new System.Drawing.Size(186, 58);
@@ -2135,6 +2141,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.Controls.Add(this.tabControlPedidos);
             this.Name = "Pedidos";
             this.Size = new System.Drawing.Size(1453, 851);
@@ -2142,12 +2149,12 @@
             this.tabPedidos.ResumeLayout(false);
             this.tabPedidos.PerformLayout();
             this.pnlBodyCot.ResumeLayout(false);
-            this.bunifuGradientPanel1.ResumeLayout(false);
-            this.bunifuGradientPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bdgPedidos)).EndInit();
             this.pnlPOAcciones.ResumeLayout(false);
             this.pnlPOAccion.ResumeLayout(false);
             this.pnlPOAccion.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bdgPedidos)).EndInit();
+            this.bunifuGradientPanel1.ResumeLayout(false);
+            this.bunifuGradientPanel1.PerformLayout();
             this.tabNuevo.ResumeLayout(false);
             this.pnlCotizacion.ResumeLayout(false);
             this.pnlCotizacion.PerformLayout();

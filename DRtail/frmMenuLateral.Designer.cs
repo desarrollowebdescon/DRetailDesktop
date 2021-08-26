@@ -825,6 +825,7 @@
             this.picMenuLogo.Size = new System.Drawing.Size(205, 140);
             this.picMenuLogo.TabIndex = 0;
             this.picMenuLogo.TabStop = false;
+            this.picMenuLogo.Click += new System.EventHandler(this.picMenuLogo_Click);
             // 
             // pnlBoxMenuInventario
             // 
@@ -998,26 +999,25 @@
         private System.Windows.Forms.PictureBox picMenuLogo;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
         private Bunifu.Framework.UI.BunifuFlatButton btnClientesMenu;
-        private System.Windows.Forms.Panel pnlLineClientes;
-        private System.Windows.Forms.Panel pnlMain;
-        private System.Windows.Forms.Panel pnlLinePLealtad;
+        public System.Windows.Forms.Panel pnlLineClientes;
+        public System.Windows.Forms.Panel pnlLinePLealtad;
         private Bunifu.Framework.UI.BunifuFlatButton btnPLealMenu;
-        private System.Windows.Forms.Panel pnlLineCorte;
+        public System.Windows.Forms.Panel pnlLineCorte;
         private Bunifu.Framework.UI.BunifuFlatButton btnCorteMenu;
-        private System.Windows.Forms.Panel pnlLineReportes;
+        public System.Windows.Forms.Panel pnlLineReportes;
         private Bunifu.Framework.UI.BunifuFlatButton btnReportesMenu;
-        private System.Windows.Forms.Panel pnlLineFacturas;
+        public System.Windows.Forms.Panel pnlLineFacturas;
         private Bunifu.Framework.UI.BunifuFlatButton btnFacturasMenu;
-        private System.Windows.Forms.Panel pnlLineInventario;
+        public System.Windows.Forms.Panel pnlLineInventario;
         private Bunifu.Framework.UI.BunifuFlatButton btnInvenMenu;
-        private System.Windows.Forms.Panel pnlLineProductos;
+        public System.Windows.Forms.Panel pnlLineProductos;
         private Bunifu.Framework.UI.BunifuFlatButton btnProdMenu;
-        private System.Windows.Forms.Panel pnlLinePedidos;
+        public System.Windows.Forms.Panel pnlLinePedidos;
         private Bunifu.Framework.UI.BunifuFlatButton btnPedidosMenu;
-        private System.Windows.Forms.Panel pnlLineCotizaciones;
+        public System.Windows.Forms.Panel pnlLineCotizaciones;
         private Bunifu.Framework.UI.BunifuFlatButton btnCotizaMenu;
         private Bunifu.Framework.UI.BunifuFlatButton btnCSesionMenu;
-        private System.Windows.Forms.Panel pnlLineConfiguracion;
+        public System.Windows.Forms.Panel pnlLineConfiguracion;
         private Bunifu.Framework.UI.BunifuFlatButton btnConfigMenu;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnRestore;
@@ -1036,6 +1036,7 @@
         private System.Windows.Forms.Panel pnlBoxMenuFacturas;
         private System.Windows.Forms.Panel pnlBoxMenuInventario;
         private System.Windows.Forms.Panel pnlBoxMenuProductos;
-        private System.Windows.Forms.Label LblTitle;
+        public System.Windows.Forms.Label LblTitle;
+        public System.Windows.Forms.Panel pnlMain;
     }
 }
