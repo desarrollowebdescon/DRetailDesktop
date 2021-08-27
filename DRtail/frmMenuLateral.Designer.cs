@@ -103,7 +103,7 @@
             this.pnlTitleBar.Location = new System.Drawing.Point(0, 0);
             this.pnlTitleBar.Margin = new System.Windows.Forms.Padding(4);
             this.pnlTitleBar.Name = "pnlTitleBar";
-            this.pnlTitleBar.Size = new System.Drawing.Size(1750, 30);
+            this.pnlTitleBar.Size = new System.Drawing.Size(1386, 30);
             this.pnlTitleBar.TabIndex = 19;
             this.pnlTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
             // 
@@ -122,7 +122,7 @@
             this.btnMin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnMin.BackgroundImage = global::DRtail.Properties.Resources.min128;
             this.btnMin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnMin.Location = new System.Drawing.Point(1643, 0);
+            this.btnMin.Location = new System.Drawing.Point(1279, 0);
             this.btnMin.Name = "btnMin";
             this.btnMin.Size = new System.Drawing.Size(30, 30);
             this.btnMin.TabIndex = 3;
@@ -134,7 +134,7 @@
             this.btnMaxim.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnMaxim.BackgroundImage = global::DRtail.Properties.Resources.max128;
             this.btnMaxim.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnMaxim.Location = new System.Drawing.Point(1679, 0);
+            this.btnMaxim.Location = new System.Drawing.Point(1315, 0);
             this.btnMaxim.Name = "btnMaxim";
             this.btnMaxim.Size = new System.Drawing.Size(30, 30);
             this.btnMaxim.TabIndex = 2;
@@ -146,7 +146,7 @@
             this.btnRestore.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnRestore.BackgroundImage = global::DRtail.Properties.Resources.rest128;
             this.btnRestore.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnRestore.Location = new System.Drawing.Point(1679, 0);
+            this.btnRestore.Location = new System.Drawing.Point(1315, 0);
             this.btnRestore.Name = "btnRestore";
             this.btnRestore.Size = new System.Drawing.Size(30, 30);
             this.btnRestore.TabIndex = 1;
@@ -158,7 +158,7 @@
             this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnClose.BackgroundImage = global::DRtail.Properties.Resources.close128;
             this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnClose.Location = new System.Drawing.Point(1715, 0);
+            this.btnClose.Location = new System.Drawing.Point(1351, 0);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(30, 30);
             this.btnClose.TabIndex = 0;
@@ -172,7 +172,7 @@
             this.pnlMain.Location = new System.Drawing.Point(315, 30);
             this.pnlMain.Margin = new System.Windows.Forms.Padding(4);
             this.pnlMain.Name = "pnlMain";
-            this.pnlMain.Size = new System.Drawing.Size(1435, 760);
+            this.pnlMain.Size = new System.Drawing.Size(1071, 758);
             this.pnlMain.TabIndex = 2;
             // 
             // pnlBoxMenuPedidos
@@ -263,7 +263,7 @@
             this.pnlMenuLateral.Margin = new System.Windows.Forms.Padding(4);
             this.pnlMenuLateral.Name = "pnlMenuLateral";
             this.pnlMenuLateral.Quality = 2;
-            this.pnlMenuLateral.Size = new System.Drawing.Size(315, 760);
+            this.pnlMenuLateral.Size = new System.Drawing.Size(315, 758);
             this.pnlMenuLateral.TabIndex = 20;
             // 
             // pnlBoxMenuCSesion
@@ -956,7 +956,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(1750, 790);
+            this.ClientSize = new System.Drawing.Size(1386, 788);
             this.ControlBox = false;
             this.Controls.Add(this.pnlMain);
             this.Controls.Add(this.pnlMenuLateral);

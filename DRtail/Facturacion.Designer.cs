@@ -40,6 +40,11 @@
             this.tabControlFacturacion = new System.Windows.Forms.TabControl();
             this.tabFacturas = new System.Windows.Forms.TabPage();
             this.pnlBodyFacturas = new System.Windows.Forms.Panel();
+            this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtBuscarFactura = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.bdgFacturas = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.pnlFooter = new System.Windows.Forms.Panel();
             this.pnlPOAcciones = new System.Windows.Forms.Panel();
             this.btnCerrarPU = new Bunifu.Framework.UI.BunifuThinButton2();
             this.pnlPOAccion = new System.Windows.Forms.Panel();
@@ -75,16 +80,6 @@
             this.tabFEfectivo = new System.Windows.Forms.TabPage();
             this.ddFMoneda = new Bunifu.Framework.UI.BunifuDropdown();
             this.label2 = new System.Windows.Forms.Label();
-            this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtBuscarFactura = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.bdgFacturas = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.NoPedido = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NoCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tFacturado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Estatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Seleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.pnlFooter = new System.Windows.Forms.Panel();
             this.tabFactura = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -226,16 +221,23 @@
             this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewButtonColumn3 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.panel15 = new System.Windows.Forms.Panel();
+            this.NoCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechaEnt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tFacturado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Seleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.tabControlFacturacion.SuspendLayout();
             this.tabFacturas.SuspendLayout();
             this.pnlBodyFacturas.SuspendLayout();
+            this.bunifuGradientPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bdgFacturas)).BeginInit();
             this.pnlPOAcciones.SuspendLayout();
             this.pnlPOAccion.SuspendLayout();
             this.pnlFGenerarFactura.SuspendLayout();
             this.tabControlFPagos.SuspendLayout();
             this.tabFTDC.SuspendLayout();
-            this.bunifuGradientPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bdgFacturas)).BeginInit();
             this.tabFactura.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -297,16 +299,135 @@
             this.pnlBodyFacturas.AutoScroll = true;
             this.pnlBodyFacturas.AutoSize = true;
             this.pnlBodyFacturas.BackColor = System.Drawing.Color.Gainsboro;
-            this.pnlBodyFacturas.Controls.Add(this.pnlPOAcciones);
             this.pnlBodyFacturas.Controls.Add(this.bunifuGradientPanel1);
             this.pnlBodyFacturas.Controls.Add(this.bdgFacturas);
             this.pnlBodyFacturas.Controls.Add(this.pnlFooter);
+            this.pnlBodyFacturas.Controls.Add(this.pnlPOAcciones);
             this.pnlBodyFacturas.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlBodyFacturas.Location = new System.Drawing.Point(3, 3);
             this.pnlBodyFacturas.Margin = new System.Windows.Forms.Padding(2);
             this.pnlBodyFacturas.Name = "pnlBodyFacturas";
             this.pnlBodyFacturas.Size = new System.Drawing.Size(1669, 903);
             this.pnlBodyFacturas.TabIndex = 27;
+            // 
+            // bunifuGradientPanel1
+            // 
+            this.bunifuGradientPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.bunifuGradientPanel1.BackColor = System.Drawing.Color.BlanchedAlmond;
+            this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
+            this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuGradientPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.bunifuGradientPanel1.Controls.Add(this.label1);
+            this.bunifuGradientPanel1.Controls.Add(this.txtBuscarFactura);
+            this.bunifuGradientPanel1.GradientBottomLeft = System.Drawing.Color.SteelBlue;
+            this.bunifuGradientPanel1.GradientBottomRight = System.Drawing.Color.White;
+            this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.White;
+            this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.White;
+            this.bunifuGradientPanel1.Location = new System.Drawing.Point(8, 8);
+            this.bunifuGradientPanel1.Margin = new System.Windows.Forms.Padding(8);
+            this.bunifuGradientPanel1.MinimumSize = new System.Drawing.Size(1350, 134);
+            this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
+            this.bunifuGradientPanel1.Quality = 10;
+            this.bunifuGradientPanel1.Size = new System.Drawing.Size(1629, 134);
+            this.bunifuGradientPanel1.TabIndex = 26;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(8, 20);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(79, 25);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Buscar:";
+            // 
+            // txtBuscarFactura
+            // 
+            this.txtBuscarFactura.BackColor = System.Drawing.Color.White;
+            this.txtBuscarFactura.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtBuscarFactura.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtBuscarFactura.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtBuscarFactura.HintForeColor = System.Drawing.Color.Gray;
+            this.txtBuscarFactura.HintText = "Cliente/No. Pedido / codigo";
+            this.txtBuscarFactura.isPassword = false;
+            this.txtBuscarFactura.LineFocusedColor = System.Drawing.Color.Green;
+            this.txtBuscarFactura.LineIdleColor = System.Drawing.Color.Gray;
+            this.txtBuscarFactura.LineMouseHoverColor = System.Drawing.Color.Green;
+            this.txtBuscarFactura.LineThickness = 3;
+            this.txtBuscarFactura.Location = new System.Drawing.Point(13, 49);
+            this.txtBuscarFactura.Margin = new System.Windows.Forms.Padding(4);
+            this.txtBuscarFactura.Name = "txtBuscarFactura";
+            this.txtBuscarFactura.Size = new System.Drawing.Size(446, 44);
+            this.txtBuscarFactura.TabIndex = 1;
+            this.txtBuscarFactura.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtBuscarFactura.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtBuscarFactura_KeyUp);
+            // 
+            // bdgFacturas
+            // 
+            this.bdgFacturas.AllowUserToAddRows = false;
+            this.bdgFacturas.AllowUserToDeleteRows = false;
+            this.bdgFacturas.AllowUserToResizeColumns = false;
+            this.bdgFacturas.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Azure;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.bdgFacturas.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.bdgFacturas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.bdgFacturas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.bdgFacturas.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.bdgFacturas.BackgroundColor = System.Drawing.Color.White;
+            this.bdgFacturas.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.bdgFacturas.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.bdgFacturas.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.bdgFacturas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.bdgFacturas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.bdgFacturas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.NoCliente,
+            this.codCliente,
+            this.cliente,
+            this.fechaEnt,
+            this.tFacturado,
+            this.Estatus,
+            this.Seleccionar});
+            this.bdgFacturas.DoubleBuffered = true;
+            this.bdgFacturas.EnableHeadersVisualStyles = false;
+            this.bdgFacturas.GridColor = System.Drawing.Color.White;
+            this.bdgFacturas.HeaderBgColor = System.Drawing.Color.SteelBlue;
+            this.bdgFacturas.HeaderForeColor = System.Drawing.Color.White;
+            this.bdgFacturas.Location = new System.Drawing.Point(8, 150);
+            this.bdgFacturas.Margin = new System.Windows.Forms.Padding(8, 0, 8, 8);
+            this.bdgFacturas.MinimumSize = new System.Drawing.Size(1350, 447);
+            this.bdgFacturas.MultiSelect = false;
+            this.bdgFacturas.Name = "bdgFacturas";
+            this.bdgFacturas.ReadOnly = true;
+            this.bdgFacturas.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.bdgFacturas.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            this.bdgFacturas.RowTemplate.Height = 24;
+            this.bdgFacturas.Size = new System.Drawing.Size(1629, 689);
+            this.bdgFacturas.TabIndex = 24;
+            this.bdgFacturas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.bdgFacturas_CellContentClick);
+            // 
+            // pnlFooter
+            // 
+            this.pnlFooter.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlFooter.BackColor = System.Drawing.Color.White;
+            this.pnlFooter.Location = new System.Drawing.Point(8, 855);
+            this.pnlFooter.Margin = new System.Windows.Forms.Padding(8, 4, 8, 8);
+            this.pnlFooter.MinimumSize = new System.Drawing.Size(1350, 41);
+            this.pnlFooter.Name = "pnlFooter";
+            this.pnlFooter.Size = new System.Drawing.Size(1629, 41);
+            this.pnlFooter.TabIndex = 25;
             // 
             // pnlPOAcciones
             // 
@@ -828,160 +949,6 @@
             this.label2.Size = new System.Drawing.Size(90, 25);
             this.label2.TabIndex = 0;
             this.label2.Text = "Moneda:";
-            // 
-            // bunifuGradientPanel1
-            // 
-            this.bunifuGradientPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.bunifuGradientPanel1.BackColor = System.Drawing.Color.BlanchedAlmond;
-            this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
-            this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuGradientPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bunifuGradientPanel1.Controls.Add(this.label1);
-            this.bunifuGradientPanel1.Controls.Add(this.txtBuscarFactura);
-            this.bunifuGradientPanel1.GradientBottomLeft = System.Drawing.Color.SteelBlue;
-            this.bunifuGradientPanel1.GradientBottomRight = System.Drawing.Color.White;
-            this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.White;
-            this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.White;
-            this.bunifuGradientPanel1.Location = new System.Drawing.Point(8, 8);
-            this.bunifuGradientPanel1.Margin = new System.Windows.Forms.Padding(8);
-            this.bunifuGradientPanel1.MinimumSize = new System.Drawing.Size(1350, 134);
-            this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
-            this.bunifuGradientPanel1.Quality = 10;
-            this.bunifuGradientPanel1.Size = new System.Drawing.Size(1629, 134);
-            this.bunifuGradientPanel1.TabIndex = 26;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(8, 20);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(79, 25);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Buscar:";
-            // 
-            // txtBuscarFactura
-            // 
-            this.txtBuscarFactura.BackColor = System.Drawing.Color.White;
-            this.txtBuscarFactura.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtBuscarFactura.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txtBuscarFactura.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtBuscarFactura.HintForeColor = System.Drawing.Color.Gray;
-            this.txtBuscarFactura.HintText = "Cliente/No. Pedido / codigo";
-            this.txtBuscarFactura.isPassword = false;
-            this.txtBuscarFactura.LineFocusedColor = System.Drawing.Color.Green;
-            this.txtBuscarFactura.LineIdleColor = System.Drawing.Color.Gray;
-            this.txtBuscarFactura.LineMouseHoverColor = System.Drawing.Color.Green;
-            this.txtBuscarFactura.LineThickness = 3;
-            this.txtBuscarFactura.Location = new System.Drawing.Point(13, 49);
-            this.txtBuscarFactura.Margin = new System.Windows.Forms.Padding(4);
-            this.txtBuscarFactura.Name = "txtBuscarFactura";
-            this.txtBuscarFactura.Size = new System.Drawing.Size(446, 44);
-            this.txtBuscarFactura.TabIndex = 1;
-            this.txtBuscarFactura.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtBuscarFactura.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtBuscarFactura_KeyUp);
-            // 
-            // bdgFacturas
-            // 
-            this.bdgFacturas.AllowUserToAddRows = false;
-            this.bdgFacturas.AllowUserToDeleteRows = false;
-            this.bdgFacturas.AllowUserToResizeColumns = false;
-            this.bdgFacturas.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Azure;
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            this.bdgFacturas.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.bdgFacturas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.bdgFacturas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.bdgFacturas.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.bdgFacturas.BackgroundColor = System.Drawing.Color.White;
-            this.bdgFacturas.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.bdgFacturas.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.bdgFacturas.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.GradientActiveCaption;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.bdgFacturas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.bdgFacturas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.bdgFacturas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.NoPedido,
-            this.NoCliente,
-            this.tFacturado,
-            this.Estatus,
-            this.Seleccionar});
-            this.bdgFacturas.DoubleBuffered = true;
-            this.bdgFacturas.EnableHeadersVisualStyles = false;
-            this.bdgFacturas.GridColor = System.Drawing.Color.White;
-            this.bdgFacturas.HeaderBgColor = System.Drawing.Color.SteelBlue;
-            this.bdgFacturas.HeaderForeColor = System.Drawing.Color.White;
-            this.bdgFacturas.Location = new System.Drawing.Point(8, 150);
-            this.bdgFacturas.Margin = new System.Windows.Forms.Padding(8, 0, 8, 8);
-            this.bdgFacturas.MinimumSize = new System.Drawing.Size(1350, 447);
-            this.bdgFacturas.MultiSelect = false;
-            this.bdgFacturas.Name = "bdgFacturas";
-            this.bdgFacturas.ReadOnly = true;
-            this.bdgFacturas.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.bdgFacturas.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            this.bdgFacturas.RowTemplate.Height = 24;
-            this.bdgFacturas.Size = new System.Drawing.Size(1629, 689);
-            this.bdgFacturas.TabIndex = 24;
-            this.bdgFacturas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.bdgFacturas_CellContentClick);
-            // 
-            // NoPedido
-            // 
-            this.NoPedido.HeaderText = "No. Pedido";
-            this.NoPedido.MinimumWidth = 6;
-            this.NoPedido.Name = "NoPedido";
-            this.NoPedido.ReadOnly = true;
-            // 
-            // NoCliente
-            // 
-            this.NoCliente.HeaderText = "No.Factura";
-            this.NoCliente.MinimumWidth = 6;
-            this.NoCliente.Name = "NoCliente";
-            this.NoCliente.ReadOnly = true;
-            // 
-            // tFacturado
-            // 
-            this.tFacturado.HeaderText = "Total facturado";
-            this.tFacturado.MinimumWidth = 6;
-            this.tFacturado.Name = "tFacturado";
-            this.tFacturado.ReadOnly = true;
-            // 
-            // Estatus
-            // 
-            this.Estatus.HeaderText = "Estatus";
-            this.Estatus.MinimumWidth = 6;
-            this.Estatus.Name = "Estatus";
-            this.Estatus.ReadOnly = true;
-            // 
-            // Seleccionar
-            // 
-            this.Seleccionar.HeaderText = "Acciones";
-            this.Seleccionar.MinimumWidth = 6;
-            this.Seleccionar.Name = "Seleccionar";
-            this.Seleccionar.ReadOnly = true;
-            this.Seleccionar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Seleccionar.Text = "...";
-            // 
-            // pnlFooter
-            // 
-            this.pnlFooter.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlFooter.BackColor = System.Drawing.Color.White;
-            this.pnlFooter.Location = new System.Drawing.Point(8, 855);
-            this.pnlFooter.Margin = new System.Windows.Forms.Padding(8, 4, 8, 8);
-            this.pnlFooter.MinimumSize = new System.Drawing.Size(1350, 41);
-            this.pnlFooter.Name = "pnlFooter";
-            this.pnlFooter.Size = new System.Drawing.Size(1629, 41);
-            this.pnlFooter.TabIndex = 25;
             // 
             // tabFactura
             // 
@@ -3065,6 +3032,54 @@
             this.panel15.Size = new System.Drawing.Size(1629, 41);
             this.panel15.TabIndex = 25;
             // 
+            // NoCliente
+            // 
+            this.NoCliente.HeaderText = "No.Factura";
+            this.NoCliente.MinimumWidth = 6;
+            this.NoCliente.Name = "NoCliente";
+            this.NoCliente.ReadOnly = true;
+            // 
+            // codCliente
+            // 
+            this.codCliente.HeaderText = "Cod. Cliente";
+            this.codCliente.Name = "codCliente";
+            this.codCliente.ReadOnly = true;
+            // 
+            // cliente
+            // 
+            this.cliente.HeaderText = "Cliente";
+            this.cliente.Name = "cliente";
+            this.cliente.ReadOnly = true;
+            // 
+            // fechaEnt
+            // 
+            this.fechaEnt.HeaderText = "Fecha Entrega";
+            this.fechaEnt.Name = "fechaEnt";
+            this.fechaEnt.ReadOnly = true;
+            // 
+            // tFacturado
+            // 
+            this.tFacturado.HeaderText = "Total facturado";
+            this.tFacturado.MinimumWidth = 6;
+            this.tFacturado.Name = "tFacturado";
+            this.tFacturado.ReadOnly = true;
+            // 
+            // Estatus
+            // 
+            this.Estatus.HeaderText = "Estatus";
+            this.Estatus.MinimumWidth = 6;
+            this.Estatus.Name = "Estatus";
+            this.Estatus.ReadOnly = true;
+            // 
+            // Seleccionar
+            // 
+            this.Seleccionar.HeaderText = "Acciones";
+            this.Seleccionar.MinimumWidth = 6;
+            this.Seleccionar.Name = "Seleccionar";
+            this.Seleccionar.ReadOnly = true;
+            this.Seleccionar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Seleccionar.Text = "...";
+            // 
             // Facturacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -3077,6 +3092,9 @@
             this.tabFacturas.ResumeLayout(false);
             this.tabFacturas.PerformLayout();
             this.pnlBodyFacturas.ResumeLayout(false);
+            this.bunifuGradientPanel1.ResumeLayout(false);
+            this.bunifuGradientPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bdgFacturas)).EndInit();
             this.pnlPOAcciones.ResumeLayout(false);
             this.pnlPOAccion.ResumeLayout(false);
             this.pnlPOAccion.PerformLayout();
@@ -3085,9 +3103,6 @@
             this.tabControlFPagos.ResumeLayout(false);
             this.tabFTDC.ResumeLayout(false);
             this.tabFTDC.PerformLayout();
-            this.bunifuGradientPanel1.ResumeLayout(false);
-            this.bunifuGradientPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bdgFacturas)).EndInit();
             this.tabFactura.ResumeLayout(false);
             this.tabFactura.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -3143,11 +3158,6 @@
         private System.Windows.Forms.Panel pnlFooter;
         private System.Windows.Forms.Label label1;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtBuscarFactura;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NoPedido;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NoCliente;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tFacturado;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Estatus;
-        private System.Windows.Forms.DataGridViewButtonColumn Seleccionar;
         private System.Windows.Forms.Panel pnlPOAcciones;
         private System.Windows.Forms.Panel pnlPOAccion;
         private System.Windows.Forms.Label lblEstatusNum;
@@ -3324,5 +3334,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
         private System.Windows.Forms.DataGridViewButtonColumn dataGridViewButtonColumn3;
         private System.Windows.Forms.Panel panel15;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NoCliente;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codCliente;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cliente;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fechaEnt;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tFacturado;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Estatus;
+        private System.Windows.Forms.DataGridViewButtonColumn Seleccionar;
     }
 }

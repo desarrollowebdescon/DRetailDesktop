@@ -10,20 +10,35 @@ namespace DRtail
     public class DatosFactura
 
     {
-        [JsonProperty("NoPedido")]
-        public int NoPedido { get; set; }
+        [JsonProperty("Numero de Entrega")]
+        public int DocEntry { get; set; }
 
-        [JsonProperty("NoFactura")]
+        [JsonProperty("Numero de Documento")]
         public string NoFactura { get; set; }
-        
-        [JsonProperty("TotalFacturado")]
+
+        [JsonProperty("Cliente")]
+        public string Cliente { get; set; }
+
+        [JsonProperty("Nombre")]
+        public string Nombre { get; set; }
+
+        [JsonProperty("FechaEntrega")]
+        public DateTime FechaEntrega { get; set; }
+
+        [JsonProperty("FechaDocumento")]
+        public DateTime FechaDocumento { get; set; }
+
+        [JsonProperty("Total")]
         public double TotalFacturado { get; set; }
+
+        [JsonProperty("Descuento")]
+        public double Descuento { get; set; }
+
+        [JsonProperty("Estatus")]
+        public string Estatus { get; set; } 
         
-        [JsonProperty("StatusPago")]
-        public string StatusPago { get; set; } 
-        
-        [JsonProperty("CódigoCliente")]
-        public string CodigoCliente { get; set; }
+        [JsonProperty("Moneda")]
+        public string Moneda { get; set; }
        
     }
 

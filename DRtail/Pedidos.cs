@@ -20,7 +20,7 @@ namespace DRtail
         #region "Variables"
         public List<DatosSocios> dtosSocios;
         List<DatosArticulos> items;
-        List<DatosCotizacion> cotizacionesList;
+        List<DatosPedido> pedidosList;
         public int ordenDGV = 0;
         public string codClienteSelec = "";
         DataTable dtSocios = new DataTable();
@@ -54,13 +54,13 @@ namespace DRtail
             {
                 dtosSocios = Servicios.getSocios();
                 items = Servicios.GetArticulos();
-                cotizacionesList = Servicios.getCotizaciones();
+                pedidosList = Servicios.getPedidos();
 
                 int i = 0;
-                foreach (DatosCotizacion dc in cotizacionesList)
+                foreach (DatosPedido dc in pedidosList)
                 {
-                    dc.NoCotizacion = (i + 1).ToString();
-                    bdgPedidos.Rows.Add(dc.NoCotizacion, dc.Cliente, dc.Nombre, dc.FechaDocumento.ToString("yyyy-MM-dd"), double.Parse(dc.Total).ToString("N2"), dc.Moneda, dc.Estatus, "...");
+                    dc.NoCotizacionRelacionada = (i + 1).ToString();
+                    bdgPedidos.Rows.Add(dc.NoCotizacionRelacionada, dc.Cliente, dc.Nombre, dc.FechaDocumento.ToString("yyyy-MM-dd"), double.Parse(dc.Total).ToString("N2"), dc.Moneda, dc.Estatus, "...");
                     i++;
                 }
 
