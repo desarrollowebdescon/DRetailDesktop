@@ -53,14 +53,6 @@
             this.btnBuscarCot = new Bunifu.Framework.UI.BunifuThinButton2();
             this.label4 = new System.Windows.Forms.Label();
             this.bdgCotizaciones = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.NoCotizacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NoCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NombreCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FechaDocumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Moneda = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Estatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Seleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.pnlFooter = new System.Windows.Forms.Panel();
             this.pnlPOAcciones = new System.Windows.Forms.Panel();
             this.pnlPOAccion = new System.Windows.Forms.Panel();
@@ -132,6 +124,15 @@
             this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NombreArt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtBuscarArtTraspaso = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.docEntry = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NoCotizacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NoCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NombreCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FechaDocumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Moneda = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Seleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.tabControlCotizaciones.SuspendLayout();
             this.tablCotizaciones.SuspendLayout();
             this.pnlBodyCot.SuspendLayout();
@@ -186,9 +187,9 @@
             this.pnlBodyCot.AutoSize = true;
             this.pnlBodyCot.BackColor = System.Drawing.Color.Gainsboro;
             this.pnlBodyCot.Controls.Add(this.bunifuGradientPanel1);
-            this.pnlBodyCot.Controls.Add(this.bdgCotizaciones);
             this.pnlBodyCot.Controls.Add(this.pnlFooter);
             this.pnlBodyCot.Controls.Add(this.pnlPOAcciones);
+            this.pnlBodyCot.Controls.Add(this.bdgCotizaciones);
             this.pnlBodyCot.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlBodyCot.Location = new System.Drawing.Point(3, 3);
             this.pnlBodyCot.Margin = new System.Windows.Forms.Padding(2);
@@ -395,6 +396,7 @@
             this.bdgCotizaciones.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.bdgCotizaciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.bdgCotizaciones.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.docEntry,
             this.NoCotizacion,
             this.NoCliente,
             this.NombreCliente,
@@ -420,63 +422,6 @@
             this.bdgCotizaciones.Size = new System.Drawing.Size(1482, 677);
             this.bdgCotizaciones.TabIndex = 24;
             this.bdgCotizaciones.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.bdgCotizaciones_CellContentClick);
-            // 
-            // NoCotizacion
-            // 
-            this.NoCotizacion.HeaderText = "No. Cotizacion";
-            this.NoCotizacion.MinimumWidth = 6;
-            this.NoCotizacion.Name = "NoCotizacion";
-            this.NoCotizacion.ReadOnly = true;
-            // 
-            // NoCliente
-            // 
-            this.NoCliente.HeaderText = "No. Cliente";
-            this.NoCliente.MinimumWidth = 6;
-            this.NoCliente.Name = "NoCliente";
-            this.NoCliente.ReadOnly = true;
-            // 
-            // NombreCliente
-            // 
-            this.NombreCliente.HeaderText = "NombreCliente";
-            this.NombreCliente.MinimumWidth = 6;
-            this.NombreCliente.Name = "NombreCliente";
-            this.NombreCliente.ReadOnly = true;
-            // 
-            // FechaDocumento
-            // 
-            this.FechaDocumento.HeaderText = "Fecha Documento";
-            this.FechaDocumento.MinimumWidth = 6;
-            this.FechaDocumento.Name = "FechaDocumento";
-            this.FechaDocumento.ReadOnly = true;
-            // 
-            // Total
-            // 
-            this.Total.HeaderText = "Total";
-            this.Total.MinimumWidth = 6;
-            this.Total.Name = "Total";
-            this.Total.ReadOnly = true;
-            // 
-            // Moneda
-            // 
-            this.Moneda.HeaderText = "Moneda";
-            this.Moneda.MinimumWidth = 6;
-            this.Moneda.Name = "Moneda";
-            this.Moneda.ReadOnly = true;
-            // 
-            // Estatus
-            // 
-            this.Estatus.HeaderText = "Estatus";
-            this.Estatus.MinimumWidth = 6;
-            this.Estatus.Name = "Estatus";
-            this.Estatus.ReadOnly = true;
-            // 
-            // Seleccionar
-            // 
-            this.Seleccionar.HeaderText = "Acciones";
-            this.Seleccionar.MinimumWidth = 6;
-            this.Seleccionar.Name = "Seleccionar";
-            this.Seleccionar.ReadOnly = true;
-            this.Seleccionar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // pnlFooter
             // 
@@ -729,7 +674,7 @@
             this.tabNuevo.Location = new System.Drawing.Point(4, 54);
             this.tabNuevo.Name = "tabNuevo";
             this.tabNuevo.Padding = new System.Windows.Forms.Padding(3);
-            this.tabNuevo.Size = new System.Drawing.Size(1528, 900);
+            this.tabNuevo.Size = new System.Drawing.Size(1528, 897);
             this.tabNuevo.TabIndex = 1;
             this.tabNuevo.Text = "NUEVO";
             this.tabNuevo.UseVisualStyleBackColor = true;
@@ -1553,6 +1498,70 @@
             this.txtBuscarArtTraspaso.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtBuscarArtTraspaso.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtBuscarArtTraspaso_KeyUp);
             // 
+            // docEntry
+            // 
+            this.docEntry.HeaderText = "docEntry";
+            this.docEntry.Name = "docEntry";
+            this.docEntry.ReadOnly = true;
+            this.docEntry.Visible = false;
+            // 
+            // NoCotizacion
+            // 
+            this.NoCotizacion.HeaderText = "No. Cotizacion";
+            this.NoCotizacion.MinimumWidth = 6;
+            this.NoCotizacion.Name = "NoCotizacion";
+            this.NoCotizacion.ReadOnly = true;
+            // 
+            // NoCliente
+            // 
+            this.NoCliente.HeaderText = "No. Cliente";
+            this.NoCliente.MinimumWidth = 6;
+            this.NoCliente.Name = "NoCliente";
+            this.NoCliente.ReadOnly = true;
+            // 
+            // NombreCliente
+            // 
+            this.NombreCliente.HeaderText = "NombreCliente";
+            this.NombreCliente.MinimumWidth = 6;
+            this.NombreCliente.Name = "NombreCliente";
+            this.NombreCliente.ReadOnly = true;
+            // 
+            // FechaDocumento
+            // 
+            this.FechaDocumento.HeaderText = "Fecha Documento";
+            this.FechaDocumento.MinimumWidth = 6;
+            this.FechaDocumento.Name = "FechaDocumento";
+            this.FechaDocumento.ReadOnly = true;
+            // 
+            // Total
+            // 
+            this.Total.HeaderText = "Total";
+            this.Total.MinimumWidth = 6;
+            this.Total.Name = "Total";
+            this.Total.ReadOnly = true;
+            // 
+            // Moneda
+            // 
+            this.Moneda.HeaderText = "Moneda";
+            this.Moneda.MinimumWidth = 6;
+            this.Moneda.Name = "Moneda";
+            this.Moneda.ReadOnly = true;
+            // 
+            // Estatus
+            // 
+            this.Estatus.HeaderText = "Estatus";
+            this.Estatus.MinimumWidth = 6;
+            this.Estatus.Name = "Estatus";
+            this.Estatus.ReadOnly = true;
+            // 
+            // Seleccionar
+            // 
+            this.Seleccionar.HeaderText = "Acciones";
+            this.Seleccionar.MinimumWidth = 6;
+            this.Seleccionar.Name = "Seleccionar";
+            this.Seleccionar.ReadOnly = true;
+            this.Seleccionar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
             // Cotizaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1622,14 +1631,6 @@
         private Bunifu.Framework.UI.BunifuDropdown bddEstatus;
         private System.Windows.Forms.Label label5;
         private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NoCotizacion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NoCliente;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NombreCliente;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FechaDocumento;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Total;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Moneda;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Estatus;
-        private System.Windows.Forms.DataGridViewButtonColumn Seleccionar;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtBuscar;
         private System.Windows.Forms.Panel pnlPOAccion;
         private System.Windows.Forms.Label lblNombre;
@@ -1686,5 +1687,14 @@
         private System.Windows.Forms.Label label8;
         private Bunifu.Framework.UI.BunifuDatepicker bdpInicio;
         private Bunifu.Framework.UI.BunifuThinButton2 btnCotLimpiar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn docEntry;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NoCotizacion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NoCliente;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NombreCliente;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FechaDocumento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Total;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Moneda;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Estatus;
+        private System.Windows.Forms.DataGridViewButtonColumn Seleccionar;
     }
 }

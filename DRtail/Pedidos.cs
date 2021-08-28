@@ -29,14 +29,16 @@ namespace DRtail
         string tempDescuento = "";
         string tempDescuentoOld = "";
         string flagPago = "";
+        string docEntryCot = "";
         #endregion
-        public Pedidos(string impCliente)
+        public Pedidos(string impCliente, string docEntryCotizacion)
         {
             InitializeComponent();
             this.Dock = DockStyle.Fill;
             GetData();
             AutoCompletar(txtProducto, "DatosArticulos");
             AutoCompletar(txtCliente, "DatosSocios");
+            docEntryCot = docEntryCotizacion;
             if (impCliente == "")
             {
                 tabControlPedidos.SelectedIndex = 0;
@@ -45,6 +47,7 @@ namespace DRtail
             {
                 tabControlPedidos.SelectedIndex = 1;
                 txtCliente.Text = impCliente;
+
             }
         }
 
@@ -281,7 +284,7 @@ namespace DRtail
             try
             {
                 DatosPedido pedido = new DatosPedido();
-                //pedido.NoCotizacionRelacionada = 738.ToString(); //Cotizacion relacionada
+                pedido.NoCotizacionRelacionada = docEntryCot; //Cotizacion relacionada
                 pedido.Cliente = txtCliente.Text;
                 pedido.FechaContabilizacion = DateTime.Now;
                 pedido.FechaVencimiento = DateTime.Now.AddDays(3);

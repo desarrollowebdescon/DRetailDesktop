@@ -9,8 +9,12 @@ namespace DRtail
 {
     public class DatosCotizacion
     {
-        [JsonProperty("NoCotizacion")]
+        [JsonProperty("Numero de Documento")]
         public string NoCotizacion { get; set; }
+
+        [JsonProperty("Numero de Entrega")]
+        public string docentryCotizacion { get; set; }
+
         [JsonProperty("Cliente")]
         public string Cliente { get; set; }
         
@@ -110,5 +114,12 @@ namespace DRtail
         public double Cantidad { get; set; }
     }
 
+
+    public class DocEntryDocumento
+    {
+        [JsonProperty("docEntry")]
+        public string docEntry { get; set; }      
+
+    }
 
 }

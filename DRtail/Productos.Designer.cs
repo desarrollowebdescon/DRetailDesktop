@@ -101,6 +101,7 @@
             // 
             // tabProductos
             // 
+            this.tabProductos.AutoScroll = true;
             this.tabProductos.BackColor = System.Drawing.Color.LightGray;
             this.tabProductos.Controls.Add(this.panel1);
             this.tabProductos.Controls.Add(this.bgPnlHProd);
@@ -111,7 +112,7 @@
             this.tabProductos.Margin = new System.Windows.Forms.Padding(10);
             this.tabProductos.Name = "tabProductos";
             this.tabProductos.Padding = new System.Windows.Forms.Padding(3);
-            this.tabProductos.Size = new System.Drawing.Size(1349, 855);
+            this.tabProductos.Size = new System.Drawing.Size(1349, 853);
             this.tabProductos.TabIndex = 0;
             this.tabProductos.Text = "PRODUCTOS";
             // 
@@ -120,7 +121,7 @@
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Location = new System.Drawing.Point(18, 778);
+            this.panel1.Location = new System.Drawing.Point(18, 776);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1308, 71);
             this.panel1.TabIndex = 19;
@@ -917,24 +918,24 @@
             // tabCtrlProductos
             // 
             this.tabCtrlProductos.Controls.Add(this.tabProductos);
-            this.tabCtrlProductos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabCtrlProductos.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabCtrlProductos.ItemSize = new System.Drawing.Size(100, 50);
             this.tabCtrlProductos.Location = new System.Drawing.Point(0, 0);
             this.tabCtrlProductos.Name = "tabCtrlProductos";
             this.tabCtrlProductos.Padding = new System.Drawing.Point(30, 3);
             this.tabCtrlProductos.SelectedIndex = 0;
-            this.tabCtrlProductos.Size = new System.Drawing.Size(1357, 913);
+            this.tabCtrlProductos.Size = new System.Drawing.Size(1357, 911);
             this.tabCtrlProductos.TabIndex = 14;
             // 
             // Productos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.AutoSize = true;
             this.Controls.Add(this.tabCtrlProductos);
             this.Name = "Productos";
-            this.Size = new System.Drawing.Size(1357, 913);
+            this.Size = new System.Drawing.Size(1360, 914);
             this.tabProductos.ResumeLayout(false);
             this.bgPnlHProd.ResumeLayout(false);
             this.bgPnlHProd.PerformLayout();

@@ -68,7 +68,7 @@ namespace DRtail
         private void btnPedidosMenu_Click(object sender, EventArgs e)
         {
             pnlMain.Controls.Clear();
-            pnlMain.Controls.Add(new Pedidos(""));
+            pnlMain.Controls.Add(new Pedidos("",""));
             SelectedLineMenu();
             pnlLinePedidos.Visible = true;
             this.LblTitle.Text = "PEDIDOS";

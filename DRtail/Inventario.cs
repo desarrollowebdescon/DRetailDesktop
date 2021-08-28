@@ -75,5 +75,20 @@ namespace DRtail
         {
             pnlPUAcciones.Visible = false;
         }
+
+        private void bbtnSolTraspaso_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bbtnAgregarPedido_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAgregarCotizacion_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

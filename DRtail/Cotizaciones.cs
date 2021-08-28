@@ -57,9 +57,8 @@ namespace DRtail
                 cotizacionesList = Servicios.getCotizaciones();
                 int i = 0;
                 foreach (DatosCotizacion dc in cotizacionesList)
-                {
-                    dc.NoCotizacion = (i + 1).ToString();
-                    bdgCotizaciones.Rows.Add(dc.NoCotizacion, dc.Cliente, dc.Nombre, dc.FechaDocumento.ToString("yyyy-MM-dd"), double.Parse(dc.Total).ToString("N2"), dc.Moneda, dc.Estatus, "...");
+                {                    
+                    bdgCotizaciones.Rows.Add(dc.docentryCotizacion,dc.NoCotizacion, dc.Cliente, dc.Nombre, dc.FechaDocumento.ToString("yyyy-MM-dd"), double.Parse(dc.Total).ToString("N2"), dc.Moneda, dc.Estatus, "...");
                     i++;
                 }
 
@@ -213,7 +212,10 @@ namespace DRtail
 
         private void btnBorrarProd_Click(object sender, EventArgs e)
         {
-            EliminarProducto();
+            if(dgvProductosCotizacion.Rows.Count > 0)
+            {
+                EliminarProducto();
+            }            
         }
         void EliminarProducto()
         {
@@ -319,13 +321,13 @@ namespace DRtail
 
         private void bdgCotizaciones_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == 7)
+            if (e.ColumnIndex == 8)
             {
                 DataGridViewRow dgvr = bdgCotizaciones.Rows[e.RowIndex];
-                lblNCotizacion.Text = dgvr.Cells[0].Value.ToString();
-                lblNCliente.Text = dgvr.Cells[1].Value.ToString();
-                lblNombre.Text = dgvr.Cells[2].Value.ToString();
-                lblMontoAcciones.Text = dgvr.Cells[4].Value.ToString();
+                lblNCotizacion.Text = dgvr.Cells[1].Value.ToString();
+                lblNCliente.Text = dgvr.Cells[2].Value.ToString();
+                lblNombre.Text = dgvr.Cells[3].Value.ToString();
+                lblMontoAcciones.Text = dgvr.Cells[5].Value.ToString();
                 lblAccionesMensaje.Text = "";
                 pnlPOAcciones.BringToFront();
                 pnlPOAcciones.Visible = true;
@@ -346,6 +348,13 @@ namespace DRtail
         private void btnAccionesGPedido_Click(object sender, EventArgs e)
         {
             lblAccionesMensaje.Text = "Se ha Generado el pedido con éxito la cotización " + lblNCotizacion.Text;
+
+            Servicios.menuLateral.pnlMain.Controls.Clear();
+            Servicios.menuLateral.pnlMain.Controls.Add(new Pedidos(bdgCotizaciones.Rows[bdgCotizaciones.CurrentRow.Index].Cells[2].Value.ToString(), bdgCotizaciones.Rows[bdgCotizaciones.CurrentRow.Index].Cells[0].Value.ToString()));
+            Servicios.menuLateral.SelectedLineMenu();
+            Servicios.menuLateral.pnlLinePedidos.Visible = true;
+            Servicios.menuLateral.LblTitle.Text = "PEDIDOS";
+
         }
 
         private void btnCerrarPOAcciones_Click(object sender, EventArgs e)
