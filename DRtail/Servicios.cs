@@ -128,8 +128,25 @@ namespace DRtail
                 return new List<DatosSocios>();
             }
         }
-        
 
+        public static Cotización getCotizacionOrigen(string cotOrigen)
+        {
+            try
+            {
+                HttpWebRequest request = (HttpWebRequest)WebRequest.Create(@"http://54.39.26.9:62436/api/consultarCotizacion?docNum=" + cotOrigen);
+                using (HttpWebResponse response = (HttpWebResponse)request.GetResponse())
+                using (Stream stream = response.GetResponseStream())
+                using (StreamReader reader = new StreamReader(stream))
+                {
+                    var json = reader.ReadToEnd();
+                    return JsonConvert.DeserializeObject<Cotización> (json);
+                }
+            }
+            catch (Exception ex)
+            {
+                return new Cotización();
+            }
+        }
 
     }
 }

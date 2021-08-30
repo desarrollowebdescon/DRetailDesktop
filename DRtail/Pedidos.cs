@@ -21,6 +21,7 @@ namespace DRtail
         public List<DatosSocios> dtosSocios;
         List<DatosArticulos> items;
         List<DatosPedido> pedidosList;
+        Cotización cotizacionOrigen;
         public int ordenDGV = 0;
         public string codClienteSelec = "";
         DataTable dtSocios = new DataTable();
@@ -35,10 +36,11 @@ namespace DRtail
         {
             InitializeComponent();
             this.Dock = DockStyle.Fill;
+            docEntryCot = docEntryCotizacion;
             GetData();
             AutoCompletar(txtProducto, "DatosArticulos");
             AutoCompletar(txtCliente, "DatosSocios");
-            docEntryCot = docEntryCotizacion;
+            
             if (impCliente == "")
             {
                 tabControlPedidos.SelectedIndex = 0;
@@ -62,11 +64,20 @@ namespace DRtail
                 int i = 0;
                 foreach (DatosPedido dc in pedidosList)
                 {
-                    dc.NoCotizacionRelacionada = (i + 1).ToString();
-                    bdgPedidos.Rows.Add(dc.NoCotizacionRelacionada, dc.Cliente, dc.Nombre, dc.FechaDocumento.ToString("yyyy-MM-dd"), double.Parse(dc.Total).ToString("N2"), dc.Moneda, dc.Estatus, "...");
+                    bdgPedidos.Rows.Add(dc.noPedido, dc.Cliente, dc.Nombre, dc.FechaDocumento.ToString("yyyy-MM-dd"), double.Parse(dc.Total).ToString("N2"), dc.Moneda, dc.Estatus, "...");
                     i++;
                 }
 
+                if (docEntryCot != "")
+                {
+                    cotizacionOrigen = Servicios.getCotizacionOrigen(docEntryCot);
+                    
+                    foreach(Lineas l in cotizacionOrigen.lineas)
+                    {
+                        dgvProductosPed.Rows.Add(l.Articulo, "", l.PrecioU, "",l.Descuento,l.Cantidad,"",l.Total,"");
+                    }                   
+
+                }
             }
             catch (Exception ex)
             {
@@ -293,10 +304,10 @@ namespace DRtail
 
                 foreach (DataGridViewRow dRow in dgvProductosPed.Rows)
                 {
-                    ArticulosCotizacion articulosCotizacion = new ArticulosCotizacion();
+                    ArticulosPedido articulosCotizacion = new ArticulosPedido();
                     articulosCotizacion.Articulo = dRow.Cells[0].Value.ToString();
-                    articulosCotizacion.Cantidad = int.Parse(dRow.Cells[5].Value.ToString());
-                    pedido.articulosCotizaciones.Add(articulosCotizacion);
+                    articulosCotizacion.Cantidad = double.Parse(dRow.Cells[5].Value.ToString());
+                    pedido.articulosCotizaciones.Add(ArticulosPedido);
                 }
 
                 if (CrearPedido(pedido))

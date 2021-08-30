@@ -239,7 +239,7 @@ namespace DRtail
                 {
                     ArticulosCotizacion articulosCotizacion = new ArticulosCotizacion();
                     articulosCotizacion.Articulo = dRow.Cells[0].Value.ToString();
-                    articulosCotizacion.Cantidad = int.Parse(dRow.Cells[5].Value.ToString());
+                    articulosCotizacion.Cantidad = double.Parse(dRow.Cells[5].Value.ToString());
                     cotizacion.articulosCotizaciones.Add(articulosCotizacion);
                 }
 
@@ -310,7 +310,6 @@ namespace DRtail
             LimpiarCotizacion();
         }
 
-
         private void txtProducto_KeyUp(object sender, KeyEventArgs e)
         {
             if ((int)e.KeyCode == (int)Keys.Enter)
@@ -362,8 +361,6 @@ namespace DRtail
             pnlPOAcciones.Visible = false;
         }
 
-
-
         private void dgvProductosCotizacion_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
 
@@ -380,7 +377,6 @@ namespace DRtail
                 dgvProductosCotizacion.Rows[e.RowIndex].Cells[e.ColumnIndex].Value = tempDescuentoOld;
             }
         }
-
 
 
         private void dgvProductosCotizacion_CellBeginEdit(object sender, DataGridViewCellCancelEventArgs e)

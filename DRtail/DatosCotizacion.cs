@@ -17,13 +17,13 @@ namespace DRtail
 
         [JsonProperty("Cliente")]
         public string Cliente { get; set; }
-        
+
         [JsonProperty("Nombre")]
         public string Nombre { get; set; }
-        
+
         [JsonProperty("FechaEntrega")]
         public DateTime FechaEntrega { get; set; }
-        
+
         [JsonProperty("FechaContabilizacion")]
         public DateTime FechaContabilizacion { get; set; }
 
@@ -35,7 +35,7 @@ namespace DRtail
 
         [JsonProperty("Moneda")]
         public string Moneda { get; set; }
-        
+
         [JsonProperty("Estatus")]
         public string Estatus { get; set; }
 
@@ -62,11 +62,17 @@ namespace DRtail
         public double Cantidad { get; set; }
     }
 
-
     public class DatosPedido
     {
         [JsonProperty("docentry")]
         public string NoCotizacionRelacionada { get; set; }
+
+        [JsonProperty("Numero de Documento")]
+        public string noPedido { get; set; }
+
+        [JsonProperty("Numero de Entrega")]
+        public string docEntryPedido { get; set; }
+
         [JsonProperty("Cliente")]
         public string Cliente { get; set; }
 
@@ -101,7 +107,7 @@ namespace DRtail
         public string Comentarios { get; set; }
 
         [JsonProperty("lineas")]
-        public List<ArticulosCotizacion> articulosCotizaciones = new List<ArticulosCotizacion>();
+        public List<ArticulosPedido> articulosCotizaciones = new List<ArticulosPedido>();
 
     }
 
@@ -114,12 +120,52 @@ namespace DRtail
         public double Cantidad { get; set; }
     }
 
-
     public class DocEntryDocumento
     {
         [JsonProperty("docEntry")]
-        public string docEntry { get; set; }      
+        public string docEntry { get; set; }
 
     }
 
+    public class Cotización
+    {
+        [JsonProperty("Encabezado")]
+        public List<Encabezado> encabezado = new List<Encabezado>();// { get; set; }
+
+        [JsonProperty("Lineas")]
+        public List<Lineas> lineas = new List<Lineas>();// { get; set; }
+    }
+
+    public class Encabezado
+    {
+        [JsonProperty("Cliente")]
+        public string Cliente { get; set; }
+
+        [JsonProperty("Nombre")]
+        public string Nombre { get; set; }
+
+        [JsonProperty("Total")]
+        public string Total { get; set; }
+    }
+
+    public class Lineas
+    {
+        [JsonProperty("Articulo")]
+        public string Articulo { get; set; }
+
+        [JsonProperty("Cantidad")]
+        public double Cantidad { get; set; }
+
+        [JsonProperty("Precio Unitario")]
+        public string PrecioU { get; set; }
+
+        [JsonProperty("Total")]
+        public string Total { get; set; }
+
+        [JsonProperty("Descuento")]
+        public string Descuento { get; set; }
+
+        [JsonProperty("Moneda")]
+        public string Moneda { get; set; }
+    }
 }

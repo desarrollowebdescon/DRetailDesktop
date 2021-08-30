@@ -28,35 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Pedidos));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControlPedidos = new System.Windows.Forms.TabControl();
             this.tabPedidos = new System.Windows.Forms.TabPage();
             this.pnlBodyCot = new System.Windows.Forms.Panel();
-            this.pnlPOAcciones = new System.Windows.Forms.Panel();
-            this.pnlPOAccion = new System.Windows.Forms.Panel();
-            this.lblMontoAcciones = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.btnCerrarPOAcciones = new System.Windows.Forms.Button();
-            this.lblNombre = new System.Windows.Forms.Label();
-            this.lblTxtNombre = new System.Windows.Forms.Label();
-            this.lblNCliente = new System.Windows.Forms.Label();
-            this.lblTxtNCliente = new System.Windows.Forms.Label();
-            this.lblNPedido = new System.Windows.Forms.Label();
-            this.lblTxtNPedido = new System.Windows.Forms.Label();
-            this.lblAccionesMensaje = new System.Windows.Forms.Label();
-            this.btnAccionesGPedido = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.btnAccionReenviar = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.btnAccionesReimp = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bdgPedidos = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.NoPedido = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NoCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -77,6 +62,21 @@
             this.btnBuscarCot = new Bunifu.Framework.UI.BunifuThinButton2();
             this.label4 = new System.Windows.Forms.Label();
             this.pnlFooter = new System.Windows.Forms.Panel();
+            this.pnlPOAcciones = new System.Windows.Forms.Panel();
+            this.pnlPOAccion = new System.Windows.Forms.Panel();
+            this.lblMontoAcciones = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.btnCerrarPOAcciones = new System.Windows.Forms.Button();
+            this.lblNombre = new System.Windows.Forms.Label();
+            this.lblTxtNombre = new System.Windows.Forms.Label();
+            this.lblNCliente = new System.Windows.Forms.Label();
+            this.lblTxtNCliente = new System.Windows.Forms.Label();
+            this.lblNPedido = new System.Windows.Forms.Label();
+            this.lblTxtNPedido = new System.Windows.Forms.Label();
+            this.lblAccionesMensaje = new System.Windows.Forms.Label();
+            this.btnAccionesGPedido = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.btnAccionReenviar = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.btnAccionesReimp = new Bunifu.Framework.UI.BunifuThinButton2();
             this.pnlTabPedidos = new System.Windows.Forms.Panel();
             this.tabNuevo = new System.Windows.Forms.TabPage();
             this.pnlCotizacion = new System.Windows.Forms.Panel();
@@ -171,10 +171,10 @@
             this.tabControlPedidos.SuspendLayout();
             this.tabPedidos.SuspendLayout();
             this.pnlBodyCot.SuspendLayout();
-            this.pnlPOAcciones.SuspendLayout();
-            this.pnlPOAccion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bdgPedidos)).BeginInit();
             this.bunifuGradientPanel1.SuspendLayout();
+            this.pnlPOAcciones.SuspendLayout();
+            this.pnlPOAccion.SuspendLayout();
             this.tabNuevo.SuspendLayout();
             this.pnlCotizacion.SuspendLayout();
             this.pnlPagos.SuspendLayout();
@@ -242,245 +242,13 @@
             this.pnlBodyCot.Size = new System.Drawing.Size(1439, 797);
             this.pnlBodyCot.TabIndex = 27;
             // 
-            // pnlPOAcciones
-            // 
-            this.pnlPOAcciones.BackColor = System.Drawing.Color.DimGray;
-            this.pnlPOAcciones.Controls.Add(this.pnlPOAccion);
-            this.pnlPOAcciones.Location = new System.Drawing.Point(257, 141);
-            this.pnlPOAcciones.Margin = new System.Windows.Forms.Padding(2);
-            this.pnlPOAcciones.Name = "pnlPOAcciones";
-            this.pnlPOAcciones.Size = new System.Drawing.Size(1100, 638);
-            this.pnlPOAcciones.TabIndex = 28;
-            this.pnlPOAcciones.Visible = false;
-            // 
-            // pnlPOAccion
-            // 
-            this.pnlPOAccion.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlPOAccion.BackColor = System.Drawing.Color.White;
-            this.pnlPOAccion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlPOAccion.Controls.Add(this.lblMontoAcciones);
-            this.pnlPOAccion.Controls.Add(this.label8);
-            this.pnlPOAccion.Controls.Add(this.btnCerrarPOAcciones);
-            this.pnlPOAccion.Controls.Add(this.lblNombre);
-            this.pnlPOAccion.Controls.Add(this.lblTxtNombre);
-            this.pnlPOAccion.Controls.Add(this.lblNCliente);
-            this.pnlPOAccion.Controls.Add(this.lblTxtNCliente);
-            this.pnlPOAccion.Controls.Add(this.lblNPedido);
-            this.pnlPOAccion.Controls.Add(this.lblTxtNPedido);
-            this.pnlPOAccion.Controls.Add(this.lblAccionesMensaje);
-            this.pnlPOAccion.Controls.Add(this.btnAccionesGPedido);
-            this.pnlPOAccion.Controls.Add(this.btnAccionReenviar);
-            this.pnlPOAccion.Controls.Add(this.btnAccionesReimp);
-            this.pnlPOAccion.Location = new System.Drawing.Point(86, 83);
-            this.pnlPOAccion.Margin = new System.Windows.Forms.Padding(2);
-            this.pnlPOAccion.Name = "pnlPOAccion";
-            this.pnlPOAccion.Size = new System.Drawing.Size(955, 441);
-            this.pnlPOAccion.TabIndex = 27;
-            // 
-            // lblMontoAcciones
-            // 
-            this.lblMontoAcciones.AutoSize = true;
-            this.lblMontoAcciones.ForeColor = System.Drawing.Color.Black;
-            this.lblMontoAcciones.Location = new System.Drawing.Point(163, 146);
-            this.lblMontoAcciones.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblMontoAcciones.Name = "lblMontoAcciones";
-            this.lblMontoAcciones.Size = new System.Drawing.Size(166, 25);
-            this.lblMontoAcciones.TabIndex = 34;
-            this.lblMontoAcciones.Text = "XXXXXXXXXXX";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(40, 146);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(67, 25);
-            this.label8.TabIndex = 33;
-            this.label8.Text = "Monto";
-            // 
-            // btnCerrarPOAcciones
-            // 
-            this.btnCerrarPOAcciones.BackColor = System.Drawing.Color.Transparent;
-            this.btnCerrarPOAcciones.ForeColor = System.Drawing.Color.Red;
-            this.btnCerrarPOAcciones.Location = new System.Drawing.Point(924, 2);
-            this.btnCerrarPOAcciones.Margin = new System.Windows.Forms.Padding(2);
-            this.btnCerrarPOAcciones.Name = "btnCerrarPOAcciones";
-            this.btnCerrarPOAcciones.Size = new System.Drawing.Size(30, 32);
-            this.btnCerrarPOAcciones.TabIndex = 32;
-            this.btnCerrarPOAcciones.Text = "X";
-            this.btnCerrarPOAcciones.UseVisualStyleBackColor = false;
-            this.btnCerrarPOAcciones.Click += new System.EventHandler(this.btnCerrarPOAcciones_Click);
-            // 
-            // lblNombre
-            // 
-            this.lblNombre.AutoSize = true;
-            this.lblNombre.ForeColor = System.Drawing.Color.Black;
-            this.lblNombre.Location = new System.Drawing.Point(163, 97);
-            this.lblNombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(166, 25);
-            this.lblNombre.TabIndex = 31;
-            this.lblNombre.Text = "XXXXXXXXXXX";
-            // 
-            // lblTxtNombre
-            // 
-            this.lblTxtNombre.AutoSize = true;
-            this.lblTxtNombre.ForeColor = System.Drawing.Color.Black;
-            this.lblTxtNombre.Location = new System.Drawing.Point(40, 97);
-            this.lblTxtNombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblTxtNombre.Name = "lblTxtNombre";
-            this.lblTxtNombre.Size = new System.Drawing.Size(81, 25);
-            this.lblTxtNombre.TabIndex = 30;
-            this.lblTxtNombre.Text = "Nombre";
-            // 
-            // lblNCliente
-            // 
-            this.lblNCliente.AutoSize = true;
-            this.lblNCliente.ForeColor = System.Drawing.Color.Black;
-            this.lblNCliente.Location = new System.Drawing.Point(163, 46);
-            this.lblNCliente.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblNCliente.Name = "lblNCliente";
-            this.lblNCliente.Size = new System.Drawing.Size(166, 25);
-            this.lblNCliente.TabIndex = 29;
-            this.lblNCliente.Text = "XXXXXXXXXXX";
-            // 
-            // lblTxtNCliente
-            // 
-            this.lblTxtNCliente.AutoSize = true;
-            this.lblTxtNCliente.ForeColor = System.Drawing.Color.Black;
-            this.lblTxtNCliente.Location = new System.Drawing.Point(40, 46);
-            this.lblTxtNCliente.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblTxtNCliente.Name = "lblTxtNCliente";
-            this.lblTxtNCliente.Size = new System.Drawing.Size(114, 25);
-            this.lblTxtNCliente.TabIndex = 28;
-            this.lblTxtNCliente.Text = "No. Cliente:";
-            // 
-            // lblNPedido
-            // 
-            this.lblNPedido.AutoSize = true;
-            this.lblNPedido.ForeColor = System.Drawing.Color.DarkRed;
-            this.lblNPedido.Location = new System.Drawing.Point(760, 38);
-            this.lblNPedido.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblNPedido.Name = "lblNPedido";
-            this.lblNPedido.Size = new System.Drawing.Size(152, 25);
-            this.lblNPedido.TabIndex = 27;
-            this.lblNPedido.Text = "XXXXXXXXXX";
-            // 
-            // lblTxtNPedido
-            // 
-            this.lblTxtNPedido.AutoSize = true;
-            this.lblTxtNPedido.ForeColor = System.Drawing.Color.Black;
-            this.lblTxtNPedido.Location = new System.Drawing.Point(596, 38);
-            this.lblTxtNPedido.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblTxtNPedido.Name = "lblTxtNPedido";
-            this.lblTxtNPedido.Size = new System.Drawing.Size(145, 25);
-            this.lblTxtNPedido.TabIndex = 26;
-            this.lblTxtNPedido.Text = "No. Cotizacion:";
-            // 
-            // lblAccionesMensaje
-            // 
-            this.lblAccionesMensaje.AutoSize = true;
-            this.lblAccionesMensaje.ForeColor = System.Drawing.Color.Lime;
-            this.lblAccionesMensaje.Location = new System.Drawing.Point(24, 366);
-            this.lblAccionesMensaje.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblAccionesMensaje.Name = "lblAccionesMensaje";
-            this.lblAccionesMensaje.Size = new System.Drawing.Size(0, 25);
-            this.lblAccionesMensaje.TabIndex = 25;
-            // 
-            // btnAccionesGPedido
-            // 
-            this.btnAccionesGPedido.ActiveBorderThickness = 1;
-            this.btnAccionesGPedido.ActiveCornerRadius = 20;
-            this.btnAccionesGPedido.ActiveFillColor = System.Drawing.Color.LimeGreen;
-            this.btnAccionesGPedido.ActiveForecolor = System.Drawing.Color.White;
-            this.btnAccionesGPedido.ActiveLineColor = System.Drawing.Color.LimeGreen;
-            this.btnAccionesGPedido.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAccionesGPedido.BackColor = System.Drawing.Color.White;
-            this.btnAccionesGPedido.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAccionesGPedido.BackgroundImage")));
-            this.btnAccionesGPedido.ButtonText = "Generar pedido";
-            this.btnAccionesGPedido.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAccionesGPedido.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAccionesGPedido.ForeColor = System.Drawing.Color.SteelBlue;
-            this.btnAccionesGPedido.IdleBorderThickness = 1;
-            this.btnAccionesGPedido.IdleCornerRadius = 20;
-            this.btnAccionesGPedido.IdleFillColor = System.Drawing.Color.White;
-            this.btnAccionesGPedido.IdleForecolor = System.Drawing.Color.LimeGreen;
-            this.btnAccionesGPedido.IdleLineColor = System.Drawing.Color.LimeGreen;
-            this.btnAccionesGPedido.Location = new System.Drawing.Point(659, 269);
-            this.btnAccionesGPedido.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
-            this.btnAccionesGPedido.Name = "btnAccionesGPedido";
-            this.btnAccionesGPedido.Size = new System.Drawing.Size(186, 50);
-            this.btnAccionesGPedido.TabIndex = 24;
-            this.btnAccionesGPedido.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnAccionesGPedido.Click += new System.EventHandler(this.btnAccionesGPedido_Click);
-            // 
-            // btnAccionReenviar
-            // 
-            this.btnAccionReenviar.ActiveBorderThickness = 1;
-            this.btnAccionReenviar.ActiveCornerRadius = 20;
-            this.btnAccionReenviar.ActiveFillColor = System.Drawing.Color.Orange;
-            this.btnAccionReenviar.ActiveForecolor = System.Drawing.Color.White;
-            this.btnAccionReenviar.ActiveLineColor = System.Drawing.Color.Orange;
-            this.btnAccionReenviar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAccionReenviar.BackColor = System.Drawing.Color.White;
-            this.btnAccionReenviar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAccionReenviar.BackgroundImage")));
-            this.btnAccionReenviar.ButtonText = "Reenviar";
-            this.btnAccionReenviar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAccionReenviar.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAccionReenviar.ForeColor = System.Drawing.Color.SteelBlue;
-            this.btnAccionReenviar.IdleBorderThickness = 1;
-            this.btnAccionReenviar.IdleCornerRadius = 20;
-            this.btnAccionReenviar.IdleFillColor = System.Drawing.Color.White;
-            this.btnAccionReenviar.IdleForecolor = System.Drawing.Color.Orange;
-            this.btnAccionReenviar.IdleLineColor = System.Drawing.Color.Orange;
-            this.btnAccionReenviar.Location = new System.Drawing.Point(135, 269);
-            this.btnAccionReenviar.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
-            this.btnAccionReenviar.Name = "btnAccionReenviar";
-            this.btnAccionReenviar.Size = new System.Drawing.Size(186, 50);
-            this.btnAccionReenviar.TabIndex = 23;
-            this.btnAccionReenviar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnAccionReenviar.Click += new System.EventHandler(this.btnAccionReenviar_Click);
-            // 
-            // btnAccionesReimp
-            // 
-            this.btnAccionesReimp.ActiveBorderThickness = 1;
-            this.btnAccionesReimp.ActiveCornerRadius = 20;
-            this.btnAccionesReimp.ActiveFillColor = System.Drawing.Color.SteelBlue;
-            this.btnAccionesReimp.ActiveForecolor = System.Drawing.Color.White;
-            this.btnAccionesReimp.ActiveLineColor = System.Drawing.Color.SteelBlue;
-            this.btnAccionesReimp.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAccionesReimp.BackColor = System.Drawing.Color.White;
-            this.btnAccionesReimp.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAccionesReimp.BackgroundImage")));
-            this.btnAccionesReimp.ButtonText = "Reimprimir";
-            this.btnAccionesReimp.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAccionesReimp.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAccionesReimp.ForeColor = System.Drawing.Color.SteelBlue;
-            this.btnAccionesReimp.IdleBorderThickness = 1;
-            this.btnAccionesReimp.IdleCornerRadius = 20;
-            this.btnAccionesReimp.IdleFillColor = System.Drawing.Color.White;
-            this.btnAccionesReimp.IdleForecolor = System.Drawing.Color.SteelBlue;
-            this.btnAccionesReimp.IdleLineColor = System.Drawing.Color.SteelBlue;
-            this.btnAccionesReimp.Location = new System.Drawing.Point(401, 269);
-            this.btnAccionesReimp.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
-            this.btnAccionesReimp.Name = "btnAccionesReimp";
-            this.btnAccionesReimp.Size = new System.Drawing.Size(186, 50);
-            this.btnAccionesReimp.TabIndex = 22;
-            this.btnAccionesReimp.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnAccionesReimp.Click += new System.EventHandler(this.btnAccionesReimp_Click);
-            // 
             // bdgPedidos
             // 
             this.bdgPedidos.AllowUserToAddRows = false;
             this.bdgPedidos.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Azure;
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            this.bdgPedidos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.Azure;
+            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.Black;
+            this.bdgPedidos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
             this.bdgPedidos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -489,14 +257,14 @@
             this.bdgPedidos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.bdgPedidos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.bdgPedidos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.GradientActiveCaption;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.bdgPedidos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.bdgPedidos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.bdgPedidos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.bdgPedidos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.NoPedido,
@@ -768,6 +536,238 @@
             this.pnlFooter.Size = new System.Drawing.Size(1384, 41);
             this.pnlFooter.TabIndex = 25;
             // 
+            // pnlPOAcciones
+            // 
+            this.pnlPOAcciones.BackColor = System.Drawing.Color.DimGray;
+            this.pnlPOAcciones.Controls.Add(this.pnlPOAccion);
+            this.pnlPOAcciones.Location = new System.Drawing.Point(257, 141);
+            this.pnlPOAcciones.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlPOAcciones.Name = "pnlPOAcciones";
+            this.pnlPOAcciones.Size = new System.Drawing.Size(1100, 638);
+            this.pnlPOAcciones.TabIndex = 28;
+            this.pnlPOAcciones.Visible = false;
+            // 
+            // pnlPOAccion
+            // 
+            this.pnlPOAccion.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlPOAccion.BackColor = System.Drawing.Color.White;
+            this.pnlPOAccion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlPOAccion.Controls.Add(this.lblMontoAcciones);
+            this.pnlPOAccion.Controls.Add(this.label8);
+            this.pnlPOAccion.Controls.Add(this.btnCerrarPOAcciones);
+            this.pnlPOAccion.Controls.Add(this.lblNombre);
+            this.pnlPOAccion.Controls.Add(this.lblTxtNombre);
+            this.pnlPOAccion.Controls.Add(this.lblNCliente);
+            this.pnlPOAccion.Controls.Add(this.lblTxtNCliente);
+            this.pnlPOAccion.Controls.Add(this.lblNPedido);
+            this.pnlPOAccion.Controls.Add(this.lblTxtNPedido);
+            this.pnlPOAccion.Controls.Add(this.lblAccionesMensaje);
+            this.pnlPOAccion.Controls.Add(this.btnAccionesGPedido);
+            this.pnlPOAccion.Controls.Add(this.btnAccionReenviar);
+            this.pnlPOAccion.Controls.Add(this.btnAccionesReimp);
+            this.pnlPOAccion.Location = new System.Drawing.Point(86, 83);
+            this.pnlPOAccion.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlPOAccion.Name = "pnlPOAccion";
+            this.pnlPOAccion.Size = new System.Drawing.Size(955, 441);
+            this.pnlPOAccion.TabIndex = 27;
+            // 
+            // lblMontoAcciones
+            // 
+            this.lblMontoAcciones.AutoSize = true;
+            this.lblMontoAcciones.ForeColor = System.Drawing.Color.Black;
+            this.lblMontoAcciones.Location = new System.Drawing.Point(163, 146);
+            this.lblMontoAcciones.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblMontoAcciones.Name = "lblMontoAcciones";
+            this.lblMontoAcciones.Size = new System.Drawing.Size(166, 25);
+            this.lblMontoAcciones.TabIndex = 34;
+            this.lblMontoAcciones.Text = "XXXXXXXXXXX";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.ForeColor = System.Drawing.Color.Black;
+            this.label8.Location = new System.Drawing.Point(40, 146);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(67, 25);
+            this.label8.TabIndex = 33;
+            this.label8.Text = "Monto";
+            // 
+            // btnCerrarPOAcciones
+            // 
+            this.btnCerrarPOAcciones.BackColor = System.Drawing.Color.Transparent;
+            this.btnCerrarPOAcciones.ForeColor = System.Drawing.Color.Red;
+            this.btnCerrarPOAcciones.Location = new System.Drawing.Point(924, 2);
+            this.btnCerrarPOAcciones.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCerrarPOAcciones.Name = "btnCerrarPOAcciones";
+            this.btnCerrarPOAcciones.Size = new System.Drawing.Size(30, 32);
+            this.btnCerrarPOAcciones.TabIndex = 32;
+            this.btnCerrarPOAcciones.Text = "X";
+            this.btnCerrarPOAcciones.UseVisualStyleBackColor = false;
+            this.btnCerrarPOAcciones.Click += new System.EventHandler(this.btnCerrarPOAcciones_Click);
+            // 
+            // lblNombre
+            // 
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.ForeColor = System.Drawing.Color.Black;
+            this.lblNombre.Location = new System.Drawing.Point(163, 97);
+            this.lblNombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(166, 25);
+            this.lblNombre.TabIndex = 31;
+            this.lblNombre.Text = "XXXXXXXXXXX";
+            // 
+            // lblTxtNombre
+            // 
+            this.lblTxtNombre.AutoSize = true;
+            this.lblTxtNombre.ForeColor = System.Drawing.Color.Black;
+            this.lblTxtNombre.Location = new System.Drawing.Point(40, 97);
+            this.lblTxtNombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTxtNombre.Name = "lblTxtNombre";
+            this.lblTxtNombre.Size = new System.Drawing.Size(81, 25);
+            this.lblTxtNombre.TabIndex = 30;
+            this.lblTxtNombre.Text = "Nombre";
+            // 
+            // lblNCliente
+            // 
+            this.lblNCliente.AutoSize = true;
+            this.lblNCliente.ForeColor = System.Drawing.Color.Black;
+            this.lblNCliente.Location = new System.Drawing.Point(163, 46);
+            this.lblNCliente.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNCliente.Name = "lblNCliente";
+            this.lblNCliente.Size = new System.Drawing.Size(166, 25);
+            this.lblNCliente.TabIndex = 29;
+            this.lblNCliente.Text = "XXXXXXXXXXX";
+            // 
+            // lblTxtNCliente
+            // 
+            this.lblTxtNCliente.AutoSize = true;
+            this.lblTxtNCliente.ForeColor = System.Drawing.Color.Black;
+            this.lblTxtNCliente.Location = new System.Drawing.Point(40, 46);
+            this.lblTxtNCliente.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTxtNCliente.Name = "lblTxtNCliente";
+            this.lblTxtNCliente.Size = new System.Drawing.Size(114, 25);
+            this.lblTxtNCliente.TabIndex = 28;
+            this.lblTxtNCliente.Text = "No. Cliente:";
+            // 
+            // lblNPedido
+            // 
+            this.lblNPedido.AutoSize = true;
+            this.lblNPedido.ForeColor = System.Drawing.Color.DarkRed;
+            this.lblNPedido.Location = new System.Drawing.Point(760, 38);
+            this.lblNPedido.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNPedido.Name = "lblNPedido";
+            this.lblNPedido.Size = new System.Drawing.Size(152, 25);
+            this.lblNPedido.TabIndex = 27;
+            this.lblNPedido.Text = "XXXXXXXXXX";
+            // 
+            // lblTxtNPedido
+            // 
+            this.lblTxtNPedido.AutoSize = true;
+            this.lblTxtNPedido.ForeColor = System.Drawing.Color.Black;
+            this.lblTxtNPedido.Location = new System.Drawing.Point(596, 38);
+            this.lblTxtNPedido.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTxtNPedido.Name = "lblTxtNPedido";
+            this.lblTxtNPedido.Size = new System.Drawing.Size(145, 25);
+            this.lblTxtNPedido.TabIndex = 26;
+            this.lblTxtNPedido.Text = "No. Cotizacion:";
+            // 
+            // lblAccionesMensaje
+            // 
+            this.lblAccionesMensaje.AutoSize = true;
+            this.lblAccionesMensaje.ForeColor = System.Drawing.Color.Lime;
+            this.lblAccionesMensaje.Location = new System.Drawing.Point(24, 366);
+            this.lblAccionesMensaje.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblAccionesMensaje.Name = "lblAccionesMensaje";
+            this.lblAccionesMensaje.Size = new System.Drawing.Size(0, 25);
+            this.lblAccionesMensaje.TabIndex = 25;
+            // 
+            // btnAccionesGPedido
+            // 
+            this.btnAccionesGPedido.ActiveBorderThickness = 1;
+            this.btnAccionesGPedido.ActiveCornerRadius = 20;
+            this.btnAccionesGPedido.ActiveFillColor = System.Drawing.Color.LimeGreen;
+            this.btnAccionesGPedido.ActiveForecolor = System.Drawing.Color.White;
+            this.btnAccionesGPedido.ActiveLineColor = System.Drawing.Color.LimeGreen;
+            this.btnAccionesGPedido.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAccionesGPedido.BackColor = System.Drawing.Color.White;
+            this.btnAccionesGPedido.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAccionesGPedido.BackgroundImage")));
+            this.btnAccionesGPedido.ButtonText = "Generar pedido";
+            this.btnAccionesGPedido.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAccionesGPedido.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAccionesGPedido.ForeColor = System.Drawing.Color.SteelBlue;
+            this.btnAccionesGPedido.IdleBorderThickness = 1;
+            this.btnAccionesGPedido.IdleCornerRadius = 20;
+            this.btnAccionesGPedido.IdleFillColor = System.Drawing.Color.White;
+            this.btnAccionesGPedido.IdleForecolor = System.Drawing.Color.LimeGreen;
+            this.btnAccionesGPedido.IdleLineColor = System.Drawing.Color.LimeGreen;
+            this.btnAccionesGPedido.Location = new System.Drawing.Point(659, 269);
+            this.btnAccionesGPedido.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.btnAccionesGPedido.Name = "btnAccionesGPedido";
+            this.btnAccionesGPedido.Size = new System.Drawing.Size(186, 50);
+            this.btnAccionesGPedido.TabIndex = 24;
+            this.btnAccionesGPedido.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnAccionesGPedido.Click += new System.EventHandler(this.btnAccionesGPedido_Click);
+            // 
+            // btnAccionReenviar
+            // 
+            this.btnAccionReenviar.ActiveBorderThickness = 1;
+            this.btnAccionReenviar.ActiveCornerRadius = 20;
+            this.btnAccionReenviar.ActiveFillColor = System.Drawing.Color.Orange;
+            this.btnAccionReenviar.ActiveForecolor = System.Drawing.Color.White;
+            this.btnAccionReenviar.ActiveLineColor = System.Drawing.Color.Orange;
+            this.btnAccionReenviar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAccionReenviar.BackColor = System.Drawing.Color.White;
+            this.btnAccionReenviar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAccionReenviar.BackgroundImage")));
+            this.btnAccionReenviar.ButtonText = "Reenviar";
+            this.btnAccionReenviar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAccionReenviar.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAccionReenviar.ForeColor = System.Drawing.Color.SteelBlue;
+            this.btnAccionReenviar.IdleBorderThickness = 1;
+            this.btnAccionReenviar.IdleCornerRadius = 20;
+            this.btnAccionReenviar.IdleFillColor = System.Drawing.Color.White;
+            this.btnAccionReenviar.IdleForecolor = System.Drawing.Color.Orange;
+            this.btnAccionReenviar.IdleLineColor = System.Drawing.Color.Orange;
+            this.btnAccionReenviar.Location = new System.Drawing.Point(135, 269);
+            this.btnAccionReenviar.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.btnAccionReenviar.Name = "btnAccionReenviar";
+            this.btnAccionReenviar.Size = new System.Drawing.Size(186, 50);
+            this.btnAccionReenviar.TabIndex = 23;
+            this.btnAccionReenviar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnAccionReenviar.Click += new System.EventHandler(this.btnAccionReenviar_Click);
+            // 
+            // btnAccionesReimp
+            // 
+            this.btnAccionesReimp.ActiveBorderThickness = 1;
+            this.btnAccionesReimp.ActiveCornerRadius = 20;
+            this.btnAccionesReimp.ActiveFillColor = System.Drawing.Color.SteelBlue;
+            this.btnAccionesReimp.ActiveForecolor = System.Drawing.Color.White;
+            this.btnAccionesReimp.ActiveLineColor = System.Drawing.Color.SteelBlue;
+            this.btnAccionesReimp.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAccionesReimp.BackColor = System.Drawing.Color.White;
+            this.btnAccionesReimp.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAccionesReimp.BackgroundImage")));
+            this.btnAccionesReimp.ButtonText = "Reimprimir";
+            this.btnAccionesReimp.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAccionesReimp.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAccionesReimp.ForeColor = System.Drawing.Color.SteelBlue;
+            this.btnAccionesReimp.IdleBorderThickness = 1;
+            this.btnAccionesReimp.IdleCornerRadius = 20;
+            this.btnAccionesReimp.IdleFillColor = System.Drawing.Color.White;
+            this.btnAccionesReimp.IdleForecolor = System.Drawing.Color.SteelBlue;
+            this.btnAccionesReimp.IdleLineColor = System.Drawing.Color.SteelBlue;
+            this.btnAccionesReimp.Location = new System.Drawing.Point(401, 269);
+            this.btnAccionesReimp.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.btnAccionesReimp.Name = "btnAccionesReimp";
+            this.btnAccionesReimp.Size = new System.Drawing.Size(186, 50);
+            this.btnAccionesReimp.TabIndex = 22;
+            this.btnAccionesReimp.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnAccionesReimp.Click += new System.EventHandler(this.btnAccionesReimp_Click);
+            // 
             // pnlTabPedidos
             // 
             this.pnlTabPedidos.AutoScroll = true;
@@ -792,7 +792,6 @@
             // pnlCotizacion
             // 
             this.pnlCotizacion.AutoScroll = true;
-            this.pnlCotizacion.Controls.Add(this.pnlPagos);
             this.pnlCotizacion.Controls.Add(this.dgvProductosPed);
             this.pnlCotizacion.Controls.Add(this.bunifuGradientPanel2);
             this.pnlCotizacion.Controls.Add(this.pnlfootPago);
@@ -809,6 +808,7 @@
             this.pnlCotizacion.Controls.Add(this.pnlConfirmación);
             this.pnlCotizacion.Controls.Add(this.pnlBuscarSocio);
             this.pnlCotizacion.Controls.Add(this.pnlbusquedaArticulo);
+            this.pnlCotizacion.Controls.Add(this.pnlPagos);
             this.pnlCotizacion.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pnlCotizacion.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlCotizacion.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1354,9 +1354,9 @@
             // 
             this.dgvProductosPed.AllowUserToAddRows = false;
             this.dgvProductosPed.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Azure;
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            this.dgvProductosPed.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.Azure;
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Black;
+            this.dgvProductosPed.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
             this.dgvProductosPed.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -1365,14 +1365,14 @@
             this.dgvProductosPed.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvProductosPed.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgvProductosPed.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.GradientActiveCaption;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvProductosPed.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvProductosPed.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.dgvProductosPed.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvProductosPed.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.CodigoBarras,
@@ -1505,7 +1505,7 @@
             this.btnAgregarProducto.IdleFillColor = System.Drawing.Color.White;
             this.btnAgregarProducto.IdleForecolor = System.Drawing.Color.SteelBlue;
             this.btnAgregarProducto.IdleLineColor = System.Drawing.Color.SteelBlue;
-            this.btnAgregarProducto.Location = new System.Drawing.Point(654, 41);
+            this.btnAgregarProducto.Location = new System.Drawing.Point(671, 41);
             this.btnAgregarProducto.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.btnAgregarProducto.Name = "btnAgregarProducto";
             this.btnAgregarProducto.Size = new System.Drawing.Size(186, 58);
@@ -1929,22 +1929,22 @@
             // 
             this.dgBuscarClientes.AllowUserToAddRows = false;
             this.dgBuscarClientes.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgBuscarClientes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgBuscarClientes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle15;
             this.dgBuscarClientes.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgBuscarClientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgBuscarClientes.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.dgBuscarClientes.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgBuscarClientes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgBuscarClientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle16.BackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgBuscarClientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle16;
             this.dgBuscarClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgBuscarClientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.codigoCliente,
@@ -1958,9 +1958,9 @@
             this.dgBuscarClientes.Name = "dgBuscarClientes";
             this.dgBuscarClientes.ReadOnly = true;
             this.dgBuscarClientes.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
-            this.dgBuscarClientes.RowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.Black;
+            this.dgBuscarClientes.RowsDefaultCellStyle = dataGridViewCellStyle17;
             this.dgBuscarClientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgBuscarClientes.Size = new System.Drawing.Size(446, 149);
             this.dgBuscarClientes.TabIndex = 1;
@@ -2069,22 +2069,22 @@
             // 
             this.dgBuscadorArticulo.AllowUserToAddRows = false;
             this.dgBuscadorArticulo.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgBuscadorArticulo.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgBuscadorArticulo.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle18;
             this.dgBuscadorArticulo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgBuscadorArticulo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgBuscadorArticulo.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.dgBuscadorArticulo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgBuscadorArticulo.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgBuscadorArticulo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle19.BackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle19.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgBuscadorArticulo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle19;
             this.dgBuscadorArticulo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgBuscadorArticulo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.codigo,
@@ -2098,9 +2098,9 @@
             this.dgBuscadorArticulo.Name = "dgBuscadorArticulo";
             this.dgBuscadorArticulo.ReadOnly = true;
             this.dgBuscadorArticulo.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
-            this.dgBuscadorArticulo.RowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.Black;
+            this.dgBuscadorArticulo.RowsDefaultCellStyle = dataGridViewCellStyle20;
             this.dgBuscadorArticulo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgBuscadorArticulo.Size = new System.Drawing.Size(446, 149);
             this.dgBuscadorArticulo.TabIndex = 1;
@@ -2149,12 +2149,12 @@
             this.tabPedidos.ResumeLayout(false);
             this.tabPedidos.PerformLayout();
             this.pnlBodyCot.ResumeLayout(false);
-            this.pnlPOAcciones.ResumeLayout(false);
-            this.pnlPOAccion.ResumeLayout(false);
-            this.pnlPOAccion.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bdgPedidos)).EndInit();
             this.bunifuGradientPanel1.ResumeLayout(false);
             this.bunifuGradientPanel1.PerformLayout();
+            this.pnlPOAcciones.ResumeLayout(false);
+            this.pnlPOAccion.ResumeLayout(false);
+            this.pnlPOAccion.PerformLayout();
             this.tabNuevo.ResumeLayout(false);
             this.pnlCotizacion.ResumeLayout(false);
             this.pnlCotizacion.PerformLayout();
