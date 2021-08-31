@@ -107,7 +107,7 @@ namespace DRtail
         public string Comentarios { get; set; }
 
         [JsonProperty("lineas")]
-        public List<ArticulosPedido> articulosCotizaciones = new List<ArticulosPedido>();
+        public List<ArticulosPedido> articulosPedidos = new List<ArticulosPedido>();
 
     }
 

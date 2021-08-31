@@ -31,12 +31,14 @@ namespace DRtail
         string tempDescuentoOld = "";
         string flagPago = "";
         string docEntryCot = "";
+        string docNumCot = "";
         #endregion
-        public Pedidos(string impCliente, string docEntryCotizacion)
+        public Pedidos(string impCliente, string docEntryCotizacion, string docNumCotizacion)
         {
             InitializeComponent();
             this.Dock = DockStyle.Fill;
             docEntryCot = docEntryCotizacion;
+            docNumCot = docNumCotizacion;
             GetData();
             AutoCompletar(txtProducto, "DatosArticulos");
             AutoCompletar(txtCliente, "DatosSocios");
@@ -70,7 +72,7 @@ namespace DRtail
 
                 if (docEntryCot != "")
                 {
-                    cotizacionOrigen = Servicios.getCotizacionOrigen(docEntryCot);
+                    cotizacionOrigen = Servicios.getCotizacionOrigen(docNumCot);
                     
                     foreach(Lineas l in cotizacionOrigen.lineas)
                     {
@@ -304,10 +306,10 @@ namespace DRtail
 
                 foreach (DataGridViewRow dRow in dgvProductosPed.Rows)
                 {
-                    ArticulosPedido articulosCotizacion = new ArticulosPedido();
-                    articulosCotizacion.Articulo = dRow.Cells[0].Value.ToString();
-                    articulosCotizacion.Cantidad = double.Parse(dRow.Cells[5].Value.ToString());
-                    pedido.articulosCotizaciones.Add(ArticulosPedido);
+                    ArticulosPedido articulosPed= new ArticulosPedido();
+                    articulosPed.Articulo = dRow.Cells[0].Value.ToString();
+                    articulosPed.Cantidad = double.Parse(dRow.Cells[5].Value.ToString());
+                    pedido.articulosPedidos.Add(articulosPed);
                 }
 
                 if (CrearPedido(pedido))

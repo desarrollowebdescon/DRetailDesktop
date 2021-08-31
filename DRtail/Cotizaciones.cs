@@ -349,7 +349,7 @@ namespace DRtail
             lblAccionesMensaje.Text = "Se ha Generado el pedido con éxito la cotización " + lblNCotizacion.Text;
 
             Servicios.menuLateral.pnlMain.Controls.Clear();
-            Servicios.menuLateral.pnlMain.Controls.Add(new Pedidos(bdgCotizaciones.Rows[bdgCotizaciones.CurrentRow.Index].Cells[2].Value.ToString(), bdgCotizaciones.Rows[bdgCotizaciones.CurrentRow.Index].Cells[0].Value.ToString()));
+            Servicios.menuLateral.pnlMain.Controls.Add(new Pedidos(bdgCotizaciones.Rows[bdgCotizaciones.CurrentRow.Index].Cells[2].Value.ToString(), bdgCotizaciones.Rows[bdgCotizaciones.CurrentRow.Index].Cells[0].Value.ToString(), bdgCotizaciones.Rows[bdgCotizaciones.CurrentRow.Index].Cells[1].Value.ToString()));
             Servicios.menuLateral.SelectedLineMenu();
             Servicios.menuLateral.pnlLinePedidos.Visible = true;
             Servicios.menuLateral.LblTitle.Text = "PEDIDOS";
