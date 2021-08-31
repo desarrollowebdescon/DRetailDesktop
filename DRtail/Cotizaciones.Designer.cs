@@ -52,7 +52,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.btnBuscarCot = new Bunifu.Framework.UI.BunifuThinButton2();
             this.label4 = new System.Windows.Forms.Label();
-            this.bdgCotizaciones = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.pnlFooter = new System.Windows.Forms.Panel();
             this.pnlPOAcciones = new System.Windows.Forms.Panel();
             this.pnlPOAccion = new System.Windows.Forms.Panel();
@@ -69,6 +68,16 @@
             this.btnAccionesGPedido = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnAccionReenviar = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnAccionesReimp = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.bdgCotizaciones = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.docEntry = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NoCotizacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NoCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NombreCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FechaDocumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Moneda = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Seleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.tabNuevo = new System.Windows.Forms.TabPage();
             this.pnlCotizacion = new System.Windows.Forms.Panel();
             this.btnCotLimpiar = new Bunifu.Framework.UI.BunifuThinButton2();
@@ -124,22 +133,13 @@
             this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NombreArt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtBuscarArtTraspaso = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.docEntry = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NoCotizacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NoCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NombreCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FechaDocumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Moneda = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Estatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Seleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.tabControlCotizaciones.SuspendLayout();
             this.tablCotizaciones.SuspendLayout();
             this.pnlBodyCot.SuspendLayout();
             this.bunifuGradientPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bdgCotizaciones)).BeginInit();
             this.pnlPOAcciones.SuspendLayout();
             this.pnlPOAccion.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bdgCotizaciones)).BeginInit();
             this.tabNuevo.SuspendLayout();
             this.pnlCotizacion.SuspendLayout();
             this.bunifuGradientPanel2.SuspendLayout();
@@ -371,58 +371,6 @@
             this.label4.TabIndex = 27;
             this.label4.Text = "Fecha Inicio";
             // 
-            // bdgCotizaciones
-            // 
-            this.bdgCotizaciones.AllowUserToAddRows = false;
-            this.bdgCotizaciones.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Azure;
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            this.bdgCotizaciones.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.bdgCotizaciones.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.bdgCotizaciones.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.bdgCotizaciones.BackgroundColor = System.Drawing.Color.White;
-            this.bdgCotizaciones.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.bdgCotizaciones.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.bdgCotizaciones.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.GradientActiveCaption;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.bdgCotizaciones.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.bdgCotizaciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.bdgCotizaciones.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.docEntry,
-            this.NoCotizacion,
-            this.NoCliente,
-            this.NombreCliente,
-            this.FechaDocumento,
-            this.Total,
-            this.Moneda,
-            this.Estatus,
-            this.Seleccionar});
-            this.bdgCotizaciones.DoubleBuffered = true;
-            this.bdgCotizaciones.EnableHeadersVisualStyles = false;
-            this.bdgCotizaciones.GridColor = System.Drawing.Color.White;
-            this.bdgCotizaciones.HeaderBgColor = System.Drawing.Color.SteelBlue;
-            this.bdgCotizaciones.HeaderForeColor = System.Drawing.Color.White;
-            this.bdgCotizaciones.Location = new System.Drawing.Point(8, 150);
-            this.bdgCotizaciones.Margin = new System.Windows.Forms.Padding(8, 0, 8, 8);
-            this.bdgCotizaciones.MinimumSize = new System.Drawing.Size(1350, 447);
-            this.bdgCotizaciones.MultiSelect = false;
-            this.bdgCotizaciones.Name = "bdgCotizaciones";
-            this.bdgCotizaciones.ReadOnly = true;
-            this.bdgCotizaciones.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.bdgCotizaciones.RowHeadersWidth = 51;
-            this.bdgCotizaciones.RowTemplate.Height = 24;
-            this.bdgCotizaciones.Size = new System.Drawing.Size(1482, 677);
-            this.bdgCotizaciones.TabIndex = 24;
-            this.bdgCotizaciones.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.bdgCotizaciones_CellContentClick);
-            // 
             // pnlFooter
             // 
             this.pnlFooter.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
@@ -594,7 +542,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAccionesGPedido.BackColor = System.Drawing.Color.White;
             this.btnAccionesGPedido.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAccionesGPedido.BackgroundImage")));
-            this.btnAccionesGPedido.ButtonText = "Generar pedido";
+            this.btnAccionesGPedido.ButtonText = "Copiar a Pedido";
             this.btnAccionesGPedido.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAccionesGPedido.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAccionesGPedido.ForeColor = System.Drawing.Color.SteelBlue;
@@ -666,6 +614,122 @@
             this.btnAccionesReimp.TabIndex = 22;
             this.btnAccionesReimp.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnAccionesReimp.Click += new System.EventHandler(this.btnAccionesReimp_Click);
+            // 
+            // bdgCotizaciones
+            // 
+            this.bdgCotizaciones.AllowUserToAddRows = false;
+            this.bdgCotizaciones.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Azure;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.bdgCotizaciones.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.bdgCotizaciones.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.bdgCotizaciones.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.bdgCotizaciones.BackgroundColor = System.Drawing.Color.White;
+            this.bdgCotizaciones.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.bdgCotizaciones.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.bdgCotizaciones.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.bdgCotizaciones.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.bdgCotizaciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.bdgCotizaciones.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.docEntry,
+            this.NoCotizacion,
+            this.NoCliente,
+            this.NombreCliente,
+            this.FechaDocumento,
+            this.Total,
+            this.Moneda,
+            this.Estatus,
+            this.Seleccionar});
+            this.bdgCotizaciones.DoubleBuffered = true;
+            this.bdgCotizaciones.EnableHeadersVisualStyles = false;
+            this.bdgCotizaciones.GridColor = System.Drawing.Color.White;
+            this.bdgCotizaciones.HeaderBgColor = System.Drawing.Color.SteelBlue;
+            this.bdgCotizaciones.HeaderForeColor = System.Drawing.Color.White;
+            this.bdgCotizaciones.Location = new System.Drawing.Point(8, 150);
+            this.bdgCotizaciones.Margin = new System.Windows.Forms.Padding(8, 0, 8, 8);
+            this.bdgCotizaciones.MinimumSize = new System.Drawing.Size(1350, 447);
+            this.bdgCotizaciones.MultiSelect = false;
+            this.bdgCotizaciones.Name = "bdgCotizaciones";
+            this.bdgCotizaciones.ReadOnly = true;
+            this.bdgCotizaciones.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.bdgCotizaciones.RowHeadersWidth = 51;
+            this.bdgCotizaciones.RowTemplate.Height = 24;
+            this.bdgCotizaciones.Size = new System.Drawing.Size(1482, 677);
+            this.bdgCotizaciones.TabIndex = 24;
+            this.bdgCotizaciones.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.bdgCotizaciones_CellContentClick);
+            // 
+            // docEntry
+            // 
+            this.docEntry.HeaderText = "docEntry";
+            this.docEntry.Name = "docEntry";
+            this.docEntry.ReadOnly = true;
+            this.docEntry.Visible = false;
+            // 
+            // NoCotizacion
+            // 
+            this.NoCotizacion.HeaderText = "No. Cotizacion";
+            this.NoCotizacion.MinimumWidth = 6;
+            this.NoCotizacion.Name = "NoCotizacion";
+            this.NoCotizacion.ReadOnly = true;
+            // 
+            // NoCliente
+            // 
+            this.NoCliente.HeaderText = "No. Cliente";
+            this.NoCliente.MinimumWidth = 6;
+            this.NoCliente.Name = "NoCliente";
+            this.NoCliente.ReadOnly = true;
+            // 
+            // NombreCliente
+            // 
+            this.NombreCliente.HeaderText = "NombreCliente";
+            this.NombreCliente.MinimumWidth = 6;
+            this.NombreCliente.Name = "NombreCliente";
+            this.NombreCliente.ReadOnly = true;
+            // 
+            // FechaDocumento
+            // 
+            this.FechaDocumento.HeaderText = "Fecha Documento";
+            this.FechaDocumento.MinimumWidth = 6;
+            this.FechaDocumento.Name = "FechaDocumento";
+            this.FechaDocumento.ReadOnly = true;
+            // 
+            // Total
+            // 
+            this.Total.HeaderText = "Total";
+            this.Total.MinimumWidth = 6;
+            this.Total.Name = "Total";
+            this.Total.ReadOnly = true;
+            // 
+            // Moneda
+            // 
+            this.Moneda.HeaderText = "Moneda";
+            this.Moneda.MinimumWidth = 6;
+            this.Moneda.Name = "Moneda";
+            this.Moneda.ReadOnly = true;
+            // 
+            // Estatus
+            // 
+            this.Estatus.HeaderText = "Estatus";
+            this.Estatus.MinimumWidth = 6;
+            this.Estatus.Name = "Estatus";
+            this.Estatus.ReadOnly = true;
+            // 
+            // Seleccionar
+            // 
+            this.Seleccionar.HeaderText = "Acciones";
+            this.Seleccionar.MinimumWidth = 6;
+            this.Seleccionar.Name = "Seleccionar";
+            this.Seleccionar.ReadOnly = true;
+            this.Seleccionar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // tabNuevo
             // 
@@ -1498,70 +1562,6 @@
             this.txtBuscarArtTraspaso.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtBuscarArtTraspaso.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtBuscarArtTraspaso_KeyUp);
             // 
-            // docEntry
-            // 
-            this.docEntry.HeaderText = "docEntry";
-            this.docEntry.Name = "docEntry";
-            this.docEntry.ReadOnly = true;
-            this.docEntry.Visible = false;
-            // 
-            // NoCotizacion
-            // 
-            this.NoCotizacion.HeaderText = "No. Cotizacion";
-            this.NoCotizacion.MinimumWidth = 6;
-            this.NoCotizacion.Name = "NoCotizacion";
-            this.NoCotizacion.ReadOnly = true;
-            // 
-            // NoCliente
-            // 
-            this.NoCliente.HeaderText = "No. Cliente";
-            this.NoCliente.MinimumWidth = 6;
-            this.NoCliente.Name = "NoCliente";
-            this.NoCliente.ReadOnly = true;
-            // 
-            // NombreCliente
-            // 
-            this.NombreCliente.HeaderText = "NombreCliente";
-            this.NombreCliente.MinimumWidth = 6;
-            this.NombreCliente.Name = "NombreCliente";
-            this.NombreCliente.ReadOnly = true;
-            // 
-            // FechaDocumento
-            // 
-            this.FechaDocumento.HeaderText = "Fecha Documento";
-            this.FechaDocumento.MinimumWidth = 6;
-            this.FechaDocumento.Name = "FechaDocumento";
-            this.FechaDocumento.ReadOnly = true;
-            // 
-            // Total
-            // 
-            this.Total.HeaderText = "Total";
-            this.Total.MinimumWidth = 6;
-            this.Total.Name = "Total";
-            this.Total.ReadOnly = true;
-            // 
-            // Moneda
-            // 
-            this.Moneda.HeaderText = "Moneda";
-            this.Moneda.MinimumWidth = 6;
-            this.Moneda.Name = "Moneda";
-            this.Moneda.ReadOnly = true;
-            // 
-            // Estatus
-            // 
-            this.Estatus.HeaderText = "Estatus";
-            this.Estatus.MinimumWidth = 6;
-            this.Estatus.Name = "Estatus";
-            this.Estatus.ReadOnly = true;
-            // 
-            // Seleccionar
-            // 
-            this.Seleccionar.HeaderText = "Acciones";
-            this.Seleccionar.MinimumWidth = 6;
-            this.Seleccionar.Name = "Seleccionar";
-            this.Seleccionar.ReadOnly = true;
-            this.Seleccionar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
             // Cotizaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1577,10 +1577,10 @@
             this.pnlBodyCot.ResumeLayout(false);
             this.bunifuGradientPanel1.ResumeLayout(false);
             this.bunifuGradientPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bdgCotizaciones)).EndInit();
             this.pnlPOAcciones.ResumeLayout(false);
             this.pnlPOAccion.ResumeLayout(false);
             this.pnlPOAccion.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bdgCotizaciones)).EndInit();
             this.tabNuevo.ResumeLayout(false);
             this.pnlCotizacion.ResumeLayout(false);
             this.pnlCotizacion.PerformLayout();

@@ -28,17 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Pedidos));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControlPedidos = new System.Windows.Forms.TabControl();
             this.tabPedidos = new System.Windows.Forms.TabPage();
             this.pnlBodyCot = new System.Windows.Forms.Panel();
@@ -80,41 +80,6 @@
             this.pnlTabPedidos = new System.Windows.Forms.Panel();
             this.tabNuevo = new System.Windows.Forms.TabPage();
             this.pnlCotizacion = new System.Windows.Forms.Panel();
-            this.pnlPagos = new System.Windows.Forms.Panel();
-            this.fpCobrarBody = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.lblCobrarTotalNumero = new System.Windows.Forms.Label();
-            this.lblCobrarTotalCobrar = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.btnCobrarPTDC = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnCobrarPCredito = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnCobrarPTDD = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnCobrarPEfectivo = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.btnCobrarAgregarPago = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.txtbCobrarPago = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.pnlCobrarEfectivo = new System.Windows.Forms.Panel();
-            this.lblCobrarEfectivoNum = new System.Windows.Forms.Label();
-            this.lblCobrarEfectivo = new System.Windows.Forms.Label();
-            this.pnlCobrarCredito = new System.Windows.Forms.Panel();
-            this.lblCobrarCreditoNum = new System.Windows.Forms.Label();
-            this.lblCobrarCredito = new System.Windows.Forms.Label();
-            this.pnlCobrarTDC = new System.Windows.Forms.Panel();
-            this.lblCobrarTDCNum = new System.Windows.Forms.Label();
-            this.lblCobrarTDC = new System.Windows.Forms.Label();
-            this.pnlCobrarTDD = new System.Windows.Forms.Panel();
-            this.lblCobrarTDDNum = new System.Windows.Forms.Label();
-            this.lblCobrarTDD = new System.Windows.Forms.Label();
-            this.pnlCobrarCambio = new System.Windows.Forms.Panel();
-            this.lblCobrarCambioNum = new System.Windows.Forms.Label();
-            this.lblCobrarCambio = new System.Windows.Forms.Label();
-            this.pnlCobrarFootBotones = new System.Windows.Forms.Panel();
-            this.btnCobrarFacturar = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.btnCobrarCancelar = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.btnCobrarCobrareIticket = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.label9 = new System.Windows.Forms.Label();
-            this.pnlCobrarTitle = new System.Windows.Forms.Panel();
-            this.lblCobrarTiltle = new System.Windows.Forms.Label();
             this.dgvProductosPed = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.CodigoBarras = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DescripcionPM = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -168,6 +133,41 @@
             this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NombreArt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtBuscarArtPedido = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.pnlPagos = new System.Windows.Forms.Panel();
+            this.fpCobrarBody = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.lblCobrarTotalNumero = new System.Windows.Forms.Label();
+            this.lblCobrarTotalCobrar = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.btnCobrarPTDC = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnCobrarPCredito = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnCobrarPTDD = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnCobrarPEfectivo = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.btnCobrarAgregarPago = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.txtbCobrarPago = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.pnlCobrarEfectivo = new System.Windows.Forms.Panel();
+            this.lblCobrarEfectivoNum = new System.Windows.Forms.Label();
+            this.lblCobrarEfectivo = new System.Windows.Forms.Label();
+            this.pnlCobrarCredito = new System.Windows.Forms.Panel();
+            this.lblCobrarCreditoNum = new System.Windows.Forms.Label();
+            this.lblCobrarCredito = new System.Windows.Forms.Label();
+            this.pnlCobrarTDC = new System.Windows.Forms.Panel();
+            this.lblCobrarTDCNum = new System.Windows.Forms.Label();
+            this.lblCobrarTDC = new System.Windows.Forms.Label();
+            this.pnlCobrarTDD = new System.Windows.Forms.Panel();
+            this.lblCobrarTDDNum = new System.Windows.Forms.Label();
+            this.lblCobrarTDD = new System.Windows.Forms.Label();
+            this.pnlCobrarCambio = new System.Windows.Forms.Panel();
+            this.lblCobrarCambioNum = new System.Windows.Forms.Label();
+            this.lblCobrarCambio = new System.Windows.Forms.Label();
+            this.pnlCobrarFootBotones = new System.Windows.Forms.Panel();
+            this.btnCobrarFacturar = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.btnCobrarCancelar = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.btnCobrarCobrareIticket = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.label9 = new System.Windows.Forms.Label();
+            this.pnlCobrarTitle = new System.Windows.Forms.Panel();
+            this.lblCobrarTiltle = new System.Windows.Forms.Label();
             this.tabControlPedidos.SuspendLayout();
             this.tabPedidos.SuspendLayout();
             this.pnlBodyCot.SuspendLayout();
@@ -177,6 +177,15 @@
             this.pnlPOAccion.SuspendLayout();
             this.tabNuevo.SuspendLayout();
             this.pnlCotizacion.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProductosPed)).BeginInit();
+            this.bunifuGradientPanel2.SuspendLayout();
+            this.pnlfootPago.SuspendLayout();
+            this.pnlConfirmación.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.pnlBuscarSocio.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgBuscarClientes)).BeginInit();
+            this.pnlbusquedaArticulo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgBuscadorArticulo)).BeginInit();
             this.pnlPagos.SuspendLayout();
             this.fpCobrarBody.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -189,15 +198,6 @@
             this.pnlCobrarCambio.SuspendLayout();
             this.pnlCobrarFootBotones.SuspendLayout();
             this.pnlCobrarTitle.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProductosPed)).BeginInit();
-            this.bunifuGradientPanel2.SuspendLayout();
-            this.pnlfootPago.SuspendLayout();
-            this.pnlConfirmación.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.pnlBuscarSocio.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgBuscarClientes)).BeginInit();
-            this.pnlbusquedaArticulo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgBuscadorArticulo)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControlPedidos
@@ -231,10 +231,10 @@
             this.pnlBodyCot.AutoScroll = true;
             this.pnlBodyCot.AutoSize = true;
             this.pnlBodyCot.BackColor = System.Drawing.Color.Gainsboro;
+            this.pnlBodyCot.Controls.Add(this.pnlPOAcciones);
             this.pnlBodyCot.Controls.Add(this.bdgPedidos);
             this.pnlBodyCot.Controls.Add(this.bunifuGradientPanel1);
             this.pnlBodyCot.Controls.Add(this.pnlFooter);
-            this.pnlBodyCot.Controls.Add(this.pnlPOAcciones);
             this.pnlBodyCot.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlBodyCot.Location = new System.Drawing.Point(3, 3);
             this.pnlBodyCot.Margin = new System.Windows.Forms.Padding(2);
@@ -246,9 +246,9 @@
             // 
             this.bdgPedidos.AllowUserToAddRows = false;
             this.bdgPedidos.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.Azure;
-            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.Black;
-            this.bdgPedidos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Azure;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.bdgPedidos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.bdgPedidos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -257,14 +257,14 @@
             this.bdgPedidos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.bdgPedidos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.bdgPedidos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.GradientActiveCaption;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.bdgPedidos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.bdgPedidos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.bdgPedidos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.bdgPedidos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.NoPedido,
@@ -817,546 +817,13 @@
             this.pnlCotizacion.Size = new System.Drawing.Size(1439, 807);
             this.pnlCotizacion.TabIndex = 14;
             // 
-            // pnlPagos
-            // 
-            this.pnlPagos.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pnlPagos.Controls.Add(this.fpCobrarBody);
-            this.pnlPagos.Controls.Add(this.pnlCobrarFootBotones);
-            this.pnlPagos.Controls.Add(this.pnlCobrarTitle);
-            this.pnlPagos.Location = new System.Drawing.Point(300, 123);
-            this.pnlPagos.Name = "pnlPagos";
-            this.pnlPagos.Size = new System.Drawing.Size(664, 615);
-            this.pnlPagos.TabIndex = 32;
-            this.pnlPagos.Visible = false;
-            // 
-            // fpCobrarBody
-            // 
-            this.fpCobrarBody.Controls.Add(this.panel1);
-            this.fpCobrarBody.Controls.Add(this.panel3);
-            this.fpCobrarBody.Controls.Add(this.panel4);
-            this.fpCobrarBody.Controls.Add(this.pnlCobrarEfectivo);
-            this.fpCobrarBody.Controls.Add(this.pnlCobrarCredito);
-            this.fpCobrarBody.Controls.Add(this.pnlCobrarTDC);
-            this.fpCobrarBody.Controls.Add(this.pnlCobrarTDD);
-            this.fpCobrarBody.Controls.Add(this.pnlCobrarCambio);
-            this.fpCobrarBody.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.fpCobrarBody.Location = new System.Drawing.Point(0, 38);
-            this.fpCobrarBody.Name = "fpCobrarBody";
-            this.fpCobrarBody.Size = new System.Drawing.Size(660, 511);
-            this.fpCobrarBody.TabIndex = 3;
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.lblCobrarTotalNumero);
-            this.panel1.Controls.Add(this.lblCobrarTotalCobrar);
-            this.panel1.Location = new System.Drawing.Point(3, 3);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(654, 67);
-            this.panel1.TabIndex = 0;
-            // 
-            // lblCobrarTotalNumero
-            // 
-            this.lblCobrarTotalNumero.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblCobrarTotalNumero.AutoSize = true;
-            this.lblCobrarTotalNumero.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCobrarTotalNumero.ForeColor = System.Drawing.Color.SteelBlue;
-            this.lblCobrarTotalNumero.Location = new System.Drawing.Point(249, 35);
-            this.lblCobrarTotalNumero.Name = "lblCobrarTotalNumero";
-            this.lblCobrarTotalNumero.Size = new System.Drawing.Size(37, 24);
-            this.lblCobrarTotalNumero.TabIndex = 1;
-            this.lblCobrarTotalNumero.Text = "0.0";
-            // 
-            // lblCobrarTotalCobrar
-            // 
-            this.lblCobrarTotalCobrar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblCobrarTotalCobrar.AutoSize = true;
-            this.lblCobrarTotalCobrar.Location = new System.Drawing.Point(204, 9);
-            this.lblCobrarTotalCobrar.Name = "lblCobrarTotalCobrar";
-            this.lblCobrarTotalCobrar.Size = new System.Drawing.Size(125, 23);
-            this.lblCobrarTotalCobrar.TabIndex = 0;
-            this.lblCobrarTotalCobrar.Text = "Total a cobrar";
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.btnCobrarPTDC);
-            this.panel3.Controls.Add(this.btnCobrarPCredito);
-            this.panel3.Controls.Add(this.btnCobrarPTDD);
-            this.panel3.Controls.Add(this.btnCobrarPEfectivo);
-            this.panel3.Location = new System.Drawing.Point(3, 76);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(654, 69);
-            this.panel3.TabIndex = 1;
-            // 
-            // btnCobrarPTDC
-            // 
-            this.btnCobrarPTDC.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btnCobrarPTDC.BackColor = System.Drawing.Color.Goldenrod;
-            this.btnCobrarPTDC.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnCobrarPTDC.BorderRadius = 0;
-            this.btnCobrarPTDC.ButtonText = "TDC";
-            this.btnCobrarPTDC.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCobrarPTDC.DisabledColor = System.Drawing.Color.Gray;
-            this.btnCobrarPTDC.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnCobrarPTDC.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnCobrarPTDC.Iconimage")));
-            this.btnCobrarPTDC.Iconimage_right = null;
-            this.btnCobrarPTDC.Iconimage_right_Selected = null;
-            this.btnCobrarPTDC.Iconimage_Selected = null;
-            this.btnCobrarPTDC.IconMarginLeft = 0;
-            this.btnCobrarPTDC.IconMarginRight = 0;
-            this.btnCobrarPTDC.IconRightVisible = true;
-            this.btnCobrarPTDC.IconRightZoom = 0D;
-            this.btnCobrarPTDC.IconVisible = true;
-            this.btnCobrarPTDC.IconZoom = 90D;
-            this.btnCobrarPTDC.IsTab = false;
-            this.btnCobrarPTDC.Location = new System.Drawing.Point(333, 9);
-            this.btnCobrarPTDC.Margin = new System.Windows.Forms.Padding(5);
-            this.btnCobrarPTDC.Name = "btnCobrarPTDC";
-            this.btnCobrarPTDC.Normalcolor = System.Drawing.Color.Goldenrod;
-            this.btnCobrarPTDC.OnHovercolor = System.Drawing.Color.SteelBlue;
-            this.btnCobrarPTDC.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnCobrarPTDC.selected = false;
-            this.btnCobrarPTDC.Size = new System.Drawing.Size(150, 44);
-            this.btnCobrarPTDC.TabIndex = 2;
-            this.btnCobrarPTDC.Text = "TDC";
-            this.btnCobrarPTDC.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnCobrarPTDC.Textcolor = System.Drawing.Color.White;
-            this.btnCobrarPTDC.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCobrarPTDC.Click += new System.EventHandler(this.btnCobrarPTDC_Click);
-            // 
-            // btnCobrarPCredito
-            // 
-            this.btnCobrarPCredito.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btnCobrarPCredito.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnCobrarPCredito.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnCobrarPCredito.BorderRadius = 0;
-            this.btnCobrarPCredito.ButtonText = "Crédito";
-            this.btnCobrarPCredito.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCobrarPCredito.DisabledColor = System.Drawing.Color.Gray;
-            this.btnCobrarPCredito.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnCobrarPCredito.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnCobrarPCredito.Iconimage")));
-            this.btnCobrarPCredito.Iconimage_right = null;
-            this.btnCobrarPCredito.Iconimage_right_Selected = null;
-            this.btnCobrarPCredito.Iconimage_Selected = null;
-            this.btnCobrarPCredito.IconMarginLeft = 0;
-            this.btnCobrarPCredito.IconMarginRight = 0;
-            this.btnCobrarPCredito.IconRightVisible = true;
-            this.btnCobrarPCredito.IconRightZoom = 0D;
-            this.btnCobrarPCredito.IconVisible = true;
-            this.btnCobrarPCredito.IconZoom = 90D;
-            this.btnCobrarPCredito.IsTab = false;
-            this.btnCobrarPCredito.Location = new System.Drawing.Point(175, 9);
-            this.btnCobrarPCredito.Margin = new System.Windows.Forms.Padding(5);
-            this.btnCobrarPCredito.Name = "btnCobrarPCredito";
-            this.btnCobrarPCredito.Normalcolor = System.Drawing.Color.SteelBlue;
-            this.btnCobrarPCredito.OnHovercolor = System.Drawing.Color.SteelBlue;
-            this.btnCobrarPCredito.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnCobrarPCredito.selected = false;
-            this.btnCobrarPCredito.Size = new System.Drawing.Size(150, 44);
-            this.btnCobrarPCredito.TabIndex = 1;
-            this.btnCobrarPCredito.Text = "Crédito";
-            this.btnCobrarPCredito.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnCobrarPCredito.Textcolor = System.Drawing.Color.White;
-            this.btnCobrarPCredito.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCobrarPCredito.Click += new System.EventHandler(this.btnCobrarPCredito_Click);
-            // 
-            // btnCobrarPTDD
-            // 
-            this.btnCobrarPTDD.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btnCobrarPTDD.BackColor = System.Drawing.Color.Orange;
-            this.btnCobrarPTDD.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnCobrarPTDD.BorderRadius = 0;
-            this.btnCobrarPTDD.ButtonText = "TDD";
-            this.btnCobrarPTDD.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCobrarPTDD.DisabledColor = System.Drawing.Color.Gray;
-            this.btnCobrarPTDD.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnCobrarPTDD.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnCobrarPTDD.Iconimage")));
-            this.btnCobrarPTDD.Iconimage_right = null;
-            this.btnCobrarPTDD.Iconimage_right_Selected = null;
-            this.btnCobrarPTDD.Iconimage_Selected = null;
-            this.btnCobrarPTDD.IconMarginLeft = 0;
-            this.btnCobrarPTDD.IconMarginRight = 0;
-            this.btnCobrarPTDD.IconRightVisible = true;
-            this.btnCobrarPTDD.IconRightZoom = 0D;
-            this.btnCobrarPTDD.IconVisible = true;
-            this.btnCobrarPTDD.IconZoom = 90D;
-            this.btnCobrarPTDD.IsTab = false;
-            this.btnCobrarPTDD.Location = new System.Drawing.Point(494, 9);
-            this.btnCobrarPTDD.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
-            this.btnCobrarPTDD.Name = "btnCobrarPTDD";
-            this.btnCobrarPTDD.Normalcolor = System.Drawing.Color.Orange;
-            this.btnCobrarPTDD.OnHovercolor = System.Drawing.Color.SteelBlue;
-            this.btnCobrarPTDD.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnCobrarPTDD.selected = false;
-            this.btnCobrarPTDD.Size = new System.Drawing.Size(150, 42);
-            this.btnCobrarPTDD.TabIndex = 3;
-            this.btnCobrarPTDD.Text = "TDD";
-            this.btnCobrarPTDD.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnCobrarPTDD.Textcolor = System.Drawing.Color.White;
-            this.btnCobrarPTDD.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCobrarPTDD.Click += new System.EventHandler(this.btnCobrarPTDD_Click);
-            // 
-            // btnCobrarPEfectivo
-            // 
-            this.btnCobrarPEfectivo.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btnCobrarPEfectivo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btnCobrarPEfectivo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnCobrarPEfectivo.BorderRadius = 0;
-            this.btnCobrarPEfectivo.ButtonText = "Efectivo";
-            this.btnCobrarPEfectivo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCobrarPEfectivo.DisabledColor = System.Drawing.Color.Gray;
-            this.btnCobrarPEfectivo.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnCobrarPEfectivo.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnCobrarPEfectivo.Iconimage")));
-            this.btnCobrarPEfectivo.Iconimage_right = null;
-            this.btnCobrarPEfectivo.Iconimage_right_Selected = null;
-            this.btnCobrarPEfectivo.Iconimage_Selected = null;
-            this.btnCobrarPEfectivo.IconMarginLeft = 0;
-            this.btnCobrarPEfectivo.IconMarginRight = 0;
-            this.btnCobrarPEfectivo.IconRightVisible = true;
-            this.btnCobrarPEfectivo.IconRightZoom = 0D;
-            this.btnCobrarPEfectivo.IconVisible = true;
-            this.btnCobrarPEfectivo.IconZoom = 90D;
-            this.btnCobrarPEfectivo.IsTab = false;
-            this.btnCobrarPEfectivo.Location = new System.Drawing.Point(15, 9);
-            this.btnCobrarPEfectivo.Margin = new System.Windows.Forms.Padding(5);
-            this.btnCobrarPEfectivo.Name = "btnCobrarPEfectivo";
-            this.btnCobrarPEfectivo.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btnCobrarPEfectivo.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
-            this.btnCobrarPEfectivo.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnCobrarPEfectivo.selected = false;
-            this.btnCobrarPEfectivo.Size = new System.Drawing.Size(150, 44);
-            this.btnCobrarPEfectivo.TabIndex = 0;
-            this.btnCobrarPEfectivo.Text = "Efectivo";
-            this.btnCobrarPEfectivo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnCobrarPEfectivo.Textcolor = System.Drawing.Color.White;
-            this.btnCobrarPEfectivo.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCobrarPEfectivo.Click += new System.EventHandler(this.btnCobrarPEfectivo_Click);
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.Controls.Add(this.btnCobrarAgregarPago);
-            this.panel4.Controls.Add(this.txtbCobrarPago);
-            this.panel4.Location = new System.Drawing.Point(3, 151);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(654, 51);
-            this.panel4.TabIndex = 2;
-            // 
-            // btnCobrarAgregarPago
-            // 
-            this.btnCobrarAgregarPago.ActiveBorderThickness = 1;
-            this.btnCobrarAgregarPago.ActiveCornerRadius = 20;
-            this.btnCobrarAgregarPago.ActiveFillColor = System.Drawing.Color.SeaGreen;
-            this.btnCobrarAgregarPago.ActiveForecolor = System.Drawing.Color.White;
-            this.btnCobrarAgregarPago.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.btnCobrarAgregarPago.BackColor = System.Drawing.Color.White;
-            this.btnCobrarAgregarPago.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCobrarAgregarPago.BackgroundImage")));
-            this.btnCobrarAgregarPago.ButtonText = "+";
-            this.btnCobrarAgregarPago.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCobrarAgregarPago.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCobrarAgregarPago.ForeColor = System.Drawing.Color.SeaGreen;
-            this.btnCobrarAgregarPago.IdleBorderThickness = 1;
-            this.btnCobrarAgregarPago.IdleCornerRadius = 20;
-            this.btnCobrarAgregarPago.IdleFillColor = System.Drawing.Color.White;
-            this.btnCobrarAgregarPago.IdleForecolor = System.Drawing.Color.SeaGreen;
-            this.btnCobrarAgregarPago.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.btnCobrarAgregarPago.Location = new System.Drawing.Point(476, 8);
-            this.btnCobrarAgregarPago.Margin = new System.Windows.Forms.Padding(5);
-            this.btnCobrarAgregarPago.Name = "btnCobrarAgregarPago";
-            this.btnCobrarAgregarPago.Size = new System.Drawing.Size(68, 41);
-            this.btnCobrarAgregarPago.TabIndex = 1;
-            this.btnCobrarAgregarPago.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnCobrarAgregarPago.Click += new System.EventHandler(this.btnCobrarAgregarPago_Click);
-            // 
-            // txtbCobrarPago
-            // 
-            this.txtbCobrarPago.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtbCobrarPago.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txtbCobrarPago.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtbCobrarPago.HintForeColor = System.Drawing.Color.Empty;
-            this.txtbCobrarPago.HintText = "";
-            this.txtbCobrarPago.isPassword = false;
-            this.txtbCobrarPago.LineFocusedColor = System.Drawing.Color.Blue;
-            this.txtbCobrarPago.LineIdleColor = System.Drawing.Color.Gray;
-            this.txtbCobrarPago.LineMouseHoverColor = System.Drawing.Color.Blue;
-            this.txtbCobrarPago.LineThickness = 3;
-            this.txtbCobrarPago.Location = new System.Drawing.Point(10, 5);
-            this.txtbCobrarPago.Margin = new System.Windows.Forms.Padding(4);
-            this.txtbCobrarPago.Name = "txtbCobrarPago";
-            this.txtbCobrarPago.Size = new System.Drawing.Size(458, 42);
-            this.txtbCobrarPago.TabIndex = 0;
-            this.txtbCobrarPago.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // pnlCobrarEfectivo
-            // 
-            this.pnlCobrarEfectivo.Controls.Add(this.lblCobrarEfectivoNum);
-            this.pnlCobrarEfectivo.Controls.Add(this.lblCobrarEfectivo);
-            this.pnlCobrarEfectivo.Location = new System.Drawing.Point(3, 208);
-            this.pnlCobrarEfectivo.Name = "pnlCobrarEfectivo";
-            this.pnlCobrarEfectivo.Size = new System.Drawing.Size(654, 50);
-            this.pnlCobrarEfectivo.TabIndex = 3;
-            this.pnlCobrarEfectivo.Visible = false;
-            // 
-            // lblCobrarEfectivoNum
-            // 
-            this.lblCobrarEfectivoNum.AutoSize = true;
-            this.lblCobrarEfectivoNum.Location = new System.Drawing.Point(112, 9);
-            this.lblCobrarEfectivoNum.Name = "lblCobrarEfectivoNum";
-            this.lblCobrarEfectivoNum.Size = new System.Drawing.Size(37, 23);
-            this.lblCobrarEfectivoNum.TabIndex = 3;
-            this.lblCobrarEfectivoNum.Text = "0.0";
-            // 
-            // lblCobrarEfectivo
-            // 
-            this.lblCobrarEfectivo.AutoSize = true;
-            this.lblCobrarEfectivo.Location = new System.Drawing.Point(3, 9);
-            this.lblCobrarEfectivo.Name = "lblCobrarEfectivo";
-            this.lblCobrarEfectivo.Size = new System.Drawing.Size(103, 23);
-            this.lblCobrarEfectivo.TabIndex = 2;
-            this.lblCobrarEfectivo.Text = "Efectivo: $";
-            // 
-            // pnlCobrarCredito
-            // 
-            this.pnlCobrarCredito.Controls.Add(this.lblCobrarCreditoNum);
-            this.pnlCobrarCredito.Controls.Add(this.lblCobrarCredito);
-            this.pnlCobrarCredito.Location = new System.Drawing.Point(3, 264);
-            this.pnlCobrarCredito.Name = "pnlCobrarCredito";
-            this.pnlCobrarCredito.Size = new System.Drawing.Size(654, 50);
-            this.pnlCobrarCredito.TabIndex = 4;
-            this.pnlCobrarCredito.Visible = false;
-            // 
-            // lblCobrarCreditoNum
-            // 
-            this.lblCobrarCreditoNum.AutoSize = true;
-            this.lblCobrarCreditoNum.Location = new System.Drawing.Point(112, 13);
-            this.lblCobrarCreditoNum.Name = "lblCobrarCreditoNum";
-            this.lblCobrarCreditoNum.Size = new System.Drawing.Size(37, 23);
-            this.lblCobrarCreditoNum.TabIndex = 3;
-            this.lblCobrarCreditoNum.Text = "0.0";
-            // 
-            // lblCobrarCredito
-            // 
-            this.lblCobrarCredito.AutoSize = true;
-            this.lblCobrarCredito.Location = new System.Drawing.Point(3, 13);
-            this.lblCobrarCredito.Name = "lblCobrarCredito";
-            this.lblCobrarCredito.Size = new System.Drawing.Size(95, 23);
-            this.lblCobrarCredito.TabIndex = 2;
-            this.lblCobrarCredito.Text = "Crédito: $";
-            // 
-            // pnlCobrarTDC
-            // 
-            this.pnlCobrarTDC.Controls.Add(this.lblCobrarTDCNum);
-            this.pnlCobrarTDC.Controls.Add(this.lblCobrarTDC);
-            this.pnlCobrarTDC.Location = new System.Drawing.Point(3, 320);
-            this.pnlCobrarTDC.Name = "pnlCobrarTDC";
-            this.pnlCobrarTDC.Size = new System.Drawing.Size(654, 50);
-            this.pnlCobrarTDC.TabIndex = 4;
-            this.pnlCobrarTDC.Visible = false;
-            // 
-            // lblCobrarTDCNum
-            // 
-            this.lblCobrarTDCNum.AutoSize = true;
-            this.lblCobrarTDCNum.Location = new System.Drawing.Point(112, 11);
-            this.lblCobrarTDCNum.Name = "lblCobrarTDCNum";
-            this.lblCobrarTDCNum.Size = new System.Drawing.Size(37, 23);
-            this.lblCobrarTDCNum.TabIndex = 3;
-            this.lblCobrarTDCNum.Text = "0.0";
-            // 
-            // lblCobrarTDC
-            // 
-            this.lblCobrarTDC.AutoSize = true;
-            this.lblCobrarTDC.Location = new System.Drawing.Point(3, 11);
-            this.lblCobrarTDC.Name = "lblCobrarTDC";
-            this.lblCobrarTDC.Size = new System.Drawing.Size(93, 23);
-            this.lblCobrarTDC.TabIndex = 2;
-            this.lblCobrarTDC.Text = "TDC :    $";
-            // 
-            // pnlCobrarTDD
-            // 
-            this.pnlCobrarTDD.Controls.Add(this.lblCobrarTDDNum);
-            this.pnlCobrarTDD.Controls.Add(this.lblCobrarTDD);
-            this.pnlCobrarTDD.Location = new System.Drawing.Point(3, 376);
-            this.pnlCobrarTDD.Name = "pnlCobrarTDD";
-            this.pnlCobrarTDD.Size = new System.Drawing.Size(654, 50);
-            this.pnlCobrarTDD.TabIndex = 5;
-            this.pnlCobrarTDD.Visible = false;
-            // 
-            // lblCobrarTDDNum
-            // 
-            this.lblCobrarTDDNum.AutoSize = true;
-            this.lblCobrarTDDNum.Location = new System.Drawing.Point(112, 20);
-            this.lblCobrarTDDNum.Name = "lblCobrarTDDNum";
-            this.lblCobrarTDDNum.Size = new System.Drawing.Size(37, 23);
-            this.lblCobrarTDDNum.TabIndex = 3;
-            this.lblCobrarTDDNum.Text = "0.0";
-            // 
-            // lblCobrarTDD
-            // 
-            this.lblCobrarTDD.AutoSize = true;
-            this.lblCobrarTDD.Location = new System.Drawing.Point(3, 20);
-            this.lblCobrarTDD.Name = "lblCobrarTDD";
-            this.lblCobrarTDD.Size = new System.Drawing.Size(89, 23);
-            this.lblCobrarTDD.TabIndex = 2;
-            this.lblCobrarTDD.Text = "TDD:    $";
-            // 
-            // pnlCobrarCambio
-            // 
-            this.pnlCobrarCambio.Controls.Add(this.lblCobrarCambioNum);
-            this.pnlCobrarCambio.Controls.Add(this.lblCobrarCambio);
-            this.pnlCobrarCambio.Location = new System.Drawing.Point(3, 432);
-            this.pnlCobrarCambio.Name = "pnlCobrarCambio";
-            this.pnlCobrarCambio.Size = new System.Drawing.Size(654, 50);
-            this.pnlCobrarCambio.TabIndex = 6;
-            this.pnlCobrarCambio.Visible = false;
-            // 
-            // lblCobrarCambioNum
-            // 
-            this.lblCobrarCambioNum.AutoSize = true;
-            this.lblCobrarCambioNum.Location = new System.Drawing.Point(112, 20);
-            this.lblCobrarCambioNum.Name = "lblCobrarCambioNum";
-            this.lblCobrarCambioNum.Size = new System.Drawing.Size(37, 23);
-            this.lblCobrarCambioNum.TabIndex = 3;
-            this.lblCobrarCambioNum.Text = "0.0";
-            // 
-            // lblCobrarCambio
-            // 
-            this.lblCobrarCambio.AutoSize = true;
-            this.lblCobrarCambio.Location = new System.Drawing.Point(3, 20);
-            this.lblCobrarCambio.Name = "lblCobrarCambio";
-            this.lblCobrarCambio.Size = new System.Drawing.Size(98, 23);
-            this.lblCobrarCambio.TabIndex = 2;
-            this.lblCobrarCambio.Text = "Cambio: $";
-            // 
-            // pnlCobrarFootBotones
-            // 
-            this.pnlCobrarFootBotones.BackColor = System.Drawing.Color.AliceBlue;
-            this.pnlCobrarFootBotones.Controls.Add(this.btnCobrarFacturar);
-            this.pnlCobrarFootBotones.Controls.Add(this.btnCobrarCancelar);
-            this.pnlCobrarFootBotones.Controls.Add(this.btnCobrarCobrareIticket);
-            this.pnlCobrarFootBotones.Controls.Add(this.label9);
-            this.pnlCobrarFootBotones.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlCobrarFootBotones.Location = new System.Drawing.Point(0, 549);
-            this.pnlCobrarFootBotones.Name = "pnlCobrarFootBotones";
-            this.pnlCobrarFootBotones.Size = new System.Drawing.Size(660, 62);
-            this.pnlCobrarFootBotones.TabIndex = 2;
-            // 
-            // btnCobrarFacturar
-            // 
-            this.btnCobrarFacturar.ActiveBorderThickness = 1;
-            this.btnCobrarFacturar.ActiveCornerRadius = 20;
-            this.btnCobrarFacturar.ActiveFillColor = System.Drawing.Color.SteelBlue;
-            this.btnCobrarFacturar.ActiveForecolor = System.Drawing.Color.White;
-            this.btnCobrarFacturar.ActiveLineColor = System.Drawing.Color.SteelBlue;
-            this.btnCobrarFacturar.BackColor = System.Drawing.Color.AliceBlue;
-            this.btnCobrarFacturar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCobrarFacturar.BackgroundImage")));
-            this.btnCobrarFacturar.ButtonText = "Facturar";
-            this.btnCobrarFacturar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCobrarFacturar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCobrarFacturar.ForeColor = System.Drawing.Color.SeaGreen;
-            this.btnCobrarFacturar.IdleBorderThickness = 1;
-            this.btnCobrarFacturar.IdleCornerRadius = 20;
-            this.btnCobrarFacturar.IdleFillColor = System.Drawing.Color.White;
-            this.btnCobrarFacturar.IdleForecolor = System.Drawing.Color.SteelBlue;
-            this.btnCobrarFacturar.IdleLineColor = System.Drawing.Color.SteelBlue;
-            this.btnCobrarFacturar.Location = new System.Drawing.Point(294, -1);
-            this.btnCobrarFacturar.Margin = new System.Windows.Forms.Padding(5);
-            this.btnCobrarFacturar.Name = "btnCobrarFacturar";
-            this.btnCobrarFacturar.Size = new System.Drawing.Size(143, 56);
-            this.btnCobrarFacturar.TabIndex = 3;
-            this.btnCobrarFacturar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnCobrarFacturar.Click += new System.EventHandler(this.btnCobrarFacturar_Click);
-            // 
-            // btnCobrarCancelar
-            // 
-            this.btnCobrarCancelar.ActiveBorderThickness = 1;
-            this.btnCobrarCancelar.ActiveCornerRadius = 20;
-            this.btnCobrarCancelar.ActiveFillColor = System.Drawing.Color.Red;
-            this.btnCobrarCancelar.ActiveForecolor = System.Drawing.Color.White;
-            this.btnCobrarCancelar.ActiveLineColor = System.Drawing.Color.Red;
-            this.btnCobrarCancelar.BackColor = System.Drawing.Color.AliceBlue;
-            this.btnCobrarCancelar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCobrarCancelar.BackgroundImage")));
-            this.btnCobrarCancelar.ButtonText = "Cancelar";
-            this.btnCobrarCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCobrarCancelar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCobrarCancelar.ForeColor = System.Drawing.Color.SeaGreen;
-            this.btnCobrarCancelar.IdleBorderThickness = 1;
-            this.btnCobrarCancelar.IdleCornerRadius = 20;
-            this.btnCobrarCancelar.IdleFillColor = System.Drawing.Color.White;
-            this.btnCobrarCancelar.IdleForecolor = System.Drawing.Color.Red;
-            this.btnCobrarCancelar.IdleLineColor = System.Drawing.Color.Red;
-            this.btnCobrarCancelar.Location = new System.Drawing.Point(500, 0);
-            this.btnCobrarCancelar.Margin = new System.Windows.Forms.Padding(5);
-            this.btnCobrarCancelar.Name = "btnCobrarCancelar";
-            this.btnCobrarCancelar.Size = new System.Drawing.Size(133, 56);
-            this.btnCobrarCancelar.TabIndex = 2;
-            this.btnCobrarCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnCobrarCancelar.Click += new System.EventHandler(this.btnCobrarCancelar_Click);
-            // 
-            // btnCobrarCobrareIticket
-            // 
-            this.btnCobrarCobrareIticket.ActiveBorderThickness = 1;
-            this.btnCobrarCobrareIticket.ActiveCornerRadius = 20;
-            this.btnCobrarCobrareIticket.ActiveFillColor = System.Drawing.Color.SeaGreen;
-            this.btnCobrarCobrareIticket.ActiveForecolor = System.Drawing.Color.White;
-            this.btnCobrarCobrareIticket.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.btnCobrarCobrareIticket.BackColor = System.Drawing.Color.AliceBlue;
-            this.btnCobrarCobrareIticket.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCobrarCobrareIticket.BackgroundImage")));
-            this.btnCobrarCobrareIticket.ButtonText = "Cobrar e imprimir ticket";
-            this.btnCobrarCobrareIticket.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCobrarCobrareIticket.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCobrarCobrareIticket.ForeColor = System.Drawing.Color.SeaGreen;
-            this.btnCobrarCobrareIticket.IdleBorderThickness = 1;
-            this.btnCobrarCobrareIticket.IdleCornerRadius = 20;
-            this.btnCobrarCobrareIticket.IdleFillColor = System.Drawing.Color.White;
-            this.btnCobrarCobrareIticket.IdleForecolor = System.Drawing.Color.SeaGreen;
-            this.btnCobrarCobrareIticket.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.btnCobrarCobrareIticket.Location = new System.Drawing.Point(5, 1);
-            this.btnCobrarCobrareIticket.Margin = new System.Windows.Forms.Padding(5);
-            this.btnCobrarCobrareIticket.Name = "btnCobrarCobrareIticket";
-            this.btnCobrarCobrareIticket.Size = new System.Drawing.Size(251, 56);
-            this.btnCobrarCobrareIticket.TabIndex = 1;
-            this.btnCobrarCobrareIticket.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnCobrarCobrareIticket.Click += new System.EventHandler(this.btnCobrarCobrareIticket_Click);
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(3, 5);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(95, 23);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "COBRAR";
-            // 
-            // pnlCobrarTitle
-            // 
-            this.pnlCobrarTitle.BackColor = System.Drawing.Color.SteelBlue;
-            this.pnlCobrarTitle.Controls.Add(this.lblCobrarTiltle);
-            this.pnlCobrarTitle.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlCobrarTitle.Location = new System.Drawing.Point(0, 0);
-            this.pnlCobrarTitle.Name = "pnlCobrarTitle";
-            this.pnlCobrarTitle.Size = new System.Drawing.Size(660, 38);
-            this.pnlCobrarTitle.TabIndex = 0;
-            this.pnlCobrarTitle.Visible = false;
-            // 
-            // lblCobrarTiltle
-            // 
-            this.lblCobrarTiltle.AutoSize = true;
-            this.lblCobrarTiltle.ForeColor = System.Drawing.Color.White;
-            this.lblCobrarTiltle.Location = new System.Drawing.Point(3, 5);
-            this.lblCobrarTiltle.Name = "lblCobrarTiltle";
-            this.lblCobrarTiltle.Size = new System.Drawing.Size(95, 23);
-            this.lblCobrarTiltle.TabIndex = 0;
-            this.lblCobrarTiltle.Text = "COBRAR";
-            // 
             // dgvProductosPed
             // 
             this.dgvProductosPed.AllowUserToAddRows = false;
             this.dgvProductosPed.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.Azure;
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Black;
-            this.dgvProductosPed.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Azure;
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            this.dgvProductosPed.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvProductosPed.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -1365,14 +832,14 @@
             this.dgvProductosPed.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvProductosPed.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgvProductosPed.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.GradientActiveCaption;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvProductosPed.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvProductosPed.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvProductosPed.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvProductosPed.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.CodigoBarras,
@@ -1929,22 +1396,22 @@
             // 
             this.dgBuscarClientes.AllowUserToAddRows = false;
             this.dgBuscarClientes.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgBuscarClientes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgBuscarClientes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgBuscarClientes.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgBuscarClientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgBuscarClientes.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.dgBuscarClientes.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgBuscarClientes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgBuscarClientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgBuscarClientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgBuscarClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgBuscarClientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.codigoCliente,
@@ -1958,9 +1425,9 @@
             this.dgBuscarClientes.Name = "dgBuscarClientes";
             this.dgBuscarClientes.ReadOnly = true;
             this.dgBuscarClientes.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.Black;
-            this.dgBuscarClientes.RowsDefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
+            this.dgBuscarClientes.RowsDefaultCellStyle = dataGridViewCellStyle7;
             this.dgBuscarClientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgBuscarClientes.Size = new System.Drawing.Size(446, 149);
             this.dgBuscarClientes.TabIndex = 1;
@@ -2069,22 +1536,22 @@
             // 
             this.dgBuscadorArticulo.AllowUserToAddRows = false;
             this.dgBuscadorArticulo.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgBuscadorArticulo.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgBuscadorArticulo.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle8;
             this.dgBuscadorArticulo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgBuscadorArticulo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgBuscadorArticulo.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.dgBuscadorArticulo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgBuscadorArticulo.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle19.BackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgBuscadorArticulo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgBuscadorArticulo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dgBuscadorArticulo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgBuscadorArticulo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.codigo,
@@ -2098,9 +1565,9 @@
             this.dgBuscadorArticulo.Name = "dgBuscadorArticulo";
             this.dgBuscadorArticulo.ReadOnly = true;
             this.dgBuscadorArticulo.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.Black;
-            this.dgBuscadorArticulo.RowsDefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
+            this.dgBuscadorArticulo.RowsDefaultCellStyle = dataGridViewCellStyle10;
             this.dgBuscadorArticulo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgBuscadorArticulo.Size = new System.Drawing.Size(446, 149);
             this.dgBuscadorArticulo.TabIndex = 1;
@@ -2137,6 +1604,539 @@
             this.txtBuscarArtPedido.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtBuscarArtPedido.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtBuscarArtTraspaso_KeyUp);
             // 
+            // pnlPagos
+            // 
+            this.pnlPagos.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnlPagos.Controls.Add(this.fpCobrarBody);
+            this.pnlPagos.Controls.Add(this.pnlCobrarFootBotones);
+            this.pnlPagos.Controls.Add(this.pnlCobrarTitle);
+            this.pnlPagos.Location = new System.Drawing.Point(300, 123);
+            this.pnlPagos.Name = "pnlPagos";
+            this.pnlPagos.Size = new System.Drawing.Size(664, 615);
+            this.pnlPagos.TabIndex = 32;
+            this.pnlPagos.Visible = false;
+            // 
+            // fpCobrarBody
+            // 
+            this.fpCobrarBody.Controls.Add(this.panel1);
+            this.fpCobrarBody.Controls.Add(this.panel3);
+            this.fpCobrarBody.Controls.Add(this.panel4);
+            this.fpCobrarBody.Controls.Add(this.pnlCobrarEfectivo);
+            this.fpCobrarBody.Controls.Add(this.pnlCobrarCredito);
+            this.fpCobrarBody.Controls.Add(this.pnlCobrarTDC);
+            this.fpCobrarBody.Controls.Add(this.pnlCobrarTDD);
+            this.fpCobrarBody.Controls.Add(this.pnlCobrarCambio);
+            this.fpCobrarBody.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.fpCobrarBody.Location = new System.Drawing.Point(0, 38);
+            this.fpCobrarBody.Name = "fpCobrarBody";
+            this.fpCobrarBody.Size = new System.Drawing.Size(660, 511);
+            this.fpCobrarBody.TabIndex = 3;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.lblCobrarTotalNumero);
+            this.panel1.Controls.Add(this.lblCobrarTotalCobrar);
+            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(654, 67);
+            this.panel1.TabIndex = 0;
+            // 
+            // lblCobrarTotalNumero
+            // 
+            this.lblCobrarTotalNumero.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblCobrarTotalNumero.AutoSize = true;
+            this.lblCobrarTotalNumero.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCobrarTotalNumero.ForeColor = System.Drawing.Color.SteelBlue;
+            this.lblCobrarTotalNumero.Location = new System.Drawing.Point(249, 35);
+            this.lblCobrarTotalNumero.Name = "lblCobrarTotalNumero";
+            this.lblCobrarTotalNumero.Size = new System.Drawing.Size(37, 24);
+            this.lblCobrarTotalNumero.TabIndex = 1;
+            this.lblCobrarTotalNumero.Text = "0.0";
+            // 
+            // lblCobrarTotalCobrar
+            // 
+            this.lblCobrarTotalCobrar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblCobrarTotalCobrar.AutoSize = true;
+            this.lblCobrarTotalCobrar.Location = new System.Drawing.Point(204, 9);
+            this.lblCobrarTotalCobrar.Name = "lblCobrarTotalCobrar";
+            this.lblCobrarTotalCobrar.Size = new System.Drawing.Size(125, 23);
+            this.lblCobrarTotalCobrar.TabIndex = 0;
+            this.lblCobrarTotalCobrar.Text = "Total a cobrar";
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.btnCobrarPTDC);
+            this.panel3.Controls.Add(this.btnCobrarPCredito);
+            this.panel3.Controls.Add(this.btnCobrarPTDD);
+            this.panel3.Controls.Add(this.btnCobrarPEfectivo);
+            this.panel3.Location = new System.Drawing.Point(3, 76);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(654, 69);
+            this.panel3.TabIndex = 1;
+            // 
+            // btnCobrarPTDC
+            // 
+            this.btnCobrarPTDC.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnCobrarPTDC.BackColor = System.Drawing.Color.Goldenrod;
+            this.btnCobrarPTDC.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCobrarPTDC.BorderRadius = 0;
+            this.btnCobrarPTDC.ButtonText = "TDC";
+            this.btnCobrarPTDC.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCobrarPTDC.DisabledColor = System.Drawing.Color.Gray;
+            this.btnCobrarPTDC.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnCobrarPTDC.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnCobrarPTDC.Iconimage")));
+            this.btnCobrarPTDC.Iconimage_right = null;
+            this.btnCobrarPTDC.Iconimage_right_Selected = null;
+            this.btnCobrarPTDC.Iconimage_Selected = null;
+            this.btnCobrarPTDC.IconMarginLeft = 0;
+            this.btnCobrarPTDC.IconMarginRight = 0;
+            this.btnCobrarPTDC.IconRightVisible = false;
+            this.btnCobrarPTDC.IconRightZoom = 0D;
+            this.btnCobrarPTDC.IconVisible = false;
+            this.btnCobrarPTDC.IconZoom = 90D;
+            this.btnCobrarPTDC.IsTab = false;
+            this.btnCobrarPTDC.Location = new System.Drawing.Point(333, 9);
+            this.btnCobrarPTDC.Margin = new System.Windows.Forms.Padding(5);
+            this.btnCobrarPTDC.Name = "btnCobrarPTDC";
+            this.btnCobrarPTDC.Normalcolor = System.Drawing.Color.Goldenrod;
+            this.btnCobrarPTDC.OnHovercolor = System.Drawing.Color.SteelBlue;
+            this.btnCobrarPTDC.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnCobrarPTDC.selected = false;
+            this.btnCobrarPTDC.Size = new System.Drawing.Size(150, 44);
+            this.btnCobrarPTDC.TabIndex = 2;
+            this.btnCobrarPTDC.Text = "TDC";
+            this.btnCobrarPTDC.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnCobrarPTDC.Textcolor = System.Drawing.Color.White;
+            this.btnCobrarPTDC.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCobrarPTDC.Click += new System.EventHandler(this.btnCobrarPTDC_Click);
+            // 
+            // btnCobrarPCredito
+            // 
+            this.btnCobrarPCredito.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnCobrarPCredito.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnCobrarPCredito.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCobrarPCredito.BorderRadius = 0;
+            this.btnCobrarPCredito.ButtonText = "Crédito";
+            this.btnCobrarPCredito.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCobrarPCredito.DisabledColor = System.Drawing.Color.Gray;
+            this.btnCobrarPCredito.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnCobrarPCredito.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnCobrarPCredito.Iconimage")));
+            this.btnCobrarPCredito.Iconimage_right = null;
+            this.btnCobrarPCredito.Iconimage_right_Selected = null;
+            this.btnCobrarPCredito.Iconimage_Selected = null;
+            this.btnCobrarPCredito.IconMarginLeft = 0;
+            this.btnCobrarPCredito.IconMarginRight = 0;
+            this.btnCobrarPCredito.IconRightVisible = false;
+            this.btnCobrarPCredito.IconRightZoom = 0D;
+            this.btnCobrarPCredito.IconVisible = false;
+            this.btnCobrarPCredito.IconZoom = 90D;
+            this.btnCobrarPCredito.IsTab = false;
+            this.btnCobrarPCredito.Location = new System.Drawing.Point(175, 9);
+            this.btnCobrarPCredito.Margin = new System.Windows.Forms.Padding(5);
+            this.btnCobrarPCredito.Name = "btnCobrarPCredito";
+            this.btnCobrarPCredito.Normalcolor = System.Drawing.Color.SteelBlue;
+            this.btnCobrarPCredito.OnHovercolor = System.Drawing.Color.SteelBlue;
+            this.btnCobrarPCredito.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnCobrarPCredito.selected = false;
+            this.btnCobrarPCredito.Size = new System.Drawing.Size(150, 44);
+            this.btnCobrarPCredito.TabIndex = 1;
+            this.btnCobrarPCredito.Text = "Crédito";
+            this.btnCobrarPCredito.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnCobrarPCredito.Textcolor = System.Drawing.Color.White;
+            this.btnCobrarPCredito.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCobrarPCredito.Click += new System.EventHandler(this.btnCobrarPCredito_Click);
+            // 
+            // btnCobrarPTDD
+            // 
+            this.btnCobrarPTDD.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnCobrarPTDD.BackColor = System.Drawing.Color.Orange;
+            this.btnCobrarPTDD.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCobrarPTDD.BorderRadius = 0;
+            this.btnCobrarPTDD.ButtonText = "TDD";
+            this.btnCobrarPTDD.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCobrarPTDD.DisabledColor = System.Drawing.Color.Gray;
+            this.btnCobrarPTDD.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnCobrarPTDD.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnCobrarPTDD.Iconimage")));
+            this.btnCobrarPTDD.Iconimage_right = null;
+            this.btnCobrarPTDD.Iconimage_right_Selected = null;
+            this.btnCobrarPTDD.Iconimage_Selected = null;
+            this.btnCobrarPTDD.IconMarginLeft = 0;
+            this.btnCobrarPTDD.IconMarginRight = 0;
+            this.btnCobrarPTDD.IconRightVisible = false;
+            this.btnCobrarPTDD.IconRightZoom = 0D;
+            this.btnCobrarPTDD.IconVisible = false;
+            this.btnCobrarPTDD.IconZoom = 90D;
+            this.btnCobrarPTDD.IsTab = false;
+            this.btnCobrarPTDD.Location = new System.Drawing.Point(494, 9);
+            this.btnCobrarPTDD.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
+            this.btnCobrarPTDD.Name = "btnCobrarPTDD";
+            this.btnCobrarPTDD.Normalcolor = System.Drawing.Color.Orange;
+            this.btnCobrarPTDD.OnHovercolor = System.Drawing.Color.SteelBlue;
+            this.btnCobrarPTDD.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnCobrarPTDD.selected = false;
+            this.btnCobrarPTDD.Size = new System.Drawing.Size(150, 42);
+            this.btnCobrarPTDD.TabIndex = 3;
+            this.btnCobrarPTDD.Text = "TDD";
+            this.btnCobrarPTDD.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnCobrarPTDD.Textcolor = System.Drawing.Color.White;
+            this.btnCobrarPTDD.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCobrarPTDD.Click += new System.EventHandler(this.btnCobrarPTDD_Click);
+            // 
+            // btnCobrarPEfectivo
+            // 
+            this.btnCobrarPEfectivo.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnCobrarPEfectivo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnCobrarPEfectivo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCobrarPEfectivo.BorderRadius = 0;
+            this.btnCobrarPEfectivo.ButtonText = "Efectivo";
+            this.btnCobrarPEfectivo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCobrarPEfectivo.DisabledColor = System.Drawing.Color.Gray;
+            this.btnCobrarPEfectivo.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnCobrarPEfectivo.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnCobrarPEfectivo.Iconimage")));
+            this.btnCobrarPEfectivo.Iconimage_right = null;
+            this.btnCobrarPEfectivo.Iconimage_right_Selected = null;
+            this.btnCobrarPEfectivo.Iconimage_Selected = null;
+            this.btnCobrarPEfectivo.IconMarginLeft = 0;
+            this.btnCobrarPEfectivo.IconMarginRight = 0;
+            this.btnCobrarPEfectivo.IconRightVisible = false;
+            this.btnCobrarPEfectivo.IconRightZoom = 0D;
+            this.btnCobrarPEfectivo.IconVisible = false;
+            this.btnCobrarPEfectivo.IconZoom = 90D;
+            this.btnCobrarPEfectivo.IsTab = false;
+            this.btnCobrarPEfectivo.Location = new System.Drawing.Point(15, 9);
+            this.btnCobrarPEfectivo.Margin = new System.Windows.Forms.Padding(5);
+            this.btnCobrarPEfectivo.Name = "btnCobrarPEfectivo";
+            this.btnCobrarPEfectivo.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnCobrarPEfectivo.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
+            this.btnCobrarPEfectivo.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnCobrarPEfectivo.selected = false;
+            this.btnCobrarPEfectivo.Size = new System.Drawing.Size(150, 44);
+            this.btnCobrarPEfectivo.TabIndex = 0;
+            this.btnCobrarPEfectivo.Text = "Efectivo";
+            this.btnCobrarPEfectivo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnCobrarPEfectivo.Textcolor = System.Drawing.Color.White;
+            this.btnCobrarPEfectivo.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCobrarPEfectivo.Click += new System.EventHandler(this.btnCobrarPEfectivo_Click);
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.White;
+            this.panel4.Controls.Add(this.btnCobrarAgregarPago);
+            this.panel4.Controls.Add(this.txtbCobrarPago);
+            this.panel4.Location = new System.Drawing.Point(3, 151);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(654, 51);
+            this.panel4.TabIndex = 2;
+            // 
+            // btnCobrarAgregarPago
+            // 
+            this.btnCobrarAgregarPago.ActiveBorderThickness = 1;
+            this.btnCobrarAgregarPago.ActiveCornerRadius = 20;
+            this.btnCobrarAgregarPago.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.btnCobrarAgregarPago.ActiveForecolor = System.Drawing.Color.White;
+            this.btnCobrarAgregarPago.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.btnCobrarAgregarPago.BackColor = System.Drawing.Color.White;
+            this.btnCobrarAgregarPago.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCobrarAgregarPago.BackgroundImage")));
+            this.btnCobrarAgregarPago.ButtonText = "+";
+            this.btnCobrarAgregarPago.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCobrarAgregarPago.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCobrarAgregarPago.ForeColor = System.Drawing.Color.SeaGreen;
+            this.btnCobrarAgregarPago.IdleBorderThickness = 1;
+            this.btnCobrarAgregarPago.IdleCornerRadius = 20;
+            this.btnCobrarAgregarPago.IdleFillColor = System.Drawing.Color.White;
+            this.btnCobrarAgregarPago.IdleForecolor = System.Drawing.Color.SeaGreen;
+            this.btnCobrarAgregarPago.IdleLineColor = System.Drawing.Color.SeaGreen;
+            this.btnCobrarAgregarPago.Location = new System.Drawing.Point(476, 8);
+            this.btnCobrarAgregarPago.Margin = new System.Windows.Forms.Padding(5);
+            this.btnCobrarAgregarPago.Name = "btnCobrarAgregarPago";
+            this.btnCobrarAgregarPago.Size = new System.Drawing.Size(68, 41);
+            this.btnCobrarAgregarPago.TabIndex = 1;
+            this.btnCobrarAgregarPago.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnCobrarAgregarPago.Click += new System.EventHandler(this.btnCobrarAgregarPago_Click);
+            // 
+            // txtbCobrarPago
+            // 
+            this.txtbCobrarPago.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtbCobrarPago.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtbCobrarPago.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtbCobrarPago.HintForeColor = System.Drawing.Color.Empty;
+            this.txtbCobrarPago.HintText = "";
+            this.txtbCobrarPago.isPassword = false;
+            this.txtbCobrarPago.LineFocusedColor = System.Drawing.Color.Blue;
+            this.txtbCobrarPago.LineIdleColor = System.Drawing.Color.Gray;
+            this.txtbCobrarPago.LineMouseHoverColor = System.Drawing.Color.Blue;
+            this.txtbCobrarPago.LineThickness = 3;
+            this.txtbCobrarPago.Location = new System.Drawing.Point(10, 5);
+            this.txtbCobrarPago.Margin = new System.Windows.Forms.Padding(4);
+            this.txtbCobrarPago.Name = "txtbCobrarPago";
+            this.txtbCobrarPago.Size = new System.Drawing.Size(458, 42);
+            this.txtbCobrarPago.TabIndex = 0;
+            this.txtbCobrarPago.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // pnlCobrarEfectivo
+            // 
+            this.pnlCobrarEfectivo.Controls.Add(this.lblCobrarEfectivoNum);
+            this.pnlCobrarEfectivo.Controls.Add(this.lblCobrarEfectivo);
+            this.pnlCobrarEfectivo.Location = new System.Drawing.Point(3, 208);
+            this.pnlCobrarEfectivo.Name = "pnlCobrarEfectivo";
+            this.pnlCobrarEfectivo.Size = new System.Drawing.Size(654, 50);
+            this.pnlCobrarEfectivo.TabIndex = 3;
+            this.pnlCobrarEfectivo.Visible = false;
+            // 
+            // lblCobrarEfectivoNum
+            // 
+            this.lblCobrarEfectivoNum.AutoSize = true;
+            this.lblCobrarEfectivoNum.Location = new System.Drawing.Point(112, 9);
+            this.lblCobrarEfectivoNum.Name = "lblCobrarEfectivoNum";
+            this.lblCobrarEfectivoNum.Size = new System.Drawing.Size(37, 23);
+            this.lblCobrarEfectivoNum.TabIndex = 3;
+            this.lblCobrarEfectivoNum.Text = "0.0";
+            // 
+            // lblCobrarEfectivo
+            // 
+            this.lblCobrarEfectivo.AutoSize = true;
+            this.lblCobrarEfectivo.Location = new System.Drawing.Point(3, 9);
+            this.lblCobrarEfectivo.Name = "lblCobrarEfectivo";
+            this.lblCobrarEfectivo.Size = new System.Drawing.Size(103, 23);
+            this.lblCobrarEfectivo.TabIndex = 2;
+            this.lblCobrarEfectivo.Text = "Efectivo: $";
+            // 
+            // pnlCobrarCredito
+            // 
+            this.pnlCobrarCredito.Controls.Add(this.lblCobrarCreditoNum);
+            this.pnlCobrarCredito.Controls.Add(this.lblCobrarCredito);
+            this.pnlCobrarCredito.Location = new System.Drawing.Point(3, 264);
+            this.pnlCobrarCredito.Name = "pnlCobrarCredito";
+            this.pnlCobrarCredito.Size = new System.Drawing.Size(654, 50);
+            this.pnlCobrarCredito.TabIndex = 4;
+            this.pnlCobrarCredito.Visible = false;
+            // 
+            // lblCobrarCreditoNum
+            // 
+            this.lblCobrarCreditoNum.AutoSize = true;
+            this.lblCobrarCreditoNum.Location = new System.Drawing.Point(112, 13);
+            this.lblCobrarCreditoNum.Name = "lblCobrarCreditoNum";
+            this.lblCobrarCreditoNum.Size = new System.Drawing.Size(37, 23);
+            this.lblCobrarCreditoNum.TabIndex = 3;
+            this.lblCobrarCreditoNum.Text = "0.0";
+            // 
+            // lblCobrarCredito
+            // 
+            this.lblCobrarCredito.AutoSize = true;
+            this.lblCobrarCredito.Location = new System.Drawing.Point(3, 13);
+            this.lblCobrarCredito.Name = "lblCobrarCredito";
+            this.lblCobrarCredito.Size = new System.Drawing.Size(95, 23);
+            this.lblCobrarCredito.TabIndex = 2;
+            this.lblCobrarCredito.Text = "Crédito: $";
+            // 
+            // pnlCobrarTDC
+            // 
+            this.pnlCobrarTDC.Controls.Add(this.lblCobrarTDCNum);
+            this.pnlCobrarTDC.Controls.Add(this.lblCobrarTDC);
+            this.pnlCobrarTDC.Location = new System.Drawing.Point(3, 320);
+            this.pnlCobrarTDC.Name = "pnlCobrarTDC";
+            this.pnlCobrarTDC.Size = new System.Drawing.Size(654, 50);
+            this.pnlCobrarTDC.TabIndex = 4;
+            this.pnlCobrarTDC.Visible = false;
+            // 
+            // lblCobrarTDCNum
+            // 
+            this.lblCobrarTDCNum.AutoSize = true;
+            this.lblCobrarTDCNum.Location = new System.Drawing.Point(112, 11);
+            this.lblCobrarTDCNum.Name = "lblCobrarTDCNum";
+            this.lblCobrarTDCNum.Size = new System.Drawing.Size(37, 23);
+            this.lblCobrarTDCNum.TabIndex = 3;
+            this.lblCobrarTDCNum.Text = "0.0";
+            // 
+            // lblCobrarTDC
+            // 
+            this.lblCobrarTDC.AutoSize = true;
+            this.lblCobrarTDC.Location = new System.Drawing.Point(3, 11);
+            this.lblCobrarTDC.Name = "lblCobrarTDC";
+            this.lblCobrarTDC.Size = new System.Drawing.Size(93, 23);
+            this.lblCobrarTDC.TabIndex = 2;
+            this.lblCobrarTDC.Text = "TDC :    $";
+            // 
+            // pnlCobrarTDD
+            // 
+            this.pnlCobrarTDD.Controls.Add(this.lblCobrarTDDNum);
+            this.pnlCobrarTDD.Controls.Add(this.lblCobrarTDD);
+            this.pnlCobrarTDD.Location = new System.Drawing.Point(3, 376);
+            this.pnlCobrarTDD.Name = "pnlCobrarTDD";
+            this.pnlCobrarTDD.Size = new System.Drawing.Size(654, 50);
+            this.pnlCobrarTDD.TabIndex = 5;
+            this.pnlCobrarTDD.Visible = false;
+            // 
+            // lblCobrarTDDNum
+            // 
+            this.lblCobrarTDDNum.AutoSize = true;
+            this.lblCobrarTDDNum.Location = new System.Drawing.Point(112, 20);
+            this.lblCobrarTDDNum.Name = "lblCobrarTDDNum";
+            this.lblCobrarTDDNum.Size = new System.Drawing.Size(37, 23);
+            this.lblCobrarTDDNum.TabIndex = 3;
+            this.lblCobrarTDDNum.Text = "0.0";
+            // 
+            // lblCobrarTDD
+            // 
+            this.lblCobrarTDD.AutoSize = true;
+            this.lblCobrarTDD.Location = new System.Drawing.Point(3, 20);
+            this.lblCobrarTDD.Name = "lblCobrarTDD";
+            this.lblCobrarTDD.Size = new System.Drawing.Size(89, 23);
+            this.lblCobrarTDD.TabIndex = 2;
+            this.lblCobrarTDD.Text = "TDD:    $";
+            // 
+            // pnlCobrarCambio
+            // 
+            this.pnlCobrarCambio.Controls.Add(this.lblCobrarCambioNum);
+            this.pnlCobrarCambio.Controls.Add(this.lblCobrarCambio);
+            this.pnlCobrarCambio.Location = new System.Drawing.Point(3, 432);
+            this.pnlCobrarCambio.Name = "pnlCobrarCambio";
+            this.pnlCobrarCambio.Size = new System.Drawing.Size(654, 50);
+            this.pnlCobrarCambio.TabIndex = 6;
+            this.pnlCobrarCambio.Visible = false;
+            // 
+            // lblCobrarCambioNum
+            // 
+            this.lblCobrarCambioNum.AutoSize = true;
+            this.lblCobrarCambioNum.Location = new System.Drawing.Point(112, 20);
+            this.lblCobrarCambioNum.Name = "lblCobrarCambioNum";
+            this.lblCobrarCambioNum.Size = new System.Drawing.Size(37, 23);
+            this.lblCobrarCambioNum.TabIndex = 3;
+            this.lblCobrarCambioNum.Text = "0.0";
+            // 
+            // lblCobrarCambio
+            // 
+            this.lblCobrarCambio.AutoSize = true;
+            this.lblCobrarCambio.Location = new System.Drawing.Point(3, 20);
+            this.lblCobrarCambio.Name = "lblCobrarCambio";
+            this.lblCobrarCambio.Size = new System.Drawing.Size(98, 23);
+            this.lblCobrarCambio.TabIndex = 2;
+            this.lblCobrarCambio.Text = "Cambio: $";
+            // 
+            // pnlCobrarFootBotones
+            // 
+            this.pnlCobrarFootBotones.BackColor = System.Drawing.Color.AliceBlue;
+            this.pnlCobrarFootBotones.Controls.Add(this.btnCobrarFacturar);
+            this.pnlCobrarFootBotones.Controls.Add(this.btnCobrarCancelar);
+            this.pnlCobrarFootBotones.Controls.Add(this.btnCobrarCobrareIticket);
+            this.pnlCobrarFootBotones.Controls.Add(this.label9);
+            this.pnlCobrarFootBotones.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnlCobrarFootBotones.Location = new System.Drawing.Point(0, 549);
+            this.pnlCobrarFootBotones.Name = "pnlCobrarFootBotones";
+            this.pnlCobrarFootBotones.Size = new System.Drawing.Size(660, 62);
+            this.pnlCobrarFootBotones.TabIndex = 2;
+            // 
+            // btnCobrarFacturar
+            // 
+            this.btnCobrarFacturar.ActiveBorderThickness = 1;
+            this.btnCobrarFacturar.ActiveCornerRadius = 20;
+            this.btnCobrarFacturar.ActiveFillColor = System.Drawing.Color.SteelBlue;
+            this.btnCobrarFacturar.ActiveForecolor = System.Drawing.Color.White;
+            this.btnCobrarFacturar.ActiveLineColor = System.Drawing.Color.SteelBlue;
+            this.btnCobrarFacturar.BackColor = System.Drawing.Color.AliceBlue;
+            this.btnCobrarFacturar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCobrarFacturar.BackgroundImage")));
+            this.btnCobrarFacturar.ButtonText = "Facturar";
+            this.btnCobrarFacturar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCobrarFacturar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCobrarFacturar.ForeColor = System.Drawing.Color.SeaGreen;
+            this.btnCobrarFacturar.IdleBorderThickness = 1;
+            this.btnCobrarFacturar.IdleCornerRadius = 20;
+            this.btnCobrarFacturar.IdleFillColor = System.Drawing.Color.White;
+            this.btnCobrarFacturar.IdleForecolor = System.Drawing.Color.SteelBlue;
+            this.btnCobrarFacturar.IdleLineColor = System.Drawing.Color.SteelBlue;
+            this.btnCobrarFacturar.Location = new System.Drawing.Point(294, -1);
+            this.btnCobrarFacturar.Margin = new System.Windows.Forms.Padding(5);
+            this.btnCobrarFacturar.Name = "btnCobrarFacturar";
+            this.btnCobrarFacturar.Size = new System.Drawing.Size(143, 56);
+            this.btnCobrarFacturar.TabIndex = 3;
+            this.btnCobrarFacturar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnCobrarFacturar.Click += new System.EventHandler(this.btnCobrarFacturar_Click);
+            // 
+            // btnCobrarCancelar
+            // 
+            this.btnCobrarCancelar.ActiveBorderThickness = 1;
+            this.btnCobrarCancelar.ActiveCornerRadius = 20;
+            this.btnCobrarCancelar.ActiveFillColor = System.Drawing.Color.Red;
+            this.btnCobrarCancelar.ActiveForecolor = System.Drawing.Color.White;
+            this.btnCobrarCancelar.ActiveLineColor = System.Drawing.Color.Red;
+            this.btnCobrarCancelar.BackColor = System.Drawing.Color.AliceBlue;
+            this.btnCobrarCancelar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCobrarCancelar.BackgroundImage")));
+            this.btnCobrarCancelar.ButtonText = "Cancelar";
+            this.btnCobrarCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCobrarCancelar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCobrarCancelar.ForeColor = System.Drawing.Color.SeaGreen;
+            this.btnCobrarCancelar.IdleBorderThickness = 1;
+            this.btnCobrarCancelar.IdleCornerRadius = 20;
+            this.btnCobrarCancelar.IdleFillColor = System.Drawing.Color.White;
+            this.btnCobrarCancelar.IdleForecolor = System.Drawing.Color.Red;
+            this.btnCobrarCancelar.IdleLineColor = System.Drawing.Color.Red;
+            this.btnCobrarCancelar.Location = new System.Drawing.Point(500, 0);
+            this.btnCobrarCancelar.Margin = new System.Windows.Forms.Padding(5);
+            this.btnCobrarCancelar.Name = "btnCobrarCancelar";
+            this.btnCobrarCancelar.Size = new System.Drawing.Size(133, 56);
+            this.btnCobrarCancelar.TabIndex = 2;
+            this.btnCobrarCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnCobrarCancelar.Click += new System.EventHandler(this.btnCobrarCancelar_Click);
+            // 
+            // btnCobrarCobrareIticket
+            // 
+            this.btnCobrarCobrareIticket.ActiveBorderThickness = 1;
+            this.btnCobrarCobrareIticket.ActiveCornerRadius = 20;
+            this.btnCobrarCobrareIticket.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.btnCobrarCobrareIticket.ActiveForecolor = System.Drawing.Color.White;
+            this.btnCobrarCobrareIticket.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.btnCobrarCobrareIticket.BackColor = System.Drawing.Color.AliceBlue;
+            this.btnCobrarCobrareIticket.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCobrarCobrareIticket.BackgroundImage")));
+            this.btnCobrarCobrareIticket.ButtonText = "Cobrar e imprimir ticket";
+            this.btnCobrarCobrareIticket.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCobrarCobrareIticket.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCobrarCobrareIticket.ForeColor = System.Drawing.Color.SeaGreen;
+            this.btnCobrarCobrareIticket.IdleBorderThickness = 1;
+            this.btnCobrarCobrareIticket.IdleCornerRadius = 20;
+            this.btnCobrarCobrareIticket.IdleFillColor = System.Drawing.Color.White;
+            this.btnCobrarCobrareIticket.IdleForecolor = System.Drawing.Color.SeaGreen;
+            this.btnCobrarCobrareIticket.IdleLineColor = System.Drawing.Color.SeaGreen;
+            this.btnCobrarCobrareIticket.Location = new System.Drawing.Point(5, 1);
+            this.btnCobrarCobrareIticket.Margin = new System.Windows.Forms.Padding(5);
+            this.btnCobrarCobrareIticket.Name = "btnCobrarCobrareIticket";
+            this.btnCobrarCobrareIticket.Size = new System.Drawing.Size(251, 56);
+            this.btnCobrarCobrareIticket.TabIndex = 1;
+            this.btnCobrarCobrareIticket.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnCobrarCobrareIticket.Click += new System.EventHandler(this.btnCobrarCobrareIticket_Click);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(3, 5);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(95, 23);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "COBRAR";
+            // 
+            // pnlCobrarTitle
+            // 
+            this.pnlCobrarTitle.BackColor = System.Drawing.Color.SteelBlue;
+            this.pnlCobrarTitle.Controls.Add(this.lblCobrarTiltle);
+            this.pnlCobrarTitle.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlCobrarTitle.Location = new System.Drawing.Point(0, 0);
+            this.pnlCobrarTitle.Name = "pnlCobrarTitle";
+            this.pnlCobrarTitle.Size = new System.Drawing.Size(660, 38);
+            this.pnlCobrarTitle.TabIndex = 0;
+            this.pnlCobrarTitle.Visible = false;
+            // 
+            // lblCobrarTiltle
+            // 
+            this.lblCobrarTiltle.AutoSize = true;
+            this.lblCobrarTiltle.ForeColor = System.Drawing.Color.White;
+            this.lblCobrarTiltle.Location = new System.Drawing.Point(3, 5);
+            this.lblCobrarTiltle.Name = "lblCobrarTiltle";
+            this.lblCobrarTiltle.Size = new System.Drawing.Size(95, 23);
+            this.lblCobrarTiltle.TabIndex = 0;
+            this.lblCobrarTiltle.Text = "COBRAR";
+            // 
             // Pedidos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2158,6 +2158,18 @@
             this.tabNuevo.ResumeLayout(false);
             this.pnlCotizacion.ResumeLayout(false);
             this.pnlCotizacion.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProductosPed)).EndInit();
+            this.bunifuGradientPanel2.ResumeLayout(false);
+            this.bunifuGradientPanel2.PerformLayout();
+            this.pnlfootPago.ResumeLayout(false);
+            this.pnlfootPago.PerformLayout();
+            this.pnlConfirmación.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.pnlBuscarSocio.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgBuscarClientes)).EndInit();
+            this.pnlbusquedaArticulo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgBuscadorArticulo)).EndInit();
             this.pnlPagos.ResumeLayout(false);
             this.fpCobrarBody.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
@@ -2178,18 +2190,6 @@
             this.pnlCobrarFootBotones.PerformLayout();
             this.pnlCobrarTitle.ResumeLayout(false);
             this.pnlCobrarTitle.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProductosPed)).EndInit();
-            this.bunifuGradientPanel2.ResumeLayout(false);
-            this.bunifuGradientPanel2.PerformLayout();
-            this.pnlfootPago.ResumeLayout(false);
-            this.pnlfootPago.PerformLayout();
-            this.pnlConfirmación.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.pnlBuscarSocio.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgBuscarClientes)).EndInit();
-            this.pnlbusquedaArticulo.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgBuscadorArticulo)).EndInit();
             this.ResumeLayout(false);
 
         }
