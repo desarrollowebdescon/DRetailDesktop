@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Pedidos));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Pedidos));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -42,6 +42,21 @@
             this.tabControlPedidos = new System.Windows.Forms.TabControl();
             this.tabPedidos = new System.Windows.Forms.TabPage();
             this.pnlBodyCot = new System.Windows.Forms.Panel();
+            this.pnlPOAcciones = new System.Windows.Forms.Panel();
+            this.pnlPOAccion = new System.Windows.Forms.Panel();
+            this.lblMontoAcciones = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.btnCerrarPOAcciones = new System.Windows.Forms.Button();
+            this.lblNombre = new System.Windows.Forms.Label();
+            this.lblTxtNombre = new System.Windows.Forms.Label();
+            this.lblNCliente = new System.Windows.Forms.Label();
+            this.lblTxtNCliente = new System.Windows.Forms.Label();
+            this.lblNPedido = new System.Windows.Forms.Label();
+            this.lblTxtNPedido = new System.Windows.Forms.Label();
+            this.lblAccionesMensaje = new System.Windows.Forms.Label();
+            this.btnAccionesGPedido = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.btnAccionReenviar = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.btnAccionesReimp = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bdgPedidos = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.NoPedido = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NoCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -62,21 +77,6 @@
             this.btnBuscarCot = new Bunifu.Framework.UI.BunifuThinButton2();
             this.label4 = new System.Windows.Forms.Label();
             this.pnlFooter = new System.Windows.Forms.Panel();
-            this.pnlPOAcciones = new System.Windows.Forms.Panel();
-            this.pnlPOAccion = new System.Windows.Forms.Panel();
-            this.lblMontoAcciones = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.btnCerrarPOAcciones = new System.Windows.Forms.Button();
-            this.lblNombre = new System.Windows.Forms.Label();
-            this.lblTxtNombre = new System.Windows.Forms.Label();
-            this.lblNCliente = new System.Windows.Forms.Label();
-            this.lblTxtNCliente = new System.Windows.Forms.Label();
-            this.lblNPedido = new System.Windows.Forms.Label();
-            this.lblTxtNPedido = new System.Windows.Forms.Label();
-            this.lblAccionesMensaje = new System.Windows.Forms.Label();
-            this.btnAccionesGPedido = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.btnAccionReenviar = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.btnAccionesReimp = new Bunifu.Framework.UI.BunifuThinButton2();
             this.pnlTabPedidos = new System.Windows.Forms.Panel();
             this.tabNuevo = new System.Windows.Forms.TabPage();
             this.pnlCotizacion = new System.Windows.Forms.Panel();
@@ -171,10 +171,10 @@
             this.tabControlPedidos.SuspendLayout();
             this.tabPedidos.SuspendLayout();
             this.pnlBodyCot.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bdgPedidos)).BeginInit();
-            this.bunifuGradientPanel1.SuspendLayout();
             this.pnlPOAcciones.SuspendLayout();
             this.pnlPOAccion.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bdgPedidos)).BeginInit();
+            this.bunifuGradientPanel1.SuspendLayout();
             this.tabNuevo.SuspendLayout();
             this.pnlCotizacion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductosPed)).BeginInit();
@@ -241,6 +241,238 @@
             this.pnlBodyCot.Name = "pnlBodyCot";
             this.pnlBodyCot.Size = new System.Drawing.Size(1439, 797);
             this.pnlBodyCot.TabIndex = 27;
+            // 
+            // pnlPOAcciones
+            // 
+            this.pnlPOAcciones.BackColor = System.Drawing.Color.DimGray;
+            this.pnlPOAcciones.Controls.Add(this.pnlPOAccion);
+            this.pnlPOAcciones.Location = new System.Drawing.Point(257, 141);
+            this.pnlPOAcciones.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlPOAcciones.Name = "pnlPOAcciones";
+            this.pnlPOAcciones.Size = new System.Drawing.Size(1100, 638);
+            this.pnlPOAcciones.TabIndex = 28;
+            this.pnlPOAcciones.Visible = false;
+            // 
+            // pnlPOAccion
+            // 
+            this.pnlPOAccion.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlPOAccion.BackColor = System.Drawing.Color.White;
+            this.pnlPOAccion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlPOAccion.Controls.Add(this.lblMontoAcciones);
+            this.pnlPOAccion.Controls.Add(this.label8);
+            this.pnlPOAccion.Controls.Add(this.btnCerrarPOAcciones);
+            this.pnlPOAccion.Controls.Add(this.lblNombre);
+            this.pnlPOAccion.Controls.Add(this.lblTxtNombre);
+            this.pnlPOAccion.Controls.Add(this.lblNCliente);
+            this.pnlPOAccion.Controls.Add(this.lblTxtNCliente);
+            this.pnlPOAccion.Controls.Add(this.lblNPedido);
+            this.pnlPOAccion.Controls.Add(this.lblTxtNPedido);
+            this.pnlPOAccion.Controls.Add(this.lblAccionesMensaje);
+            this.pnlPOAccion.Controls.Add(this.btnAccionesGPedido);
+            this.pnlPOAccion.Controls.Add(this.btnAccionReenviar);
+            this.pnlPOAccion.Controls.Add(this.btnAccionesReimp);
+            this.pnlPOAccion.Location = new System.Drawing.Point(86, 83);
+            this.pnlPOAccion.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlPOAccion.Name = "pnlPOAccion";
+            this.pnlPOAccion.Size = new System.Drawing.Size(955, 441);
+            this.pnlPOAccion.TabIndex = 27;
+            // 
+            // lblMontoAcciones
+            // 
+            this.lblMontoAcciones.AutoSize = true;
+            this.lblMontoAcciones.ForeColor = System.Drawing.Color.Black;
+            this.lblMontoAcciones.Location = new System.Drawing.Point(163, 146);
+            this.lblMontoAcciones.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblMontoAcciones.Name = "lblMontoAcciones";
+            this.lblMontoAcciones.Size = new System.Drawing.Size(166, 25);
+            this.lblMontoAcciones.TabIndex = 34;
+            this.lblMontoAcciones.Text = "XXXXXXXXXXX";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.ForeColor = System.Drawing.Color.Black;
+            this.label8.Location = new System.Drawing.Point(40, 146);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(67, 25);
+            this.label8.TabIndex = 33;
+            this.label8.Text = "Monto";
+            // 
+            // btnCerrarPOAcciones
+            // 
+            this.btnCerrarPOAcciones.BackColor = System.Drawing.Color.Transparent;
+            this.btnCerrarPOAcciones.ForeColor = System.Drawing.Color.Red;
+            this.btnCerrarPOAcciones.Location = new System.Drawing.Point(924, 2);
+            this.btnCerrarPOAcciones.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCerrarPOAcciones.Name = "btnCerrarPOAcciones";
+            this.btnCerrarPOAcciones.Size = new System.Drawing.Size(30, 32);
+            this.btnCerrarPOAcciones.TabIndex = 32;
+            this.btnCerrarPOAcciones.Text = "X";
+            this.btnCerrarPOAcciones.UseVisualStyleBackColor = false;
+            this.btnCerrarPOAcciones.Click += new System.EventHandler(this.btnCerrarPOAcciones_Click);
+            // 
+            // lblNombre
+            // 
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.ForeColor = System.Drawing.Color.Black;
+            this.lblNombre.Location = new System.Drawing.Point(163, 97);
+            this.lblNombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(166, 25);
+            this.lblNombre.TabIndex = 31;
+            this.lblNombre.Text = "XXXXXXXXXXX";
+            // 
+            // lblTxtNombre
+            // 
+            this.lblTxtNombre.AutoSize = true;
+            this.lblTxtNombre.ForeColor = System.Drawing.Color.Black;
+            this.lblTxtNombre.Location = new System.Drawing.Point(40, 97);
+            this.lblTxtNombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTxtNombre.Name = "lblTxtNombre";
+            this.lblTxtNombre.Size = new System.Drawing.Size(81, 25);
+            this.lblTxtNombre.TabIndex = 30;
+            this.lblTxtNombre.Text = "Nombre";
+            // 
+            // lblNCliente
+            // 
+            this.lblNCliente.AutoSize = true;
+            this.lblNCliente.ForeColor = System.Drawing.Color.Black;
+            this.lblNCliente.Location = new System.Drawing.Point(163, 46);
+            this.lblNCliente.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNCliente.Name = "lblNCliente";
+            this.lblNCliente.Size = new System.Drawing.Size(166, 25);
+            this.lblNCliente.TabIndex = 29;
+            this.lblNCliente.Text = "XXXXXXXXXXX";
+            // 
+            // lblTxtNCliente
+            // 
+            this.lblTxtNCliente.AutoSize = true;
+            this.lblTxtNCliente.ForeColor = System.Drawing.Color.Black;
+            this.lblTxtNCliente.Location = new System.Drawing.Point(40, 46);
+            this.lblTxtNCliente.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTxtNCliente.Name = "lblTxtNCliente";
+            this.lblTxtNCliente.Size = new System.Drawing.Size(114, 25);
+            this.lblTxtNCliente.TabIndex = 28;
+            this.lblTxtNCliente.Text = "No. Cliente:";
+            // 
+            // lblNPedido
+            // 
+            this.lblNPedido.AutoSize = true;
+            this.lblNPedido.ForeColor = System.Drawing.Color.DarkRed;
+            this.lblNPedido.Location = new System.Drawing.Point(760, 38);
+            this.lblNPedido.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNPedido.Name = "lblNPedido";
+            this.lblNPedido.Size = new System.Drawing.Size(152, 25);
+            this.lblNPedido.TabIndex = 27;
+            this.lblNPedido.Text = "XXXXXXXXXX";
+            // 
+            // lblTxtNPedido
+            // 
+            this.lblTxtNPedido.AutoSize = true;
+            this.lblTxtNPedido.ForeColor = System.Drawing.Color.Black;
+            this.lblTxtNPedido.Location = new System.Drawing.Point(596, 38);
+            this.lblTxtNPedido.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTxtNPedido.Name = "lblTxtNPedido";
+            this.lblTxtNPedido.Size = new System.Drawing.Size(145, 25);
+            this.lblTxtNPedido.TabIndex = 26;
+            this.lblTxtNPedido.Text = "No. Cotizacion:";
+            // 
+            // lblAccionesMensaje
+            // 
+            this.lblAccionesMensaje.AutoSize = true;
+            this.lblAccionesMensaje.ForeColor = System.Drawing.Color.Lime;
+            this.lblAccionesMensaje.Location = new System.Drawing.Point(24, 366);
+            this.lblAccionesMensaje.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblAccionesMensaje.Name = "lblAccionesMensaje";
+            this.lblAccionesMensaje.Size = new System.Drawing.Size(0, 25);
+            this.lblAccionesMensaje.TabIndex = 25;
+            // 
+            // btnAccionesGPedido
+            // 
+            this.btnAccionesGPedido.ActiveBorderThickness = 1;
+            this.btnAccionesGPedido.ActiveCornerRadius = 20;
+            this.btnAccionesGPedido.ActiveFillColor = System.Drawing.Color.LimeGreen;
+            this.btnAccionesGPedido.ActiveForecolor = System.Drawing.Color.White;
+            this.btnAccionesGPedido.ActiveLineColor = System.Drawing.Color.LimeGreen;
+            this.btnAccionesGPedido.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAccionesGPedido.BackColor = System.Drawing.Color.White;
+            this.btnAccionesGPedido.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAccionesGPedido.BackgroundImage")));
+            this.btnAccionesGPedido.ButtonText = "Generar factura";
+            this.btnAccionesGPedido.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAccionesGPedido.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAccionesGPedido.ForeColor = System.Drawing.Color.SteelBlue;
+            this.btnAccionesGPedido.IdleBorderThickness = 1;
+            this.btnAccionesGPedido.IdleCornerRadius = 20;
+            this.btnAccionesGPedido.IdleFillColor = System.Drawing.Color.White;
+            this.btnAccionesGPedido.IdleForecolor = System.Drawing.Color.LimeGreen;
+            this.btnAccionesGPedido.IdleLineColor = System.Drawing.Color.LimeGreen;
+            this.btnAccionesGPedido.Location = new System.Drawing.Point(659, 269);
+            this.btnAccionesGPedido.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.btnAccionesGPedido.Name = "btnAccionesGPedido";
+            this.btnAccionesGPedido.Size = new System.Drawing.Size(186, 50);
+            this.btnAccionesGPedido.TabIndex = 24;
+            this.btnAccionesGPedido.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnAccionesGPedido.Click += new System.EventHandler(this.btnAccionesGPedido_Click);
+            // 
+            // btnAccionReenviar
+            // 
+            this.btnAccionReenviar.ActiveBorderThickness = 1;
+            this.btnAccionReenviar.ActiveCornerRadius = 20;
+            this.btnAccionReenviar.ActiveFillColor = System.Drawing.Color.Orange;
+            this.btnAccionReenviar.ActiveForecolor = System.Drawing.Color.White;
+            this.btnAccionReenviar.ActiveLineColor = System.Drawing.Color.Orange;
+            this.btnAccionReenviar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAccionReenviar.BackColor = System.Drawing.Color.White;
+            this.btnAccionReenviar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAccionReenviar.BackgroundImage")));
+            this.btnAccionReenviar.ButtonText = "Reenviar";
+            this.btnAccionReenviar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAccionReenviar.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAccionReenviar.ForeColor = System.Drawing.Color.SteelBlue;
+            this.btnAccionReenviar.IdleBorderThickness = 1;
+            this.btnAccionReenviar.IdleCornerRadius = 20;
+            this.btnAccionReenviar.IdleFillColor = System.Drawing.Color.White;
+            this.btnAccionReenviar.IdleForecolor = System.Drawing.Color.Orange;
+            this.btnAccionReenviar.IdleLineColor = System.Drawing.Color.Orange;
+            this.btnAccionReenviar.Location = new System.Drawing.Point(135, 269);
+            this.btnAccionReenviar.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.btnAccionReenviar.Name = "btnAccionReenviar";
+            this.btnAccionReenviar.Size = new System.Drawing.Size(186, 50);
+            this.btnAccionReenviar.TabIndex = 23;
+            this.btnAccionReenviar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnAccionReenviar.Click += new System.EventHandler(this.btnAccionReenviar_Click);
+            // 
+            // btnAccionesReimp
+            // 
+            this.btnAccionesReimp.ActiveBorderThickness = 1;
+            this.btnAccionesReimp.ActiveCornerRadius = 20;
+            this.btnAccionesReimp.ActiveFillColor = System.Drawing.Color.SteelBlue;
+            this.btnAccionesReimp.ActiveForecolor = System.Drawing.Color.White;
+            this.btnAccionesReimp.ActiveLineColor = System.Drawing.Color.SteelBlue;
+            this.btnAccionesReimp.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAccionesReimp.BackColor = System.Drawing.Color.White;
+            this.btnAccionesReimp.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAccionesReimp.BackgroundImage")));
+            this.btnAccionesReimp.ButtonText = "Reimprimir";
+            this.btnAccionesReimp.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAccionesReimp.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAccionesReimp.ForeColor = System.Drawing.Color.SteelBlue;
+            this.btnAccionesReimp.IdleBorderThickness = 1;
+            this.btnAccionesReimp.IdleCornerRadius = 20;
+            this.btnAccionesReimp.IdleFillColor = System.Drawing.Color.White;
+            this.btnAccionesReimp.IdleForecolor = System.Drawing.Color.SteelBlue;
+            this.btnAccionesReimp.IdleLineColor = System.Drawing.Color.SteelBlue;
+            this.btnAccionesReimp.Location = new System.Drawing.Point(401, 269);
+            this.btnAccionesReimp.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.btnAccionesReimp.Name = "btnAccionesReimp";
+            this.btnAccionesReimp.Size = new System.Drawing.Size(186, 50);
+            this.btnAccionesReimp.TabIndex = 22;
+            this.btnAccionesReimp.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnAccionesReimp.Click += new System.EventHandler(this.btnAccionesReimp_Click);
             // 
             // bdgPedidos
             // 
@@ -535,238 +767,6 @@
             this.pnlFooter.Name = "pnlFooter";
             this.pnlFooter.Size = new System.Drawing.Size(1384, 41);
             this.pnlFooter.TabIndex = 25;
-            // 
-            // pnlPOAcciones
-            // 
-            this.pnlPOAcciones.BackColor = System.Drawing.Color.DimGray;
-            this.pnlPOAcciones.Controls.Add(this.pnlPOAccion);
-            this.pnlPOAcciones.Location = new System.Drawing.Point(257, 141);
-            this.pnlPOAcciones.Margin = new System.Windows.Forms.Padding(2);
-            this.pnlPOAcciones.Name = "pnlPOAcciones";
-            this.pnlPOAcciones.Size = new System.Drawing.Size(1100, 638);
-            this.pnlPOAcciones.TabIndex = 28;
-            this.pnlPOAcciones.Visible = false;
-            // 
-            // pnlPOAccion
-            // 
-            this.pnlPOAccion.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlPOAccion.BackColor = System.Drawing.Color.White;
-            this.pnlPOAccion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlPOAccion.Controls.Add(this.lblMontoAcciones);
-            this.pnlPOAccion.Controls.Add(this.label8);
-            this.pnlPOAccion.Controls.Add(this.btnCerrarPOAcciones);
-            this.pnlPOAccion.Controls.Add(this.lblNombre);
-            this.pnlPOAccion.Controls.Add(this.lblTxtNombre);
-            this.pnlPOAccion.Controls.Add(this.lblNCliente);
-            this.pnlPOAccion.Controls.Add(this.lblTxtNCliente);
-            this.pnlPOAccion.Controls.Add(this.lblNPedido);
-            this.pnlPOAccion.Controls.Add(this.lblTxtNPedido);
-            this.pnlPOAccion.Controls.Add(this.lblAccionesMensaje);
-            this.pnlPOAccion.Controls.Add(this.btnAccionesGPedido);
-            this.pnlPOAccion.Controls.Add(this.btnAccionReenviar);
-            this.pnlPOAccion.Controls.Add(this.btnAccionesReimp);
-            this.pnlPOAccion.Location = new System.Drawing.Point(86, 83);
-            this.pnlPOAccion.Margin = new System.Windows.Forms.Padding(2);
-            this.pnlPOAccion.Name = "pnlPOAccion";
-            this.pnlPOAccion.Size = new System.Drawing.Size(955, 441);
-            this.pnlPOAccion.TabIndex = 27;
-            // 
-            // lblMontoAcciones
-            // 
-            this.lblMontoAcciones.AutoSize = true;
-            this.lblMontoAcciones.ForeColor = System.Drawing.Color.Black;
-            this.lblMontoAcciones.Location = new System.Drawing.Point(163, 146);
-            this.lblMontoAcciones.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblMontoAcciones.Name = "lblMontoAcciones";
-            this.lblMontoAcciones.Size = new System.Drawing.Size(166, 25);
-            this.lblMontoAcciones.TabIndex = 34;
-            this.lblMontoAcciones.Text = "XXXXXXXXXXX";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(40, 146);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(67, 25);
-            this.label8.TabIndex = 33;
-            this.label8.Text = "Monto";
-            // 
-            // btnCerrarPOAcciones
-            // 
-            this.btnCerrarPOAcciones.BackColor = System.Drawing.Color.Transparent;
-            this.btnCerrarPOAcciones.ForeColor = System.Drawing.Color.Red;
-            this.btnCerrarPOAcciones.Location = new System.Drawing.Point(924, 2);
-            this.btnCerrarPOAcciones.Margin = new System.Windows.Forms.Padding(2);
-            this.btnCerrarPOAcciones.Name = "btnCerrarPOAcciones";
-            this.btnCerrarPOAcciones.Size = new System.Drawing.Size(30, 32);
-            this.btnCerrarPOAcciones.TabIndex = 32;
-            this.btnCerrarPOAcciones.Text = "X";
-            this.btnCerrarPOAcciones.UseVisualStyleBackColor = false;
-            this.btnCerrarPOAcciones.Click += new System.EventHandler(this.btnCerrarPOAcciones_Click);
-            // 
-            // lblNombre
-            // 
-            this.lblNombre.AutoSize = true;
-            this.lblNombre.ForeColor = System.Drawing.Color.Black;
-            this.lblNombre.Location = new System.Drawing.Point(163, 97);
-            this.lblNombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(166, 25);
-            this.lblNombre.TabIndex = 31;
-            this.lblNombre.Text = "XXXXXXXXXXX";
-            // 
-            // lblTxtNombre
-            // 
-            this.lblTxtNombre.AutoSize = true;
-            this.lblTxtNombre.ForeColor = System.Drawing.Color.Black;
-            this.lblTxtNombre.Location = new System.Drawing.Point(40, 97);
-            this.lblTxtNombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblTxtNombre.Name = "lblTxtNombre";
-            this.lblTxtNombre.Size = new System.Drawing.Size(81, 25);
-            this.lblTxtNombre.TabIndex = 30;
-            this.lblTxtNombre.Text = "Nombre";
-            // 
-            // lblNCliente
-            // 
-            this.lblNCliente.AutoSize = true;
-            this.lblNCliente.ForeColor = System.Drawing.Color.Black;
-            this.lblNCliente.Location = new System.Drawing.Point(163, 46);
-            this.lblNCliente.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblNCliente.Name = "lblNCliente";
-            this.lblNCliente.Size = new System.Drawing.Size(166, 25);
-            this.lblNCliente.TabIndex = 29;
-            this.lblNCliente.Text = "XXXXXXXXXXX";
-            // 
-            // lblTxtNCliente
-            // 
-            this.lblTxtNCliente.AutoSize = true;
-            this.lblTxtNCliente.ForeColor = System.Drawing.Color.Black;
-            this.lblTxtNCliente.Location = new System.Drawing.Point(40, 46);
-            this.lblTxtNCliente.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblTxtNCliente.Name = "lblTxtNCliente";
-            this.lblTxtNCliente.Size = new System.Drawing.Size(114, 25);
-            this.lblTxtNCliente.TabIndex = 28;
-            this.lblTxtNCliente.Text = "No. Cliente:";
-            // 
-            // lblNPedido
-            // 
-            this.lblNPedido.AutoSize = true;
-            this.lblNPedido.ForeColor = System.Drawing.Color.DarkRed;
-            this.lblNPedido.Location = new System.Drawing.Point(760, 38);
-            this.lblNPedido.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblNPedido.Name = "lblNPedido";
-            this.lblNPedido.Size = new System.Drawing.Size(152, 25);
-            this.lblNPedido.TabIndex = 27;
-            this.lblNPedido.Text = "XXXXXXXXXX";
-            // 
-            // lblTxtNPedido
-            // 
-            this.lblTxtNPedido.AutoSize = true;
-            this.lblTxtNPedido.ForeColor = System.Drawing.Color.Black;
-            this.lblTxtNPedido.Location = new System.Drawing.Point(596, 38);
-            this.lblTxtNPedido.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblTxtNPedido.Name = "lblTxtNPedido";
-            this.lblTxtNPedido.Size = new System.Drawing.Size(145, 25);
-            this.lblTxtNPedido.TabIndex = 26;
-            this.lblTxtNPedido.Text = "No. Cotizacion:";
-            // 
-            // lblAccionesMensaje
-            // 
-            this.lblAccionesMensaje.AutoSize = true;
-            this.lblAccionesMensaje.ForeColor = System.Drawing.Color.Lime;
-            this.lblAccionesMensaje.Location = new System.Drawing.Point(24, 366);
-            this.lblAccionesMensaje.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblAccionesMensaje.Name = "lblAccionesMensaje";
-            this.lblAccionesMensaje.Size = new System.Drawing.Size(0, 25);
-            this.lblAccionesMensaje.TabIndex = 25;
-            // 
-            // btnAccionesGPedido
-            // 
-            this.btnAccionesGPedido.ActiveBorderThickness = 1;
-            this.btnAccionesGPedido.ActiveCornerRadius = 20;
-            this.btnAccionesGPedido.ActiveFillColor = System.Drawing.Color.LimeGreen;
-            this.btnAccionesGPedido.ActiveForecolor = System.Drawing.Color.White;
-            this.btnAccionesGPedido.ActiveLineColor = System.Drawing.Color.LimeGreen;
-            this.btnAccionesGPedido.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAccionesGPedido.BackColor = System.Drawing.Color.White;
-            this.btnAccionesGPedido.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAccionesGPedido.BackgroundImage")));
-            this.btnAccionesGPedido.ButtonText = "Generar pedido";
-            this.btnAccionesGPedido.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAccionesGPedido.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAccionesGPedido.ForeColor = System.Drawing.Color.SteelBlue;
-            this.btnAccionesGPedido.IdleBorderThickness = 1;
-            this.btnAccionesGPedido.IdleCornerRadius = 20;
-            this.btnAccionesGPedido.IdleFillColor = System.Drawing.Color.White;
-            this.btnAccionesGPedido.IdleForecolor = System.Drawing.Color.LimeGreen;
-            this.btnAccionesGPedido.IdleLineColor = System.Drawing.Color.LimeGreen;
-            this.btnAccionesGPedido.Location = new System.Drawing.Point(659, 269);
-            this.btnAccionesGPedido.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
-            this.btnAccionesGPedido.Name = "btnAccionesGPedido";
-            this.btnAccionesGPedido.Size = new System.Drawing.Size(186, 50);
-            this.btnAccionesGPedido.TabIndex = 24;
-            this.btnAccionesGPedido.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnAccionesGPedido.Click += new System.EventHandler(this.btnAccionesGPedido_Click);
-            // 
-            // btnAccionReenviar
-            // 
-            this.btnAccionReenviar.ActiveBorderThickness = 1;
-            this.btnAccionReenviar.ActiveCornerRadius = 20;
-            this.btnAccionReenviar.ActiveFillColor = System.Drawing.Color.Orange;
-            this.btnAccionReenviar.ActiveForecolor = System.Drawing.Color.White;
-            this.btnAccionReenviar.ActiveLineColor = System.Drawing.Color.Orange;
-            this.btnAccionReenviar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAccionReenviar.BackColor = System.Drawing.Color.White;
-            this.btnAccionReenviar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAccionReenviar.BackgroundImage")));
-            this.btnAccionReenviar.ButtonText = "Reenviar";
-            this.btnAccionReenviar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAccionReenviar.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAccionReenviar.ForeColor = System.Drawing.Color.SteelBlue;
-            this.btnAccionReenviar.IdleBorderThickness = 1;
-            this.btnAccionReenviar.IdleCornerRadius = 20;
-            this.btnAccionReenviar.IdleFillColor = System.Drawing.Color.White;
-            this.btnAccionReenviar.IdleForecolor = System.Drawing.Color.Orange;
-            this.btnAccionReenviar.IdleLineColor = System.Drawing.Color.Orange;
-            this.btnAccionReenviar.Location = new System.Drawing.Point(135, 269);
-            this.btnAccionReenviar.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
-            this.btnAccionReenviar.Name = "btnAccionReenviar";
-            this.btnAccionReenviar.Size = new System.Drawing.Size(186, 50);
-            this.btnAccionReenviar.TabIndex = 23;
-            this.btnAccionReenviar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnAccionReenviar.Click += new System.EventHandler(this.btnAccionReenviar_Click);
-            // 
-            // btnAccionesReimp
-            // 
-            this.btnAccionesReimp.ActiveBorderThickness = 1;
-            this.btnAccionesReimp.ActiveCornerRadius = 20;
-            this.btnAccionesReimp.ActiveFillColor = System.Drawing.Color.SteelBlue;
-            this.btnAccionesReimp.ActiveForecolor = System.Drawing.Color.White;
-            this.btnAccionesReimp.ActiveLineColor = System.Drawing.Color.SteelBlue;
-            this.btnAccionesReimp.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAccionesReimp.BackColor = System.Drawing.Color.White;
-            this.btnAccionesReimp.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAccionesReimp.BackgroundImage")));
-            this.btnAccionesReimp.ButtonText = "Reimprimir";
-            this.btnAccionesReimp.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAccionesReimp.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAccionesReimp.ForeColor = System.Drawing.Color.SteelBlue;
-            this.btnAccionesReimp.IdleBorderThickness = 1;
-            this.btnAccionesReimp.IdleCornerRadius = 20;
-            this.btnAccionesReimp.IdleFillColor = System.Drawing.Color.White;
-            this.btnAccionesReimp.IdleForecolor = System.Drawing.Color.SteelBlue;
-            this.btnAccionesReimp.IdleLineColor = System.Drawing.Color.SteelBlue;
-            this.btnAccionesReimp.Location = new System.Drawing.Point(401, 269);
-            this.btnAccionesReimp.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
-            this.btnAccionesReimp.Name = "btnAccionesReimp";
-            this.btnAccionesReimp.Size = new System.Drawing.Size(186, 50);
-            this.btnAccionesReimp.TabIndex = 22;
-            this.btnAccionesReimp.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnAccionesReimp.Click += new System.EventHandler(this.btnAccionesReimp_Click);
             // 
             // pnlTabPedidos
             // 
@@ -2149,12 +2149,12 @@
             this.tabPedidos.ResumeLayout(false);
             this.tabPedidos.PerformLayout();
             this.pnlBodyCot.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.bdgPedidos)).EndInit();
-            this.bunifuGradientPanel1.ResumeLayout(false);
-            this.bunifuGradientPanel1.PerformLayout();
             this.pnlPOAcciones.ResumeLayout(false);
             this.pnlPOAccion.ResumeLayout(false);
             this.pnlPOAccion.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bdgPedidos)).EndInit();
+            this.bunifuGradientPanel1.ResumeLayout(false);
+            this.bunifuGradientPanel1.PerformLayout();
             this.tabNuevo.ResumeLayout(false);
             this.pnlCotizacion.ResumeLayout(false);
             this.pnlCotizacion.PerformLayout();
