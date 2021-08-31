@@ -19,6 +19,7 @@ namespace DRtail
         public List<DatosSocios> dtosSocios;
         List<DatosArticulos> items;
         List<DatosCotizacion> cotizacionesList;
+       
         public int ordenDGV = 0;
         public string codClienteSelec = "";
         DataTable dtSocios = new DataTable();
@@ -30,16 +31,32 @@ namespace DRtail
         public Cotizaciones()
         {
             InitializeComponent();
-            this.Dock = DockStyle.Fill;
+
             GetData();
             AutoCompletar(txtProducto, "DatosArticulos");
             AutoCompletar(txtCliente, "DatosSocios");
             
+           // txtBuscar.Size = bdpInicio.Size;
+
+        }
+        public Cotizaciones(DatosCotizacion dc)
+        {
+            InitializeComponent();
+            GetData();
+            AutoCompletar(txtProducto, "DatosArticulos");
+            AutoCompletar(txtCliente, "DatosSocios");
+            if(dc.Cliente != "")
+            {
+                txtCliente.Text = dc.Cliente;
+                tabControlCotizaciones.SelectedIndex = 1;
+            }
         }
 
         
         private void GetData()
         {
+         
+
             try
             {
                 dtosSocios = Servicios.getSocios();
@@ -335,7 +352,21 @@ namespace DRtail
 
         private void btnAccionesGPedido_Click(object sender, EventArgs e)
         {
-            lblAccionesMensaje.Text = "Se ha Generado el pedido con éxito la cotización " + lblNCotizacion.Text;
+            frmMenuLateral ml = (frmMenuLateral)this.ParentForm;
+            ml.SelectedLineMenu("pnlLineCotizaciones");
+            DatosCotizacion dc = new DatosCotizacion();
+            dc.Cliente = bdgCotizaciones.SelectedRows[0].Cells[1].Value.ToString();
+            Cotizaciones cot = new Cotizaciones(dc);
+
+            foreach (Control c in ml.Controls)
+            {
+                if (c.Name == "pnlMain")
+                {
+                    c.Controls.Clear();
+
+                    c.Controls.Add(cot);
+                }
+            }
         }
 
         private void btnCerrarPOAcciones_Click(object sender, EventArgs e)

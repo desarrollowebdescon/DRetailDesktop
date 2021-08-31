@@ -30,7 +30,19 @@ namespace DRtail
         public Pedidos()
         {
             InitializeComponent();
-            this.Dock = DockStyle.Fill;
+           
+            GetData();
+            AutoCompletar(txtProducto, "DatosArticulos");
+            AutoCompletar(txtCliente, "DatosSocios");
+        }
+        public Pedidos(DatosCotizacion dc)
+        {
+            InitializeComponent();
+            if(dc.Cliente != "")
+            {
+                txtCliente.Text = dc.Cliente;
+                tabControlPedidos.SelectedIndex = 1;
+            }
             GetData();
             AutoCompletar(txtProducto, "DatosArticulos");
             AutoCompletar(txtCliente, "DatosSocios");
@@ -400,5 +412,7 @@ namespace DRtail
         {
             MessageBox.Show("Se ha generado correctamente");
         }
+
+       
     }
 }

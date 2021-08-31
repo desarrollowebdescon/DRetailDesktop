@@ -293,6 +293,26 @@ namespace DRtail.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap semaforo_rojo {
+            get {
+                object obj = ResourceManager.GetObject("semaforo_rojo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap semaforo_verde {
+            get {
+                object obj = ResourceManager.GetObject("semaforo_verde", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap serchC50 {
             get {
                 object obj = ResourceManager.GetObject("serchC50", resourceCulture);

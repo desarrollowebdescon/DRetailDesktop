@@ -120,10 +120,237 @@
   <metadata name="pnlTitleBar.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="pnlMain.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="pbSemaforo.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Zoom</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="pbSemaforo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>-1, -1</value>
+  </data>
+  <data name="pbSemaforo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>39, 30</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="pbSemaforo.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;pbSemaforo.Name" xml:space="preserve">
+    <value>pbSemaforo</value>
+  </data>
+  <data name="&gt;&gt;pbSemaforo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pbSemaforo.Parent" xml:space="preserve">
+    <value>pnlTitleBar</value>
+  </data>
+  <data name="&gt;&gt;pbSemaforo.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="LblTitle.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="LblTitle.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Rockwell, 12pt, style=Bold</value>
+  </data>
+  <data name="LblTitle.Location" type="System.Drawing.Point, System.Drawing">
+    <value>54, 5</value>
+  </data>
+  <data name="LblTitle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>70, 19</value>
+  </data>
+  <data name="LblTitle.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="LblTitle.Text" xml:space="preserve">
+    <value>DRetail</value>
+  </data>
+  <data name="&gt;&gt;LblTitle.Name" xml:space="preserve">
+    <value>LblTitle</value>
+  </data>
+  <data name="&gt;&gt;LblTitle.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LblTitle.Parent" xml:space="preserve">
+    <value>pnlTitleBar</value>
+  </data>
+  <data name="&gt;&gt;LblTitle.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="btnMin.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="btnMin.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Zoom</value>
+  </data>
+  <data name="btnMin.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1638, 0</value>
+  </data>
+  <data name="btnMin.Size" type="System.Drawing.Size, System.Drawing">
+    <value>30, 30</value>
+  </data>
+  <data name="btnMin.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;btnMin.Name" xml:space="preserve">
+    <value>btnMin</value>
+  </data>
+  <data name="&gt;&gt;btnMin.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnMin.Parent" xml:space="preserve">
+    <value>pnlTitleBar</value>
+  </data>
+  <data name="&gt;&gt;btnMin.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="btnMaxim.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="btnMaxim.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Zoom</value>
+  </data>
+  <data name="btnMaxim.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1674, 0</value>
+  </data>
+  <data name="btnMaxim.Size" type="System.Drawing.Size, System.Drawing">
+    <value>30, 30</value>
+  </data>
+  <data name="btnMaxim.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;btnMaxim.Name" xml:space="preserve">
+    <value>btnMaxim</value>
+  </data>
+  <data name="&gt;&gt;btnMaxim.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnMaxim.Parent" xml:space="preserve">
+    <value>pnlTitleBar</value>
+  </data>
+  <data name="&gt;&gt;btnMaxim.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="btnRestore.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="btnRestore.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Zoom</value>
+  </data>
+  <data name="btnRestore.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1674, 0</value>
+  </data>
+  <data name="btnRestore.Size" type="System.Drawing.Size, System.Drawing">
+    <value>30, 30</value>
+  </data>
+  <data name="btnRestore.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;btnRestore.Name" xml:space="preserve">
+    <value>btnRestore</value>
+  </data>
+  <data name="&gt;&gt;btnRestore.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnRestore.Parent" xml:space="preserve">
+    <value>pnlTitleBar</value>
+  </data>
+  <data name="&gt;&gt;btnRestore.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="btnClose.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="btnClose.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Zoom</value>
+  </data>
+  <data name="btnClose.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1710, 0</value>
+  </data>
+  <data name="btnClose.Size" type="System.Drawing.Size, System.Drawing">
+    <value>30, 30</value>
+  </data>
+  <data name="btnClose.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;btnClose.Name" xml:space="preserve">
+    <value>btnClose</value>
+  </data>
+  <data name="&gt;&gt;btnClose.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnClose.Parent" xml:space="preserve">
+    <value>pnlTitleBar</value>
+  </data>
+  <data name="&gt;&gt;btnClose.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="pnlTitleBar.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="pnlTitleBar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="pnlTitleBar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="pnlTitleBar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1745, 30</value>
+  </data>
+  <data name="pnlTitleBar.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="&gt;&gt;pnlTitleBar.Name" xml:space="preserve">
+    <value>pnlTitleBar</value>
+  </data>
+  <data name="&gt;&gt;pnlTitleBar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlTitleBar.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;pnlTitleBar.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="pnlMain.AutoScroll" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="pnlMain.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="pnlMain.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="pnlMain.Location" type="System.Drawing.Point, System.Drawing">
+    <value>315, 30</value>
+  </data>
+  <data name="pnlMain.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="pnlMain.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 5, 5</value>
+  </data>
+  <data name="pnlMain.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1430, 1003</value>
+  </data>
+  <data name="pnlMain.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;pnlMain.Name" xml:space="preserve">
+    <value>pnlMain</value>
+  </data>
+  <data name="&gt;&gt;pnlMain.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlMain.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;pnlMain.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="pnlMenuLateral.AutoScroll" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="pnlMenuLateral.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -131,11 +358,1223 @@
         SUVORK5CYII=
 </value>
   </data>
+  <data name="pnlMenuLateral.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Stretch</value>
+  </data>
+  <data name="btnPedidosMenu.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Stretch</value>
+  </data>
+  <data name="btnPedidosMenu.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="btnPedidosMenu.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10pt, style=Bold</value>
+  </data>
+  <data name="btnPedidosMenu.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 0</value>
+  </data>
+  <data name="btnPedidosMenu.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="btnPedidosMenu.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>280, 60</value>
+  </data>
+  <data name="btnPedidosMenu.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>280, 60</value>
+  </data>
+  <data name="btnPedidosMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>280, 60</value>
+  </data>
+  <data name="btnPedidosMenu.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="btnPedidosMenu.Text" xml:space="preserve">
+    <value>PEDIDOS</value>
+  </data>
+  <data name="&gt;&gt;btnPedidosMenu.Name" xml:space="preserve">
+    <value>btnPedidosMenu</value>
+  </data>
+  <data name="&gt;&gt;btnPedidosMenu.Type" xml:space="preserve">
+    <value>Bunifu.Framework.UI.BunifuFlatButton, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;btnPedidosMenu.Parent" xml:space="preserve">
+    <value>pnlBoxMenuPedidos</value>
+  </data>
+  <data name="&gt;&gt;btnPedidosMenu.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="pnlLinePedidos.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="pnlLinePedidos.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="pnlLinePedidos.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="pnlLinePedidos.Size" type="System.Drawing.Size, System.Drawing">
+    <value>10, 60</value>
+  </data>
+  <data name="pnlLinePedidos.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="pnlLinePedidos.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;pnlLinePedidos.Name" xml:space="preserve">
+    <value>pnlLinePedidos</value>
+  </data>
+  <data name="&gt;&gt;pnlLinePedidos.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlLinePedidos.Parent" xml:space="preserve">
+    <value>pnlBoxMenuPedidos</value>
+  </data>
+  <data name="&gt;&gt;pnlLinePedidos.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="pnlBoxMenuPedidos.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 277</value>
+  </data>
+  <data name="pnlBoxMenuPedidos.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 2, 0, 2</value>
+  </data>
+  <data name="pnlBoxMenuPedidos.Size" type="System.Drawing.Size, System.Drawing">
+    <value>300, 60</value>
+  </data>
+  <data name="pnlBoxMenuPedidos.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;pnlBoxMenuPedidos.Name" xml:space="preserve">
+    <value>pnlBoxMenuPedidos</value>
+  </data>
+  <data name="&gt;&gt;pnlBoxMenuPedidos.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlBoxMenuPedidos.Parent" xml:space="preserve">
+    <value>pnlMenuLateral</value>
+  </data>
+  <data name="&gt;&gt;pnlBoxMenuPedidos.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="btnCSesionMenu.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Zoom</value>
+  </data>
+  <data name="btnCSesionMenu.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="btnCSesionMenu.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10pt, style=Bold</value>
+  </data>
+  <data name="btnCSesionMenu.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 0</value>
+  </data>
+  <data name="btnCSesionMenu.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="btnCSesionMenu.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>280, 60</value>
+  </data>
+  <data name="btnCSesionMenu.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>280, 60</value>
+  </data>
+  <data name="btnCSesionMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>280, 60</value>
+  </data>
+  <data name="btnCSesionMenu.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="btnCSesionMenu.Text" xml:space="preserve">
+    <value>CERRAR SESIÓN</value>
+  </data>
+  <data name="&gt;&gt;btnCSesionMenu.Name" xml:space="preserve">
+    <value>btnCSesionMenu</value>
+  </data>
+  <data name="&gt;&gt;btnCSesionMenu.Type" xml:space="preserve">
+    <value>Bunifu.Framework.UI.BunifuFlatButton, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;btnCSesionMenu.Parent" xml:space="preserve">
+    <value>pnlBoxMenuCSesion</value>
+  </data>
+  <data name="&gt;&gt;btnCSesionMenu.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="panel2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="panel2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="panel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>10, 60</value>
+  </data>
+  <data name="panel2.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
+  <data name="panel2.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;panel2.Name" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;panel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel2.Parent" xml:space="preserve">
+    <value>pnlBoxMenuCSesion</value>
+  </data>
+  <data name="&gt;&gt;panel2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="pnlBoxMenuCSesion.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 787</value>
+  </data>
+  <data name="pnlBoxMenuCSesion.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 2, 0, 2</value>
+  </data>
+  <data name="pnlBoxMenuCSesion.Size" type="System.Drawing.Size, System.Drawing">
+    <value>300, 60</value>
+  </data>
+  <data name="pnlBoxMenuCSesion.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="&gt;&gt;pnlBoxMenuCSesion.Name" xml:space="preserve">
+    <value>pnlBoxMenuCSesion</value>
+  </data>
+  <data name="&gt;&gt;pnlBoxMenuCSesion.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlBoxMenuCSesion.Parent" xml:space="preserve">
+    <value>pnlMenuLateral</value>
+  </data>
+  <data name="&gt;&gt;pnlBoxMenuCSesion.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="btnConfigMenu.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Stretch</value>
+  </data>
+  <data name="btnConfigMenu.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="btnConfigMenu.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10pt, style=Bold</value>
+  </data>
+  <data name="btnConfigMenu.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 0</value>
+  </data>
+  <data name="btnConfigMenu.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="btnConfigMenu.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>280, 60</value>
+  </data>
+  <data name="btnConfigMenu.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>280, 60</value>
+  </data>
+  <data name="btnConfigMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>280, 60</value>
+  </data>
+  <data name="btnConfigMenu.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="btnConfigMenu.Text" xml:space="preserve">
+    <value>CONFIGURACION</value>
+  </data>
+  <data name="&gt;&gt;btnConfigMenu.Name" xml:space="preserve">
+    <value>btnConfigMenu</value>
+  </data>
+  <data name="&gt;&gt;btnConfigMenu.Type" xml:space="preserve">
+    <value>Bunifu.Framework.UI.BunifuFlatButton, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;btnConfigMenu.Parent" xml:space="preserve">
+    <value>pnlBoxMenuConfiguracion</value>
+  </data>
+  <data name="&gt;&gt;btnConfigMenu.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="pnlLineConfiguracion.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="pnlLineConfiguracion.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="pnlLineConfiguracion.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="pnlLineConfiguracion.Size" type="System.Drawing.Size, System.Drawing">
+    <value>10, 60</value>
+  </data>
+  <data name="pnlLineConfiguracion.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="pnlLineConfiguracion.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;pnlLineConfiguracion.Name" xml:space="preserve">
+    <value>pnlLineConfiguracion</value>
+  </data>
+  <data name="&gt;&gt;pnlLineConfiguracion.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlLineConfiguracion.Parent" xml:space="preserve">
+    <value>pnlBoxMenuConfiguracion</value>
+  </data>
+  <data name="&gt;&gt;pnlLineConfiguracion.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="pnlBoxMenuConfiguracion.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 723</value>
+  </data>
+  <data name="pnlBoxMenuConfiguracion.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 2, 0, 2</value>
+  </data>
+  <data name="pnlBoxMenuConfiguracion.Size" type="System.Drawing.Size, System.Drawing">
+    <value>300, 60</value>
+  </data>
+  <data name="pnlBoxMenuConfiguracion.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="&gt;&gt;pnlBoxMenuConfiguracion.Name" xml:space="preserve">
+    <value>pnlBoxMenuConfiguracion</value>
+  </data>
+  <data name="&gt;&gt;pnlBoxMenuConfiguracion.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlBoxMenuConfiguracion.Parent" xml:space="preserve">
+    <value>pnlMenuLateral</value>
+  </data>
+  <data name="&gt;&gt;pnlBoxMenuConfiguracion.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="btnPLealMenu.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Stretch</value>
+  </data>
+  <data name="btnPLealMenu.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="btnPLealMenu.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10pt, style=Bold</value>
+  </data>
+  <data name="btnPLealMenu.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 0</value>
+  </data>
+  <data name="btnPLealMenu.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="btnPLealMenu.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>280, 60</value>
+  </data>
+  <data name="btnPLealMenu.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>280, 60</value>
+  </data>
+  <data name="btnPLealMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>280, 60</value>
+  </data>
+  <data name="btnPLealMenu.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="btnPLealMenu.Text" xml:space="preserve">
+    <value>PTOS. LEALTAD</value>
+  </data>
+  <data name="&gt;&gt;btnPLealMenu.Name" xml:space="preserve">
+    <value>btnPLealMenu</value>
+  </data>
+  <data name="&gt;&gt;btnPLealMenu.Type" xml:space="preserve">
+    <value>Bunifu.Framework.UI.BunifuFlatButton, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;btnPLealMenu.Parent" xml:space="preserve">
+    <value>pnlBoxMenuPLealtad</value>
+  </data>
+  <data name="&gt;&gt;btnPLealMenu.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="pnlLinePLealtad.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="pnlLinePLealtad.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="pnlLinePLealtad.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="pnlLinePLealtad.Size" type="System.Drawing.Size, System.Drawing">
+    <value>10, 60</value>
+  </data>
+  <data name="pnlLinePLealtad.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="pnlLinePLealtad.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;pnlLinePLealtad.Name" xml:space="preserve">
+    <value>pnlLinePLealtad</value>
+  </data>
+  <data name="&gt;&gt;pnlLinePLealtad.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlLinePLealtad.Parent" xml:space="preserve">
+    <value>pnlBoxMenuPLealtad</value>
+  </data>
+  <data name="&gt;&gt;pnlLinePLealtad.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="pnlBoxMenuPLealtad.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 661</value>
+  </data>
+  <data name="pnlBoxMenuPLealtad.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 2, 0, 2</value>
+  </data>
+  <data name="pnlBoxMenuPLealtad.Size" type="System.Drawing.Size, System.Drawing">
+    <value>300, 60</value>
+  </data>
+  <data name="pnlBoxMenuPLealtad.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;pnlBoxMenuPLealtad.Name" xml:space="preserve">
+    <value>pnlBoxMenuPLealtad</value>
+  </data>
+  <data name="&gt;&gt;pnlBoxMenuPLealtad.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlBoxMenuPLealtad.Parent" xml:space="preserve">
+    <value>pnlMenuLateral</value>
+  </data>
+  <data name="&gt;&gt;pnlBoxMenuPLealtad.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="btnCorteMenu.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Stretch</value>
+  </data>
+  <data name="btnCorteMenu.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="btnCorteMenu.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10pt, style=Bold</value>
+  </data>
+  <data name="btnCorteMenu.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 0</value>
+  </data>
+  <data name="btnCorteMenu.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="btnCorteMenu.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>280, 60</value>
+  </data>
+  <data name="btnCorteMenu.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>280, 60</value>
+  </data>
+  <data name="btnCorteMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>280, 60</value>
+  </data>
+  <data name="btnCorteMenu.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="btnCorteMenu.Text" xml:space="preserve">
+    <value>CORTE</value>
+  </data>
+  <data name="&gt;&gt;btnCorteMenu.Name" xml:space="preserve">
+    <value>btnCorteMenu</value>
+  </data>
+  <data name="&gt;&gt;btnCorteMenu.Type" xml:space="preserve">
+    <value>Bunifu.Framework.UI.BunifuFlatButton, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;btnCorteMenu.Parent" xml:space="preserve">
+    <value>pnlBoxMenuCorte</value>
+  </data>
+  <data name="&gt;&gt;btnCorteMenu.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="pnlLineCorte.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="pnlLineCorte.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="pnlLineCorte.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="pnlLineCorte.Size" type="System.Drawing.Size, System.Drawing">
+    <value>10, 60</value>
+  </data>
+  <data name="pnlLineCorte.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="pnlLineCorte.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;pnlLineCorte.Name" xml:space="preserve">
+    <value>pnlLineCorte</value>
+  </data>
+  <data name="&gt;&gt;pnlLineCorte.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlLineCorte.Parent" xml:space="preserve">
+    <value>pnlBoxMenuCorte</value>
+  </data>
+  <data name="&gt;&gt;pnlLineCorte.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="pnlBoxMenuCorte.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 599</value>
+  </data>
+  <data name="pnlBoxMenuCorte.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 2, 0, 2</value>
+  </data>
+  <data name="pnlBoxMenuCorte.Size" type="System.Drawing.Size, System.Drawing">
+    <value>300, 60</value>
+  </data>
+  <data name="pnlBoxMenuCorte.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;pnlBoxMenuCorte.Name" xml:space="preserve">
+    <value>pnlBoxMenuCorte</value>
+  </data>
+  <data name="&gt;&gt;pnlBoxMenuCorte.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlBoxMenuCorte.Parent" xml:space="preserve">
+    <value>pnlMenuLateral</value>
+  </data>
+  <data name="&gt;&gt;pnlBoxMenuCorte.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="btnCotizaMenu.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Stretch</value>
+  </data>
+  <data name="btnCotizaMenu.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="btnCotizaMenu.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10pt, style=Bold</value>
+  </data>
+  <data name="btnCotizaMenu.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 0</value>
+  </data>
+  <data name="btnCotizaMenu.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="btnCotizaMenu.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>280, 60</value>
+  </data>
+  <data name="btnCotizaMenu.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>280, 60</value>
+  </data>
+  <data name="btnCotizaMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>280, 60</value>
+  </data>
+  <data name="btnCotizaMenu.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="btnCotizaMenu.Text" xml:space="preserve">
+    <value>COTIZACIONES</value>
+  </data>
+  <data name="&gt;&gt;btnCotizaMenu.Name" xml:space="preserve">
+    <value>btnCotizaMenu</value>
+  </data>
+  <data name="&gt;&gt;btnCotizaMenu.Type" xml:space="preserve">
+    <value>Bunifu.Framework.UI.BunifuFlatButton, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;btnCotizaMenu.Parent" xml:space="preserve">
+    <value>pnlBoxMenuCotizaciones</value>
+  </data>
+  <data name="&gt;&gt;btnCotizaMenu.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="pnlLineCotizaciones.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="pnlLineCotizaciones.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="pnlLineCotizaciones.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="pnlLineCotizaciones.Size" type="System.Drawing.Size, System.Drawing">
+    <value>10, 60</value>
+  </data>
+  <data name="pnlLineCotizaciones.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="pnlLineCotizaciones.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;pnlLineCotizaciones.Name" xml:space="preserve">
+    <value>pnlLineCotizaciones</value>
+  </data>
+  <data name="&gt;&gt;pnlLineCotizaciones.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlLineCotizaciones.Parent" xml:space="preserve">
+    <value>pnlBoxMenuCotizaciones</value>
+  </data>
+  <data name="&gt;&gt;pnlLineCotizaciones.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="pnlBoxMenuCotizaciones.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 213</value>
+  </data>
+  <data name="pnlBoxMenuCotizaciones.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 2, 0, 2</value>
+  </data>
+  <data name="pnlBoxMenuCotizaciones.Size" type="System.Drawing.Size, System.Drawing">
+    <value>300, 60</value>
+  </data>
+  <data name="pnlBoxMenuCotizaciones.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;pnlBoxMenuCotizaciones.Name" xml:space="preserve">
+    <value>pnlBoxMenuCotizaciones</value>
+  </data>
+  <data name="&gt;&gt;pnlBoxMenuCotizaciones.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlBoxMenuCotizaciones.Parent" xml:space="preserve">
+    <value>pnlMenuLateral</value>
+  </data>
+  <data name="&gt;&gt;pnlBoxMenuCotizaciones.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="btnReportesMenu.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Stretch</value>
+  </data>
+  <data name="btnReportesMenu.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="btnReportesMenu.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10pt, style=Bold</value>
+  </data>
+  <data name="btnReportesMenu.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 0</value>
+  </data>
+  <data name="btnReportesMenu.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="btnReportesMenu.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>280, 60</value>
+  </data>
+  <data name="btnReportesMenu.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>280, 60</value>
+  </data>
+  <data name="btnReportesMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>280, 60</value>
+  </data>
+  <data name="btnReportesMenu.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="btnReportesMenu.Text" xml:space="preserve">
+    <value>REPORTES</value>
+  </data>
+  <data name="&gt;&gt;btnReportesMenu.Name" xml:space="preserve">
+    <value>btnReportesMenu</value>
+  </data>
+  <data name="&gt;&gt;btnReportesMenu.Type" xml:space="preserve">
+    <value>Bunifu.Framework.UI.BunifuFlatButton, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;btnReportesMenu.Parent" xml:space="preserve">
+    <value>pnlBoxMenuReportes</value>
+  </data>
+  <data name="&gt;&gt;btnReportesMenu.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="pnlLineReportes.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="pnlLineReportes.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="pnlLineReportes.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="pnlLineReportes.Size" type="System.Drawing.Size, System.Drawing">
+    <value>10, 60</value>
+  </data>
+  <data name="pnlLineReportes.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="pnlLineReportes.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;pnlLineReportes.Name" xml:space="preserve">
+    <value>pnlLineReportes</value>
+  </data>
+  <data name="&gt;&gt;pnlLineReportes.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlLineReportes.Parent" xml:space="preserve">
+    <value>pnlBoxMenuReportes</value>
+  </data>
+  <data name="&gt;&gt;pnlLineReportes.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="pnlBoxMenuReportes.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 535</value>
+  </data>
+  <data name="pnlBoxMenuReportes.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 2, 0, 2</value>
+  </data>
+  <data name="pnlBoxMenuReportes.Size" type="System.Drawing.Size, System.Drawing">
+    <value>300, 60</value>
+  </data>
+  <data name="pnlBoxMenuReportes.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;pnlBoxMenuReportes.Name" xml:space="preserve">
+    <value>pnlBoxMenuReportes</value>
+  </data>
+  <data name="&gt;&gt;pnlBoxMenuReportes.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlBoxMenuReportes.Parent" xml:space="preserve">
+    <value>pnlMenuLateral</value>
+  </data>
+  <data name="&gt;&gt;pnlBoxMenuReportes.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="btnClientesMenu.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Stretch</value>
+  </data>
+  <data name="btnClientesMenu.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="btnClientesMenu.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10pt, style=Bold</value>
+  </data>
+  <data name="btnClientesMenu.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 0</value>
+  </data>
+  <data name="btnClientesMenu.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="btnClientesMenu.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>280, 60</value>
+  </data>
+  <data name="btnClientesMenu.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>280, 60</value>
+  </data>
+  <data name="btnClientesMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>280, 60</value>
+  </data>
+  <data name="btnClientesMenu.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="btnClientesMenu.Text" xml:space="preserve">
+    <value>CLIENTES</value>
+  </data>
+  <data name="&gt;&gt;btnClientesMenu.Name" xml:space="preserve">
+    <value>btnClientesMenu</value>
+  </data>
+  <data name="&gt;&gt;btnClientesMenu.Type" xml:space="preserve">
+    <value>Bunifu.Framework.UI.BunifuFlatButton, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;btnClientesMenu.Parent" xml:space="preserve">
+    <value>pnlBoxMenuClientes</value>
+  </data>
+  <data name="&gt;&gt;btnClientesMenu.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="pnlLineClientes.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="pnlLineClientes.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="pnlLineClientes.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="pnlLineClientes.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>10, 60</value>
+  </data>
+  <data name="pnlLineClientes.Size" type="System.Drawing.Size, System.Drawing">
+    <value>10, 60</value>
+  </data>
+  <data name="pnlLineClientes.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="pnlLineClientes.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;pnlLineClientes.Name" xml:space="preserve">
+    <value>pnlLineClientes</value>
+  </data>
+  <data name="&gt;&gt;pnlLineClientes.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlLineClientes.Parent" xml:space="preserve">
+    <value>pnlBoxMenuClientes</value>
+  </data>
+  <data name="&gt;&gt;pnlLineClientes.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="pnlBoxMenuClientes.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 149</value>
+  </data>
+  <data name="pnlBoxMenuClientes.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 2, 0, 2</value>
+  </data>
+  <data name="pnlBoxMenuClientes.Size" type="System.Drawing.Size, System.Drawing">
+    <value>300, 60</value>
+  </data>
+  <data name="pnlBoxMenuClientes.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;pnlBoxMenuClientes.Name" xml:space="preserve">
+    <value>pnlBoxMenuClientes</value>
+  </data>
+  <data name="&gt;&gt;pnlBoxMenuClientes.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlBoxMenuClientes.Parent" xml:space="preserve">
+    <value>pnlMenuLateral</value>
+  </data>
+  <data name="&gt;&gt;pnlBoxMenuClientes.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="btnFacturasMenu.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Stretch</value>
+  </data>
+  <data name="btnFacturasMenu.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="btnFacturasMenu.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10pt, style=Bold</value>
+  </data>
+  <data name="btnFacturasMenu.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 0</value>
+  </data>
+  <data name="btnFacturasMenu.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="btnFacturasMenu.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>280, 60</value>
+  </data>
+  <data name="btnFacturasMenu.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>280, 60</value>
+  </data>
+  <data name="btnFacturasMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>280, 60</value>
+  </data>
+  <data name="btnFacturasMenu.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="btnFacturasMenu.Text" xml:space="preserve">
+    <value>FACTURAS</value>
+  </data>
+  <data name="&gt;&gt;btnFacturasMenu.Name" xml:space="preserve">
+    <value>btnFacturasMenu</value>
+  </data>
+  <data name="&gt;&gt;btnFacturasMenu.Type" xml:space="preserve">
+    <value>Bunifu.Framework.UI.BunifuFlatButton, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;btnFacturasMenu.Parent" xml:space="preserve">
+    <value>pnlBoxMenuFacturas</value>
+  </data>
+  <data name="&gt;&gt;btnFacturasMenu.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="pnlLineFacturas.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="pnlLineFacturas.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="pnlLineFacturas.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="pnlLineFacturas.Size" type="System.Drawing.Size, System.Drawing">
+    <value>10, 60</value>
+  </data>
+  <data name="pnlLineFacturas.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="pnlLineFacturas.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;pnlLineFacturas.Name" xml:space="preserve">
+    <value>pnlLineFacturas</value>
+  </data>
+  <data name="&gt;&gt;pnlLineFacturas.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlLineFacturas.Parent" xml:space="preserve">
+    <value>pnlBoxMenuFacturas</value>
+  </data>
+  <data name="&gt;&gt;pnlLineFacturas.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="pnlBoxMenuFacturas.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 469</value>
+  </data>
+  <data name="pnlBoxMenuFacturas.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 2, 0, 2</value>
+  </data>
+  <data name="pnlBoxMenuFacturas.Size" type="System.Drawing.Size, System.Drawing">
+    <value>300, 60</value>
+  </data>
+  <data name="pnlBoxMenuFacturas.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;pnlBoxMenuFacturas.Name" xml:space="preserve">
+    <value>pnlBoxMenuFacturas</value>
+  </data>
+  <data name="&gt;&gt;pnlBoxMenuFacturas.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlBoxMenuFacturas.Parent" xml:space="preserve">
+    <value>pnlMenuLateral</value>
+  </data>
+  <data name="&gt;&gt;pnlBoxMenuFacturas.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="bunifuFlatButton1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="bunifuFlatButton1.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Stretch</value>
+  </data>
   <data name="bunifuFlatButton1.Iconimage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAFFJREFUaEPt
         1bENAEEQArHtv+n/BtCREtjShMQcADDmG69Ko6WqNFqqSqOlAOApncdSVRotVaXRUlUaLQUAT+k8lqrS
         aKkqjZaq0mgpAGDE3Q9k1t4wPl3CWAAAAABJRU5ErkJggg==
 </value>
+  </data>
+  <data name="bunifuFlatButton1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>227, 0</value>
+  </data>
+  <data name="bunifuFlatButton1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="bunifuFlatButton1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>53, 49</value>
+  </data>
+  <data name="bunifuFlatButton1.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;bunifuFlatButton1.Name" xml:space="preserve">
+    <value>bunifuFlatButton1</value>
+  </data>
+  <data name="&gt;&gt;bunifuFlatButton1.Type" xml:space="preserve">
+    <value>Bunifu.Framework.UI.BunifuFlatButton, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;bunifuFlatButton1.Parent" xml:space="preserve">
+    <value>pnlMenuHeader</value>
+  </data>
+  <data name="&gt;&gt;bunifuFlatButton1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="picMenuLogo.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="picMenuLogo.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Stretch</value>
+  </data>
+  <data name="picMenuLogo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>-6, 0</value>
+  </data>
+  <data name="picMenuLogo.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 43, 4, 4</value>
+  </data>
+  <data name="picMenuLogo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>205, 140</value>
+  </data>
+  <data name="picMenuLogo.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;picMenuLogo.Name" xml:space="preserve">
+    <value>picMenuLogo</value>
+  </data>
+  <data name="&gt;&gt;picMenuLogo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;picMenuLogo.Parent" xml:space="preserve">
+    <value>pnlMenuHeader</value>
+  </data>
+  <data name="&gt;&gt;picMenuLogo.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="pnlMenuHeader.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="pnlMenuHeader.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="pnlMenuHeader.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="pnlMenuHeader.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>280, 146</value>
+  </data>
+  <data name="pnlMenuHeader.Size" type="System.Drawing.Size, System.Drawing">
+    <value>280, 146</value>
+  </data>
+  <data name="pnlMenuHeader.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
+  <data name="&gt;&gt;pnlMenuHeader.Name" xml:space="preserve">
+    <value>pnlMenuHeader</value>
+  </data>
+  <data name="&gt;&gt;pnlMenuHeader.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlMenuHeader.Parent" xml:space="preserve">
+    <value>pnlMenuLateral</value>
+  </data>
+  <data name="&gt;&gt;pnlMenuHeader.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="btnInvenMenu.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Stretch</value>
+  </data>
+  <data name="btnInvenMenu.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="btnInvenMenu.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10pt, style=Bold</value>
+  </data>
+  <data name="btnInvenMenu.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 0</value>
+  </data>
+  <data name="btnInvenMenu.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="btnInvenMenu.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>280, 60</value>
+  </data>
+  <data name="btnInvenMenu.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>280, 60</value>
+  </data>
+  <data name="btnInvenMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>280, 60</value>
+  </data>
+  <data name="btnInvenMenu.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="btnInvenMenu.Text" xml:space="preserve">
+    <value>INVENTARIO</value>
+  </data>
+  <data name="&gt;&gt;btnInvenMenu.Name" xml:space="preserve">
+    <value>btnInvenMenu</value>
+  </data>
+  <data name="&gt;&gt;btnInvenMenu.Type" xml:space="preserve">
+    <value>Bunifu.Framework.UI.BunifuFlatButton, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;btnInvenMenu.Parent" xml:space="preserve">
+    <value>pnlBoxMenuInventario</value>
+  </data>
+  <data name="&gt;&gt;btnInvenMenu.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="pnlLineInventario.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="pnlLineInventario.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="pnlLineInventario.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="pnlLineInventario.Size" type="System.Drawing.Size, System.Drawing">
+    <value>10, 60</value>
+  </data>
+  <data name="pnlLineInventario.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="pnlLineInventario.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;pnlLineInventario.Name" xml:space="preserve">
+    <value>pnlLineInventario</value>
+  </data>
+  <data name="&gt;&gt;pnlLineInventario.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlLineInventario.Parent" xml:space="preserve">
+    <value>pnlBoxMenuInventario</value>
+  </data>
+  <data name="&gt;&gt;pnlLineInventario.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="pnlBoxMenuInventario.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 405</value>
+  </data>
+  <data name="pnlBoxMenuInventario.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 2, 0, 2</value>
+  </data>
+  <data name="pnlBoxMenuInventario.Size" type="System.Drawing.Size, System.Drawing">
+    <value>300, 60</value>
+  </data>
+  <data name="pnlBoxMenuInventario.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;pnlBoxMenuInventario.Name" xml:space="preserve">
+    <value>pnlBoxMenuInventario</value>
+  </data>
+  <data name="&gt;&gt;pnlBoxMenuInventario.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlBoxMenuInventario.Parent" xml:space="preserve">
+    <value>pnlMenuLateral</value>
+  </data>
+  <data name="&gt;&gt;pnlBoxMenuInventario.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="btnProdMenu.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Stretch</value>
+  </data>
+  <data name="btnProdMenu.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="btnProdMenu.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10pt, style=Bold</value>
+  </data>
+  <data name="btnProdMenu.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 0</value>
+  </data>
+  <data name="btnProdMenu.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="btnProdMenu.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>280, 60</value>
+  </data>
+  <data name="btnProdMenu.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>280, 60</value>
+  </data>
+  <data name="btnProdMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>280, 60</value>
+  </data>
+  <data name="btnProdMenu.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="btnProdMenu.Text" xml:space="preserve">
+    <value>PRODUCTOS</value>
+  </data>
+  <data name="&gt;&gt;btnProdMenu.Name" xml:space="preserve">
+    <value>btnProdMenu</value>
+  </data>
+  <data name="&gt;&gt;btnProdMenu.Type" xml:space="preserve">
+    <value>Bunifu.Framework.UI.BunifuFlatButton, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;btnProdMenu.Parent" xml:space="preserve">
+    <value>pnlBoxMenuProductos</value>
+  </data>
+  <data name="&gt;&gt;btnProdMenu.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="pnlLineProductos.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="pnlLineProductos.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="pnlLineProductos.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="pnlLineProductos.Size" type="System.Drawing.Size, System.Drawing">
+    <value>10, 60</value>
+  </data>
+  <data name="pnlLineProductos.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="pnlLineProductos.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;pnlLineProductos.Name" xml:space="preserve">
+    <value>pnlLineProductos</value>
+  </data>
+  <data name="&gt;&gt;pnlLineProductos.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlLineProductos.Parent" xml:space="preserve">
+    <value>pnlBoxMenuProductos</value>
+  </data>
+  <data name="&gt;&gt;pnlLineProductos.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="pnlBoxMenuProductos.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 341</value>
+  </data>
+  <data name="pnlBoxMenuProductos.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 2, 0, 2</value>
+  </data>
+  <data name="pnlBoxMenuProductos.Size" type="System.Drawing.Size, System.Drawing">
+    <value>300, 60</value>
+  </data>
+  <data name="pnlBoxMenuProductos.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;pnlBoxMenuProductos.Name" xml:space="preserve">
+    <value>pnlBoxMenuProductos</value>
+  </data>
+  <data name="&gt;&gt;pnlBoxMenuProductos.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlBoxMenuProductos.Parent" xml:space="preserve">
+    <value>pnlMenuLateral</value>
+  </data>
+  <data name="&gt;&gt;pnlBoxMenuProductos.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="pnlMenuLateral.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="pnlMenuLateral.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 30</value>
+  </data>
+  <data name="pnlMenuLateral.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="pnlMenuLateral.Size" type="System.Drawing.Size, System.Drawing">
+    <value>315, 1003</value>
+  </data>
+  <data name="pnlMenuLateral.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="&gt;&gt;pnlMenuLateral.Name" xml:space="preserve">
+    <value>pnlMenuLateral</value>
+  </data>
+  <data name="&gt;&gt;pnlMenuLateral.Type" xml:space="preserve">
+    <value>Bunifu.Framework.UI.BunifuGradientPanel, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;pnlMenuLateral.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;pnlMenuLateral.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScroll" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="$this.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1750, 1038</value>
+  </data>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>1200, 800</value>
+  </data>
+  <data name="$this.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 5, 5</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>DRetail</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>frmMenuLateral</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
 </root>
