@@ -148,5 +148,42 @@ namespace DRtail
             }
         }
 
+
+        public static Boolean enviarCorreo(string U_Correo, string U_Path, string tipoDocumento)
+        {
+            bool enviado = false;
+
+            try
+            {
+                string SMTP = "smtp.gmail.com"; // lc_ServidorSMTP
+                string Usuario = "testdesarrollosdescon@gmail.com"; // lc_UsuarioCorreo
+                string Contraseña = "Descon2020"; // lc_ContraseñaCorreo
+                int Puerto = System.Convert.ToInt32(587);
+                System.Net.Mail.MailMessage correo = new System.Net.Mail.MailMessage();
+                correo.From = new System.Net.Mail.MailAddress(Usuario);
+                correo.Subject = "Envio de " + tipoDocumento + " de Etrusca";
+                correo.Body = "Buen dìa enviamos el siguiente correo como prueba de funcionalidad del mismo, quedando atentos a sus comentarios y agradeciendo su atención";
+                correo.To.Add(U_Correo);
+                System.Net.Mail.SmtpClient Servidor = new System.Net.Mail.SmtpClient();
+                Servidor.Host = SMTP;
+                Servidor.Port = Puerto;
+                //System.Net.Mail.Attachment archivo = new System.Net.Mail.Attachment(U_Path);
+                //correo.Attachments.Add(archivo);
+                if (1 == 1)
+                    Servidor.EnableSsl = true;
+                else
+                    Servidor.EnableSsl = false;
+                Servidor.Credentials = new System.Net.NetworkCredential(Usuario, Contraseña);
+                Servidor.Send(correo);
+                correo.Attachments.Dispose();
+                enviado = true;
+            }
+            catch (Exception ex)
+            {
+                enviado = false;
+            }
+            return enviado;
+        }
+
     }
 }

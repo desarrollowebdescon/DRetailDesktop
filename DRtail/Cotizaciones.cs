@@ -55,11 +55,11 @@ namespace DRtail
                 dtosSocios = Servicios.getSocios();
                 items = Servicios.GetArticulos();
                 cotizacionesList = Servicios.getCotizaciones();
-                int i = 0;
+                
                 foreach (DatosCotizacion dc in cotizacionesList)
                 {                    
                     bdgCotizaciones.Rows.Add(dc.docentryCotizacion,dc.NoCotizacion, dc.Cliente, dc.Nombre, dc.FechaDocumento.ToString("yyyy-MM-dd"), double.Parse(dc.Total).ToString("N2"), dc.Moneda, dc.Estatus, "...");
-                    i++;
+                    
                 }
 
             }
@@ -246,6 +246,23 @@ namespace DRtail
                 if (CrearCotizacion(cotizacion))
                 {
                     btnCobrarCotizacion.Visible = true;
+                    string email = "";
+                  
+                    var socio = dtosSocios.Where(i => (i.CodigoCliente.Contains(txtCliente.Text)));
+
+                    foreach (DatosSocios s in socio)
+                    {
+                        email = s.Email;
+                    }
+
+                    if(Servicios.enviarCorreo(email,"","Cotización"))
+                    {
+                        MessageBox.Show("Correo enviado a: " + email);
+                    }
+                    else
+                        MessageBox.Show("Correo no enviado");
+
+
                 }
             }
             catch (Exception ex)
