@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Net;
 using System.IO;
 using Newtonsoft.Json;
+using System.Configuration;
 
 namespace DRtail
 {
@@ -28,6 +29,14 @@ namespace DRtail
         string tempDescuento = "";
         string tempDescuentoOld = "";
         #endregion
+        public Cotizaciones()
+        {
+            InitializeComponent();
+
+            GetData();
+            AutoCompletar(txtProducto, "DatosArticulos");
+            AutoCompletar(txtCliente, "DatosSocios");
+        }
         public Cotizaciones(string impCliente)
         {
             InitializeComponent();
@@ -48,9 +57,9 @@ namespace DRtail
             }
         }
             
-           // txtBuscar.Size = bdpInicio.Size;
+          
 
-        }
+        
         public Cotizaciones(DatosCotizacion dc)
         {
             InitializeComponent();
@@ -68,7 +77,6 @@ namespace DRtail
         private void GetData()
         {
          
-
             try
             {
                 dtosSocios = Servicios.getSocios();
@@ -251,7 +259,7 @@ namespace DRtail
                 cotizacion.Cliente = txtCliente.Text;
                 cotizacion.FechaContabilizacion = DateTime.Now;
                 cotizacion.FechaVencimiento = DateTime.Now.AddDays(3);
-                cotizacion.Moneda = "MXP";
+                //cotizacion.Moneda = "MXP";
                 cotizacion.Comentarios = "Cotización generada desde DRtail";
 
                 foreach (DataGridViewRow dRow in dgvProductosCotizacion.Rows)
@@ -290,7 +298,7 @@ namespace DRtail
             Boolean generado = false;
             try
             {
-                var httpWebRequest = (HttpWebRequest)WebRequest.Create("http://54.39.26.9:62436/api/crearCotizacion");
+                var httpWebRequest = (HttpWebRequest)WebRequest.Create(ConfigurationManager.AppSettings["urlAPI"] +"/api/crearCotizacion");
                 httpWebRequest.ContentType = "application/json";
                 httpWebRequest.Method = "POST";
                 //ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12 | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls;

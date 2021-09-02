@@ -11,6 +11,7 @@ using System.Net;
 using System.IO;
 using Newtonsoft.Json;
 using Bunifu.Framework.UI;
+using System.Configuration;
 
 namespace DRtail
 {
@@ -21,6 +22,7 @@ namespace DRtail
         public int ordenDGV = 0;
         public string codClienteSelec = "";
         DataTable dtSocios = new DataTable();
+        float SizeFont = 10F;
         #endregion
         public Clientes()
         {
@@ -68,7 +70,7 @@ namespace DRtail
             Boolean generado = false;
             try
             {
-                var httpWebRequest = (HttpWebRequest)WebRequest.Create("http://54.39.26.9:62436/api/crearSocio");
+                var httpWebRequest = (HttpWebRequest)WebRequest.Create(ConfigurationManager.AppSettings["urlAPI"] +"/api/crearSocio");
                 httpWebRequest.ContentType = "application/json";
                 httpWebRequest.Method = "POST";
                 //ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12 | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls;
@@ -190,6 +192,7 @@ namespace DRtail
             Panel lineTab = (Panel)tabPanel.Controls[1];
             lineTab.Visible = true;
             bodyTab.Visible = true;
+            bodyTab.BringToFront();
         }
 
 
@@ -221,9 +224,7 @@ namespace DRtail
                 Point xy = bdg.SelectedCells[5].AccessibilityObject.Bounds.Location;
                 pnlAcciones.Location = new Point((xy.X - 725),(xy.Y - 150));
                 pnlAcciones.Visible = true;
-                pnlAcciones.BringToFront();
-                
-                   
+                pnlAcciones.BringToFront();     
             }
         }
 
@@ -244,9 +245,8 @@ namespace DRtail
             txtCrearCodCli.Text         = row.Cells[0].Value.ToString();
             txtCrearNombreCli.Text      = row.Cells[1].Value.ToString();
             txtCreaRFCCli.Text          = row.Cells[2].Value.ToString();
-            txtCreaTelCli.Text         = row.Cells[3].Value.ToString();
-            txtCreaEmailCli.Text         = row.Cells[4].Value.ToString();
-
+            txtCreaTelCli.Text          = row.Cells[3].Value.ToString();
+            txtCreaEmailCli.Text        = row.Cells[4].Value.ToString();
 
         }
         private void LimpiarForm()
@@ -326,6 +326,27 @@ namespace DRtail
             }
         }
 
+        private void btnResizeMax_Click(object sender, EventArgs e)
+        {
+            MaxFont();
+        }
+
        
+
+        private void btnResizeMin_Click(object sender, EventArgs e)
+        {
+            MinFont();
+        }
+        private void MaxFont()
+        {
+            SizeFont += 1;
+            controlTabClientes.Font = new Font("Rockwell", SizeFont, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0))); ;
+        }
+
+        private void MinFont()
+        {
+            SizeFont -= 1;
+            controlTabClientes.Font = new Font("Rockwell", SizeFont, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0))); ;
+        }
     }
 }

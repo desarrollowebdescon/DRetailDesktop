@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Net;
 using System.IO;
 using Newtonsoft.Json;
+using System.Configuration;
 
 namespace DRtail
 {
@@ -33,11 +34,24 @@ namespace DRtail
         string docEntryCot = "";
         string docNumCot = "";
         #endregion
+        public Pedidos()
+        {
+
+        }
         public Pedidos(string impCliente, string docEntryCotizacion, string docNumCotizacion)
         {
             InitializeComponent();
-           
             GetData();
+            if (impCliente == "")
+            {
+                tabControlPedidos.SelectedIndex = 0;
+            }
+            else
+            {
+                tabControlPedidos.SelectedIndex = 1;
+                txtCliente.Text = impCliente;
+
+            }
             AutoCompletar(txtProducto, "DatosArticulos");
             AutoCompletar(txtCliente, "DatosSocios");
         }
@@ -53,16 +67,7 @@ namespace DRtail
             AutoCompletar(txtProducto, "DatosArticulos");
             AutoCompletar(txtCliente, "DatosSocios");
             
-            if (impCliente == "")
-            {
-                tabControlPedidos.SelectedIndex = 0;
-            }
-            else
-            {
-                tabControlPedidos.SelectedIndex = 1;
-                txtCliente.Text = impCliente;
-
-            }
+           
         }
 
         private void GetData()
@@ -472,7 +477,7 @@ namespace DRtail
             Boolean generado = false;
             try
             {
-                var httpWebRequest = (HttpWebRequest)WebRequest.Create("http://54.39.26.9:62436/api/crearPedido");
+                var httpWebRequest = (HttpWebRequest)WebRequest.Create(ConfigurationManager.AppSettings["urlAPI"] +"/api/crearPedido");
                 httpWebRequest.ContentType = "application/json";
                 httpWebRequest.Method = "POST";
                 //ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12 | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls;

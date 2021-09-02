@@ -74,7 +74,6 @@
             this.pnlBoxMenuProductos = new System.Windows.Forms.Panel();
             this.btnProdMenu = new Bunifu.Framework.UI.BunifuFlatButton();
             this.pnlLineProductos = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.pnlTitleBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbSemaforo)).BeginInit();
             this.pnlMenuLateral.SuspendLayout();
@@ -155,7 +154,7 @@
             // pnlMain
             // 
             resources.ApplyResources(this.pnlMain, "pnlMain");
-            this.pnlMain.BackColor = System.Drawing.Color.Maroon;
+            this.pnlMain.BackColor = System.Drawing.Color.White;
             this.pnlMain.Name = "pnlMain";
             this.pnlMain.TabStop = true;
             // 
@@ -724,18 +723,11 @@
             resources.ApplyResources(this.pnlLineProductos, "pnlLineProductos");
             this.pnlLineProductos.Name = "pnlLineProductos";
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.panel1, "panel1");
-            this.panel1.Name = "panel1";
-            // 
             // frmMenuLateral
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             resources.ApplyResources(this, "$this");
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlMain);
             this.Controls.Add(this.pnlMenuLateral);
             this.Controls.Add(this.pnlTitleBar);
@@ -745,7 +737,6 @@
             this.Name = "frmMenuLateral";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmMenu_Load);
-            this.Click += new System.EventHandler(this.frmMenuLateral_Click);
             this.pnlTitleBar.ResumeLayout(false);
             this.pnlTitleBar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbSemaforo)).EndInit();
@@ -814,6 +805,5 @@
         private System.Windows.Forms.Panel pnlBoxMenuProductos;
         private System.Windows.Forms.Label LblTitle;
         private System.Windows.Forms.PictureBox pbSemaforo;
-        private System.Windows.Forms.Panel panel1;
     }
 }

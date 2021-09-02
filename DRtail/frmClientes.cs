@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Drawing;
 using System.IO;
@@ -124,7 +125,7 @@ namespace DRtail
 
         void ObtenerSocios()
         {
-            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(@"http://54.39.26.9:62436/api/consultarAllSociosEsc");
+            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(ConfigurationManager.AppSettings["urlAPI"] +"/api/consultarAllSociosEsc");
             using (HttpWebResponse response = (HttpWebResponse)request.GetResponse())
             using (Stream stream = response.GetResponseStream())
             using (StreamReader reader = new StreamReader(stream))

@@ -183,7 +183,7 @@ namespace DRtail
             clientes.Size = new Size(wa.Width -90, wa.Height - 60);
             pnlMain.Controls.Add(clientes);
             SelectedLineMenu("pnlLineClientes");
-
+            ForceToggleMenu();
 
             this.LblTitle.Text = "CLIENTES";
 
@@ -196,7 +196,7 @@ namespace DRtail
             cotizaciones.Size = new Size(wa.Width - 90, wa.Height);
             pnlMain.Controls.Add(cotizaciones);
             SelectedLineMenu("pnlLineCotizaciones");
-
+            ForceToggleMenu();
 
             this.LblTitle.Text = "COTIZACIONES";
         }
@@ -205,7 +205,7 @@ namespace DRtail
             pnlMain.Controls.Clear();
             pnlMain.Controls.Add(new Pedidos());
             SelectedLineMenu("pnlLinePedidos");
-
+            ForceToggleMenu();
 
             this.LblTitle.Text = "PEDIDOS";
         }
@@ -214,7 +214,7 @@ namespace DRtail
             pnlMain.Controls.Clear();
             pnlMain.Controls.Add(new Productos());
             SelectedLineMenu("pnlLineProductos");
-
+            ForceToggleMenu();
 
             this.LblTitle.Text = "PRODUCTOS";
         }
@@ -240,7 +240,7 @@ namespace DRtail
             pnlMain.Controls.Clear();
             pnlMain.Controls.Add(new Inventario());
             SelectedLineMenu("pnlLineInventario");
-            
+            ForceToggleMenu();
             this.LblTitle.Text = "INVENTARIO";
         }
 
@@ -249,7 +249,7 @@ namespace DRtail
             pnlMain.Controls.Clear();
             pnlMain.Controls.Add(new Facturacion());
             SelectedLineMenu("pnlLineFacturas");
-
+            ForceToggleMenu();
 
             this.LblTitle.Text = "FACTURAS";
         }
@@ -259,7 +259,7 @@ namespace DRtail
             pnlMain.Controls.Clear();
             pnlMain.Controls.Add(new Reportes());
             SelectedLineMenu("pnlLineReportes");
-
+            ForceToggleMenu();
 
             this.LblTitle.Text = "REPORTES";
         }
@@ -268,7 +268,7 @@ namespace DRtail
             pnlMain.Controls.Clear();
             pnlMain.Controls.Add(new Corte());
             SelectedLineMenu("pnlLineCorte");
-
+            ForceToggleMenu();
 
             this.LblTitle.Text = "CORTES";
         }
@@ -278,7 +278,7 @@ namespace DRtail
             pnlMain.Controls.Add(new PLealtad());
             SelectedLineMenu("pnlLinePLealtad");
             this.LblTitle.Text = "PUNTOS LEALTAD";
-
+            ForceToggleMenu();
         }
         private void btnConfigMenu_Click(object sender, EventArgs e)
         {
@@ -310,6 +310,11 @@ namespace DRtail
 
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
         {
+            ToggleMenu();
+        }
+
+        private void ToggleMenu()
+        {
             if (pnlMenuLateral.Width == pnlMenuLat)
             {
                 pnlMenuLateral.Width = 90;
@@ -321,7 +326,13 @@ namespace DRtail
                 MaxiButton();
             }
         }
-
+        private void ForceToggleMenu()
+        {
+           
+                pnlMenuLateral.Width = 90;
+                MiniButons();
+            
+        }
         private void MaxiButton()
         {
             Size minS = new Size(296, 60);
@@ -341,7 +352,7 @@ namespace DRtail
 
         private void MiniButons()
         {
-            Size minS = new Size(50, 60);
+            Size minS = new Size(60, 60);
             pnlBoxMenuClientes.Size = minS;
             pnlBoxMenuCotizaciones.Size = minS;
             pnlBoxMenuCSesion.Size = minS;

@@ -764,7 +764,7 @@
             this.bdgCotizaciones.GridColor = System.Drawing.Color.White;
             this.bdgCotizaciones.HeaderBgColor = System.Drawing.Color.SteelBlue;
             this.bdgCotizaciones.HeaderForeColor = System.Drawing.Color.White;
-            this.bdgCotizaciones.Location = new System.Drawing.Point(8, 150);
+            this.bdgCotizaciones.Location = new System.Drawing.Point(39, 150);
             this.bdgCotizaciones.Margin = new System.Windows.Forms.Padding(8, 0, 8, 8);
             this.bdgCotizaciones.MinimumSize = new System.Drawing.Size(1350, 447);
             this.bdgCotizaciones.MultiSelect = false;
@@ -899,8 +899,7 @@
             this.btnCotLimpiar.ActiveFillColor = System.Drawing.Color.Red;
             this.btnCotLimpiar.ActiveForecolor = System.Drawing.Color.White;
             this.btnCotLimpiar.ActiveLineColor = System.Drawing.Color.Red;
-            this.btnCotLimpiar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCotLimpiar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCotLimpiar.BackColor = System.Drawing.Color.Transparent;
             this.btnCotLimpiar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCotLimpiar.BackgroundImage")));
             this.btnCotLimpiar.ButtonText = "Limpiar";
@@ -912,7 +911,7 @@
             this.btnCotLimpiar.IdleFillColor = System.Drawing.Color.White;
             this.btnCotLimpiar.IdleForecolor = System.Drawing.Color.Red;
             this.btnCotLimpiar.IdleLineColor = System.Drawing.Color.Red;
-            this.btnCotLimpiar.Location = new System.Drawing.Point(1334, 149);
+            this.btnCotLimpiar.Location = new System.Drawing.Point(1061, 145);
             this.btnCotLimpiar.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.btnCotLimpiar.MaximumSize = new System.Drawing.Size(180, 55);
             this.btnCotLimpiar.Name = "btnCotLimpiar";
@@ -937,10 +936,9 @@
             this.bunifuGradientPanel2.GradientTopRight = System.Drawing.Color.White;
             this.bunifuGradientPanel2.Location = new System.Drawing.Point(10, 14);
             this.bunifuGradientPanel2.Margin = new System.Windows.Forms.Padding(8);
-            this.bunifuGradientPanel2.MinimumSize = new System.Drawing.Size(1350, 120);
             this.bunifuGradientPanel2.Name = "bunifuGradientPanel2";
             this.bunifuGradientPanel2.Quality = 10;
-            this.bunifuGradientPanel2.Size = new System.Drawing.Size(1350, 120);
+            this.bunifuGradientPanel2.Size = new System.Drawing.Size(1497, 120);
             this.bunifuGradientPanel2.TabIndex = 27;
             // 
             // panel10
@@ -1144,7 +1142,7 @@
             this.dgvProductosCotizacion.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.dgvProductosCotizacion.RowTemplate.Height = 24;
             this.dgvProductosCotizacion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvProductosCotizacion.Size = new System.Drawing.Size(1506, 432);
+            this.dgvProductosCotizacion.Size = new System.Drawing.Size(1499, 432);
             this.dgvProductosCotizacion.TabIndex = 25;
             this.dgvProductosCotizacion.CellBeginEdit += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.dgvProductosCotizacion_CellBeginEdit);
             this.dgvProductosCotizacion.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProductosCotizacion_CellEndEdit);
@@ -1228,7 +1226,6 @@
             // 
             // lblCambioCot
             // 
-            this.lblCambioCot.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblCambioCot.AutoSize = true;
             this.lblCambioCot.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCambioCot.Location = new System.Drawing.Point(235, 777);
@@ -1239,7 +1236,6 @@
             // 
             // lblPagoCot
             // 
-            this.lblPagoCot.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblPagoCot.AutoSize = true;
             this.lblPagoCot.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPagoCot.Location = new System.Drawing.Point(130, 780);
@@ -1250,7 +1246,6 @@
             // 
             // lblTotalCobCot
             // 
-            this.lblTotalCobCot.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblTotalCobCot.AutoSize = true;
             this.lblTotalCobCot.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotalCobCot.Location = new System.Drawing.Point(6, 777);
@@ -1261,7 +1256,7 @@
             // 
             // panel1
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.lblProductosTotal);
@@ -1270,7 +1265,7 @@
             this.panel1.Controls.Add(this.txtTotal);
             this.panel1.Location = new System.Drawing.Point(3, 660);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1502, 75);
+            this.panel1.Size = new System.Drawing.Size(1504, 75);
             this.panel1.TabIndex = 18;
             // 
             // lblProductosTotal
@@ -1297,7 +1292,7 @@
             // 
             this.btnCobrarCotizacion.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnCobrarCotizacion.BackColor = System.Drawing.Color.White;
-            this.btnCobrarCotizacion.Location = new System.Drawing.Point(873, 21);
+            this.btnCobrarCotizacion.Location = new System.Drawing.Point(874, 21);
             this.btnCobrarCotizacion.Name = "btnCobrarCotizacion";
             this.btnCobrarCotizacion.Size = new System.Drawing.Size(211, 42);
             this.btnCobrarCotizacion.TabIndex = 16;
@@ -1311,7 +1306,7 @@
             this.txtTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTotal.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTotal.Font = new System.Drawing.Font("Times New Roman", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTotal.Location = new System.Drawing.Point(1206, 21);
+            this.txtTotal.Location = new System.Drawing.Point(1208, 21);
             this.txtTotal.Multiline = true;
             this.txtTotal.Name = "txtTotal";
             this.txtTotal.Size = new System.Drawing.Size(290, 49);
@@ -1321,7 +1316,6 @@
             // 
             // btnCobradoCotizaciones
             // 
-            this.btnCobradoCotizaciones.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnCobradoCotizaciones.BackColor = System.Drawing.Color.White;
             this.btnCobradoCotizaciones.Location = new System.Drawing.Point(497, 773);
             this.btnCobradoCotizaciones.Name = "btnCobradoCotizaciones";
@@ -1334,7 +1328,6 @@
             // 
             // btnGenerarCotizacion
             // 
-            this.btnGenerarCotizacion.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnGenerarCotizacion.BackColor = System.Drawing.Color.White;
             this.btnGenerarCotizacion.Location = new System.Drawing.Point(877, 773);
             this.btnGenerarCotizacion.Name = "btnGenerarCotizacion";
@@ -1636,7 +1629,7 @@
             this.pnlbusquedaArticulo.Controls.Add(this.btnAgregarBusqueda);
             this.pnlbusquedaArticulo.Controls.Add(this.dgBuscadorArticulo);
             this.pnlbusquedaArticulo.Controls.Add(this.txtBuscarArtTraspaso);
-            this.pnlbusquedaArticulo.Location = new System.Drawing.Point(706, 6);
+            this.pnlbusquedaArticulo.Location = new System.Drawing.Point(506, 6);
             this.pnlbusquedaArticulo.Name = "pnlbusquedaArticulo";
             this.pnlbusquedaArticulo.Size = new System.Drawing.Size(489, 289);
             this.pnlbusquedaArticulo.TabIndex = 30;
