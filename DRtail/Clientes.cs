@@ -34,7 +34,7 @@ namespace DRtail
             dtosSocios = Servicios.getSocios();
 
             SetDataSocios(dtosSocios);
-            
+
         }
 
         private void SetDataSocios(List<DatosSocios> dtosSocios)
@@ -42,22 +42,22 @@ namespace DRtail
             bfgSocios.Rows.Clear();
             foreach (DatosSocios ds in dtosSocios)
             {
-                bfgSocios.Rows.Add(ds.CodigoCliente, ds.NombreCliente, ds.RFC, ds.Telefono, ds.Email,"...","...","...");
+                bfgSocios.Rows.Add(ds.CodigoCliente, ds.NombreCliente, ds.RFC, ds.Telefono, ds.Email, "...", "...", "...");
             }
         }
 
-       
+
 
         private void btnProspectos_Click(object sender, EventArgs e)
         {
 
         }
 
-        
+
 
         private void btnCreaCrearCliente_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         public Boolean CrearSocio()
@@ -65,7 +65,7 @@ namespace DRtail
             Boolean generado = false;
             try
             {
-                var httpWebRequest = (HttpWebRequest)WebRequest.Create("http://54.39.26.9:62436/api/crearSocio");
+                var httpWebRequest = (HttpWebRequest)WebRequest.Create(Properties.Settings.Default.RutaApi + "crearSocio");
                 httpWebRequest.ContentType = "application/json";
                 httpWebRequest.Method = "POST";
                 //ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12 | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls;
@@ -109,7 +109,7 @@ namespace DRtail
             return generado;
         }
 
-       
+
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
@@ -119,7 +119,7 @@ namespace DRtail
                                                             || s.RFC.ToLower().Contains(txtBuscar.Text.ToLower()))
                                                             ).ToList();
             SetDataSocios(temp);
-            
+
         }
 
         private void btnCreaCrearCliente_Click_1(object sender, EventArgs e)
@@ -158,7 +158,7 @@ namespace DRtail
             {
                 //MessageBox.Show(bfgSocios.Rows[bfgSocios.CurrentRow.Index].Cells[0].Value.ToString());
                 Servicios.menuLateral.pnlMain.Controls.Clear();
-                Servicios.menuLateral.pnlMain.Controls.Add(new Pedidos(bfgSocios.Rows[bfgSocios.CurrentRow.Index].Cells[0].Value.ToString(),"",""));
+                Servicios.menuLateral.pnlMain.Controls.Add(new Pedidos(bfgSocios.Rows[bfgSocios.CurrentRow.Index].Cells[0].Value.ToString(), "", ""));
                 Servicios.menuLateral.SelectedLineMenu();
                 Servicios.menuLateral.pnlLinePedidos.Visible = true;
                 Servicios.menuLateral.LblTitle.Text = "COTIZACIONES";

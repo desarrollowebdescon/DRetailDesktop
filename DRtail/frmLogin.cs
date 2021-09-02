@@ -123,8 +123,6 @@ namespace DRtail
             }
         }
 
-        string resp = "";
-
         private void txtCodigoBarras_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)Keys.Enter)
@@ -134,7 +132,7 @@ namespace DRtail
                     frmMenu menu = new frmMenu();
                     this.Hide();
                     menu.Show();
-                   
+
                 }
             }
         }
@@ -144,7 +142,7 @@ namespace DRtail
             Boolean inicio = false;
             try
             {
-                var httpWebRequest = (HttpWebRequest)WebRequest.Create("http://54.39.26.9:62436/api/login?usuario="+ txtUsaurio.Text  + "&pass=" + txtPassword.Text);
+                var httpWebRequest = (HttpWebRequest)WebRequest.Create(Properties.Settings.Default.RutaApi + "login?usuario=" + txtUsaurio.Text + "&pass=" + txtPassword.Text);
                 httpWebRequest.ContentType = "application/json";
                 httpWebRequest.Method = "GET";
                 var httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();
@@ -184,16 +182,16 @@ namespace DRtail
 
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
         {
-           if (InicioSesion() == true)
+            if (InicioSesion() == true)
             //if (true)
             {
                 //frmMenu menu = new frmMenu();
                 frmMenuLateral menu = new frmMenuLateral();
                 this.Hide();
                 menu.Show();
-               
+
             }
-            
+
         }
 
         private void txtPassword_KeyPress(object sender, KeyPressEventArgs e)

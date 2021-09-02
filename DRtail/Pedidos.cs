@@ -63,11 +63,11 @@ namespace DRtail
                 items = Servicios.GetArticulos();
                 pedidosList = Servicios.getPedidos();
 
-                
+
                 foreach (DatosPedido dc in pedidosList)
                 {
                     bdgPedidos.Rows.Add(dc.noPedido, dc.Cliente, dc.Nombre, dc.FechaDocumento.ToString("yyyy-MM-dd"), double.Parse(dc.Total).ToString("N2"), dc.Moneda, dc.Estatus, "...");
-                    
+
                 }
 
                 if (docEntryCot != "")
@@ -82,7 +82,7 @@ namespace DRtail
                         dgvProductosPed.Rows.Add(l.Articulo, "", l.PrecioU, "", l.Descuento, l.Cantidad, "", l.Total, "");
                     }
 
-                    foreach(DataGridViewRow row in dgvProductosPed.Rows)
+                    foreach (DataGridViewRow row in dgvProductosPed.Rows)
                     {
                         numArticulosCotPed++;
                         totCotPed = totCotPed + double.Parse(row.Cells["ImporteM"].Value.ToString());
@@ -325,7 +325,6 @@ namespace DRtail
 
                 if (CrearPedido(pedido))
                 {
-                    
                     btnCobrarCotizacion.Visible = true;
                 }
             }
@@ -474,7 +473,7 @@ namespace DRtail
             Boolean generado = false;
             try
             {
-                var httpWebRequest = (HttpWebRequest)WebRequest.Create("http://54.39.26.9:62436/api/crearPedido");
+                var httpWebRequest = (HttpWebRequest)WebRequest.Create(Properties.Settings.Default.RutaApi + "crearPedido");
                 httpWebRequest.ContentType = "application/json";
                 httpWebRequest.Method = "POST";
                 //ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12 | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls;
@@ -492,9 +491,23 @@ namespace DRtail
                 {
                     var result = streamReader.ReadToEnd();
                     var j = JsonConvert.DeserializeObject<RespuestaAPI>(result);
-                    MessageBox.Show(j.Message);
+                    string email = "";
+                    var socio = dtosSocios.Where(i => (i.CodigoCliente.Contains(txtCliente.Text)));
+
+                    foreach (DatosSocios s in socio)
+                    {
+                        email = s.Email;
+                    }
+
                     if (j.Error == "false")
+                    {
+                        if (Utilidades.ReporteCotizacion(j.docEntryGenerado, email, "Pedido"))
+                        {
+                            MessageBox.Show("Correo enviado");
+                        }
+                        MessageBox.Show(j.Message);
                         generado = true;
+                    }
                 }
             }
             catch (Exception ex)

@@ -22,7 +22,7 @@ namespace DRtail
         {
             try
             {
-                var httpWebRequest = (HttpWebRequest)WebRequest.Create("http://54.39.26.9:62436/api/consultarAllCotizaciones");
+                var httpWebRequest = (HttpWebRequest)WebRequest.Create(Properties.Settings.Default.RutaApi + "consultarAllCotizaciones");
                 httpWebRequest.ContentType = "application/json";
                 httpWebRequest.Method = "GET";
                 //ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12 | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls;
@@ -46,7 +46,7 @@ namespace DRtail
         {
             try
             {
-                var httpWebRequest = (HttpWebRequest)WebRequest.Create("http://54.39.26.9:62436/api/consultarAllPedidos");
+                var httpWebRequest = (HttpWebRequest)WebRequest.Create(Properties.Settings.Default.RutaApi + "consultarAllPedidos");
                 httpWebRequest.ContentType = "application/json";
                 httpWebRequest.Method = "GET";
                 //ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12 | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls;
@@ -70,7 +70,7 @@ namespace DRtail
         {
             try
             {
-                var httpWebRequest = (HttpWebRequest)WebRequest.Create("http://54.39.26.9:62436/api/consultarAllFacturas");
+                var httpWebRequest = (HttpWebRequest)WebRequest.Create(Properties.Settings.Default.RutaApi + "consultarAllFacturas");
                 httpWebRequest.ContentType = "application/json";
                 httpWebRequest.Method = "GET";
                 //ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12 | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls;
@@ -94,7 +94,7 @@ namespace DRtail
         {
             try
             {
-                HttpWebRequest request = (HttpWebRequest)WebRequest.Create("http://54.39.26.9:62436/api/consultarAllArticulosEsc");
+                HttpWebRequest request = (HttpWebRequest)WebRequest.Create(Properties.Settings.Default.RutaApi + "consultarAllArticulosEsc");
                 using (HttpWebResponse response = (HttpWebResponse)request.GetResponse())
                 using (Stream stream = response.GetResponseStream())
                 using (StreamReader reader = new StreamReader(stream))
@@ -114,7 +114,7 @@ namespace DRtail
         {
             try
             {
-                HttpWebRequest request = (HttpWebRequest)WebRequest.Create(@"http://54.39.26.9:62436/api/consultarAllSociosEsc");
+                HttpWebRequest request = (HttpWebRequest)WebRequest.Create(Properties.Settings.Default.RutaApi + "consultarAllSociosEsc");
                 using (HttpWebResponse response = (HttpWebResponse)request.GetResponse())
                 using (Stream stream = response.GetResponseStream())
                 using (StreamReader reader = new StreamReader(stream))
@@ -133,13 +133,13 @@ namespace DRtail
         {
             try
             {
-                HttpWebRequest request = (HttpWebRequest)WebRequest.Create(@"http://54.39.26.9:62436/api/consultarCotizacion?docNum=" + cotOrigen);
+                HttpWebRequest request = (HttpWebRequest)WebRequest.Create(Properties.Settings.Default.RutaApi + "consultarCotizacion?docNum=" + cotOrigen);
                 using (HttpWebResponse response = (HttpWebResponse)request.GetResponse())
                 using (Stream stream = response.GetResponseStream())
                 using (StreamReader reader = new StreamReader(stream))
                 {
                     var json = reader.ReadToEnd();
-                    return JsonConvert.DeserializeObject<Cotización> (json);
+                    return JsonConvert.DeserializeObject<Cotización>(json);
                 }
             }
             catch (Exception ex)
@@ -148,42 +148,6 @@ namespace DRtail
             }
         }
 
-
-        public static Boolean enviarCorreo(string U_Correo, string U_Path, string tipoDocumento)
-        {
-            bool enviado = false;
-
-            try
-            {
-                string SMTP = "smtp.gmail.com"; // lc_ServidorSMTP
-                string Usuario = "testdesarrollosdescon@gmail.com"; // lc_UsuarioCorreo
-                string Contraseña = "Descon2020"; // lc_ContraseñaCorreo
-                int Puerto = System.Convert.ToInt32(587);
-                System.Net.Mail.MailMessage correo = new System.Net.Mail.MailMessage();
-                correo.From = new System.Net.Mail.MailAddress(Usuario);
-                correo.Subject = "Envio de " + tipoDocumento + " de Etrusca";
-                correo.Body = "Buen dìa enviamos el siguiente correo como prueba de funcionalidad del mismo, quedando atentos a sus comentarios y agradeciendo su atención";
-                correo.To.Add(U_Correo);
-                System.Net.Mail.SmtpClient Servidor = new System.Net.Mail.SmtpClient();
-                Servidor.Host = SMTP;
-                Servidor.Port = Puerto;
-                //System.Net.Mail.Attachment archivo = new System.Net.Mail.Attachment(U_Path);
-                //correo.Attachments.Add(archivo);
-                if (1 == 1)
-                    Servidor.EnableSsl = true;
-                else
-                    Servidor.EnableSsl = false;
-                Servidor.Credentials = new System.Net.NetworkCredential(Usuario, Contraseña);
-                Servidor.Send(correo);
-                correo.Attachments.Dispose();
-                enviado = true;
-            }
-            catch (Exception ex)
-            {
-                enviado = false;
-            }
-            return enviado;
-        }
 
     }
 }

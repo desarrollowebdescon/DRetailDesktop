@@ -55,11 +55,11 @@ namespace DRtail
                 dtosSocios = Servicios.getSocios();
                 items = Servicios.GetArticulos();
                 cotizacionesList = Servicios.getCotizaciones();
-                
+
                 foreach (DatosCotizacion dc in cotizacionesList)
-                {                    
-                    bdgCotizaciones.Rows.Add(dc.docentryCotizacion,dc.NoCotizacion, dc.Cliente, dc.Nombre, dc.FechaDocumento.ToString("yyyy-MM-dd"), double.Parse(dc.Total).ToString("N2"), dc.Moneda, dc.Estatus, "...");
-                    
+                {
+                    bdgCotizaciones.Rows.Add(dc.docentryCotizacion, dc.NoCotizacion, dc.Cliente, dc.Nombre, dc.FechaDocumento.ToString("yyyy-MM-dd"), double.Parse(dc.Total).ToString("N2"), dc.Moneda, dc.Estatus, "...");
+
                 }
 
             }
@@ -212,10 +212,10 @@ namespace DRtail
 
         private void btnBorrarProd_Click(object sender, EventArgs e)
         {
-            if(dgvProductosCotizacion.Rows.Count > 0)
+            if (dgvProductosCotizacion.Rows.Count > 0)
             {
                 EliminarProducto();
-            }            
+            }
         }
         void EliminarProducto()
         {
@@ -246,23 +246,6 @@ namespace DRtail
                 if (CrearCotizacion(cotizacion))
                 {
                     btnCobrarCotizacion.Visible = true;
-                    string email = "";
-                  
-                    var socio = dtosSocios.Where(i => (i.CodigoCliente.Contains(txtCliente.Text)));
-
-                    foreach (DatosSocios s in socio)
-                    {
-                        email = s.Email;
-                    }
-
-                    if(Servicios.enviarCorreo(email,"","Cotización"))
-                    {
-                        MessageBox.Show("Correo enviado a: " + email);
-                    }
-                    else
-                        MessageBox.Show("Correo no enviado");
-
-
                 }
             }
             catch (Exception ex)
@@ -288,7 +271,7 @@ namespace DRtail
             Boolean generado = false;
             try
             {
-                var httpWebRequest = (HttpWebRequest)WebRequest.Create("http://54.39.26.9:62436/api/crearCotizacion");
+                var httpWebRequest = (HttpWebRequest)WebRequest.Create(Properties.Settings.Default.RutaApi + "crearCotizacion");
                 httpWebRequest.ContentType = "application/json";
                 httpWebRequest.Method = "POST";
                 //ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12 | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls;
@@ -306,9 +289,24 @@ namespace DRtail
                 {
                     var result = streamReader.ReadToEnd();
                     var j = JsonConvert.DeserializeObject<RespuestaAPI>(result);
-                    MessageBox.Show(j.Message);
+                    string email = "";
+                    var socio = dtosSocios.Where(i => (i.CodigoCliente.Contains(txtCliente.Text)));
+
+                    foreach (DatosSocios s in socio)
+                    {
+                        email = s.Email;
+                    }
+
                     if (j.Error == "false")
+                    {
+                        if (Utilidades.ReporteCotizacion(j.docEntryGenerado, email, "Cotizacion"))
+                        {
+                            MessageBox.Show("Correo enviado");
+                        }
+                        MessageBox.Show(j.Message);
                         generado = true;
+                    }                    
+
                 }
             }
             catch (Exception ex)

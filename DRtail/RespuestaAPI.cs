@@ -17,5 +17,8 @@ namespace DRtail
 
         [JsonProperty("idResponseSAP")]
         public string idResponseSAP { get; set; }
+
+        [JsonProperty("DocEntry")]
+        public string docEntryGenerado { get; set; }
     }
 }
