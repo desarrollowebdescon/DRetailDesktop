@@ -7,7 +7,10 @@ using System.Drawing;
 using System.IO;
 using System.Net;
 using System.Net.Http;
+using System.Net.WebSockets;
 using System.Runtime.InteropServices;
+using System.Threading;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
@@ -23,6 +26,7 @@ namespace DRtail
         public List<DatosArticulos> itemsCotizacion = new List<DatosArticulos>();
         public List<DatosArticulos> itemsPedido = new List<DatosArticulos>();
         List<DatosSocios> socios;
+        public string codigoSocioActivo = "";
         public string codClienteSelec = "";
         int numArticulos = 0;
         double importeTotal = 0;
@@ -30,6 +34,12 @@ namespace DRtail
         public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int HT_CAPTION = 0x2;
         private int pnlMenuLat = 315;
+        protected bool isDragging = false;
+        protected Rectangle lastRectangle = new Rectangle();
+        private Rectangle wa;
+        bool IsLine = false;
+        Socket socket = new Socket();
+
 
         [DllImportAttribute("user32.dll")]
         public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
@@ -39,20 +49,142 @@ namespace DRtail
         public frmMenuLateral()
         {
             InitializeComponent();
-            SelectedLineMenu();
+            SelectedLineMenu("");
+            
+            Conectar();
+            getLine();
             btnRestore.Visible = true;
             btnMaxim.Visible = false;
-            Rectangle wa = Screen.FromControl(this).WorkingArea;
+            wa = Screen.FromControl(this).WorkingArea;
             this.MaximumSize = new Size(wa.Width, wa.Height);
-            Servicios.menuLateral = this;
+            this.SetStyle(ControlStyles.ResizeRedraw, true);
+            
+
+         
+
         }
 
+        private void Conectar()
+        {
+
+            Task.Run(async() => 
+            {
+                await Socket.Conectar();
+                
+            });
+           
+           
+            
+        }
+
+        private void getLine()
+        {
+
+            Task.Run(async () =>
+            {
+                
+              
+                while (true)
+                {
+                    IsLine =  await socket.getInLine();
+                    if (IsLine)
+                    {
+                        pbSemaforo.BackgroundImage = Properties.Resources.semaforo_verde;
+                    }
+                    else
+                    {
+                        pbSemaforo.BackgroundImage = Properties.Resources.semaforo_rojo;
+                    }
+                    
+                }
+               
+
+
+            });
+
+           
+        }
+            
+
+      
+
+        private const int cGrip = 16;      // Grip size
+        private const int cCaption = 32;   // Caption bar height;
+
+        protected override void OnPaint( PaintEventArgs e)
+        {
+            Rectangle rc = new Rectangle(ClientSize.Width - cGrip, ClientSize.Height - cGrip, cGrip, cGrip);
+            ControlPaint.DrawSizeGrip(e.Graphics, this.BackColor, rc);
+            
+        }
+
+        protected override void WndProc(ref Message m)
+        {
+            const int RESIZE_HANDLE_SIZE = 10;
+
+            switch (m.Msg)
+            {
+                case 0x0084/*NCHITTEST*/ :
+                    base.WndProc(ref m);
+
+                    if ((int)m.Result == 0x01/*HTCLIENT*/)
+                    {
+                        Point screenPoint = new Point(m.LParam.ToInt32());
+                        Point clientPoint = this.PointToClient(screenPoint);
+                        if (clientPoint.Y <= RESIZE_HANDLE_SIZE)
+                        {
+                            if (clientPoint.X <= RESIZE_HANDLE_SIZE)
+                                m.Result = (IntPtr)13/*HTTOPLEFT*/ ;
+                            else if (clientPoint.X < (Size.Width - RESIZE_HANDLE_SIZE))
+                                m.Result = (IntPtr)12/*HTTOP*/ ;
+                            else
+                                m.Result = (IntPtr)14/*HTTOPRIGHT*/ ;
+                        }
+                        else if (clientPoint.Y <= (Size.Height - RESIZE_HANDLE_SIZE))
+                        {
+                            if (clientPoint.X <= RESIZE_HANDLE_SIZE)
+                                m.Result = (IntPtr)10/*HTLEFT*/ ;
+                            else if (clientPoint.X < (Size.Width - RESIZE_HANDLE_SIZE))
+                                m.Result = (IntPtr)2/*HTCAPTION*/ ;
+                            else
+                                m.Result = (IntPtr)11/*HTRIGHT*/ ;
+                        }
+                        else
+                        {
+                            if (clientPoint.X <= RESIZE_HANDLE_SIZE)
+                                m.Result = (IntPtr)16/*HTBOTTOMLEFT*/ ;
+                            else if (clientPoint.X < (Size.Width - RESIZE_HANDLE_SIZE))
+                                m.Result = (IntPtr)15/*HTBOTTOM*/ ;
+                            else
+                                m.Result = (IntPtr)17/*HTBOTTOMRIGHT*/ ;
+                        }
+                    }
+                    return;
+            }
+            base.WndProc(ref m);
+        }
+        protected override CreateParams CreateParams
+
+        {
+            get
+            {
+                const int WS_CAPTION = 0x00C00000;
+                CreateParams baseParams = base.CreateParams;
+                //Get rid of caption
+                baseParams.Style = baseParams.Style & ~WS_CAPTION;
+                return baseParams;
+            }
+        }
         private void btnClientesMenu_Click(object sender, EventArgs e)
         {
             pnlMain.Controls.Clear();
-            pnlMain.Controls.Add(new Clientes());
-            SelectedLineMenu();
-            pnlLineClientes.Visible = true;
+           
+            Clientes clientes = new Clientes();
+            clientes.Size = new Size(wa.Width -90, wa.Height - 60);
+            pnlMain.Controls.Add(clientes);
+            SelectedLineMenu("pnlLineClientes");
+
+
             this.LblTitle.Text = "CLIENTES";
 
 
@@ -60,6 +192,12 @@ namespace DRtail
         private void btnCotizaMenu_Click(object sender, EventArgs e)
         {
             pnlMain.Controls.Clear();
+            Cotizaciones cotizaciones = new Cotizaciones();
+            cotizaciones.Size = new Size(wa.Width - 90, wa.Height);
+            pnlMain.Controls.Add(cotizaciones);
+            SelectedLineMenu("pnlLineCotizaciones");
+
+
             pnlMain.Controls.Add(new Cotizaciones(""));
             SelectedLineMenu();
             pnlLineCotizaciones.Visible = true;
@@ -77,8 +215,9 @@ namespace DRtail
         {
             pnlMain.Controls.Clear();
             pnlMain.Controls.Add(new Productos());
-            SelectedLineMenu();
-            pnlLineProductos.Visible = true;
+            SelectedLineMenu("pnlLineProductos");
+
+
             this.LblTitle.Text = "PRODUCTOS";
         }
         public void AgregarArticuloCotizacion(DatosArticulos da)
@@ -102,8 +241,8 @@ namespace DRtail
         {
             pnlMain.Controls.Clear();
             pnlMain.Controls.Add(new Inventario());
-            SelectedLineMenu();
-            pnlLineInventario.Visible = true;
+            SelectedLineMenu("pnlLineInventario");
+            
             this.LblTitle.Text = "INVENTARIO";
         }
 
@@ -111,8 +250,9 @@ namespace DRtail
         {
             pnlMain.Controls.Clear();
             pnlMain.Controls.Add(new Facturacion());
-            SelectedLineMenu();
-            pnlLineFacturas.Visible = true;
+            SelectedLineMenu("pnlLineFacturas");
+
+
             this.LblTitle.Text = "FACTURAS";
         }
 
@@ -120,36 +260,36 @@ namespace DRtail
         {
             pnlMain.Controls.Clear();
             pnlMain.Controls.Add(new Reportes());
-            SelectedLineMenu();
-            pnlLineReportes.Visible = true;
+            SelectedLineMenu("pnlLineReportes");
+
+
             this.LblTitle.Text = "REPORTES";
         }
         private void btnCorteMenu_Click(object sender, EventArgs e)
         {
             pnlMain.Controls.Clear();
             pnlMain.Controls.Add(new Corte());
-            SelectedLineMenu();
-            pnlLineCorte.Visible = true;
+            SelectedLineMenu("pnlLineCorte");
+
+
             this.LblTitle.Text = "CORTES";
         }
         private void btnPLealMenu_Click(object sender, EventArgs e)
         {
             pnlMain.Controls.Clear();
             pnlMain.Controls.Add(new PLealtad());
-            SelectedLineMenu();
-            pnlLinePLealtad.Visible = true;
+            SelectedLineMenu("pnlLinePLealtad");
+            this.LblTitle.Text = "PUNTOS LEALTAD";
+
         }
         private void btnConfigMenu_Click(object sender, EventArgs e)
         {
             pnlMain.Controls.Clear();
             pnlMain.Controls.Add(new Configuraciones());
-            SelectedLineMenu();
-            pnlLineConfiguracion.Visible = true;
+            SelectedLineMenu("pnlLineConfiguracion");
+            
             this.LblTitle.Text = "CONFIGURACIONES";
         }
-
-
-
         private void btnMinimizar_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
@@ -233,18 +373,20 @@ namespace DRtail
             Application.Restart();
         }
 
-        public void SelectedLineMenu()
+        public void SelectedLineMenu(string idPanel)
         {
-            pnlLineClientes.Visible = false;
-            pnlLineCotizaciones.Visible = false;
-            pnlLinePedidos.Visible = false;
-            pnlLineProductos.Visible = false;
-            pnlLineInventario.Visible = false;
-            pnlLineFacturas.Visible = false;
-            pnlLineReportes.Visible = false;
-            pnlLineCorte.Visible = false;
-            pnlLinePLealtad.Visible = false;
-            pnlLineConfiguracion.Visible = false;
+            pnlLineClientes.Visible         = pnlLineClientes.Name      == idPanel;
+            pnlLineCotizaciones.Visible     = pnlLineCotizaciones.Name  == idPanel;
+            pnlLinePedidos.Visible          = pnlLinePedidos.Name       == idPanel;
+            pnlLineProductos.Visible        = pnlLineProductos.Name     == idPanel;
+            pnlLineInventario.Visible       = pnlLineInventario.Name    == idPanel;
+            pnlLineFacturas.Visible         = pnlLineFacturas.Name      == idPanel;
+            pnlLineReportes.Visible         = pnlLineReportes.Name      == idPanel;
+            pnlLineCorte.Visible            = pnlLineCorte.Name         == idPanel;
+            pnlLinePLealtad.Visible         = pnlLinePLealtad.Name      == idPanel;
+            pnlLineConfiguracion.Visible    = pnlLineConfiguracion.Name == idPanel;
+
+            
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -255,7 +397,7 @@ namespace DRtail
         private void btnRestore_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Normal;
-            //this.Size = new Size(1200,780);
+            this.Size = this.MinimumSize;
             btnRestore.Visible = false;
             btnMaxim.Visible = true;
 

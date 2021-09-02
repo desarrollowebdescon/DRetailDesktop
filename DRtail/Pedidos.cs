@@ -36,6 +36,19 @@ namespace DRtail
         public Pedidos(string impCliente, string docEntryCotizacion, string docNumCotizacion)
         {
             InitializeComponent();
+           
+            GetData();
+            AutoCompletar(txtProducto, "DatosArticulos");
+            AutoCompletar(txtCliente, "DatosSocios");
+        }
+        public Pedidos(DatosCotizacion dc)
+        {
+            InitializeComponent();
+            if(dc.Cliente != "")
+            {
+                txtCliente.Text = dc.Cliente;
+                tabControlPedidos.SelectedIndex = 1;
+            }
             this.Dock = DockStyle.Fill;
             docEntryCot = docEntryCotizacion;
             docNumCot = docNumCotizacion;

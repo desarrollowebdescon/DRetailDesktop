@@ -19,6 +19,7 @@ namespace DRtail
         public List<DatosSocios> dtosSocios;
         List<DatosArticulos> items;
         List<DatosCotizacion> cotizacionesList;
+       
         public int ordenDGV = 0;
         public string codClienteSelec = "";
         DataTable dtSocios = new DataTable();
@@ -30,7 +31,7 @@ namespace DRtail
         public Cotizaciones(string impCliente)
         {
             InitializeComponent();
-            this.Dock = DockStyle.Fill;
+
             GetData();
             AutoCompletar(txtProducto, "DatosArticulos");
             AutoCompletar(txtCliente, "DatosSocios");
@@ -46,10 +47,24 @@ namespace DRtail
                 txtCliente.Text = impCliente;
             }
         }
+        public Cotizaciones(DatosCotizacion dc)
+        {
+            InitializeComponent();
+            GetData();
+            AutoCompletar(txtProducto, "DatosArticulos");
+            AutoCompletar(txtCliente, "DatosSocios");
+            if(dc.Cliente != "")
+            {
+                txtCliente.Text = dc.Cliente;
+                tabControlCotizaciones.SelectedIndex = 1;
+            }
+        }
 
 
         private void GetData()
         {
+         
+
             try
             {
                 dtosSocios = Servicios.getSocios();
