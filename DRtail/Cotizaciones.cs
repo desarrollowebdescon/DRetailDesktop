@@ -232,7 +232,7 @@ namespace DRtail
                 cotizacion.Cliente = txtCliente.Text;
                 cotizacion.FechaContabilizacion = DateTime.Now;
                 cotizacion.FechaVencimiento = DateTime.Now.AddDays(3);
-                cotizacion.Moneda = "MXP";
+                cotizacion.Moneda = "MXN";
                 cotizacion.Comentarios = "Cotización generada desde DRtail";
 
                 foreach (DataGridViewRow dRow in dgvProductosCotizacion.Rows)

@@ -25,7 +25,7 @@ namespace DRtail.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://64.250.121.122:2627/")]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://64.250.121.122:2627/api/")]
         public string RutaApi {
             get {
                 return ((string)(this["RutaApi"]));
