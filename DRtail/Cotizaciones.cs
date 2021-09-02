@@ -19,6 +19,7 @@ namespace DRtail
         public List<DatosSocios> dtosSocios;
         List<DatosArticulos> items;
         List<DatosCotizacion> cotizacionesList;
+       
         public int ordenDGV = 0;
         public string codClienteSelec = "";
         DataTable dtSocios = new DataTable();
@@ -27,10 +28,25 @@ namespace DRtail
         string tempDescuento = "";
         string tempDescuentoOld = "";
         #endregion
+
+
+        public Cotizaciones()
+        {
+            InitializeComponent();
+
+            GetData();
+            AutoCompletar(txtProducto, "DatosArticulos");
+            AutoCompletar(txtCliente, "DatosSocios");
+
+            // txtBuscar.Size = bdpInicio.Size;
+
+        }
+
+
         public Cotizaciones(string impCliente)
         {
             InitializeComponent();
-            this.Dock = DockStyle.Fill;
+            
             GetData();
             AutoCompletar(txtProducto, "DatosArticulos");
             AutoCompletar(txtCliente, "DatosSocios");
@@ -45,11 +61,26 @@ namespace DRtail
                 tabControlCotizaciones.SelectedIndex = 1;
                 txtCliente.Text = impCliente;
             }
+
+        }
+        public Cotizaciones(DatosCotizacion dc)
+        {
+            InitializeComponent();
+            GetData();
+            AutoCompletar(txtProducto, "DatosArticulos");
+            AutoCompletar(txtCliente, "DatosSocios");
+            if(dc.Cliente != "")
+            {
+                txtCliente.Text = dc.Cliente;
+                tabControlCotizaciones.SelectedIndex = 1;
+            }
         }
 
 
         private void GetData()
         {
+         
+
             try
             {
                 dtosSocios = Servicios.getSocios();
@@ -362,13 +393,6 @@ namespace DRtail
         private void btnAccionesGPedido_Click(object sender, EventArgs e)
         {
             lblAccionesMensaje.Text = "Se ha Generado el pedido con éxito la cotización " + lblNCotizacion.Text;
-
-            Servicios.menuLateral.pnlMain.Controls.Clear();
-            Servicios.menuLateral.pnlMain.Controls.Add(new Pedidos(bdgCotizaciones.Rows[bdgCotizaciones.CurrentRow.Index].Cells[2].Value.ToString(), bdgCotizaciones.Rows[bdgCotizaciones.CurrentRow.Index].Cells[0].Value.ToString(), bdgCotizaciones.Rows[bdgCotizaciones.CurrentRow.Index].Cells[1].Value.ToString()));
-            Servicios.menuLateral.SelectedLineMenu();
-            Servicios.menuLateral.pnlLinePedidos.Visible = true;
-            Servicios.menuLateral.LblTitle.Text = "PEDIDOS";
-
         }
 
         private void btnCerrarPOAcciones_Click(object sender, EventArgs e)
@@ -380,7 +404,14 @@ namespace DRtail
         {
 
             string descuento = tempDescuento;
-            string articulo = dgvProductosCotizacion.Rows[e.RowIndex].Cells[0].Value.ToString();
+            lblAccionesMensaje.Text = "Se ha Generado el pedido con éxito la cotización " + lblNCotizacion.Text;
+
+            Servicios.menuLateral.pnlMain.Controls.Clear();
+            Servicios.menuLateral.pnlMain.Controls.Add(new Pedidos(bdgCotizaciones.Rows[bdgCotizaciones.CurrentRow.Index].Cells[2].Value.ToString(), bdgCotizaciones.Rows[bdgCotizaciones.CurrentRow.Index].Cells[0].Value.ToString(), bdgCotizaciones.Rows[bdgCotizaciones.CurrentRow.Index].Cells[1].Value.ToString()));
+            Servicios.menuLateral.SelectedLineMenu();
+            Servicios.menuLateral.pnlLinePedidos.Visible = true;
+            Servicios.menuLateral.LblTitle.Text = "PEDIDOS";
+
             DialogResult dr = MessageBox.Show("¿Desea aplicar el descuento de $" + descuento + " al articulo " + articulo + "?", "Autorizar descuento", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
             if (dr.Equals(DialogResult.OK))
             {

@@ -55,6 +55,28 @@ namespace DRtail
             }
         }
 
+
+        public Pedidos()
+        {
+            InitializeComponent();
+
+            GetData();
+            AutoCompletar(txtProducto, "DatosArticulos");
+            AutoCompletar(txtCliente, "DatosSocios");
+        }
+        public Pedidos(DatosCotizacion dc)
+        {
+            InitializeComponent();
+            if (dc.Cliente != "")
+            {
+                txtCliente.Text = dc.Cliente;
+                tabControlPedidos.SelectedIndex = 1;
+            }
+            GetData();
+            AutoCompletar(txtProducto, "DatosArticulos");
+            AutoCompletar(txtCliente, "DatosSocios");
+        }
+
         private void GetData()
         {
             try
