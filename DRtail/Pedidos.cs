@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Net;
+using System.IO;
+using Newtonsoft.Json;
 
 namespace DRtail
 {
@@ -17,7 +20,8 @@ namespace DRtail
         #region "Variables"
         public List<DatosSocios> dtosSocios;
         List<DatosArticulos> items;
-        List<DatosCotizacion> cotizacionesList;
+        List<DatosPedido> pedidosList;
+        Cotización cotizacionOrigen;
         public int ordenDGV = 0;
         public string codClienteSelec = "";
         DataTable dtSocios = new DataTable();
@@ -26,8 +30,10 @@ namespace DRtail
         string tempDescuento = "";
         string tempDescuentoOld = "";
         string flagPago = "";
+        string docEntryCot = "";
+        string docNumCot = "";
         #endregion
-        public Pedidos()
+        public Pedidos(string impCliente, string docEntryCotizacion, string docNumCotizacion)
         {
             InitializeComponent();
            
@@ -46,6 +52,17 @@ namespace DRtail
             GetData();
             AutoCompletar(txtProducto, "DatosArticulos");
             AutoCompletar(txtCliente, "DatosSocios");
+            
+            if (impCliente == "")
+            {
+                tabControlPedidos.SelectedIndex = 0;
+            }
+            else
+            {
+                tabControlPedidos.SelectedIndex = 1;
+                txtCliente.Text = impCliente;
+
+            }
         }
 
         private void GetData()
@@ -54,16 +71,25 @@ namespace DRtail
             {
                 dtosSocios = Servicios.getSocios();
                 items = Servicios.GetArticulos();
-                cotizacionesList = Servicios.getCotizaciones();
+                pedidosList = Servicios.getPedidos();
 
                 int i = 0;
-                foreach (DatosCotizacion dc in cotizacionesList)
+                foreach (DatosPedido dc in pedidosList)
                 {
-                    dc.NoCotizacion = (i + 1).ToString();
-                    bdgPedidos.Rows.Add(dc.NoCotizacion, dc.Cliente, dc.Nombre, dc.FechaDocumento.ToString("yyyy-MM-dd"), double.Parse(dc.Total).ToString("N2"), dc.Moneda, dc.Estatus, "...");
+                    bdgPedidos.Rows.Add(dc.noPedido, dc.Cliente, dc.Nombre, dc.FechaDocumento.ToString("yyyy-MM-dd"), double.Parse(dc.Total).ToString("N2"), dc.Moneda, dc.Estatus, "...");
                     i++;
                 }
 
+                if (docEntryCot != "")
+                {
+                    cotizacionOrigen = Servicios.getCotizacionOrigen(docNumCot);
+                    
+                    foreach(Lineas l in cotizacionOrigen.lineas)
+                    {
+                        dgvProductosPed.Rows.Add(l.Articulo, "", l.PrecioU, "",l.Descuento,l.Cantidad,"",l.Total,"");
+                    }                   
+
+                }
             }
             catch (Exception ex)
             {
@@ -277,7 +303,35 @@ namespace DRtail
 
         private void btnGenerarCotizacion_Click(object sender, EventArgs e)
         {
-            btnCobrarCotizacion.Visible = true;
+
+            try
+            {
+                DatosPedido pedido = new DatosPedido();
+                pedido.NoCotizacionRelacionada = docEntryCot; //Cotizacion relacionada
+                pedido.Cliente = txtCliente.Text;
+                pedido.FechaContabilizacion = DateTime.Now;
+                pedido.FechaVencimiento = DateTime.Now.AddDays(3);
+                pedido.Moneda = "MXP";
+                pedido.Comentarios = "Pedido generado desde DRtail";
+
+                foreach (DataGridViewRow dRow in dgvProductosPed.Rows)
+                {
+                    ArticulosPedido articulosPed= new ArticulosPedido();
+                    articulosPed.Articulo = dRow.Cells[0].Value.ToString();
+                    articulosPed.Cantidad = double.Parse(dRow.Cells[5].Value.ToString());
+                    pedido.articulosPedidos.Add(articulosPed);
+                }
+
+                if (CrearPedido(pedido))
+                {
+                    btnCobrarCotizacion.Visible = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al Generar Pedido: " + ex.Message);
+            }
+
         }
 
         private void btnCobrarCancelar_Click(object sender, EventArgs e)
@@ -413,6 +467,40 @@ namespace DRtail
             MessageBox.Show("Se ha generado correctamente");
         }
 
-       
+        public Boolean CrearPedido(DatosPedido pedido)
+        {
+            Boolean generado = false;
+            try
+            {
+                var httpWebRequest = (HttpWebRequest)WebRequest.Create("http://54.39.26.9:62436/api/crearPedido");
+                httpWebRequest.ContentType = "application/json";
+                httpWebRequest.Method = "POST";
+                //ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12 | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls;
+
+                using (var streamWriter = new StreamWriter(httpWebRequest.GetRequestStream()))
+                {
+                    var json = JsonConvert.SerializeObject(pedido);
+                    streamWriter.Write(json);
+                    streamWriter.Flush();
+                    streamWriter.Close();
+                }
+
+                var httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();
+                using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
+                {
+                    var result = streamReader.ReadToEnd();
+                    var j = JsonConvert.DeserializeObject<RespuestaAPI>(result);
+                    MessageBox.Show(j.Message);
+                    if (j.Error == "false")
+                        generado = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al Crear Cotización:" + ex.Message);
+            }
+            return generado;
+        }
+
     }
 }

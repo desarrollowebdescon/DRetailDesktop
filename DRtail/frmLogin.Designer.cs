@@ -36,10 +36,10 @@
             this.pnlBar = new System.Windows.Forms.Panel();
             this.btnClose = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.lblError = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.txtPassword = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtUsaurio = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.lblError = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.datosUsuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -103,35 +103,11 @@
             resources.ApplyResources(this.panel2, "panel2");
             this.panel2.Name = "panel2";
             // 
-            // txtPassword
+            // lblError
             // 
-            this.txtPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
-            resources.ApplyResources(this.txtPassword, "txtPassword");
-            this.txtPassword.ForeColor = System.Drawing.Color.White;
-            this.txtPassword.HintForeColor = System.Drawing.Color.White;
-            this.txtPassword.HintText = "Contraseña";
-            this.txtPassword.isPassword = true;
-            this.txtPassword.LineFocusedColor = System.Drawing.Color.White;
-            this.txtPassword.LineIdleColor = System.Drawing.Color.Gray;
-            this.txtPassword.LineMouseHoverColor = System.Drawing.Color.LightSlateGray;
-            this.txtPassword.LineThickness = 4;
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // txtUsaurio
-            // 
-            this.txtUsaurio.Cursor = System.Windows.Forms.Cursors.IBeam;
-            resources.ApplyResources(this.txtUsaurio, "txtUsaurio");
-            this.txtUsaurio.ForeColor = System.Drawing.Color.White;
-            this.txtUsaurio.HintForeColor = System.Drawing.Color.White;
-            this.txtUsaurio.HintText = "Usuario";
-            this.txtUsaurio.isPassword = false;
-            this.txtUsaurio.LineFocusedColor = System.Drawing.Color.White;
-            this.txtUsaurio.LineIdleColor = System.Drawing.Color.Gray;
-            this.txtUsaurio.LineMouseHoverColor = System.Drawing.Color.LightSlateGray;
-            this.txtUsaurio.LineThickness = 7;
-            this.txtUsaurio.Name = "txtUsaurio";
-            this.txtUsaurio.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            resources.ApplyResources(this.lblError, "lblError");
+            this.lblError.ForeColor = System.Drawing.Color.Red;
+            this.lblError.Name = "lblError";
             // 
             // bunifuFlatButton1
             // 
@@ -164,11 +140,36 @@
             this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuFlatButton1.Click += new System.EventHandler(this.bunifuFlatButton1_Click);
             // 
-            // lblError
+            // txtPassword
             // 
-            resources.ApplyResources(this.lblError, "lblError");
-            this.lblError.ForeColor = System.Drawing.Color.Red;
-            this.lblError.Name = "lblError";
+            this.txtPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
+            resources.ApplyResources(this.txtPassword, "txtPassword");
+            this.txtPassword.ForeColor = System.Drawing.Color.White;
+            this.txtPassword.HintForeColor = System.Drawing.Color.White;
+            this.txtPassword.HintText = "Contraseña";
+            this.txtPassword.isPassword = true;
+            this.txtPassword.LineFocusedColor = System.Drawing.Color.White;
+            this.txtPassword.LineIdleColor = System.Drawing.Color.Gray;
+            this.txtPassword.LineMouseHoverColor = System.Drawing.Color.LightSlateGray;
+            this.txtPassword.LineThickness = 4;
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPassword_KeyPress);
+            // 
+            // txtUsaurio
+            // 
+            this.txtUsaurio.Cursor = System.Windows.Forms.Cursors.IBeam;
+            resources.ApplyResources(this.txtUsaurio, "txtUsaurio");
+            this.txtUsaurio.ForeColor = System.Drawing.Color.White;
+            this.txtUsaurio.HintForeColor = System.Drawing.Color.White;
+            this.txtUsaurio.HintText = "Usuario";
+            this.txtUsaurio.isPassword = false;
+            this.txtUsaurio.LineFocusedColor = System.Drawing.Color.White;
+            this.txtUsaurio.LineIdleColor = System.Drawing.Color.Gray;
+            this.txtUsaurio.LineMouseHoverColor = System.Drawing.Color.LightSlateGray;
+            this.txtUsaurio.LineThickness = 7;
+            this.txtUsaurio.Name = "txtUsaurio";
+            this.txtUsaurio.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // datosUsuarioBindingSource
             // 

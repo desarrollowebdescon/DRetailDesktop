@@ -28,13 +28,25 @@ namespace DRtail
         string tempDescuento = "";
         string tempDescuentoOld = "";
         #endregion
-        public Cotizaciones()
+        public Cotizaciones(string impCliente)
         {
             InitializeComponent();
 
             GetData();
             AutoCompletar(txtProducto, "DatosArticulos");
             AutoCompletar(txtCliente, "DatosSocios");
+
+
+            if (impCliente == "")
+            {
+                tabControlCotizaciones.SelectedIndex = 0;
+            }
+            else
+            {
+                tabControlCotizaciones.SelectedIndex = 1;
+                txtCliente.Text = impCliente;
+            }
+        }
             
            // txtBuscar.Size = bdpInicio.Size;
 
@@ -52,7 +64,7 @@ namespace DRtail
             }
         }
 
-        
+
         private void GetData()
         {
          
@@ -63,17 +75,16 @@ namespace DRtail
                 items = Servicios.GetArticulos();
                 cotizacionesList = Servicios.getCotizaciones();
                 int i = 0;
-                foreach(DatosCotizacion dc in cotizacionesList)
-                {
-                    dc.NoCotizacion = (i + 1).ToString() ;
-                    bdgCotizaciones.Rows.Add(dc.NoCotizacion, dc.Cliente, dc.Nombre, dc.FechaDocumento.ToString("yyyy-MM-dd"),double.Parse(dc.Total).ToString("N2"), dc.Moneda, dc.Estatus, "...");
+                foreach (DatosCotizacion dc in cotizacionesList)
+                {                    
+                    bdgCotizaciones.Rows.Add(dc.docentryCotizacion,dc.NoCotizacion, dc.Cliente, dc.Nombre, dc.FechaDocumento.ToString("yyyy-MM-dd"), double.Parse(dc.Total).ToString("N2"), dc.Moneda, dc.Estatus, "...");
                     i++;
                 }
 
             }
             catch (Exception ex)
             {
-                
+
             }
         }
 
@@ -103,34 +114,34 @@ namespace DRtail
             }
             return stringCol;
         }
-     
+
         private void btnBuscarCot_Click(object sender, EventArgs e)
         {
             List<DatosCotizacion> dcTemp = new List<DatosCotizacion>();
             bdgCotizaciones.Rows.Clear();
-            
+
             dcTemp = cotizacionesList;
-            dcTemp =  dcTemp.Where(dc => (dc.FechaDocumento >= bdpInicio.Value && dc.FechaDocumento <= bdpFin.Value)).ToList();
-            
-            if( txtBuscar.Text != "")
+            dcTemp = dcTemp.Where(dc => (dc.FechaDocumento >= bdpInicio.Value && dc.FechaDocumento <= bdpFin.Value)).ToList();
+
+            if (txtBuscar.Text != "")
             {
                 dcTemp = dcTemp.Where(dc => (dc.NoCotizacion == txtBuscar.Text || dc.Cliente == txtBuscar.Text)).ToList();
             }
 
-            if(bddEstatus.selectedIndex > 0)
+            if (bddEstatus.selectedIndex > 0)
             {
                 dcTemp = dcTemp.Where(dc => dc.Estatus == bddEstatus.selectedValue).ToList();
             }
 
             foreach (DatosCotizacion dc in dcTemp)
             {
-                bdgCotizaciones.Rows.Add(dc.NoCotizacion, dc.Cliente, dc.Nombre, dc.FechaDocumento.ToString("yyyy-MM-dd"), double.Parse(dc.Total).ToString("N2"), dc.Moneda, dc.Estatus,"...");
-                
+                bdgCotizaciones.Rows.Add(dc.NoCotizacion, dc.Cliente, dc.Nombre, dc.FechaDocumento.ToString("yyyy-MM-dd"), double.Parse(dc.Total).ToString("N2"), dc.Moneda, dc.Estatus, "...");
+
             }
 
 
         }
-        
+
         private void lnkLblBuscarCliente_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             foreach (DatosSocios da in dtosSocios)
@@ -142,7 +153,7 @@ namespace DRtail
 
         }
 
-       
+
 
         void AgregarArticuloDGV()
         {
@@ -170,8 +181,8 @@ namespace DRtail
 
                         if (rep == 0)
                         {
-                            
-                            dgvProductosCotizacion.Rows.Add(i.Codigo, i.Descripcion, i.Costo,"IVA",0.0,1,(i.Costo *0.16), i.Costo,0, (i.Costo * 0.16), i.TotalStock);
+
+                            dgvProductosCotizacion.Rows.Add(i.Codigo, i.Descripcion, i.Costo, "IVA", 0.0, 1, (i.Costo * 0.16), i.Costo, 0, (i.Costo * 0.16), i.TotalStock);
                             numArticulos++;
                             valid = 1;
                             rep = 0;
@@ -220,7 +231,10 @@ namespace DRtail
 
         private void btnBorrarProd_Click(object sender, EventArgs e)
         {
-            EliminarProducto();
+            if(dgvProductosCotizacion.Rows.Count > 0)
+            {
+                EliminarProducto();
+            }            
         }
         void EliminarProducto()
         {
@@ -231,38 +245,38 @@ namespace DRtail
 
         private void btnGenerarCotizacion_Click(object sender, EventArgs e)
         {
-            //try
-            //{
-            //    DatosCotizacion cotizacion = new DatosCotizacion();
-            //    cotizacion.Cliente = txtCliente.Text;
-            //    cotizacion.FechaContabilizacion = DateTime.Now;
-            //    cotizacion.FechaVencimiento = DateTime.Now.AddDays(3);
-            //    cotizacion.Moneda = "MXP";
-            //    cotizacion.Comentarios = "Cotización generada desde DRtail";
+            try
+            {
+                DatosCotizacion cotizacion = new DatosCotizacion();
+                cotizacion.Cliente = txtCliente.Text;
+                cotizacion.FechaContabilizacion = DateTime.Now;
+                cotizacion.FechaVencimiento = DateTime.Now.AddDays(3);
+                cotizacion.Moneda = "MXP";
+                cotizacion.Comentarios = "Cotización generada desde DRtail";
 
-            //    foreach (DataGridViewRow dRow in dgvProductosCotizacion.Rows)
-            //    {
-            //        ArticulosCotizacion articulosCotizacion = new ArticulosCotizacion();
-            //        articulosCotizacion.Articulo = dRow.Cells[0].Value.ToString();
-            //        articulosCotizacion.Cantidad = int.Parse(dRow.Cells[3].Value.ToString());
-            //        cotizacion.articulosCotizaciones.Add(articulosCotizacion);
-            //    }
+                foreach (DataGridViewRow dRow in dgvProductosCotizacion.Rows)
+                {
+                    ArticulosCotizacion articulosCotizacion = new ArticulosCotizacion();
+                    articulosCotizacion.Articulo = dRow.Cells[0].Value.ToString();
+                    articulosCotizacion.Cantidad = double.Parse(dRow.Cells[5].Value.ToString());
+                    cotizacion.articulosCotizaciones.Add(articulosCotizacion);
+                }
 
-            //    if (CrearCotizacion(cotizacion))
-            //    {
-            //        btnCobrarCotizacion.Visible = true;
-            //    }
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show("Error al Generar Cotización: " + ex.Message);
-            //}
+                if (CrearCotizacion(cotizacion))
+                {
+                    btnCobrarCotizacion.Visible = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al Generar Cotización: " + ex.Message);
+            }
 
-            MessageBox.Show("Se ha generado correctamente la Cotización: ");
-            dgvProductosCotizacion.Rows.Clear();
-            txtCliente.Text = "";
-            txtProducto.Text = "";
-            lblTotalProd.Text = "0";
+            //MessageBox.Show("Se ha generado correctamente la Cotización: ");
+            //dgvProductosCotizacion.Rows.Clear();
+            //txtCliente.Text = "";
+            //txtProducto.Text = "";
+            //lblTotalProd.Text = "0";
         }
         public void LimpiarCotizacion()
         {
@@ -315,7 +329,6 @@ namespace DRtail
             LimpiarCotizacion();
         }
 
-       
         private void txtProducto_KeyUp(object sender, KeyEventArgs e)
         {
             if ((int)e.KeyCode == (int)Keys.Enter)
@@ -326,13 +339,13 @@ namespace DRtail
 
         private void bdgCotizaciones_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if(e.ColumnIndex == 7)
+            if (e.ColumnIndex == 8)
             {
-                DataGridViewRow dgvr =  bdgCotizaciones.Rows[e.RowIndex];
-                lblNCotizacion.Text =  dgvr.Cells[0].Value.ToString();
-                lblNCliente.Text    = dgvr.Cells[1].Value.ToString();
-                lblNombre.Text      = dgvr.Cells[2].Value.ToString();
-                lblMontoAcciones.Text      = dgvr.Cells[4].Value.ToString();
+                DataGridViewRow dgvr = bdgCotizaciones.Rows[e.RowIndex];
+                lblNCotizacion.Text = dgvr.Cells[1].Value.ToString();
+                lblNCliente.Text = dgvr.Cells[2].Value.ToString();
+                lblNombre.Text = dgvr.Cells[3].Value.ToString();
+                lblMontoAcciones.Text = dgvr.Cells[5].Value.ToString();
                 lblAccionesMensaje.Text = "";
                 pnlPOAcciones.BringToFront();
                 pnlPOAcciones.Visible = true;
@@ -374,12 +387,10 @@ namespace DRtail
             pnlPOAcciones.Visible = false;
         }
 
-       
-
         private void dgvProductosCotizacion_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
 
-            string descuento =tempDescuento ;
+            string descuento = tempDescuento;
             string articulo = dgvProductosCotizacion.Rows[e.RowIndex].Cells[0].Value.ToString();
             DialogResult dr = MessageBox.Show("¿Desea aplicar el descuento de $" + descuento + " al articulo " + articulo + "?", "Autorizar descuento", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
             if (dr.Equals(DialogResult.OK))
@@ -393,7 +404,6 @@ namespace DRtail
             }
         }
 
-       
 
         private void dgvProductosCotizacion_CellBeginEdit(object sender, DataGridViewCellCancelEventArgs e)
         {
@@ -402,7 +412,7 @@ namespace DRtail
 
         private void dgvProductosCotizacion_CellValidating(object sender, DataGridViewCellValidatingEventArgs e)
         {
-            tempDescuento =  e.FormattedValue.ToString();
+            tempDescuento = e.FormattedValue.ToString();
         }
 
         private void btnAceptarPass_Click_1(object sender, EventArgs e)
@@ -486,7 +496,7 @@ namespace DRtail
 
         private void tabControlCotizaciones_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(tabControlCotizaciones.SelectedIndex == 1)
+            if (tabControlCotizaciones.SelectedIndex == 1)
             {
                 frmMenuLateral ml = (frmMenuLateral)this.ParentForm;
                 dgvProductosCotizacion.Rows.Clear();
@@ -494,7 +504,7 @@ namespace DRtail
                 numArticulos = 0;
                 List<DatosArticulos> tempList = ml.ObtenerArticulosCotizacion();
 
-               
+
 
                 foreach (DatosArticulos daT in tempList)
                 {
@@ -504,32 +514,32 @@ namespace DRtail
                     {
                         foreach (DataGridViewRow row in dgvProductosCotizacion.Rows)
                         {
-                            
+
                             if (row.Cells[0].Value.ToString().Equals(daT.Codigo))
                             {
                                 int cant = int.Parse(row.Cells[5].Value.ToString());
                                 row.Cells[5].Value = cant + 1;
-                                row.Cells[6].Value = (cant + 1)* (daT.Costo * 0.16);
-                                row.Cells[7].Value = (cant + 1)* (daT.Costo * 1.16);
+                                row.Cells[6].Value = (cant + 1) * (daT.Costo * 0.16);
+                                row.Cells[7].Value = (cant + 1) * (daT.Costo * 1.16);
                                 importeTotal += (daT.Costo * 1.16);
                                 agregado = true;
                                 break;
                             }
-                            
+
                         }
                         if (!agregado)
                         {
-                            dgvProductosCotizacion.Rows.Add(daT.Codigo, daT.Descripcion, daT.Costo, "IVA", 0, 1, (daT.Costo * 0.16), (daT.Costo *1.16), daT.TotalStock);
+                            dgvProductosCotizacion.Rows.Add(daT.Codigo, daT.Descripcion, daT.Costo, "IVA", 0, 1, (daT.Costo * 0.16), (daT.Costo * 1.16), daT.TotalStock);
                             importeTotal += (daT.Costo * 1.16);
                         }
-                        
+
                     }
                     else
                     {
                         dgvProductosCotizacion.Rows.Add(daT.Codigo, daT.Descripcion, daT.Costo, "IVA", 0, 1, (daT.Costo * 0.16), (daT.Costo * 1.16), daT.TotalStock);
                         importeTotal += (daT.Costo * 1.16);
                     }
-                    
+
                 }
                 txtTotal.Text = importeTotal.ToString("N2");
                 lblTotalProd.Text = numArticulos.ToString();

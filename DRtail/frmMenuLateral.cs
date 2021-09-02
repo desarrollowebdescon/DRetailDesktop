@@ -176,7 +176,7 @@ namespace DRtail
             }
         }
         private void btnClientesMenu_Click(object sender, EventArgs e)
-        {  
+        {
             pnlMain.Controls.Clear();
            
             Clientes clientes = new Clientes();
@@ -186,8 +186,8 @@ namespace DRtail
 
 
             this.LblTitle.Text = "CLIENTES";
-           
-         
+
+
         }
         private void btnCotizaMenu_Click(object sender, EventArgs e)
         {
@@ -218,11 +218,11 @@ namespace DRtail
 
             this.LblTitle.Text = "PRODUCTOS";
         }
-        public  void  AgregarArticuloCotizacion(DatosArticulos da)
+        public void AgregarArticuloCotizacion(DatosArticulos da)
         {
             itemsCotizacion.Add(da);
         }
-        public  List<DatosArticulos> ObtenerArticulosCotizacion()
+        public List<DatosArticulos> ObtenerArticulosCotizacion()
         {
             return itemsCotizacion;
         }
@@ -303,30 +303,28 @@ namespace DRtail
             this.Text = this.Text;// + " - " + dtos.nombreC;
             frmMensaje mensaje = new frmMensaje();
             mensaje.lblMensaje.Text = mensaje.lblMensaje.Text;// + " " + dtos.nombreC + "!!!";
-           // mensaje.menu = this;
+                                                              // mensaje.menu = this;
             mensaje.ShowDialog();
-            
+
         }
 
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
         {
-            if(pnlMenuLateral.Width == pnlMenuLat)
+            if (pnlMenuLateral.Width == pnlMenuLat)
             {
                 pnlMenuLateral.Width = 90;
                 MiniButons();
-                
             }
             else
             {
                 pnlMenuLateral.Width = pnlMenuLat;
                 MaxiButton();
-               
             }
         }
 
         private void MaxiButton()
         {
-            Size minS =  new Size(296, 60);
+            Size minS = new Size(296, 60);
             pnlBoxMenuClientes.Size = minS;
             pnlBoxMenuCotizaciones.Size = minS;
             pnlBoxMenuCSesion.Size = minS;
@@ -361,7 +359,7 @@ namespace DRtail
 
         }
 
-              
+
 
         private void btnVenta_Click(object sender, EventArgs e)
         {
@@ -423,9 +421,9 @@ namespace DRtail
             SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
         }
 
-        private void frmMenuLateral_Click(object sender, EventArgs e)
+        private void picMenuLogo_Click(object sender, EventArgs e)
         {
-
+            System.Diagnostics.Process.Start("https://cafeetrusca.com");
         }
     }
 }

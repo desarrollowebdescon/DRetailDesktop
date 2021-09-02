@@ -28,7 +28,7 @@ namespace DRtail
 
             foreach(DatosFactura df in datosFacturas)
             {
-                bdgFacturas.Rows.Add(df.NoFactura, df.NoPedido, df.TotalFacturado, df.StatusPago,"...");
+                bdgFacturas.Rows.Add(df.NoFactura, df.Cliente, df.Nombre, df.FechaEntrega, df.TotalFacturado, df.Estatus,"...");
             }
 
         }
@@ -39,14 +39,14 @@ namespace DRtail
             List<DatosFactura> dfList = datosFacturas;
             bdgFacturas.Rows.Clear();
             dfList = dfList.Where(df => 
-                                    (df.CodigoCliente.Contains(txtBuscarFactura.Text) ||
+                                    (df.Cliente.Contains(txtBuscarFactura.Text) ||
                                      df.NoFactura.Contains(txtBuscarFactura.Text) ||
-                                     df.NoPedido.ToString().Contains(txtBuscarFactura.Text)
+                                     df.Nombre.ToString().Contains(txtBuscarFactura.Text)
                                     )
                                 ).ToList();
             foreach (DatosFactura df in dfList)
             {
-                bdgFacturas.Rows.Add(df.NoFactura, df.NoPedido, df.TotalFacturado, df.StatusPago,"...");
+                bdgFacturas.Rows.Add(df.NoFactura, df.Cliente, df.Nombre, df.FechaEntrega, df.TotalFacturado, df.Estatus, "...");
             }
 
         }
