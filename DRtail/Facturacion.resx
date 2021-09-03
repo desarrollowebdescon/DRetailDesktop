@@ -117,7 +117,42 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="CodigoBarras.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="DescripcionPM.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="CantidadVM.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="impuesto.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="descuento.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="cantidad.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="totImpuesto.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="ImporteM.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="ExistenciaM.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="bunifuGradientPanel5.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABPSURBVChTjcOxCkBQAIXh8/6PYTVbZWJSynSVJJLhDiJR
+        d/g9gvPVp6wKOJXXI04V7YxTZb/iVBN2nOqmiFPDduDUEi+ciueDU/eb+J/4AJNnZKq8M2YxAAAAAElF
+        TkSuQmCC
+</value>
+  </data>
   <data name="bunifuGradientPanel1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -568,4 +603,22 @@
   <metadata name="dataGridViewButtonColumn3.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="btnAgregarProducto.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAALoAAAA6CAYAAAAHvkMpAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAK5SURBVHhe7d3PS9NxHMfx/rpOnbp08rSTp05ePI0Og8Cg
+        wKhDCxOhgR46KLY59zW3OXSoDUVLJMofKRlGDCqLeLfXd+ub4vK8fd7PB7xAMD09HZ99g32u2cmqMRb6
+        CJ25GKEzFyN05mKEzlyM0JmLXRn62fGqRbWKZZ4v2NDTkg3cL9j1O9OM9cTUo7pMT0SWr1SseVDv2rH2
+        39Dra0s28KBgmam6RZuH1nj/2Y6/fDOgV6hHdVl9c2QjL9Zbvc61gq927flS6PqrGJl8ZcMTS3ba/NH5
+        lUDva37/2Qp+zYbHSnb64eKr+4XQFfng46Ll1/c6Pwr0n/ruJ7v9JLLjdyvdQ9crOZEjBDrS6Px+KXSd
+        yXVcAUKRLW5ZrrD4L3Q9XdEbT87kCMnZr9+to3jJ9naW26Hr0YzetQKhyZV3LDu92A5dzyH1iAYIze7R
+        Vxt8VGyHnhqds72TZudbQDh0fLmRmWmHfvPubPwMEgiR/hc1Dl1fAKEidLhA6HCB0OECocMFQocLhA4X
+        CB0uEDpcIHS4QOhwgdDhAqHDBUKHC4QOFwgdLhA6XCB0uEDocIHQ4QKhwwVChwuEDhcIHS4QOlxIQtdH
+        dumju4AQJaHr0iPuJ0KoktB154uuwwBCow/P1YfoxqHrVoDs/HbnW0A48q/3bWRyoR26LjVKPZznnI7g
+        pHPLVl2ptkPXxmfLNh7xqo5wRBsH8WXQ6jsJXfcY6Ravrf3Tzj8D+pfu40qNFpPbpJPQNV1qFF9uxO0X
+        6GOKfGisbI1GLWn7Quja1kYtvlQ3V37b+TGgf1S3P8av5Ocj1y6FrukYk50p29CzSvyulWsZ0ct0LVG0
+        eWiZqbqlJxaS48r5dQ397/RXoUczt+69jB+6M9aL0x1cetMZ1SpdO9auDJ2xUEbozMUInbkYoTMXI3Tm
+        YKv2B4C+CJOZS/dIAAAAAElFTkSuQmCC
+</value>
+  </data>
 </root>

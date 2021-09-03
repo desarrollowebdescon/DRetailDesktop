@@ -12,13 +12,13 @@ namespace DRtail
 {
     class Utilidades
     {
-        public static bool ReporteCotizacion(string docEntryGenerado, string email, string tipoDoc)
+        public static bool ReporteTicket(string docEntryGenerado, string email, string tipoDoc)
         {
             try
             {
                 ReportDocument ocInforme = new ReportDocument();
                 string fileName;
-                ocInforme.Load(Application.StartupPath + @"\" + tipoDoc + ".rpt");
+                ocInforme.Load(Application.StartupPath + @"\Ticket_" + tipoDoc + ".rpt");
 
                 foreach (Table var in ocInforme.Database.Tables)
                 {

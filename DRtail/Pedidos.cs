@@ -501,7 +501,7 @@ namespace DRtail
 
                     if (j.Error == "false")
                     {
-                        if (Utilidades.ReporteCotizacion(j.docEntryGenerado, email, "Pedido"))
+                        if (Utilidades.ReporteTicket(j.docEntryGenerado, email, "Pedido"))
                         {
                             MessageBox.Show("Correo enviado");
                         }

@@ -746,6 +746,7 @@
             // pnlCotizacion
             // 
             this.pnlCotizacion.AutoScroll = true;
+            this.pnlCotizacion.Controls.Add(this.pnlConfirmación);
             this.pnlCotizacion.Controls.Add(this.btnCotLimpiar);
             this.pnlCotizacion.Controls.Add(this.bunifuGradientPanel2);
             this.pnlCotizacion.Controls.Add(this.dgvProductosCotizacion);
@@ -759,7 +760,6 @@
             this.pnlCotizacion.Controls.Add(this.btnSalidasProd);
             this.pnlCotizacion.Controls.Add(this.btnEntradasProd);
             this.pnlCotizacion.Controls.Add(this.btnBuscarProd);
-            this.pnlCotizacion.Controls.Add(this.pnlConfirmación);
             this.pnlCotizacion.Controls.Add(this.pnlBuscarSocio);
             this.pnlCotizacion.Controls.Add(this.pnlbusquedaArticulo);
             this.pnlCotizacion.Cursor = System.Windows.Forms.Cursors.Hand;
