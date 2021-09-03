@@ -3,7 +3,7 @@
   <Profiles />
   <Settings>
     <Setting Name="RutaApi" Type="System.String" Scope="User">
-      <Value Profile="(Default)">http://64.250.121.122:2627/</Value>
+      <Value Profile="(Default)">http://64.250.121.122:2627/api/</Value>
     </Setting>
     <Setting Name="Servidor" Type="System.String" Scope="User">
       <Value Profile="(Default)" />

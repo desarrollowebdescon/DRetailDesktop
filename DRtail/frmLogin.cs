@@ -158,7 +158,7 @@ namespace DRtail
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al Iniciar Sesion:" + ex.Message);
+                MessageBox.Show("Error al Iniciar Sesion:" + ex.Message + " " + Properties.Settings.Default.RutaApi);
             }
             return inicio;
         }
