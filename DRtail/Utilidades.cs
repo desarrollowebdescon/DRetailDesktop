@@ -14,6 +14,7 @@ namespace DRtail
     {
         public static bool ReporteTicket(string docEntryGenerado, string email, string tipoDoc)
         {
+            bool reporteCorrecto = false;
             try
             {
                 ReportDocument ocInforme = new ReportDocument();
@@ -31,15 +32,17 @@ namespace DRtail
                 }
                 ocInforme.SetParameterValue("DocKey@", docEntryGenerado); // 
                 ocInforme.SetDatabaseLogon(Properties.Settings.Default.Usuario, Properties.Settings.Default.Password, Properties.Settings.Default.Servidor, Properties.Settings.Default.Empresa);
-                fileName = ExportToPDF(ocInforme, tipoDoc + "_" + docEntryGenerado.ToString() + ".pdf");
-                enviarCorreo(email, fileName, tipoDoc);
-                return true;
+                ocInforme.PrintToPrinter(1, false, 1, 0);
+                //fileName = ExportToPDF(ocInforme, tipoDoc + "_" + docEntryGenerado.ToString() + ".pdf");
+                //if (enviarCorreo(email, fileName, tipoDoc))
+                reporteCorrecto = true;
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error de impresión: " + ex.Message);
-                return false;
+                reporteCorrecto = false;
             }
+            return reporteCorrecto;
         }
 
         public static string ExportToPDF(ReportDocument rpt, string NombreArchivo)
@@ -80,7 +83,7 @@ namespace DRtail
                 System.Net.Mail.MailMessage correo = new System.Net.Mail.MailMessage();
                 correo.From = new System.Net.Mail.MailAddress(Usuario);
                 correo.Subject = "Envio de " + tipoDocumento + " de Etrusca";
-                correo.Body = "Buen dìa enviamos el siguiente correo como prueba de funcionalidad del mismo, quedando atentos a sus comentarios y agradeciendo su atención";
+                correo.Body = "Buen día enviamos el siguiente correo como prueba de funcionalidad del mismo, quedando atentos a sus comentarios y agradeciendo su atención";
                 correo.To.Add(U_Correo);
                 System.Net.Mail.SmtpClient Servidor = new System.Net.Mail.SmtpClient();
                 Servidor.Host = SMTP;
@@ -99,6 +102,7 @@ namespace DRtail
             catch (Exception ex)
             {
                 enviado = false;
+                MessageBox.Show("Error al enviar correo: " + ex.Message);
             }
             return enviado;
         }

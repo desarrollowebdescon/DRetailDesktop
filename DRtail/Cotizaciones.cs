@@ -26,6 +26,7 @@ namespace DRtail
         double importeTotal = 0;
         string tempDescuento = "";
         string tempDescuentoOld = "";
+        string docEntrySeleccionado = "";
         #endregion
         public Cotizaciones(string impCliente)
         {
@@ -39,6 +40,7 @@ namespace DRtail
             if (impCliente == "")
             {
                 tabControlCotizaciones.SelectedIndex = 0;
+                txtCliente.Text = "C-010132";
             }
             else
             {
@@ -299,13 +301,10 @@ namespace DRtail
 
                     if (j.Error == "false")
                     {
-                        if (Utilidades.ReporteTicket(j.docEntryGenerado, email, "Cotizacion"))
-                        {
-                            MessageBox.Show("Correo enviado");
-                        }
                         MessageBox.Show(j.Message);
+                        Utilidades.ReporteTicket(j.docEntryGenerado, email, "Cotizacion");
                         generado = true;
-                    }                    
+                    }
 
                 }
             }
@@ -338,6 +337,7 @@ namespace DRtail
             if (e.ColumnIndex == 8)
             {
                 DataGridViewRow dgvr = bdgCotizaciones.Rows[e.RowIndex];
+                docEntrySeleccionado = dgvr.Cells[0].Value.ToString();
                 lblNCotizacion.Text = dgvr.Cells[1].Value.ToString();
                 lblNCliente.Text = dgvr.Cells[2].Value.ToString();
                 lblNombre.Text = dgvr.Cells[3].Value.ToString();
@@ -351,12 +351,19 @@ namespace DRtail
 
         private void btnAccionReenviar_Click(object sender, EventArgs e)
         {
-            lblAccionesMensaje.Text = "Se ha enviado con éxito la cotización " + lblNCotizacion.Text;
+            string email = "";
+            var socio = dtosSocios.Where(i => (i.CodigoCliente.Contains(lblNCliente.Text)));
+
+            foreach (DatosSocios s in socio)
+            {
+                email = s.Email;
+            }
+            MessageBox.Show("Se ha reenviado correctamente a: " + email);
         }
 
         private void btnAccionesReimp_Click(object sender, EventArgs e)
         {
-            lblAccionesMensaje.Text = "Se ha reeimpreso con éxito la cotización " + lblNCotizacion.Text;
+            Utilidades.ReporteTicket(docEntrySeleccionado, "", "Cotizacion");
         }
 
         private void btnAccionesGPedido_Click(object sender, EventArgs e)

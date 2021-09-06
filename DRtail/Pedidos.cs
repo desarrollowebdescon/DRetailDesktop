@@ -32,6 +32,7 @@ namespace DRtail
         string flagPago = "";
         string docEntryCot = "";
         string docNumCot = "";
+        string docEntrySeleccionado = "";
         #endregion
         public Pedidos(string impCliente, string docEntryCotizacion, string docNumCotizacion)
         {
@@ -90,6 +91,10 @@ namespace DRtail
                     lblTotalProd.Text = numArticulosCotPed.ToString();
                     txtTotal.Text = totCotPed.ToString();
 
+                }
+                else
+                {
+                    txtCliente.Text = "C-010132";
                 }
             }
             catch (Exception ex)
@@ -439,7 +444,7 @@ namespace DRtail
             {
                 pnlPOAcciones.Visible = true;
                 pnlPOAcciones.BringToFront();
-
+                docEntrySeleccionado = bdgPedidos.Rows[e.RowIndex].Cells[0].Value.ToString();
                 lblNCliente.Text = bdgPedidos.Rows[e.RowIndex].Cells[1].Value.ToString();
                 lblNombre.Text = bdgPedidos.Rows[e.RowIndex].Cells[2].Value.ToString();
                 lblMontoAcciones.Text = bdgPedidos.Rows[e.RowIndex].Cells[4].Value.ToString();
@@ -455,12 +460,19 @@ namespace DRtail
 
         private void btnAccionReenviar_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Se ha reenviado correctamente");
+            string email = "";
+            var socio = dtosSocios.Where(i => (i.CodigoCliente.Contains(lblNCliente.Text)));
+
+            foreach (DatosSocios s in socio)
+            {
+                email = s.Email;
+            }
+            MessageBox.Show("Se ha reenviado correctamente a: " + email);
         }
 
         private void btnAccionesReimp_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Se ha reimpreso correctamente");
+            Utilidades.ReporteTicket(docEntrySeleccionado, "", "Pedido");
         }
 
         private void btnAccionesGPedido_Click(object sender, EventArgs e)
@@ -501,10 +513,7 @@ namespace DRtail
 
                     if (j.Error == "false")
                     {
-                        if (Utilidades.ReporteTicket(j.docEntryGenerado, email, "Pedido"))
-                        {
-                            MessageBox.Show("Correo enviado");
-                        }
+                        Utilidades.ReporteTicket(j.docEntryGenerado, email, "Pedido");
                         MessageBox.Show(j.Message);
                         generado = true;
                     }
