@@ -249,9 +249,9 @@
             this.pnlBodyCot.AutoScroll = true;
             this.pnlBodyCot.AutoSize = true;
             this.pnlBodyCot.BackColor = System.Drawing.Color.White;
+            this.pnlBodyCot.Controls.Add(this.bdgPedidos);
             this.pnlBodyCot.Controls.Add(this.bunifuGradientPanel1);
             this.pnlBodyCot.Controls.Add(this.pnlPOAcciones);
-            this.pnlBodyCot.Controls.Add(this.bdgPedidos);
             this.pnlBodyCot.Controls.Add(this.pnlFooter);
             this.pnlBodyCot.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlBodyCot.Location = new System.Drawing.Point(3, 3);
@@ -281,7 +281,7 @@
             this.bunifuGradientPanel1.MinimumSize = new System.Drawing.Size(1350, 120);
             this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
             this.bunifuGradientPanel1.Quality = 10;
-            this.bunifuGradientPanel1.Size = new System.Drawing.Size(1380, 120);
+            this.bunifuGradientPanel1.Size = new System.Drawing.Size(1363, 120);
             this.bunifuGradientPanel1.TabIndex = 29;
             // 
             // panel5
@@ -539,7 +539,7 @@
             // 
             this.pnlPOAcciones.BackColor = System.Drawing.Color.DimGray;
             this.pnlPOAcciones.Controls.Add(this.pnlPOAccion);
-            this.pnlPOAcciones.Location = new System.Drawing.Point(257, 141);
+            this.pnlPOAcciones.Location = new System.Drawing.Point(196, 137);
             this.pnlPOAcciones.Margin = new System.Windows.Forms.Padding(2);
             this.pnlPOAcciones.Name = "pnlPOAcciones";
             this.pnlPOAcciones.Size = new System.Drawing.Size(1100, 638);
@@ -818,7 +818,7 @@
             this.bdgPedidos.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.bdgPedidos.RowTemplate.Height = 24;
             this.bdgPedidos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.bdgPedidos.Size = new System.Drawing.Size(1350, 1477);
+            this.bdgPedidos.Size = new System.Drawing.Size(1350, 1565);
             this.bdgPedidos.TabIndex = 24;
             this.bdgPedidos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.bdgPedidos_CellContentClick);
             // 
@@ -892,7 +892,7 @@
             this.pnlFooter.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlFooter.BackColor = System.Drawing.Color.White;
-            this.pnlFooter.Location = new System.Drawing.Point(8, 1643);
+            this.pnlFooter.Location = new System.Drawing.Point(8, 1731);
             this.pnlFooter.Margin = new System.Windows.Forms.Padding(8, 4, 8, 8);
             this.pnlFooter.MinimumSize = new System.Drawing.Size(1350, 41);
             this.pnlFooter.Name = "pnlFooter";

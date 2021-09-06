@@ -204,9 +204,9 @@
             this.pnlBodyCot.AutoScroll = true;
             this.pnlBodyCot.AutoSize = true;
             this.pnlBodyCot.BackColor = System.Drawing.Color.White;
+            this.pnlBodyCot.Controls.Add(this.bdgCotizaciones);
             this.pnlBodyCot.Controls.Add(this.pnlPOAcciones);
             this.pnlBodyCot.Controls.Add(this.bunifuGradientPanel1);
-            this.pnlBodyCot.Controls.Add(this.bdgCotizaciones);
             this.pnlBodyCot.Controls.Add(this.pnlFooter);
             this.pnlBodyCot.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlBodyCot.Location = new System.Drawing.Point(3, 3);
