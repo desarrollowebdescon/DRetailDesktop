@@ -23,15 +23,23 @@ namespace DRtail
         public string codClienteSelec = "";
         DataTable dtSocios = new DataTable();
         float SizeFont = 10F;
+        
         #endregion
         public Clientes()
         {
             InitializeComponent();
-            //this.Dock = DockStyle.Fill;
             
             ClosePanel();
             GetData();
-
+            controlTabClientes.SelectedIndex = 1;
+            Rectangle wa = Screen.FromControl(this).WorkingArea;
+            Size gSize = new Size(wa.Width, wa.Height);
+            this.MaximumSize = gSize;
+            this.SetStyle(ControlStyles.ResizeRedraw, true);
+            pnlPestañaBodyDirs.MaximumSize = gSize;
+            flowLayoutPanel3.MaximumSize = gSize;
+            flowLayoutPanel2.Size = gSize;
+            panel38.Size = new Size(300, 31);
 
         }
 
@@ -211,7 +219,7 @@ namespace DRtail
 
         private void btnAgregarDireccion_Click(object sender, EventArgs e)
         {
-            pnlDir_1.Visible = true;
+            fpnalDir_1.Visible = true;
         }
 
         private void bfgSocios_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -346,7 +354,9 @@ namespace DRtail
         private void MinFont()
         {
             SizeFont -= 1;
+            SizeFont = 9.5F;
             controlTabClientes.Font = new Font("Rockwell", SizeFont, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0))); ;
         }
+
     }
 }
