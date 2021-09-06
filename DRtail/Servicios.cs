@@ -1,7 +1,6 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
-using System.Configuration;
 using System.IO;
 using System.Linq;
 using System.Net;
@@ -23,7 +22,7 @@ namespace DRtail
         {
             try
             {
-                var httpWebRequest = (HttpWebRequest)WebRequest.Create(ConfigurationManager.AppSettings["urlAPI"] +"/api/consultarAllCotizaciones");
+                var httpWebRequest = (HttpWebRequest)WebRequest.Create(Properties.Settings.Default.RutaApi + "consultarAllCotizaciones");
                 httpWebRequest.ContentType = "application/json";
                 httpWebRequest.Method = "GET";
                 //ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12 | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls;
@@ -47,7 +46,7 @@ namespace DRtail
         {
             try
             {
-                var httpWebRequest = (HttpWebRequest)WebRequest.Create(ConfigurationManager.AppSettings["urlAPI"] +"/api/consultarAllPedidos");
+                var httpWebRequest = (HttpWebRequest)WebRequest.Create(Properties.Settings.Default.RutaApi + "consultarAllPedidos");
                 httpWebRequest.ContentType = "application/json";
                 httpWebRequest.Method = "GET";
                 //ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12 | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls;
@@ -71,7 +70,7 @@ namespace DRtail
         {
             try
             {
-                var httpWebRequest = (HttpWebRequest)WebRequest.Create(ConfigurationManager.AppSettings["urlAPI"] +"/api/consultarAllFacturas");
+                var httpWebRequest = (HttpWebRequest)WebRequest.Create(Properties.Settings.Default.RutaApi + "consultarAllFacturas");
                 httpWebRequest.ContentType = "application/json";
                 httpWebRequest.Method = "GET";
                 //ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12 | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls;
@@ -95,7 +94,7 @@ namespace DRtail
         {
             try
             {
-                HttpWebRequest request = (HttpWebRequest)WebRequest.Create(ConfigurationManager.AppSettings["urlAPI"] +"/api/consultarAllArticulosEsc");
+                HttpWebRequest request = (HttpWebRequest)WebRequest.Create(Properties.Settings.Default.RutaApi + "consultarAllArticulosEsc");
                 using (HttpWebResponse response = (HttpWebResponse)request.GetResponse())
                 using (Stream stream = response.GetResponseStream())
                 using (StreamReader reader = new StreamReader(stream))
@@ -115,7 +114,7 @@ namespace DRtail
         {
             try
             {
-                HttpWebRequest request = (HttpWebRequest)WebRequest.Create(ConfigurationManager.AppSettings["urlAPI"] +"/api/consultarAllSociosEsc");
+                HttpWebRequest request = (HttpWebRequest)WebRequest.Create(Properties.Settings.Default.RutaApi + "consultarAllSociosEsc");
                 using (HttpWebResponse response = (HttpWebResponse)request.GetResponse())
                 using (Stream stream = response.GetResponseStream())
                 using (StreamReader reader = new StreamReader(stream))
@@ -134,13 +133,13 @@ namespace DRtail
         {
             try
             {
-                HttpWebRequest request = (HttpWebRequest)WebRequest.Create(ConfigurationManager.AppSettings["urlAPI"] +"/api/consultarCotizacion?docNum=" + cotOrigen);
+                HttpWebRequest request = (HttpWebRequest)WebRequest.Create(Properties.Settings.Default.RutaApi + "consultarCotizacion?docNum=" + cotOrigen);
                 using (HttpWebResponse response = (HttpWebResponse)request.GetResponse())
                 using (Stream stream = response.GetResponseStream())
                 using (StreamReader reader = new StreamReader(stream))
                 {
                     var json = reader.ReadToEnd();
-                    return JsonConvert.DeserializeObject<Cotización> (json);
+                    return JsonConvert.DeserializeObject<Cotización>(json);
                 }
             }
             catch (Exception ex)
@@ -148,6 +147,7 @@ namespace DRtail
                 return new Cotización();
             }
         }
+
 
     }
 }

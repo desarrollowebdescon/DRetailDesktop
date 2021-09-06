@@ -15,7 +15,7 @@ namespace DRtail
 {
     public partial class frmClientes : Form
     {
-        public frmClientes() 
+        public frmClientes()
         {
             InitializeComponent();
         }
@@ -51,8 +51,8 @@ namespace DRtail
 
         private void btnAgregarCliente_Click(object sender, EventArgs e)
         {
-         //   menu.MostrarPanel(menu.pnlClientes, menu.btnCrearCliente);
-         //   menu.MostrarSubPanel(menu.pnlClientes, menu.pnlClientesCrea, menu.btnCrearCliente);
+            //   menu.MostrarPanel(menu.pnlClientes, menu.btnCrearCliente);
+            //   menu.MostrarSubPanel(menu.pnlClientes, menu.pnlClientesCrea, menu.btnCrearCliente);
             this.Dispose();
         }
 
@@ -111,7 +111,7 @@ namespace DRtail
         {
             codClienteSelec = dgvClientes.Rows[dgvClientes.CurrentRow.Index].Cells[0].Value.ToString();
             menu.codClienteSelec = codClienteSelec;
-           // menu.txtCliente.Text = codClienteSelec;
+            // menu.txtCliente.Text = codClienteSelec;
             this.Dispose();
         }
 
@@ -119,13 +119,13 @@ namespace DRtail
         {
             codClienteSelec = dgvClientes.Rows[dgvClientes.CurrentRow.Index].Cells[0].Value.ToString();
             menu.codClienteSelec = codClienteSelec;
-           // menu.txtCliente.Text = codClienteSelec;
+            // menu.txtCliente.Text = codClienteSelec;
             this.Dispose();
         }
 
         void ObtenerSocios()
         {
-            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(ConfigurationManager.AppSettings["urlAPI"] +"/api/consultarAllSociosEsc");
+            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(Properties.Settings.Default.RutaApi + "consultarAllSociosEsc");
             using (HttpWebResponse response = (HttpWebResponse)request.GetResponse())
             using (Stream stream = response.GetResponseStream())
             using (StreamReader reader = new StreamReader(stream))

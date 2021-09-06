@@ -1,7 +1,6 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
-using System.Configuration;
 using System.Data;
 using System.Drawing;
 using System.IO;
@@ -124,8 +123,6 @@ namespace DRtail
             }
         }
 
-        string resp = "";
-
         private void txtCodigoBarras_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)Keys.Enter)
@@ -135,7 +132,7 @@ namespace DRtail
                     frmMenu menu = new frmMenu();
                     this.Hide();
                     menu.Show();
-                   
+
                 }
             }
         }
@@ -145,7 +142,7 @@ namespace DRtail
             Boolean inicio = false;
             try
             {
-                var httpWebRequest = (HttpWebRequest)WebRequest.Create(ConfigurationManager.AppSettings["urlAPI"] +"/api/login?usuario="+ txtUsaurio.Text  + "&pass=" + txtPassword.Text);
+                var httpWebRequest = (HttpWebRequest)WebRequest.Create(Properties.Settings.Default.RutaApi + "login?usuario=" + txtUsaurio.Text + "&pass=" + txtPassword.Text);
                 httpWebRequest.ContentType = "application/json";
                 httpWebRequest.Method = "GET";
                 var httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();
@@ -161,7 +158,7 @@ namespace DRtail
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al Iniciar Sesion:" + ex.Message);
+                MessageBox.Show("Error al Iniciar Sesion:" + ex.Message + " " + Properties.Settings.Default.RutaApi);
             }
             return inicio;
         }
@@ -185,16 +182,16 @@ namespace DRtail
 
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
         {
-           if (InicioSesion() == true)
+            if (InicioSesion() == true)
             //if (true)
             {
                 //frmMenu menu = new frmMenu();
                 frmMenuLateral menu = new frmMenuLateral();
                 this.Hide();
                 menu.Show();
-               
+
             }
-            
+
         }
 
         private void txtPassword_KeyPress(object sender, KeyPressEventArgs e)

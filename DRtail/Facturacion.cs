@@ -13,7 +13,21 @@ namespace DRtail
     public partial class Facturacion : UserControl
     {
 
+        #region "Variables"
+        public List<DatosSocios> dtosSocios;
+        List<DatosArticulos> items;
         List<DatosFactura> datosFacturas;
+        public int ordenDGV = 0;
+        public string codClienteSelec = "";
+        DataTable dtSocios = new DataTable();
+        int numArticulos = 0;
+        double importeTotal = 0;
+        string tempDescuento = "";
+        string tempDescuentoOld = "";
+        string docEntrySeleccionado = "";
+        #endregion
+
+        
         public Facturacion()
         {
             InitializeComponent();
@@ -103,5 +117,33 @@ namespace DRtail
             pnlPOAcciones.Visible = false;
             pnlFGenerarFactura.Visible = false;
         }
+
+        void AutoCompletar(TextBox txtAutoCmpletar, string clase)
+        {
+            txtAutoCmpletar.AutoCompleteCustomSource = LoadAutoComplete(clase);
+            txtAutoCmpletar.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            txtAutoCmpletar.AutoCompleteSource = AutoCompleteSource.CustomSource;
+        }
+        public AutoCompleteStringCollection LoadAutoComplete(string clase)
+        {
+            AutoCompleteStringCollection stringCol = new AutoCompleteStringCollection();
+
+            if (clase == "DatosArticulos")
+            {
+                foreach (DatosArticulos i in items)
+                {
+                    stringCol.Add(i.Codigo);
+                }
+            }
+            else if (clase == "DatosSocios")
+            {
+                foreach (DatosSocios s in dtosSocios)
+                {
+                    stringCol.Add(s.CodigoCliente);
+                }
+            }
+            return stringCol;
+        }
+
     }
 }

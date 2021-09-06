@@ -16,7 +16,7 @@ namespace DRtail
 {
     public partial class Pedidos : UserControl
     {
-        
+
 
         #region "Variables"
         public List<DatosSocios> dtosSocios;
@@ -33,6 +33,7 @@ namespace DRtail
         string flagPago = "";
         string docEntryCot = "";
         string docNumCot = "";
+        string docEntrySeleccionado = "";
         #endregion
         public Pedidos()
         {
@@ -42,6 +43,9 @@ namespace DRtail
         {
             InitializeComponent();
             GetData();
+            AutoCompletar(txtProducto, "DatosArticulos");
+            AutoCompletar(txtCliente, "DatosSocios");
+            
             if (impCliente == "")
             {
                 tabControlPedidos.SelectedIndex = 0;
@@ -78,22 +82,37 @@ namespace DRtail
                 items = Servicios.GetArticulos();
                 pedidosList = Servicios.getPedidos();
 
-                int i = 0;
+
                 foreach (DatosPedido dc in pedidosList)
                 {
                     bdgPedidos.Rows.Add(dc.noPedido, dc.Cliente, dc.Nombre, dc.FechaDocumento.ToString("yyyy-MM-dd"), double.Parse(dc.Total).ToString("N2"), dc.Moneda, dc.Estatus, "...");
-                    i++;
+
                 }
 
                 if (docEntryCot != "")
                 {
-                    cotizacionOrigen = Servicios.getCotizacionOrigen(docNumCot);
-                    
-                    foreach(Lineas l in cotizacionOrigen.lineas)
-                    {
-                        dgvProductosPed.Rows.Add(l.Articulo, "", l.PrecioU, "",l.Descuento,l.Cantidad,"",l.Total,"");
-                    }                   
+                    int numArticulosCotPed = 0;
+                    double totCotPed = 0;
 
+                    cotizacionOrigen = Servicios.getCotizacionOrigen(docNumCot);
+
+                    foreach (Lineas l in cotizacionOrigen.lineas)
+                    {
+                        dgvProductosPed.Rows.Add(l.Articulo, "", l.PrecioU, "", l.Descuento, l.Cantidad, "", l.Total, "");
+                    }
+
+                    foreach (DataGridViewRow row in dgvProductosPed.Rows)
+                    {
+                        numArticulosCotPed++;
+                        totCotPed = totCotPed + double.Parse(row.Cells["ImporteM"].Value.ToString());
+                    }
+                    lblTotalProd.Text = numArticulosCotPed.ToString();
+                    txtTotal.Text = totCotPed.ToString();
+
+                }
+                else
+                {
+                    txtCliente.Text = "C-010132";
                 }
             }
             catch (Exception ex)
@@ -113,7 +132,7 @@ namespace DRtail
 
             if (clase == "DatosArticulos")
             {
-                foreach (DatosArticulos i in items) 
+                foreach (DatosArticulos i in items)
                 {
                     stringCol.Add(i.Codigo);
                 }
@@ -139,7 +158,7 @@ namespace DRtail
             pnlBuscarSocio.Visible = true;
             pnlBuscarSocio.BringToFront();
             dgBuscarClientes.Rows.Clear();
-            
+
             foreach (DatosSocios da in dtosSocios)
             {
                 dgBuscarClientes.Rows.Add(da.CodigoCliente, da.NombreCliente);
@@ -150,9 +169,9 @@ namespace DRtail
         {
             pnlbusquedaArticulo.Visible = true;
             pnlbusquedaArticulo.BringToFront();
-           
+
             dgBuscadorArticulo.Rows.Clear();
-           
+
             foreach (DatosArticulos da in items)
             {
                 dgBuscadorArticulo.Rows.Add(da.Codigo, da.Descripcion);
@@ -321,7 +340,7 @@ namespace DRtail
 
                 foreach (DataGridViewRow dRow in dgvProductosPed.Rows)
                 {
-                    ArticulosPedido articulosPed= new ArticulosPedido();
+                    ArticulosPedido articulosPed = new ArticulosPedido();
                     articulosPed.Articulo = dRow.Cells[0].Value.ToString();
                     articulosPed.Cantidad = double.Parse(dRow.Cells[5].Value.ToString());
                     pedido.articulosPedidos.Add(articulosPed);
@@ -346,7 +365,7 @@ namespace DRtail
 
         private void btnCobrarPEfectivo_Click(object sender, EventArgs e)
         {
-            flagPago = "efectivo"; 
+            flagPago = "efectivo";
             txtbCobrarPago.Enabled = true;
         }
 
@@ -372,8 +391,8 @@ namespace DRtail
         {
 
             double cantidad = 0;
-            
-            if(!double.TryParse(txtbCobrarPago.Text,out cantidad))
+
+            if (!double.TryParse(txtbCobrarPago.Text, out cantidad))
             {
                 return;
             }
@@ -381,7 +400,7 @@ namespace DRtail
             switch (flagPago)
             {
                 case "credito":
-                     
+
                     double totalCredito = double.Parse(lblCobrarEfectivoNum.Text);
                     cambio = cambio + totalCredito;
                     lblCobrarEfectivoNum.Text = (cantidad + totalCredito).ToString("N2");
@@ -415,13 +434,13 @@ namespace DRtail
 
             }
             double cTotal = cambio - importeTotal;
-            
-            if(cTotal > 0)
+
+            if (cTotal > 0)
             {
-                lblCobrarCambioNum.Text= cTotal.ToString("N2");
+                lblCobrarCambioNum.Text = cTotal.ToString("N2");
                 pnlCobrarCambio.Visible = true;
             }
-            
+
 
         }
 
@@ -443,7 +462,7 @@ namespace DRtail
             {
                 pnlPOAcciones.Visible = true;
                 pnlPOAcciones.BringToFront();
-
+                docEntrySeleccionado = bdgPedidos.Rows[e.RowIndex].Cells[0].Value.ToString();
                 lblNCliente.Text = bdgPedidos.Rows[e.RowIndex].Cells[1].Value.ToString();
                 lblNombre.Text = bdgPedidos.Rows[e.RowIndex].Cells[2].Value.ToString();
                 lblMontoAcciones.Text = bdgPedidos.Rows[e.RowIndex].Cells[4].Value.ToString();
@@ -459,12 +478,19 @@ namespace DRtail
 
         private void btnAccionReenviar_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Se ha reenviado correctamente");
+            string email = "";
+            var socio = dtosSocios.Where(i => (i.CodigoCliente.Contains(lblNCliente.Text)));
+
+            foreach (DatosSocios s in socio)
+            {
+                email = s.Email;
+            }
+            MessageBox.Show("Se ha reenviado correctamente a: " + email);
         }
 
         private void btnAccionesReimp_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Se ha reimpreso correctamente");
+            Utilidades.ReporteTicket(docEntrySeleccionado, "", "Pedido");
         }
 
         private void btnAccionesGPedido_Click(object sender, EventArgs e)
@@ -477,7 +503,7 @@ namespace DRtail
             Boolean generado = false;
             try
             {
-                var httpWebRequest = (HttpWebRequest)WebRequest.Create(ConfigurationManager.AppSettings["urlAPI"] +"/api/crearPedido");
+                var httpWebRequest = (HttpWebRequest)WebRequest.Create(Properties.Settings.Default.RutaApi + "crearPedido");
                 httpWebRequest.ContentType = "application/json";
                 httpWebRequest.Method = "POST";
                 //ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12 | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls;
@@ -495,9 +521,20 @@ namespace DRtail
                 {
                     var result = streamReader.ReadToEnd();
                     var j = JsonConvert.DeserializeObject<RespuestaAPI>(result);
-                    MessageBox.Show(j.Message);
+                    string email = "";
+                    var socio = dtosSocios.Where(i => (i.CodigoCliente.Contains(txtCliente.Text)));
+
+                    foreach (DatosSocios s in socio)
+                    {
+                        email = s.Email;
+                    }
+
                     if (j.Error == "false")
+                    {
+                        Utilidades.ReporteTicket(j.docEntryGenerado, email, "Pedido");
+                        MessageBox.Show(j.Message);
                         generado = true;
+                    }
                 }
             }
             catch (Exception ex)

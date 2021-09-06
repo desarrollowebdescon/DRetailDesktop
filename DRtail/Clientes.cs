@@ -58,18 +58,18 @@ namespace DRtail
             bfgSocios.Rows.Clear();
             foreach (DatosSocios ds in dtosSocios)
             {
-                bfgSocios.Rows.Add(ds.CodigoCliente, ds.NombreCliente, ds.RFC, ds.Telefono, ds.Email,"...","...","...");
+                bfgSocios.Rows.Add(ds.CodigoCliente, ds.NombreCliente, ds.RFC, ds.Telefono, ds.Email, "...", "...", "...");
             }
         }
 
-       
+
 
         private void btnProspectos_Click(object sender, EventArgs e)
         {
 
         }
 
-        
+
 
        
 
@@ -78,7 +78,7 @@ namespace DRtail
             Boolean generado = false;
             try
             {
-                var httpWebRequest = (HttpWebRequest)WebRequest.Create(ConfigurationManager.AppSettings["urlAPI"] +"/api/crearSocio");
+                var httpWebRequest = (HttpWebRequest)WebRequest.Create(Properties.Settings.Default.RutaApi + "crearSocio");
                 httpWebRequest.ContentType = "application/json";
                 httpWebRequest.Method = "POST";
                 //ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12 | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls;
@@ -122,7 +122,7 @@ namespace DRtail
             return generado;
         }
 
-       
+
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
@@ -132,7 +132,7 @@ namespace DRtail
                                                             || s.RFC.ToLower().Contains(txtBuscar.Text.ToLower()))
                                                             ).ToList();
             SetDataSocios(temp);
-            
+
         }
 
         private void btnCreaCrearCliente_Click(object sender, EventArgs e)

@@ -28,6 +28,7 @@ namespace DRtail
         double importeTotal = 0;
         string tempDescuento = "";
         string tempDescuentoOld = "";
+        string docEntrySeleccionado = "";
         #endregion
         public Cotizaciones()
         {
@@ -49,6 +50,7 @@ namespace DRtail
             if (impCliente == "")
             {
                 tabControlCotizaciones.SelectedIndex = 0;
+                txtCliente.Text = "C-010132";
             }
             else
             {
@@ -82,11 +84,11 @@ namespace DRtail
                 dtosSocios = Servicios.getSocios();
                 items = Servicios.GetArticulos();
                 cotizacionesList = Servicios.getCotizaciones();
-                int i = 0;
+
                 foreach (DatosCotizacion dc in cotizacionesList)
-                {                    
-                    bdgCotizaciones.Rows.Add(dc.docentryCotizacion,dc.NoCotizacion, dc.Cliente, dc.Nombre, dc.FechaDocumento.ToString("yyyy-MM-dd"), double.Parse(dc.Total).ToString("N2"), dc.Moneda, dc.Estatus, "...");
-                    i++;
+                {
+                    bdgCotizaciones.Rows.Add(dc.docentryCotizacion, dc.NoCotizacion, dc.Cliente, dc.Nombre, dc.FechaDocumento.ToString("yyyy-MM-dd"), double.Parse(dc.Total).ToString("N2"), dc.Moneda, dc.Estatus, "...");
+
                 }
 
             }
@@ -239,10 +241,10 @@ namespace DRtail
 
         private void btnBorrarProd_Click(object sender, EventArgs e)
         {
-            if(dgvProductosCotizacion.Rows.Count > 0)
+            if (dgvProductosCotizacion.Rows.Count > 0)
             {
                 EliminarProducto();
-            }            
+            }
         }
         void EliminarProducto()
         {
@@ -298,7 +300,7 @@ namespace DRtail
             Boolean generado = false;
             try
             {
-                var httpWebRequest = (HttpWebRequest)WebRequest.Create(ConfigurationManager.AppSettings["urlAPI"] +"/api/crearCotizacion");
+                var httpWebRequest = (HttpWebRequest)WebRequest.Create(Properties.Settings.Default.RutaApi + "crearCotizacion");
                 httpWebRequest.ContentType = "application/json";
                 httpWebRequest.Method = "POST";
                 //ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12 | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls;
@@ -316,9 +318,21 @@ namespace DRtail
                 {
                     var result = streamReader.ReadToEnd();
                     var j = JsonConvert.DeserializeObject<RespuestaAPI>(result);
-                    MessageBox.Show(j.Message);
+                    string email = "";
+                    var socio = dtosSocios.Where(i => (i.CodigoCliente.Contains(txtCliente.Text)));
+
+                    foreach (DatosSocios s in socio)
+                    {
+                        email = s.Email;
+                    }
+
                     if (j.Error == "false")
+                    {
+                        MessageBox.Show(j.Message);
+                        Utilidades.ReporteTicket(j.docEntryGenerado, email, "Cotizacion");
                         generado = true;
+                    }
+
                 }
             }
             catch (Exception ex)
@@ -350,6 +364,7 @@ namespace DRtail
             if (e.ColumnIndex == 8)
             {
                 DataGridViewRow dgvr = bdgCotizaciones.Rows[e.RowIndex];
+                docEntrySeleccionado = dgvr.Cells[0].Value.ToString();
                 lblNCotizacion.Text = dgvr.Cells[1].Value.ToString();
                 lblNCliente.Text = dgvr.Cells[2].Value.ToString();
                 lblNombre.Text = dgvr.Cells[3].Value.ToString();
@@ -363,12 +378,19 @@ namespace DRtail
 
         private void btnAccionReenviar_Click(object sender, EventArgs e)
         {
-            lblAccionesMensaje.Text = "Se ha enviado con éxito la cotización " + lblNCotizacion.Text;
+            string email = "";
+            var socio = dtosSocios.Where(i => (i.CodigoCliente.Contains(lblNCliente.Text)));
+
+            foreach (DatosSocios s in socio)
+            {
+                email = s.Email;
+            }
+            MessageBox.Show("Se ha reenviado correctamente a: " + email);
         }
 
         private void btnAccionesReimp_Click(object sender, EventArgs e)
         {
-            lblAccionesMensaje.Text = "Se ha reeimpreso con éxito la cotización " + lblNCotizacion.Text;
+            Utilidades.ReporteTicket(docEntrySeleccionado, "", "Cotizacion");
         }
 
         private void btnAccionesGPedido_Click(object sender, EventArgs e)
