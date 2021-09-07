@@ -2588,5 +2588,15 @@
         public System.Windows.Forms.TextBox txtCliente;
         private System.Windows.Forms.LinkLabel lnkLblBuscarCliente;
         private Bunifu.Framework.UI.BunifuThinButton2 btnAgregarProducto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn docEntry;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NoPedido;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NoCliente;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NombreCliente;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FechaDocumento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Total;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Moneda;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Estatus;
+        private System.Windows.Forms.DataGridViewButtonColumn Seleccionar;
+
     }
 }

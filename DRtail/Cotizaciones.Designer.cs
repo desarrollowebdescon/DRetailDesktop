@@ -138,7 +138,7 @@
             this.bdpInicio = new Bunifu.Framework.UI.BunifuDatepicker();
             this.bdpFin = new Bunifu.Framework.UI.BunifuDatepicker();
             this.txtBuscar = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.label5 = new System.Windows.Forms.Label();
+            //this.label5 = new System.Windows.Forms.Label();
             this.lblHeaderCotClie = new System.Windows.Forms.Label();
             this.bddEstatus = new Bunifu.Framework.UI.BunifuDropdown();
             this.label3 = new System.Windows.Forms.Label();
@@ -748,9 +748,9 @@
             this.bdgCotizaciones.AllowUserToDeleteRows = false;
             this.bdgCotizaciones.AllowUserToResizeColumns = false;
             this.bdgCotizaciones.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            this.bdgCotizaciones.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            //dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            //dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            //this.bdgCotizaciones.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.bdgCotizaciones.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -760,14 +760,14 @@
             this.bdgCotizaciones.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.bdgCotizaciones.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal;
             this.bdgCotizaciones.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Rockwell", 15F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.GradientActiveCaption;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.bdgCotizaciones.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            //dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            //dataGridViewCellStyle2.BackColor = System.Drawing.Color.SteelBlue;
+            //dataGridViewCellStyle2.Font = new System.Drawing.Font("Rockwell", 15F, System.Drawing.FontStyle.Bold);
+            //dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            //dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            //dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.GradientActiveCaption;
+            //dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            //this.bdgCotizaciones.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.bdgCotizaciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.bdgCotizaciones.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.docEntry,
@@ -1114,9 +1114,9 @@
             this.dgvProductosCotizacion.AllowUserToDeleteRows = false;
             this.dgvProductosCotizacion.AllowUserToResizeColumns = false;
             this.dgvProductosCotizacion.AllowUserToResizeRows = false;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            this.dgvProductosCotizacion.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            //dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            //dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            //this.dgvProductosCotizacion.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvProductosCotizacion.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -1126,14 +1126,14 @@
             this.dgvProductosCotizacion.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvProductosCotizacion.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgvProductosCotizacion.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.GradientActiveCaption;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvProductosCotizacion.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            //dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            //dataGridViewCellStyle4.BackColor = System.Drawing.Color.SteelBlue;
+            //dataGridViewCellStyle4.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            //dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            //dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            //dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.GradientActiveCaption;
+            //dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            //this.dgvProductosCotizacion.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvProductosCotizacion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvProductosCotizacion.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.CodigoBarras,
@@ -1584,7 +1584,7 @@
             this.bunifuGradientPanel1.Controls.Add(this.bdpInicio);
             this.bunifuGradientPanel1.Controls.Add(this.bdpFin);
             this.bunifuGradientPanel1.Controls.Add(this.txtBuscar);
-            this.bunifuGradientPanel1.Controls.Add(this.label5);
+            //this.bunifuGradientPanel1.Controls.Add(this.label5);
             this.bunifuGradientPanel1.Controls.Add(this.lblHeaderCotClie);
             this.bunifuGradientPanel1.Controls.Add(this.bddEstatus);
             this.bunifuGradientPanel1.Controls.Add(this.label3);
@@ -1654,15 +1654,15 @@
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(850, 14);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(59, 19);
-            this.label5.TabIndex = 29;
-            this.label5.Text = "Estatus";
+            //this.label5.AutoSize = true;
+            //this.label5.BackColor = System.Drawing.Color.Transparent;
+            //this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            //this.label5.Location = new System.Drawing.Point(850, 14);
+            //this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            //this.label5.Name = "label5";
+            //this.label5.Size = new System.Drawing.Size(59, 19);
+            //this.label5.TabIndex = 29;
+            //this.label5.Text = "Estatus";
             // 
             // lblHeaderCotClie
             // 
@@ -2206,22 +2206,22 @@
             // 
             this.dgBuscarClientes.AllowUserToAddRows = false;
             this.dgBuscarClientes.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgBuscarClientes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            //dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            //this.dgBuscarClientes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgBuscarClientes.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgBuscarClientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgBuscarClientes.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.dgBuscarClientes.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgBuscarClientes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgBuscarClientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            //dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            //dataGridViewCellStyle6.BackColor = System.Drawing.Color.SteelBlue;
+            //dataGridViewCellStyle6.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            //dataGridViewCellStyle6.ForeColor = System.Drawing.Color.WhiteSmoke;
+            //dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            //dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            //dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            //this.dgBuscarClientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgBuscarClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgBuscarClientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.codigoCliente,
@@ -2235,9 +2235,9 @@
             this.dgBuscarClientes.Name = "dgBuscarClientes";
             this.dgBuscarClientes.ReadOnly = true;
             this.dgBuscarClientes.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
-            this.dgBuscarClientes.RowsDefaultCellStyle = dataGridViewCellStyle7;
+            //dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            //dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
+            //this.dgBuscarClientes.RowsDefaultCellStyle = dataGridViewCellStyle7;
             this.dgBuscarClientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgBuscarClientes.Size = new System.Drawing.Size(446, 149);
             this.dgBuscarClientes.TabIndex = 1;
@@ -2346,22 +2346,22 @@
             // 
             this.dgBuscadorArticulo.AllowUserToAddRows = false;
             this.dgBuscadorArticulo.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgBuscadorArticulo.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle8;
+            //dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            //this.dgBuscadorArticulo.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle8;
             this.dgBuscadorArticulo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgBuscadorArticulo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgBuscadorArticulo.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.dgBuscadorArticulo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgBuscadorArticulo.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgBuscadorArticulo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            //dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            //dataGridViewCellStyle9.BackColor = System.Drawing.Color.SteelBlue;
+            //dataGridViewCellStyle9.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            //dataGridViewCellStyle9.ForeColor = System.Drawing.Color.WhiteSmoke;
+            //dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            //dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            //dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            //this.dgBuscadorArticulo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dgBuscadorArticulo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgBuscadorArticulo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.codigo,
@@ -2375,9 +2375,9 @@
             this.dgBuscadorArticulo.Name = "dgBuscadorArticulo";
             this.dgBuscadorArticulo.ReadOnly = true;
             this.dgBuscadorArticulo.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
-            this.dgBuscadorArticulo.RowsDefaultCellStyle = dataGridViewCellStyle10;
+            //dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            //dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
+            //this.dgBuscadorArticulo.RowsDefaultCellStyle = dataGridViewCellStyle10;
             this.dgBuscadorArticulo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgBuscadorArticulo.Size = new System.Drawing.Size(446, 149);
             this.dgBuscadorArticulo.TabIndex = 1;
@@ -2558,6 +2558,7 @@
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Panel panel11;
         public System.Windows.Forms.TextBox txtProducto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn docEntry;
         private System.Windows.Forms.DataGridViewTextBoxColumn CodigoBarras;
         private System.Windows.Forms.DataGridViewTextBoxColumn DescripcionPM;
         private System.Windows.Forms.DataGridViewTextBoxColumn CantidadVM;

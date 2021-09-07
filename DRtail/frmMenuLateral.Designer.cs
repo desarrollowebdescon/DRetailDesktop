@@ -746,7 +746,7 @@
             this.Name = "frmMenuLateral";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmMenu_Load);
-            this.Click += new System.EventHandler(this.frmMenuLateral_Click);
+            //this.Click += new System.EventHandler(this.frmMenuLateral_Click);
             this.pnlTitleBar.ResumeLayout(false);
             this.pnlTitleBar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbSemaforo)).EndInit();
@@ -769,7 +769,7 @@
         }
 
         #endregion
-       
+        public System.Windows.Forms.Panel pnlMain;
         private System.Windows.Forms.Panel pnlTitleBar;
         private Bunifu.Framework.UI.BunifuGradientPanel pnlMenuLateral;
         private System.Windows.Forms.PictureBox picMenuLogo;

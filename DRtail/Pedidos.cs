@@ -48,26 +48,12 @@ namespace DRtail
         public Pedidos(string impCliente, string docEntryCotizacion, string docNumCotizacion)
         {
             InitializeComponent();
-           
+
             GetData();
             AutoCompletar(txtProducto, "DatosArticulos");
             AutoCompletar(txtCliente, "DatosSocios");
-        }
-        public Pedidos(DatosCotizacion dc)
-        {
-            InitializeComponent();
-            if(dc.Cliente != "")
-            {
-                txtCliente.Text = dc.Cliente;
-                tabControlPedidos.SelectedIndex = 1;
-            }
-            this.Dock = DockStyle.Fill;
             docEntryCot = docEntryCotizacion;
             docNumCot = docNumCotizacion;
-            GetData();
-            AutoCompletar(txtProducto, "DatosArticulos");
-            AutoCompletar(txtCliente, "DatosSocios");
-
             if (impCliente == "")
             {
                 tabControlPedidos.SelectedIndex = 0;
@@ -78,6 +64,21 @@ namespace DRtail
                 txtCliente.Text = impCliente;
 
             }
+        }
+        public Pedidos(DatosCotizacion dc)
+        {
+            InitializeComponent();
+            if (dc.Cliente != "")
+            {
+                txtCliente.Text = dc.Cliente;
+                tabControlPedidos.SelectedIndex = 1;
+            }
+            this.Dock = DockStyle.Fill;
+
+            GetData();
+            AutoCompletar(txtProducto, "DatosArticulos");
+            AutoCompletar(txtCliente, "DatosSocios");
+
         }
 
         private void GetData()
@@ -513,9 +514,9 @@ namespace DRtail
 
             Servicios.menuLateral.pnlMain.Controls.Clear();
             Servicios.menuLateral.pnlMain.Controls.Add(new Facturacion(bdgPedidos.Rows[bdgPedidos.CurrentRow.Index].Cells[2].Value.ToString(), bdgPedidos.Rows[bdgPedidos.CurrentRow.Index].Cells[0].Value.ToString(), bdgPedidos.Rows[bdgPedidos.CurrentRow.Index].Cells[1].Value.ToString()));
-            Servicios.menuLateral.SelectedLineMenu();
+            Servicios.menuLateral.SelectedLineMenu("pnlPedidos");
             Servicios.menuLateral.pnlLinePedidos.Visible = true;
-            Servicios.menuLateral.LblTitle.Text = "PEDIDOS";
+            //Servicios.menuLateral.LblTitle.Text = "PEDIDOS";
         }
 
         public Boolean CrearPedido(DatosPedido pedido)

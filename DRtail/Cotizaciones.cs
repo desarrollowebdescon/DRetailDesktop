@@ -29,6 +29,18 @@ namespace DRtail
         string tempDescuentoOld = "";
         string docEntrySeleccionado = "";
         #endregion
+
+        public Cotizaciones()
+        {
+            InitializeComponent();
+
+            GetData();
+            AutoCompletar(txtProducto, "DatosArticulos");
+            AutoCompletar(txtCliente, "DatosSocios");
+
+        }
+
+
         public Cotizaciones(string impCliente)
         {
             InitializeComponent();
@@ -410,9 +422,9 @@ namespace DRtail
 
             Servicios.menuLateral.pnlMain.Controls.Clear();
             Servicios.menuLateral.pnlMain.Controls.Add(new Pedidos(bdgCotizaciones.Rows[bdgCotizaciones.CurrentRow.Index].Cells[2].Value.ToString(), bdgCotizaciones.Rows[bdgCotizaciones.CurrentRow.Index].Cells[0].Value.ToString(), bdgCotizaciones.Rows[bdgCotizaciones.CurrentRow.Index].Cells[1].Value.ToString()));
-            Servicios.menuLateral.SelectedLineMenu();
+            //Servicios.menuLateral.SelectedLineMenu();
             Servicios.menuLateral.pnlLinePedidos.Visible = true;
-            Servicios.menuLateral.LblTitle.Text = "PEDIDOS";
+            //Servicios.menuLateral.LblTitle.Text = "PEDIDOS";
 
         }
 
