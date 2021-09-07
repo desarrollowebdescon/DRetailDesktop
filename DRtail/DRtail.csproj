@@ -201,6 +201,12 @@
     <Compile Include="frmCobrar.Designer.cs">
       <DependentUpon>frmCobrar.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmDatosFiscales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDatosFiscales.Designer.cs">
+      <DependentUpon>frmDatosFiscales.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -296,6 +302,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmCobrar.resx">
       <DependentUpon>frmCobrar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDatosFiscales.resx">
+      <DependentUpon>frmDatosFiscales.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.aa.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>

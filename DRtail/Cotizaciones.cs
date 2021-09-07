@@ -271,11 +271,17 @@ namespace DRtail
                     articulosCotizacion.Cantidad = double.Parse(dRow.Cells[5].Value.ToString());
                     cotizacion.articulosCotizaciones.Add(articulosCotizacion);
                 }
-
-                if (CrearCotizacion(cotizacion))
+                string crearCot = CrearCotizacion(cotizacion);
+                if (crearCot == "1")
                 {
-                    btnCobrarCotizacion.Visible = true;
+                    //btnCobrarCotizacion.Visible = true;
+                    txtProducto.Text = "";
+                    lblTotalProd.Text = "0";
+                    LimpiarCotizacion();
+                    txtCliente.Text = "C-010132";
                 }
+                else
+                    MessageBox.Show(crearCot);
             }
             catch (Exception ex)
             {
@@ -295,9 +301,9 @@ namespace DRtail
             btnCobrarCotizacion.Visible = false;
             btnCobradoCotizaciones.Visible = false;
         }
-        public Boolean CrearCotizacion(DatosCotizacion cotizacion)
+        public string CrearCotizacion(DatosCotizacion cotizacion)
         {
-            Boolean generado = false;
+            string generado = "0";
             try
             {
                 var httpWebRequest = (HttpWebRequest)WebRequest.Create(Properties.Settings.Default.RutaApi + "crearCotizacion");
@@ -330,14 +336,16 @@ namespace DRtail
                     {
                         MessageBox.Show(j.Message);
                         Utilidades.ReporteTicket(j.docEntryGenerado, email, "Cotizacion");
-                        generado = true;
+                        generado = "1";
                     }
-
+                    else
+                        generado = j.Message;
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error al Crear Cotización:" + ex.Message);
+                generado = "0";
             }
             return generado;
         }
