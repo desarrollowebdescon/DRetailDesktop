@@ -225,6 +225,7 @@
     <Compile Include="Servicios.cs" />
     <Compile Include="Settings.cs" />
     <Compile Include="Utilidades.cs" />
+    <Compile Include="Socket.cs" />
     <Compile Include="Ventas.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -386,6 +387,13 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\semaforo_verde.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\semaforo_rojo.png" />
+    <None Include="Resources\semaforo_rojo1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

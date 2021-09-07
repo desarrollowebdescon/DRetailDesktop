@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Net;
 using System.IO;
 using Newtonsoft.Json;
+using Bunifu.Framework.UI;
 
 namespace DRtail
 {
@@ -24,11 +25,16 @@ namespace DRtail
         public Clientes()
         {
             InitializeComponent();
-            this.Dock = DockStyle.Fill;
+            //this.Dock = DockStyle.Fill;
+            
+            ClosePanel();
             GetData();
 
 
         }
+
+       
+
         private void GetData()
         {
             dtosSocios = Servicios.getSocios();
@@ -55,7 +61,7 @@ namespace DRtail
 
 
 
-        private void btnCreaCrearCliente_Click(object sender, EventArgs e)
+        private void btnCreaCrearCliente_Click_1(object sender, EventArgs e)
         {
 
         }
@@ -122,48 +128,207 @@ namespace DRtail
 
         }
 
-        private void btnCreaCrearCliente_Click_1(object sender, EventArgs e)
+        private void btnCreaCrearCliente_Click(object sender, EventArgs e)
         {
-            //MessageBox.Show("Se ha creado el usuario correctamente");
 
-            if (CrearSocio())
+            if(btnCreaCrearCliente.Text == "Actualizar")
             {
-                txtCrearCodCli.ResetText();
-                txtCrearNombreCli.ResetText();
-                txtCreaDirCli.ResetText();
-                txtCreaCPCli.ResetText();
-                txtCreaTelCli.ResetText();
-                txtCreaRFCCli.ResetText();
-                txtCreaCelCli.ResetText();
-                txtCreaCiudadCli.ResetText();
-                txtCreaEmailCli.ResetText();
-                txtCreaCalleCli.ResetText();
-                txtCrearCodCli.Focus();
+                MessageBox.Show("Se ha actualizado correctamente el usuario correctamente");
             }
+            else
+            {
+                if (CrearSocio())
+                {
+                    MessageBox.Show("Se ha creado el usuario correctamente");
+                }
+                else
+                {
+                    MessageBox.Show("Se hubo un error al crear usuario");
+                }               
+            }
+
+            LimpiarForm();
+            btnCreaCrearCliente.Text = "Crear Cliente";
+            controlTabClientes.SelectedIndex = 0;
 
         }
 
-        private void bfgSocios_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void txtBuscar_KeyUp(object sender, KeyEventArgs e)
         {
-            if (e.ColumnIndex == 7)
-            {
-                //MessageBox.Show(bfgSocios.Rows[bfgSocios.CurrentRow.Index].Cells[0].Value.ToString());
-                Servicios.menuLateral.pnlMain.Controls.Clear();
-                Servicios.menuLateral.pnlMain.Controls.Add(new Cotizaciones(bfgSocios.Rows[bfgSocios.CurrentRow.Index].Cells[0].Value.ToString()));
-                Servicios.menuLateral.SelectedLineMenu();
-                Servicios.menuLateral.pnlLineCotizaciones.Visible = true;
-                Servicios.menuLateral.LblTitle.Text = "COTIZACIONES";
-            }
-            if (e.ColumnIndex == 6)
-            {
-                //MessageBox.Show(bfgSocios.Rows[bfgSocios.CurrentRow.Index].Cells[0].Value.ToString());
-                Servicios.menuLateral.pnlMain.Controls.Clear();
-                Servicios.menuLateral.pnlMain.Controls.Add(new Pedidos(bfgSocios.Rows[bfgSocios.CurrentRow.Index].Cells[0].Value.ToString(), "", ""));
-                Servicios.menuLateral.SelectedLineMenu();
-                Servicios.menuLateral.pnlLinePedidos.Visible = true;
-                Servicios.menuLateral.LblTitle.Text = "COTIZACIONES";
+            List<DatosSocios> temp = dtosSocios.Where(s => (s.CodigoCliente.ToLower().Contains(txtBuscar.Text.ToLower())
+                                                           || s.NombreCliente.ToLower().Contains(txtBuscar.Text.ToLower())
+                                                           || s.RFC.ToLower().Contains(txtBuscar.Text.ToLower()))
+                                                           ).ToList();
+            SetDataSocios(temp);
+        }
 
+        #region "Acciones tabs Detalle"
+        private void btnTabDatosGEnerales_Click(object sender, EventArgs e)
+        {
+            if (!pnlPestañaBodyDG.Visible)
+            {
+                OpenPanel(pnlPestañaDG, pnlPestañaBodyDG);
+            }
+
+        }
+        private void btnPestañaDC_Click(object sender, EventArgs e)
+        {
+            if (!pnlPestañaBodyDC.Visible)
+            {
+                OpenPanel(pnlPestañaDC, pnlPestañaBodyDC);
             }
         }
+
+        private void btnPestañaDirs_Click(object sender, EventArgs e)
+        {
+            if (!pnlPestañaBodyDirs.Visible)
+            {
+                OpenPanel(pnlPestañaDirecciones, pnlPestañaBodyDirs);
+            }
+        }
+        private void OpenPanel(Panel tabPanel, Panel bodyTab)
+        {
+            ClosePanel();
+            BunifuFlatButton buttonTab = (BunifuFlatButton)tabPanel.Controls[0];
+            Panel lineTab = (Panel)tabPanel.Controls[1];
+            lineTab.Visible = true;
+            bodyTab.Visible = true;
+        }
+
+
+        private void ClosePanel()
+        {
+            pnlPestañaBodyDC.Visible = false;
+            pnlPestañaBodyDG.Visible = false;
+            pnlPestañaBodyDirs.Visible = false;
+            pnltabLineDG.Visible = false;
+            pnlTabLineDC.Visible = false;
+            pnlTabLineDirs.Visible = false;
+        }
+
+
+        #endregion
+
+        private void btnAgregarDireccion_Click(object sender, EventArgs e)
+        {
+            pnlDir_1.Visible = true;
+        }
+
+        private void bfgSocios_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if(e.ColumnIndex == 5)
+            {
+                BunifuCustomDataGrid bdg = (BunifuCustomDataGrid)sender;
+                string headerName = bdg.SelectedCells[0].Value + "-" + bdg.SelectedCells[1].Value;
+                lblAccionesHeadpnl.Text = headerName;
+                Point xy = bdg.SelectedCells[5].AccessibilityObject.Bounds.Location;
+                pnlAcciones.Location = new Point((xy.X - 725),(xy.Y - 150));
+                pnlAcciones.Visible = true;
+                pnlAcciones.BringToFront();
+                
+                   
+            }
+        }
+
+        private void btnAccionesEditar_Click(object sender, EventArgs e)
+        {
+            pnlAcciones.Visible = false;
+            tabDetalle.Text = "EDITAR";
+            controlTabClientes.SelectedIndex = 1;
+            DataGridViewRow dg =  bfgSocios.SelectedRows[0];
+            Editar(dg);
+            btnCreaCrearCliente.Text = "Actualizar";
+            OpenPanel(pnlPestañaDG, pnlPestañaBodyDG);
+        }
+
+        private void Editar(DataGridViewRow row)
+        {
+
+            txtCrearCodCli.Text         = row.Cells[0].Value.ToString();
+            txtCrearNombreCli.Text      = row.Cells[1].Value.ToString();
+            txtCreaRFCCli.Text          = row.Cells[2].Value.ToString();
+            txtCreaTelCli.Text         = row.Cells[3].Value.ToString();
+            txtCreaEmailCli.Text         = row.Cells[4].Value.ToString();
+
+
+        }
+        private void LimpiarForm()
+        {
+            tabDetalle.Text = "NUEVO";
+            txtCrearCodCli.Text     = "";
+            txtCrearNombreCli.Text  = "";
+            txtCreaRFCCli.Text      = "";
+            txtCreaTelCli.Text      = "";
+            txtCreaEmailCli.Text    = "";
+            btnCreaCrearCliente.Text = "Crear Cliente";
+        }
+
+        private void controlTabClientes_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(controlTabClientes.SelectedIndex == 1)
+            {
+                OpenPanel(pnlPestañaDG, pnlPestañaBodyDG);
+            }
+
+            if(tabDetalle.Text == "EDITAR" && controlTabClientes.SelectedIndex == 0)
+            {
+                
+                if (MessageBox.Show("Desea salir de la edición?", "Editando...", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes) 
+                {
+                    
+                    LimpiarForm();
+                }
+                else
+                {
+                    controlTabClientes.SelectedIndex = 1;
+                }
+                    
+            }
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            pnlAcciones.Visible = false; 
+        }
+
+        private void btnAccionCCoti_Click(object sender, EventArgs e)
+        {
+            frmMenuLateral ml = (frmMenuLateral)this.ParentForm;
+            ml.SelectedLineMenu("pnlLineCotizaciones");
+            DatosCotizacion dc = new DatosCotizacion();
+            dc.Cliente = bfgSocios.SelectedRows[0].Cells[0].Value.ToString();
+            Cotizaciones cot = new Cotizaciones(dc);
+            
+            foreach (Control c in ml.Controls)
+            {
+                if (c.Name == "pnlMain")
+                {
+                    c.Controls.Clear();
+
+                    c.Controls.Add(cot);
+                }
+            }
+        }
+
+        private void btnAccionCPedido_Click(object sender, EventArgs e)
+        {
+            frmMenuLateral ml = (frmMenuLateral)this.ParentForm;
+            ml.SelectedLineMenu("pnlLinePedidos");
+            DatosCotizacion dc = new DatosCotizacion();
+            dc.Cliente = bfgSocios.SelectedRows[0].Cells[0].Value.ToString();
+            Pedidos cot = new Pedidos(dc);
+
+            foreach (Control c in ml.Controls)
+            {
+                if (c.Name == "pnlMain")
+                {
+                    c.Controls.Clear();
+
+                    c.Controls.Add(cot);
+                }
+            }
+        }
+
+       
     }
 }
