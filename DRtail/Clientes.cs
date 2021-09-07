@@ -33,18 +33,22 @@ namespace DRtail
             GetData();
             
             controlTabClientes.SelectedIndex = 1;
-            Rectangle wa = Screen.FromControl(this).WorkingArea;
-            Size gSize = new Size(wa.Width, wa.Height);
-            var x = this.Size;
+            this.Dock = DockStyle.Fill;
+            //Rectangle wa = Screen.FromControl(this).WorkingArea;
+            //Size gSize = new Size(wa.Width, wa.Height);
+            Size gSize = flowLayoutPanel2.Size;
             //this.SetStyle(ControlStyles.ResizeRedraw, true);
-            
-            pnlPestañaBodyDirs.MaximumSize = gSize;
-            this.Size = gSize;
-            flowLayoutPanel3.MaximumSize = gSize;
-            flowLayoutPanel2.Size = gSize;
-            panel38.Size = new Size(gSize.Width, 31);
 
-        }
+            //pnlPestañaBodyDirs.MaximumSize = gSize;
+            //this.Size = gSize;
+            //flowLayoutPanel3.MaximumSize = gSize;
+            //flowLayoutPanel2.Size = gSize;
+            panel38.MaximumSize = new Size(gSize.Width, 31);
+            var y = panel38.Size;
+            flowLayoutPanel3.MaximumSize = new Size(950, 700);
+            
+            
+         }
 
        
 
@@ -222,7 +226,7 @@ namespace DRtail
 
         private void btnAgregarDireccion_Click(object sender, EventArgs e)
         {
-            //fpnalDir_1.Visible = true;
+            fpnalDir_1.Visible = true;
         }
 
         private void bfgSocios_CellContentClick(object sender, DataGridViewCellEventArgs e)

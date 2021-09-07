@@ -278,6 +278,7 @@
     <Compile Include="Servicios.cs" />
     <Compile Include="Settings.cs" />
     <Compile Include="Socket.cs" />
+    <Compile Include="Ticket.cs" />
     <Compile Include="Utilidades.cs" />
     <Compile Include="Ventas.cs">
       <SubType>UserControl</SubType>

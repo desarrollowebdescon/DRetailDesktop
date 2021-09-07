@@ -33,7 +33,7 @@ namespace DRtail
         public Cotizaciones()
         {
             InitializeComponent();
-
+            this.Dock = DockStyle.Fill;
             GetData();
             AutoCompletar(txtProducto, "DatosArticulos");
             AutoCompletar(txtCliente, "DatosSocios");
@@ -41,7 +41,7 @@ namespace DRtail
         public Cotizaciones(string impCliente)
         {
             InitializeComponent();
-
+            this.Dock = DockStyle.Fill;
             GetData();
             AutoCompletar(txtProducto, "DatosArticulos");
             AutoCompletar(txtCliente, "DatosSocios");
@@ -65,6 +65,7 @@ namespace DRtail
         public Cotizaciones(DatosCotizacion dc)
         {
             InitializeComponent();
+            this.Dock = DockStyle.Fill;
             GetData();
             AutoCompletar(txtProducto, "DatosArticulos");
             AutoCompletar(txtCliente, "DatosSocios");

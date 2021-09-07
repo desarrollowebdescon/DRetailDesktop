@@ -178,7 +178,7 @@ namespace DRtail
             pnlMain.Controls.Clear();
            
             Clientes clientes = new Clientes();
-            clientes.Size = new Size(wa.Width + 70, wa.Height );
+            clientes.Size = new Size(wa.Width , wa.Height );
             pnlMain.Controls.Add(clientes);
             SelectedLineMenu("pnlLineClientes");
             ForceToggleMenu();
@@ -191,7 +191,7 @@ namespace DRtail
         {
             pnlMain.Controls.Clear();
             Cotizaciones cotizaciones = new Cotizaciones();
-            cotizaciones.Size = new Size(wa.Width - 90, wa.Height);
+            cotizaciones.Size = new Size(wa.Width , wa.Height);
             pnlMain.Controls.Add(cotizaciones);
             SelectedLineMenu("pnlLineCotizaciones");
             ForceToggleMenu();
