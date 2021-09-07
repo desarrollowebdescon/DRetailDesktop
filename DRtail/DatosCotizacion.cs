@@ -9,6 +9,7 @@ namespace DRtail
 {
     public class DatosCotizacion
     {
+        
         [JsonProperty("Numero de Documento")]
         public string NoCotizacion { get; set; }
 

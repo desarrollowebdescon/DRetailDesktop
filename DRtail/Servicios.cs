@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -22,7 +23,7 @@ namespace DRtail
         {
             try
             {
-                var httpWebRequest = (HttpWebRequest)WebRequest.Create(Properties.Settings.Default.RutaApi + "consultarAllCotizaciones");
+                var httpWebRequest = (HttpWebRequest)WebRequest.Create(Properties.Settings.Default.RutaApi + "consultarAllCotizaciones?DOCNUM=&CARDCODE=&FECHAINICIO=&FECHAFIN=");
                 httpWebRequest.ContentType = "application/json";
                 httpWebRequest.Method = "GET";
                 //ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12 | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls;
@@ -30,7 +31,8 @@ namespace DRtail
                 using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
                 {
                     var result = streamReader.ReadToEnd();
-                    var j = JsonConvert.DeserializeObject<List<DatosCotizacion>>(result);
+                    var y = (JObject)JsonConvert.DeserializeObject(result);
+                    var j = JsonConvert.DeserializeObject<List<DatosCotizacion>>(y.SelectToken("documentos").ToString());
 
                     return j;
 
@@ -42,19 +44,21 @@ namespace DRtail
             }
         }
 
-        public static List<DatosPedido> getPedidos()
+        public static List<DatosPedido> getPedidos() 
         {
             try
             {
-                var httpWebRequest = (HttpWebRequest)WebRequest.Create(Properties.Settings.Default.RutaApi + "consultarAllPedidos");
+                var httpWebRequest = (HttpWebRequest)WebRequest.Create(Properties.Settings.Default.RutaApi + "consultarAllPedidos?NOPEDIDO=&CARDCODE=&CARDNAME=&ESTATUS=");
                 httpWebRequest.ContentType = "application/json";
                 httpWebRequest.Method = "GET";
                 //ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12 | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls;
                 var httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();
-                using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
+                using ( var streamReader = new StreamReader(httpResponse.GetResponseStream()))
                 {
                     var result = streamReader.ReadToEnd();
-                    var j = JsonConvert.DeserializeObject<List<DatosPedido>>(result);
+                    var y = (JObject)JsonConvert.DeserializeObject(result);
+                    var j = JsonConvert.DeserializeObject<List<DatosPedido>>(y.SelectToken("documentos").ToString());
+                    
 
                     return j;
 

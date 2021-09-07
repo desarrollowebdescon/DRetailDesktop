@@ -80,6 +80,12 @@
             this.Seleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.tabNuevo = new System.Windows.Forms.TabPage();
             this.pnlCotizacion = new System.Windows.Forms.Panel();
+            this.pnlConfirmación = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btnAdminCancelar = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.btnAceptarPass = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.passAdministradorConf = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.label6 = new System.Windows.Forms.Label();
             this.btnCotLimpiar = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuGradientPanel2 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.btnAgregarProducto = new Bunifu.Framework.UI.BunifuThinButton2();
@@ -113,19 +119,6 @@
             this.btnSalidasProd = new System.Windows.Forms.Button();
             this.btnEntradasProd = new System.Windows.Forms.Button();
             this.btnBuscarProd = new System.Windows.Forms.Button();
-            this.pnlConfirmación = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.btnAdminCancelar = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.btnAceptarPass = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.passAdministradorConf = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.pnlBuscarSocio = new System.Windows.Forms.Panel();
-            this.bunifuThinButton22 = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.btnAgregarBuscarSocio = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.dgBuscarClientes = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.codigoCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreClienteBuscar = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtBuscarCliente = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.pnlbusquedaArticulo = new System.Windows.Forms.Panel();
             this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnAgregarBusqueda = new Bunifu.Framework.UI.BunifuThinButton2();
@@ -133,6 +126,13 @@
             this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NombreArt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtBuscarArtTraspaso = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.pnlBuscarSocio = new System.Windows.Forms.Panel();
+            this.bunifuThinButton22 = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.btnAgregarBuscarSocio = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.dgBuscarClientes = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.codigoCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreClienteBuscar = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtBuscarCliente = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.tabControlCotizaciones.SuspendLayout();
             this.tablCotizaciones.SuspendLayout();
             this.pnlBodyCot.SuspendLayout();
@@ -142,15 +142,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.bdgCotizaciones)).BeginInit();
             this.tabNuevo.SuspendLayout();
             this.pnlCotizacion.SuspendLayout();
+            this.pnlConfirmación.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.bunifuGradientPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductosCotizacion)).BeginInit();
             this.panel1.SuspendLayout();
-            this.pnlConfirmación.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.pnlBuscarSocio.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgBuscarClientes)).BeginInit();
             this.pnlbusquedaArticulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgBuscadorArticulo)).BeginInit();
+            this.pnlBuscarSocio.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgBuscarClientes)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControlCotizaciones
@@ -188,8 +188,8 @@
             this.pnlBodyCot.BackColor = System.Drawing.Color.Gainsboro;
             this.pnlBodyCot.Controls.Add(this.bunifuGradientPanel1);
             this.pnlBodyCot.Controls.Add(this.pnlFooter);
-            this.pnlBodyCot.Controls.Add(this.pnlPOAcciones);
             this.pnlBodyCot.Controls.Add(this.bdgCotizaciones);
+            this.pnlBodyCot.Controls.Add(this.pnlPOAcciones);
             this.pnlBodyCot.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlBodyCot.Location = new System.Drawing.Point(3, 3);
             this.pnlBodyCot.Margin = new System.Windows.Forms.Padding(2);
@@ -760,14 +760,117 @@
             this.pnlCotizacion.Controls.Add(this.btnSalidasProd);
             this.pnlCotizacion.Controls.Add(this.btnEntradasProd);
             this.pnlCotizacion.Controls.Add(this.btnBuscarProd);
-            this.pnlCotizacion.Controls.Add(this.pnlBuscarSocio);
             this.pnlCotizacion.Controls.Add(this.pnlbusquedaArticulo);
+            this.pnlCotizacion.Controls.Add(this.pnlBuscarSocio);
             this.pnlCotizacion.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pnlCotizacion.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pnlCotizacion.Location = new System.Drawing.Point(3, 3);
             this.pnlCotizacion.Name = "pnlCotizacion";
             this.pnlCotizacion.Size = new System.Drawing.Size(1522, 891);
             this.pnlCotizacion.TabIndex = 13;
+            // 
+            // pnlConfirmación
+            // 
+            this.pnlConfirmación.BackColor = System.Drawing.Color.DarkGray;
+            this.pnlConfirmación.Controls.Add(this.panel2);
+            this.pnlConfirmación.Location = new System.Drawing.Point(337, 228);
+            this.pnlConfirmación.Name = "pnlConfirmación";
+            this.pnlConfirmación.Size = new System.Drawing.Size(849, 439);
+            this.pnlConfirmación.TabIndex = 29;
+            this.pnlConfirmación.Visible = false;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.btnAdminCancelar);
+            this.panel2.Controls.Add(this.btnAceptarPass);
+            this.panel2.Controls.Add(this.passAdministradorConf);
+            this.panel2.Controls.Add(this.label6);
+            this.panel2.Location = new System.Drawing.Point(229, 103);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(458, 211);
+            this.panel2.TabIndex = 0;
+            // 
+            // btnAdminCancelar
+            // 
+            this.btnAdminCancelar.ActiveBorderThickness = 1;
+            this.btnAdminCancelar.ActiveCornerRadius = 20;
+            this.btnAdminCancelar.ActiveFillColor = System.Drawing.Color.Red;
+            this.btnAdminCancelar.ActiveForecolor = System.Drawing.Color.White;
+            this.btnAdminCancelar.ActiveLineColor = System.Drawing.Color.Red;
+            this.btnAdminCancelar.BackColor = System.Drawing.Color.White;
+            this.btnAdminCancelar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAdminCancelar.BackgroundImage")));
+            this.btnAdminCancelar.ButtonText = "Cancelar";
+            this.btnAdminCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAdminCancelar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdminCancelar.ForeColor = System.Drawing.Color.SeaGreen;
+            this.btnAdminCancelar.IdleBorderThickness = 1;
+            this.btnAdminCancelar.IdleCornerRadius = 20;
+            this.btnAdminCancelar.IdleFillColor = System.Drawing.Color.White;
+            this.btnAdminCancelar.IdleForecolor = System.Drawing.Color.Red;
+            this.btnAdminCancelar.IdleLineColor = System.Drawing.Color.Red;
+            this.btnAdminCancelar.Location = new System.Drawing.Point(243, 136);
+            this.btnAdminCancelar.Margin = new System.Windows.Forms.Padding(5);
+            this.btnAdminCancelar.Name = "btnAdminCancelar";
+            this.btnAdminCancelar.Size = new System.Drawing.Size(181, 41);
+            this.btnAdminCancelar.TabIndex = 3;
+            this.btnAdminCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnAdminCancelar.Click += new System.EventHandler(this.btnAdminCancelar_Click);
+            // 
+            // btnAceptarPass
+            // 
+            this.btnAceptarPass.ActiveBorderThickness = 1;
+            this.btnAceptarPass.ActiveCornerRadius = 20;
+            this.btnAceptarPass.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.btnAceptarPass.ActiveForecolor = System.Drawing.Color.White;
+            this.btnAceptarPass.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.btnAceptarPass.BackColor = System.Drawing.Color.White;
+            this.btnAceptarPass.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAceptarPass.BackgroundImage")));
+            this.btnAceptarPass.ButtonText = "Aceptar";
+            this.btnAceptarPass.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAceptarPass.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAceptarPass.ForeColor = System.Drawing.Color.SeaGreen;
+            this.btnAceptarPass.IdleBorderThickness = 1;
+            this.btnAceptarPass.IdleCornerRadius = 20;
+            this.btnAceptarPass.IdleFillColor = System.Drawing.Color.White;
+            this.btnAceptarPass.IdleForecolor = System.Drawing.Color.SeaGreen;
+            this.btnAceptarPass.IdleLineColor = System.Drawing.Color.SeaGreen;
+            this.btnAceptarPass.Location = new System.Drawing.Point(52, 136);
+            this.btnAceptarPass.Margin = new System.Windows.Forms.Padding(5);
+            this.btnAceptarPass.Name = "btnAceptarPass";
+            this.btnAceptarPass.Size = new System.Drawing.Size(181, 41);
+            this.btnAceptarPass.TabIndex = 2;
+            this.btnAceptarPass.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnAceptarPass.Click += new System.EventHandler(this.btnAceptarPass_Click_1);
+            // 
+            // passAdministradorConf
+            // 
+            this.passAdministradorConf.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.passAdministradorConf.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.passAdministradorConf.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.passAdministradorConf.HintForeColor = System.Drawing.Color.Gray;
+            this.passAdministradorConf.HintText = "password";
+            this.passAdministradorConf.isPassword = true;
+            this.passAdministradorConf.LineFocusedColor = System.Drawing.Color.Blue;
+            this.passAdministradorConf.LineIdleColor = System.Drawing.Color.Gray;
+            this.passAdministradorConf.LineMouseHoverColor = System.Drawing.Color.Blue;
+            this.passAdministradorConf.LineThickness = 3;
+            this.passAdministradorConf.Location = new System.Drawing.Point(52, 72);
+            this.passAdministradorConf.Margin = new System.Windows.Forms.Padding(4);
+            this.passAdministradorConf.Name = "passAdministradorConf";
+            this.passAdministradorConf.Size = new System.Drawing.Size(372, 44);
+            this.passAdministradorConf.TabIndex = 1;
+            this.passAdministradorConf.Text = "bunifuMaterialTextbox1";
+            this.passAdministradorConf.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(66, 34);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(253, 23);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "Contraseña del administrador";
             // 
             // btnCotLimpiar
             // 
@@ -851,6 +954,7 @@
             this.btnAgregarProducto.Size = new System.Drawing.Size(186, 59);
             this.btnAgregarProducto.TabIndex = 22;
             this.btnAgregarProducto.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnAgregarProducto.Visible = false;
             this.btnAgregarProducto.Click += new System.EventHandler(this.btnAgregarProducto_Click_1);
             // 
             // linkLabel1
@@ -1179,249 +1283,6 @@
             this.btnBuscarProd.Text = "F10 - Buscar";
             this.btnBuscarProd.UseVisualStyleBackColor = false;
             // 
-            // pnlConfirmación
-            // 
-            this.pnlConfirmación.BackColor = System.Drawing.Color.DarkGray;
-            this.pnlConfirmación.Controls.Add(this.panel2);
-            this.pnlConfirmación.Location = new System.Drawing.Point(337, 228);
-            this.pnlConfirmación.Name = "pnlConfirmación";
-            this.pnlConfirmación.Size = new System.Drawing.Size(849, 439);
-            this.pnlConfirmación.TabIndex = 29;
-            this.pnlConfirmación.Visible = false;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.btnAdminCancelar);
-            this.panel2.Controls.Add(this.btnAceptarPass);
-            this.panel2.Controls.Add(this.passAdministradorConf);
-            this.panel2.Controls.Add(this.label6);
-            this.panel2.Location = new System.Drawing.Point(229, 103);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(458, 211);
-            this.panel2.TabIndex = 0;
-            // 
-            // btnAdminCancelar
-            // 
-            this.btnAdminCancelar.ActiveBorderThickness = 1;
-            this.btnAdminCancelar.ActiveCornerRadius = 20;
-            this.btnAdminCancelar.ActiveFillColor = System.Drawing.Color.Red;
-            this.btnAdminCancelar.ActiveForecolor = System.Drawing.Color.White;
-            this.btnAdminCancelar.ActiveLineColor = System.Drawing.Color.Red;
-            this.btnAdminCancelar.BackColor = System.Drawing.Color.White;
-            this.btnAdminCancelar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAdminCancelar.BackgroundImage")));
-            this.btnAdminCancelar.ButtonText = "Cancelar";
-            this.btnAdminCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAdminCancelar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdminCancelar.ForeColor = System.Drawing.Color.SeaGreen;
-            this.btnAdminCancelar.IdleBorderThickness = 1;
-            this.btnAdminCancelar.IdleCornerRadius = 20;
-            this.btnAdminCancelar.IdleFillColor = System.Drawing.Color.White;
-            this.btnAdminCancelar.IdleForecolor = System.Drawing.Color.Red;
-            this.btnAdminCancelar.IdleLineColor = System.Drawing.Color.Red;
-            this.btnAdminCancelar.Location = new System.Drawing.Point(243, 136);
-            this.btnAdminCancelar.Margin = new System.Windows.Forms.Padding(5);
-            this.btnAdminCancelar.Name = "btnAdminCancelar";
-            this.btnAdminCancelar.Size = new System.Drawing.Size(181, 41);
-            this.btnAdminCancelar.TabIndex = 3;
-            this.btnAdminCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnAdminCancelar.Click += new System.EventHandler(this.btnAdminCancelar_Click);
-            // 
-            // btnAceptarPass
-            // 
-            this.btnAceptarPass.ActiveBorderThickness = 1;
-            this.btnAceptarPass.ActiveCornerRadius = 20;
-            this.btnAceptarPass.ActiveFillColor = System.Drawing.Color.SeaGreen;
-            this.btnAceptarPass.ActiveForecolor = System.Drawing.Color.White;
-            this.btnAceptarPass.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.btnAceptarPass.BackColor = System.Drawing.Color.White;
-            this.btnAceptarPass.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAceptarPass.BackgroundImage")));
-            this.btnAceptarPass.ButtonText = "Aceptar";
-            this.btnAceptarPass.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAceptarPass.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAceptarPass.ForeColor = System.Drawing.Color.SeaGreen;
-            this.btnAceptarPass.IdleBorderThickness = 1;
-            this.btnAceptarPass.IdleCornerRadius = 20;
-            this.btnAceptarPass.IdleFillColor = System.Drawing.Color.White;
-            this.btnAceptarPass.IdleForecolor = System.Drawing.Color.SeaGreen;
-            this.btnAceptarPass.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.btnAceptarPass.Location = new System.Drawing.Point(52, 136);
-            this.btnAceptarPass.Margin = new System.Windows.Forms.Padding(5);
-            this.btnAceptarPass.Name = "btnAceptarPass";
-            this.btnAceptarPass.Size = new System.Drawing.Size(181, 41);
-            this.btnAceptarPass.TabIndex = 2;
-            this.btnAceptarPass.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnAceptarPass.Click += new System.EventHandler(this.btnAceptarPass_Click_1);
-            // 
-            // passAdministradorConf
-            // 
-            this.passAdministradorConf.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.passAdministradorConf.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.passAdministradorConf.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.passAdministradorConf.HintForeColor = System.Drawing.Color.Gray;
-            this.passAdministradorConf.HintText = "password";
-            this.passAdministradorConf.isPassword = true;
-            this.passAdministradorConf.LineFocusedColor = System.Drawing.Color.Blue;
-            this.passAdministradorConf.LineIdleColor = System.Drawing.Color.Gray;
-            this.passAdministradorConf.LineMouseHoverColor = System.Drawing.Color.Blue;
-            this.passAdministradorConf.LineThickness = 3;
-            this.passAdministradorConf.Location = new System.Drawing.Point(52, 72);
-            this.passAdministradorConf.Margin = new System.Windows.Forms.Padding(4);
-            this.passAdministradorConf.Name = "passAdministradorConf";
-            this.passAdministradorConf.Size = new System.Drawing.Size(372, 44);
-            this.passAdministradorConf.TabIndex = 1;
-            this.passAdministradorConf.Text = "bunifuMaterialTextbox1";
-            this.passAdministradorConf.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(66, 34);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(253, 23);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "Contraseña del administrador";
-            // 
-            // pnlBuscarSocio
-            // 
-            this.pnlBuscarSocio.BackColor = System.Drawing.Color.White;
-            this.pnlBuscarSocio.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pnlBuscarSocio.Controls.Add(this.bunifuThinButton22);
-            this.pnlBuscarSocio.Controls.Add(this.btnAgregarBuscarSocio);
-            this.pnlBuscarSocio.Controls.Add(this.dgBuscarClientes);
-            this.pnlBuscarSocio.Controls.Add(this.txtBuscarCliente);
-            this.pnlBuscarSocio.Location = new System.Drawing.Point(200, 4);
-            this.pnlBuscarSocio.Name = "pnlBuscarSocio";
-            this.pnlBuscarSocio.Size = new System.Drawing.Size(489, 289);
-            this.pnlBuscarSocio.TabIndex = 31;
-            this.pnlBuscarSocio.Visible = false;
-            // 
-            // bunifuThinButton22
-            // 
-            this.bunifuThinButton22.ActiveBorderThickness = 1;
-            this.bunifuThinButton22.ActiveCornerRadius = 20;
-            this.bunifuThinButton22.ActiveFillColor = System.Drawing.Color.Red;
-            this.bunifuThinButton22.ActiveForecolor = System.Drawing.Color.White;
-            this.bunifuThinButton22.ActiveLineColor = System.Drawing.Color.Red;
-            this.bunifuThinButton22.BackColor = System.Drawing.Color.White;
-            this.bunifuThinButton22.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton22.BackgroundImage")));
-            this.bunifuThinButton22.ButtonText = "X";
-            this.bunifuThinButton22.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuThinButton22.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuThinButton22.ForeColor = System.Drawing.Color.Red;
-            this.bunifuThinButton22.IdleBorderThickness = 1;
-            this.bunifuThinButton22.IdleCornerRadius = 20;
-            this.bunifuThinButton22.IdleFillColor = System.Drawing.Color.White;
-            this.bunifuThinButton22.IdleForecolor = System.Drawing.Color.Red;
-            this.bunifuThinButton22.IdleLineColor = System.Drawing.Color.Red;
-            this.bunifuThinButton22.Location = new System.Drawing.Point(451, 3);
-            this.bunifuThinButton22.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.bunifuThinButton22.Name = "bunifuThinButton22";
-            this.bunifuThinButton22.Size = new System.Drawing.Size(30, 30);
-            this.bunifuThinButton22.TabIndex = 3;
-            this.bunifuThinButton22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuThinButton22.Click += new System.EventHandler(this.bunifuThinButton22_Click);
-            // 
-            // btnAgregarBuscarSocio
-            // 
-            this.btnAgregarBuscarSocio.ActiveBorderThickness = 1;
-            this.btnAgregarBuscarSocio.ActiveCornerRadius = 20;
-            this.btnAgregarBuscarSocio.ActiveFillColor = System.Drawing.Color.SteelBlue;
-            this.btnAgregarBuscarSocio.ActiveForecolor = System.Drawing.Color.White;
-            this.btnAgregarBuscarSocio.ActiveLineColor = System.Drawing.Color.SteelBlue;
-            this.btnAgregarBuscarSocio.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAgregarBuscarSocio.BackColor = System.Drawing.Color.White;
-            this.btnAgregarBuscarSocio.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAgregarBuscarSocio.BackgroundImage")));
-            this.btnAgregarBuscarSocio.ButtonText = "Agregar";
-            this.btnAgregarBuscarSocio.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAgregarBuscarSocio.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarBuscarSocio.ForeColor = System.Drawing.Color.SeaGreen;
-            this.btnAgregarBuscarSocio.IdleBorderThickness = 1;
-            this.btnAgregarBuscarSocio.IdleCornerRadius = 20;
-            this.btnAgregarBuscarSocio.IdleFillColor = System.Drawing.Color.White;
-            this.btnAgregarBuscarSocio.IdleForecolor = System.Drawing.Color.SteelBlue;
-            this.btnAgregarBuscarSocio.IdleLineColor = System.Drawing.Color.SteelBlue;
-            this.btnAgregarBuscarSocio.Location = new System.Drawing.Point(69, 244);
-            this.btnAgregarBuscarSocio.Margin = new System.Windows.Forms.Padding(5);
-            this.btnAgregarBuscarSocio.Name = "btnAgregarBuscarSocio";
-            this.btnAgregarBuscarSocio.Size = new System.Drawing.Size(359, 41);
-            this.btnAgregarBuscarSocio.TabIndex = 2;
-            this.btnAgregarBuscarSocio.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnAgregarBuscarSocio.Click += new System.EventHandler(this.btnAgregarBuscarSocio_Click);
-            // 
-            // dgBuscarClientes
-            // 
-            this.dgBuscarClientes.AllowUserToAddRows = false;
-            this.dgBuscarClientes.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgBuscarClientes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
-            this.dgBuscarClientes.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgBuscarClientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgBuscarClientes.BackgroundColor = System.Drawing.Color.Gainsboro;
-            this.dgBuscarClientes.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgBuscarClientes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgBuscarClientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
-            this.dgBuscarClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgBuscarClientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.codigoCliente,
-            this.nombreClienteBuscar});
-            this.dgBuscarClientes.DoubleBuffered = true;
-            this.dgBuscarClientes.EnableHeadersVisualStyles = false;
-            this.dgBuscarClientes.HeaderBgColor = System.Drawing.Color.SteelBlue;
-            this.dgBuscarClientes.HeaderForeColor = System.Drawing.Color.WhiteSmoke;
-            this.dgBuscarClientes.Location = new System.Drawing.Point(24, 87);
-            this.dgBuscarClientes.MultiSelect = false;
-            this.dgBuscarClientes.Name = "dgBuscarClientes";
-            this.dgBuscarClientes.ReadOnly = true;
-            this.dgBuscarClientes.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
-            this.dgBuscarClientes.RowsDefaultCellStyle = dataGridViewCellStyle7;
-            this.dgBuscarClientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgBuscarClientes.Size = new System.Drawing.Size(446, 149);
-            this.dgBuscarClientes.TabIndex = 1;
-            // 
-            // codigoCliente
-            // 
-            this.codigoCliente.HeaderText = "Codigo";
-            this.codigoCliente.Name = "codigoCliente";
-            this.codigoCliente.ReadOnly = true;
-            // 
-            // nombreClienteBuscar
-            // 
-            this.nombreClienteBuscar.HeaderText = "Nombre ";
-            this.nombreClienteBuscar.Name = "nombreClienteBuscar";
-            this.nombreClienteBuscar.ReadOnly = true;
-            // 
-            // txtBuscarCliente
-            // 
-            this.txtBuscarCliente.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtBuscarCliente.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txtBuscarCliente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtBuscarCliente.HintForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtBuscarCliente.HintText = "Nombre/Código";
-            this.txtBuscarCliente.isPassword = false;
-            this.txtBuscarCliente.LineFocusedColor = System.Drawing.Color.Green;
-            this.txtBuscarCliente.LineIdleColor = System.Drawing.Color.Gray;
-            this.txtBuscarCliente.LineMouseHoverColor = System.Drawing.Color.Green;
-            this.txtBuscarCliente.LineThickness = 3;
-            this.txtBuscarCliente.Location = new System.Drawing.Point(24, 37);
-            this.txtBuscarCliente.Margin = new System.Windows.Forms.Padding(4);
-            this.txtBuscarCliente.Name = "txtBuscarCliente";
-            this.txtBuscarCliente.Size = new System.Drawing.Size(446, 44);
-            this.txtBuscarCliente.TabIndex = 0;
-            this.txtBuscarCliente.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtBuscarCliente.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtBuscarCliente_KeyUp);
-            // 
             // pnlbusquedaArticulo
             // 
             this.pnlbusquedaArticulo.BackColor = System.Drawing.Color.White;
@@ -1432,7 +1293,7 @@
             this.pnlbusquedaArticulo.Controls.Add(this.txtBuscarArtTraspaso);
             this.pnlbusquedaArticulo.Location = new System.Drawing.Point(202, 3);
             this.pnlbusquedaArticulo.Name = "pnlbusquedaArticulo";
-            this.pnlbusquedaArticulo.Size = new System.Drawing.Size(489, 289);
+            this.pnlbusquedaArticulo.Size = new System.Drawing.Size(809, 393);
             this.pnlbusquedaArticulo.TabIndex = 30;
             this.pnlbusquedaArticulo.Visible = false;
             // 
@@ -1454,7 +1315,7 @@
             this.bunifuThinButton21.IdleFillColor = System.Drawing.Color.White;
             this.bunifuThinButton21.IdleForecolor = System.Drawing.Color.Red;
             this.bunifuThinButton21.IdleLineColor = System.Drawing.Color.Red;
-            this.bunifuThinButton21.Location = new System.Drawing.Point(451, 3);
+            this.bunifuThinButton21.Location = new System.Drawing.Point(760, 7);
             this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuThinButton21.Name = "bunifuThinButton21";
             this.bunifuThinButton21.Size = new System.Drawing.Size(30, 30);
@@ -1482,34 +1343,35 @@
             this.btnAgregarBusqueda.IdleFillColor = System.Drawing.Color.White;
             this.btnAgregarBusqueda.IdleForecolor = System.Drawing.Color.SteelBlue;
             this.btnAgregarBusqueda.IdleLineColor = System.Drawing.Color.SteelBlue;
-            this.btnAgregarBusqueda.Location = new System.Drawing.Point(69, 244);
+            this.btnAgregarBusqueda.Location = new System.Drawing.Point(67, 309);
             this.btnAgregarBusqueda.Margin = new System.Windows.Forms.Padding(5);
             this.btnAgregarBusqueda.Name = "btnAgregarBusqueda";
-            this.btnAgregarBusqueda.Size = new System.Drawing.Size(359, 41);
+            this.btnAgregarBusqueda.Size = new System.Drawing.Size(679, 41);
             this.btnAgregarBusqueda.TabIndex = 2;
             this.btnAgregarBusqueda.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnAgregarBusqueda.Visible = false;
             this.btnAgregarBusqueda.Click += new System.EventHandler(this.btnAgregarBusqueda_Click);
             // 
             // dgBuscadorArticulo
             // 
             this.dgBuscadorArticulo.AllowUserToAddRows = false;
             this.dgBuscadorArticulo.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgBuscadorArticulo.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgBuscadorArticulo.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgBuscadorArticulo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgBuscadorArticulo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgBuscadorArticulo.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.dgBuscadorArticulo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgBuscadorArticulo.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgBuscadorArticulo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgBuscadorArticulo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgBuscadorArticulo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgBuscadorArticulo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.codigo,
@@ -1518,17 +1380,18 @@
             this.dgBuscadorArticulo.EnableHeadersVisualStyles = false;
             this.dgBuscadorArticulo.HeaderBgColor = System.Drawing.Color.SteelBlue;
             this.dgBuscadorArticulo.HeaderForeColor = System.Drawing.Color.WhiteSmoke;
-            this.dgBuscadorArticulo.Location = new System.Drawing.Point(24, 87);
+            this.dgBuscadorArticulo.Location = new System.Drawing.Point(24, 124);
             this.dgBuscadorArticulo.MultiSelect = false;
             this.dgBuscadorArticulo.Name = "dgBuscadorArticulo";
             this.dgBuscadorArticulo.ReadOnly = true;
             this.dgBuscadorArticulo.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
-            this.dgBuscadorArticulo.RowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
+            this.dgBuscadorArticulo.RowsDefaultCellStyle = dataGridViewCellStyle7;
             this.dgBuscadorArticulo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgBuscadorArticulo.Size = new System.Drawing.Size(446, 149);
+            this.dgBuscadorArticulo.Size = new System.Drawing.Size(766, 211);
             this.dgBuscadorArticulo.TabIndex = 1;
+            this.dgBuscadorArticulo.DoubleClick += new System.EventHandler(this.dgBuscadorArticulo_DoubleClick);
             // 
             // codigo
             // 
@@ -1557,10 +1420,152 @@
             this.txtBuscarArtTraspaso.Location = new System.Drawing.Point(24, 37);
             this.txtBuscarArtTraspaso.Margin = new System.Windows.Forms.Padding(4);
             this.txtBuscarArtTraspaso.Name = "txtBuscarArtTraspaso";
-            this.txtBuscarArtTraspaso.Size = new System.Drawing.Size(446, 44);
+            this.txtBuscarArtTraspaso.Size = new System.Drawing.Size(766, 44);
             this.txtBuscarArtTraspaso.TabIndex = 0;
             this.txtBuscarArtTraspaso.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtBuscarArtTraspaso.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtBuscarArtTraspaso_KeyUp);
+            // 
+            // pnlBuscarSocio
+            // 
+            this.pnlBuscarSocio.BackColor = System.Drawing.Color.White;
+            this.pnlBuscarSocio.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnlBuscarSocio.Controls.Add(this.bunifuThinButton22);
+            this.pnlBuscarSocio.Controls.Add(this.btnAgregarBuscarSocio);
+            this.pnlBuscarSocio.Controls.Add(this.dgBuscarClientes);
+            this.pnlBuscarSocio.Controls.Add(this.txtBuscarCliente);
+            this.pnlBuscarSocio.Location = new System.Drawing.Point(200, 4);
+            this.pnlBuscarSocio.Name = "pnlBuscarSocio";
+            this.pnlBuscarSocio.Size = new System.Drawing.Size(811, 392);
+            this.pnlBuscarSocio.TabIndex = 31;
+            this.pnlBuscarSocio.Visible = false;
+            // 
+            // bunifuThinButton22
+            // 
+            this.bunifuThinButton22.ActiveBorderThickness = 1;
+            this.bunifuThinButton22.ActiveCornerRadius = 20;
+            this.bunifuThinButton22.ActiveFillColor = System.Drawing.Color.Red;
+            this.bunifuThinButton22.ActiveForecolor = System.Drawing.Color.White;
+            this.bunifuThinButton22.ActiveLineColor = System.Drawing.Color.Red;
+            this.bunifuThinButton22.BackColor = System.Drawing.Color.White;
+            this.bunifuThinButton22.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton22.BackgroundImage")));
+            this.bunifuThinButton22.ButtonText = "X";
+            this.bunifuThinButton22.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuThinButton22.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuThinButton22.ForeColor = System.Drawing.Color.Red;
+            this.bunifuThinButton22.IdleBorderThickness = 1;
+            this.bunifuThinButton22.IdleCornerRadius = 20;
+            this.bunifuThinButton22.IdleFillColor = System.Drawing.Color.White;
+            this.bunifuThinButton22.IdleForecolor = System.Drawing.Color.Red;
+            this.bunifuThinButton22.IdleLineColor = System.Drawing.Color.Red;
+            this.bunifuThinButton22.Location = new System.Drawing.Point(762, 11);
+            this.bunifuThinButton22.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuThinButton22.Name = "bunifuThinButton22";
+            this.bunifuThinButton22.Size = new System.Drawing.Size(30, 30);
+            this.bunifuThinButton22.TabIndex = 3;
+            this.bunifuThinButton22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton22.Click += new System.EventHandler(this.bunifuThinButton22_Click);
+            // 
+            // btnAgregarBuscarSocio
+            // 
+            this.btnAgregarBuscarSocio.ActiveBorderThickness = 1;
+            this.btnAgregarBuscarSocio.ActiveCornerRadius = 20;
+            this.btnAgregarBuscarSocio.ActiveFillColor = System.Drawing.Color.SteelBlue;
+            this.btnAgregarBuscarSocio.ActiveForecolor = System.Drawing.Color.White;
+            this.btnAgregarBuscarSocio.ActiveLineColor = System.Drawing.Color.SteelBlue;
+            this.btnAgregarBuscarSocio.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAgregarBuscarSocio.BackColor = System.Drawing.Color.White;
+            this.btnAgregarBuscarSocio.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAgregarBuscarSocio.BackgroundImage")));
+            this.btnAgregarBuscarSocio.ButtonText = "Agregar";
+            this.btnAgregarBuscarSocio.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAgregarBuscarSocio.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarBuscarSocio.ForeColor = System.Drawing.Color.SeaGreen;
+            this.btnAgregarBuscarSocio.IdleBorderThickness = 1;
+            this.btnAgregarBuscarSocio.IdleCornerRadius = 20;
+            this.btnAgregarBuscarSocio.IdleFillColor = System.Drawing.Color.White;
+            this.btnAgregarBuscarSocio.IdleForecolor = System.Drawing.Color.SteelBlue;
+            this.btnAgregarBuscarSocio.IdleLineColor = System.Drawing.Color.SteelBlue;
+            this.btnAgregarBuscarSocio.Location = new System.Drawing.Point(69, 342);
+            this.btnAgregarBuscarSocio.Margin = new System.Windows.Forms.Padding(5);
+            this.btnAgregarBuscarSocio.Name = "btnAgregarBuscarSocio";
+            this.btnAgregarBuscarSocio.Size = new System.Drawing.Size(681, 41);
+            this.btnAgregarBuscarSocio.TabIndex = 2;
+            this.btnAgregarBuscarSocio.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnAgregarBuscarSocio.Visible = false;
+            this.btnAgregarBuscarSocio.Click += new System.EventHandler(this.btnAgregarBuscarSocio_Click);
+            // 
+            // dgBuscarClientes
+            // 
+            this.dgBuscarClientes.AllowUserToAddRows = false;
+            this.dgBuscarClientes.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgBuscarClientes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle8;
+            this.dgBuscarClientes.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgBuscarClientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgBuscarClientes.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.dgBuscarClientes.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgBuscarClientes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgBuscarClientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            this.dgBuscarClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgBuscarClientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.codigoCliente,
+            this.nombreClienteBuscar});
+            this.dgBuscarClientes.DoubleBuffered = true;
+            this.dgBuscarClientes.EnableHeadersVisualStyles = false;
+            this.dgBuscarClientes.HeaderBgColor = System.Drawing.Color.SteelBlue;
+            this.dgBuscarClientes.HeaderForeColor = System.Drawing.Color.WhiteSmoke;
+            this.dgBuscarClientes.Location = new System.Drawing.Point(24, 89);
+            this.dgBuscarClientes.MultiSelect = false;
+            this.dgBuscarClientes.Name = "dgBuscarClientes";
+            this.dgBuscarClientes.ReadOnly = true;
+            this.dgBuscarClientes.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
+            this.dgBuscarClientes.RowsDefaultCellStyle = dataGridViewCellStyle10;
+            this.dgBuscarClientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgBuscarClientes.Size = new System.Drawing.Size(768, 250);
+            this.dgBuscarClientes.TabIndex = 1;
+            this.dgBuscarClientes.DoubleClick += new System.EventHandler(this.dgBuscarClientes_DoubleClick);
+            // 
+            // codigoCliente
+            // 
+            this.codigoCliente.HeaderText = "Codigo";
+            this.codigoCliente.Name = "codigoCliente";
+            this.codigoCliente.ReadOnly = true;
+            // 
+            // nombreClienteBuscar
+            // 
+            this.nombreClienteBuscar.HeaderText = "Nombre ";
+            this.nombreClienteBuscar.Name = "nombreClienteBuscar";
+            this.nombreClienteBuscar.ReadOnly = true;
+            // 
+            // txtBuscarCliente
+            // 
+            this.txtBuscarCliente.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtBuscarCliente.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtBuscarCliente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtBuscarCliente.HintForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtBuscarCliente.HintText = "Nombre/Código";
+            this.txtBuscarCliente.isPassword = false;
+            this.txtBuscarCliente.LineFocusedColor = System.Drawing.Color.Green;
+            this.txtBuscarCliente.LineIdleColor = System.Drawing.Color.Gray;
+            this.txtBuscarCliente.LineMouseHoverColor = System.Drawing.Color.Green;
+            this.txtBuscarCliente.LineThickness = 3;
+            this.txtBuscarCliente.Location = new System.Drawing.Point(24, 37);
+            this.txtBuscarCliente.Margin = new System.Windows.Forms.Padding(4);
+            this.txtBuscarCliente.Name = "txtBuscarCliente";
+            this.txtBuscarCliente.Size = new System.Drawing.Size(766, 44);
+            this.txtBuscarCliente.TabIndex = 0;
+            this.txtBuscarCliente.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtBuscarCliente.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtBuscarCliente_KeyUp);
             // 
             // Cotizaciones
             // 
@@ -1584,18 +1589,18 @@
             this.tabNuevo.ResumeLayout(false);
             this.pnlCotizacion.ResumeLayout(false);
             this.pnlCotizacion.PerformLayout();
+            this.pnlConfirmación.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.bunifuGradientPanel2.ResumeLayout(false);
             this.bunifuGradientPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductosCotizacion)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.pnlConfirmación.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.pnlBuscarSocio.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgBuscarClientes)).EndInit();
             this.pnlbusquedaArticulo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgBuscadorArticulo)).EndInit();
+            this.pnlBuscarSocio.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgBuscarClientes)).EndInit();
             this.ResumeLayout(false);
 
         }

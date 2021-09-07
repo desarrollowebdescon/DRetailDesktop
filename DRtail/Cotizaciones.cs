@@ -444,10 +444,7 @@ namespace DRtail
 
         private void btnAgregarBusqueda_Click(object sender, EventArgs e)
         {
-            string codigo = dgBuscadorArticulo.SelectedRows[0].Cells[0].Value.ToString();
-            txtProducto.Text = codigo;
-            pnlbusquedaArticulo.Visible = false;
-            dgBuscadorArticulo.Rows.Clear();
+           
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -465,10 +462,10 @@ namespace DRtail
         {
             List<DatosSocios> tempItems = dtosSocios;
             dgBuscarClientes.Rows.Clear();
-            tempItems = tempItems.Where(i => (i.CodigoCliente.Contains(txtBuscarCliente.Text)
+            tempItems = tempItems.Where(i => (i.CodigoCliente.ToLower().Contains(txtBuscarCliente.Text.ToLower())
                                            || (i.NombreCliente != null
-                                                ? i.NombreCliente
-                                                : "").Contains(txtBuscarCliente.Text))
+                                                ? i.NombreCliente.ToLower()
+                                                : "").Contains(txtBuscarCliente.Text.ToLower()))
                                         ).ToList();
 
             foreach (DatosSocios da in tempItems)
@@ -479,15 +476,12 @@ namespace DRtail
 
         private void btnAgregarBuscarSocio_Click(object sender, EventArgs e)
         {
-            string codigo = dgBuscarClientes.SelectedRows[0].Cells[0].Value.ToString();
-            txtCliente.Text = codigo;
-            pnlBuscarSocio.Visible = false;
-            dgBuscarClientes.Rows.Clear();
+           
         }
 
         private void btnAgregarProducto_Click_1(object sender, EventArgs e)
         {
-            AgregarArticuloDGV();
+           
         }
 
         private void tabControlCotizaciones_SelectedIndexChanged(object sender, EventArgs e)
@@ -558,6 +552,23 @@ namespace DRtail
         private void bunifuThinButton21_Click(object sender, EventArgs e)
         {
             pnlbusquedaArticulo.Visible = false;
+        }
+
+        private void dgBuscadorArticulo_DoubleClick(object sender, EventArgs e)
+        {
+            string codigo = dgBuscadorArticulo.SelectedRows[0].Cells[0].Value.ToString();
+            txtProducto.Text = codigo;
+            pnlbusquedaArticulo.Visible = false;
+            dgBuscadorArticulo.Rows.Clear();
+            AgregarArticuloDGV();
+        }
+
+        private void dgBuscarClientes_DoubleClick(object sender, EventArgs e)
+        {
+            string codigo = dgBuscarClientes.SelectedRows[0].Cells[0].Value.ToString();
+            txtCliente.Text = codigo;
+            pnlBuscarSocio.Visible = false;
+            dgBuscarClientes.Rows.Clear();
         }
     }
 }
