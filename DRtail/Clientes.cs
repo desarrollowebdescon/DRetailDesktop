@@ -31,15 +31,18 @@ namespace DRtail
             
             ClosePanel();
             GetData();
+            
             controlTabClientes.SelectedIndex = 1;
             Rectangle wa = Screen.FromControl(this).WorkingArea;
             Size gSize = new Size(wa.Width, wa.Height);
-            this.MaximumSize = gSize;
-            this.SetStyle(ControlStyles.ResizeRedraw, true);
+            var x = this.Size;
+            //this.SetStyle(ControlStyles.ResizeRedraw, true);
+            
             pnlPestañaBodyDirs.MaximumSize = gSize;
+            this.Size = gSize;
             flowLayoutPanel3.MaximumSize = gSize;
             flowLayoutPanel2.Size = gSize;
-            panel38.Size = new Size(300, 31);
+            panel38.Size = new Size(gSize.Width, 31);
 
         }
 

@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Cotizaciones));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Cotizaciones));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -42,6 +42,15 @@
             this.tabControlCotizaciones = new System.Windows.Forms.TabControl();
             this.tablCotizaciones = new System.Windows.Forms.TabPage();
             this.pnlBodyCot = new System.Windows.Forms.Panel();
+            this.bdgCotizaciones = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.NoCotizacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NoCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NombreCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FechaDocumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Moneda = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Seleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.pnlPOAcciones = new System.Windows.Forms.Panel();
             this.pnlPOAccion = new System.Windows.Forms.Panel();
             this.lblMontoAcciones = new System.Windows.Forms.Label();
@@ -75,18 +84,15 @@
             this.label3 = new System.Windows.Forms.Label();
             this.bdpInicio = new Bunifu.Framework.UI.BunifuDatepicker();
             this.btnBuscarCot = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.bdgCotizaciones = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.NoCotizacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NoCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NombreCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FechaDocumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Moneda = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Estatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Seleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.pnlFooter = new System.Windows.Forms.Panel();
             this.tabNuevo = new System.Windows.Forms.TabPage();
             this.pnlCotizacion = new System.Windows.Forms.Panel();
+            this.pnlConfirmación = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btnAdminCancelar = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.btnAceptarPass = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.passAdministradorConf = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.label6 = new System.Windows.Forms.Label();
             this.btnCotLimpiar = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuGradientPanel2 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.panel10 = new System.Windows.Forms.Panel();
@@ -124,12 +130,6 @@
             this.btnSalidasProd = new System.Windows.Forms.Button();
             this.btnEntradasProd = new System.Windows.Forms.Button();
             this.btnBuscarProd = new System.Windows.Forms.Button();
-            this.pnlConfirmación = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.btnAdminCancelar = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.btnAceptarPass = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.passAdministradorConf = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.label6 = new System.Windows.Forms.Label();
             this.pnlBuscarSocio = new System.Windows.Forms.Panel();
             this.bunifuThinButton22 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnAgregarBuscarSocio = new Bunifu.Framework.UI.BunifuThinButton2();
@@ -147,6 +147,7 @@
             this.tabControlCotizaciones.SuspendLayout();
             this.tablCotizaciones.SuspendLayout();
             this.pnlBodyCot.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bdgCotizaciones)).BeginInit();
             this.pnlPOAcciones.SuspendLayout();
             this.pnlPOAccion.SuspendLayout();
             this.bunifuGradientPanel1.SuspendLayout();
@@ -154,16 +155,15 @@
             this.pnlBusqFechaFin.SuspendLayout();
             this.pnlBusqNoCotizacion.SuspendLayout();
             this.pnlBusqFechaInicio.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bdgCotizaciones)).BeginInit();
             this.tabNuevo.SuspendLayout();
             this.pnlCotizacion.SuspendLayout();
+            this.pnlConfirmación.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.bunifuGradientPanel2.SuspendLayout();
             this.panel10.SuspendLayout();
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductosCotizacion)).BeginInit();
             this.panel1.SuspendLayout();
-            this.pnlConfirmación.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.pnlBuscarSocio.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgBuscarClientes)).BeginInit();
             this.pnlbusquedaArticulo.SuspendLayout();
@@ -214,6 +214,126 @@
             this.pnlBodyCot.Name = "pnlBodyCot";
             this.pnlBodyCot.Size = new System.Drawing.Size(1522, 894);
             this.pnlBodyCot.TabIndex = 26;
+            // 
+            // bdgCotizaciones
+            // 
+            this.bdgCotizaciones.AllowUserToAddRows = false;
+            this.bdgCotizaciones.AllowUserToDeleteRows = false;
+            this.bdgCotizaciones.AllowUserToResizeColumns = false;
+            this.bdgCotizaciones.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.bdgCotizaciones.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.bdgCotizaciones.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.bdgCotizaciones.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.bdgCotizaciones.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.bdgCotizaciones.BackgroundColor = System.Drawing.Color.White;
+            this.bdgCotizaciones.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.bdgCotizaciones.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal;
+            this.bdgCotizaciones.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Rockwell", 15F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.bdgCotizaciones.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.bdgCotizaciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.bdgCotizaciones.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.NoCotizacion,
+            this.NoCliente,
+            this.NombreCliente,
+            this.FechaDocumento,
+            this.Total,
+            this.Moneda,
+            this.Estatus,
+            this.Seleccionar});
+            this.bdgCotizaciones.DoubleBuffered = true;
+            this.bdgCotizaciones.EnableHeadersVisualStyles = false;
+            this.bdgCotizaciones.GridColor = System.Drawing.Color.White;
+            this.bdgCotizaciones.HeaderBgColor = System.Drawing.Color.SteelBlue;
+            this.bdgCotizaciones.HeaderForeColor = System.Drawing.Color.White;
+            this.bdgCotizaciones.Location = new System.Drawing.Point(39, 150);
+            this.bdgCotizaciones.Margin = new System.Windows.Forms.Padding(8, 0, 8, 8);
+            this.bdgCotizaciones.MinimumSize = new System.Drawing.Size(1350, 447);
+            this.bdgCotizaciones.MultiSelect = false;
+            this.bdgCotizaciones.Name = "bdgCotizaciones";
+            this.bdgCotizaciones.ReadOnly = true;
+            this.bdgCotizaciones.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.bdgCotizaciones.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            this.bdgCotizaciones.RowTemplate.Height = 24;
+            this.bdgCotizaciones.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.bdgCotizaciones.Size = new System.Drawing.Size(1482, 680);
+            this.bdgCotizaciones.TabIndex = 24;
+            this.bdgCotizaciones.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.bdgCotizaciones_CellContentClick);
+            // 
+            // NoCotizacion
+            // 
+            this.NoCotizacion.HeaderText = "No. Cotizacion";
+            this.NoCotizacion.MinimumWidth = 200;
+            this.NoCotizacion.Name = "NoCotizacion";
+            this.NoCotizacion.ReadOnly = true;
+            this.NoCotizacion.Width = 200;
+            // 
+            // NoCliente
+            // 
+            this.NoCliente.HeaderText = "No. Cliente";
+            this.NoCliente.MinimumWidth = 150;
+            this.NoCliente.Name = "NoCliente";
+            this.NoCliente.ReadOnly = true;
+            this.NoCliente.Width = 150;
+            // 
+            // NombreCliente
+            // 
+            this.NombreCliente.HeaderText = "NombreCliente";
+            this.NombreCliente.MinimumWidth = 400;
+            this.NombreCliente.Name = "NombreCliente";
+            this.NombreCliente.ReadOnly = true;
+            this.NombreCliente.Width = 400;
+            // 
+            // FechaDocumento
+            // 
+            this.FechaDocumento.HeaderText = "Fecha Documento";
+            this.FechaDocumento.MinimumWidth = 200;
+            this.FechaDocumento.Name = "FechaDocumento";
+            this.FechaDocumento.ReadOnly = true;
+            this.FechaDocumento.Width = 200;
+            // 
+            // Total
+            // 
+            this.Total.HeaderText = "Total";
+            this.Total.MinimumWidth = 200;
+            this.Total.Name = "Total";
+            this.Total.ReadOnly = true;
+            this.Total.Width = 200;
+            // 
+            // Moneda
+            // 
+            this.Moneda.HeaderText = "Moneda";
+            this.Moneda.MinimumWidth = 6;
+            this.Moneda.Name = "Moneda";
+            this.Moneda.ReadOnly = true;
+            this.Moneda.Width = 114;
+            // 
+            // Estatus
+            // 
+            this.Estatus.HeaderText = "Estatus";
+            this.Estatus.MinimumWidth = 6;
+            this.Estatus.Name = "Estatus";
+            this.Estatus.ReadOnly = true;
+            this.Estatus.Width = 105;
+            // 
+            // Seleccionar
+            // 
+            this.Seleccionar.HeaderText = "Acciones";
+            this.Seleccionar.MinimumWidth = 6;
+            this.Seleccionar.Name = "Seleccionar";
+            this.Seleccionar.ReadOnly = true;
+            this.Seleccionar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Seleccionar.Width = 102;
             // 
             // pnlPOAcciones
             // 
@@ -723,126 +843,6 @@
             this.btnBuscarCot.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnBuscarCot.Click += new System.EventHandler(this.btnBuscarCot_Click);
             // 
-            // bdgCotizaciones
-            // 
-            this.bdgCotizaciones.AllowUserToAddRows = false;
-            this.bdgCotizaciones.AllowUserToDeleteRows = false;
-            this.bdgCotizaciones.AllowUserToResizeColumns = false;
-            this.bdgCotizaciones.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            this.bdgCotizaciones.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.bdgCotizaciones.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.bdgCotizaciones.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.bdgCotizaciones.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.bdgCotizaciones.BackgroundColor = System.Drawing.Color.White;
-            this.bdgCotizaciones.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.bdgCotizaciones.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal;
-            this.bdgCotizaciones.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Rockwell", 15F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.GradientActiveCaption;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.bdgCotizaciones.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.bdgCotizaciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.bdgCotizaciones.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.NoCotizacion,
-            this.NoCliente,
-            this.NombreCliente,
-            this.FechaDocumento,
-            this.Total,
-            this.Moneda,
-            this.Estatus,
-            this.Seleccionar});
-            this.bdgCotizaciones.DoubleBuffered = true;
-            this.bdgCotizaciones.EnableHeadersVisualStyles = false;
-            this.bdgCotizaciones.GridColor = System.Drawing.Color.White;
-            this.bdgCotizaciones.HeaderBgColor = System.Drawing.Color.SteelBlue;
-            this.bdgCotizaciones.HeaderForeColor = System.Drawing.Color.White;
-            this.bdgCotizaciones.Location = new System.Drawing.Point(39, 150);
-            this.bdgCotizaciones.Margin = new System.Windows.Forms.Padding(8, 0, 8, 8);
-            this.bdgCotizaciones.MinimumSize = new System.Drawing.Size(1350, 447);
-            this.bdgCotizaciones.MultiSelect = false;
-            this.bdgCotizaciones.Name = "bdgCotizaciones";
-            this.bdgCotizaciones.ReadOnly = true;
-            this.bdgCotizaciones.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.bdgCotizaciones.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            this.bdgCotizaciones.RowTemplate.Height = 24;
-            this.bdgCotizaciones.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.bdgCotizaciones.Size = new System.Drawing.Size(1482, 680);
-            this.bdgCotizaciones.TabIndex = 24;
-            this.bdgCotizaciones.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.bdgCotizaciones_CellContentClick);
-            // 
-            // NoCotizacion
-            // 
-            this.NoCotizacion.HeaderText = "No. Cotizacion";
-            this.NoCotizacion.MinimumWidth = 200;
-            this.NoCotizacion.Name = "NoCotizacion";
-            this.NoCotizacion.ReadOnly = true;
-            this.NoCotizacion.Width = 200;
-            // 
-            // NoCliente
-            // 
-            this.NoCliente.HeaderText = "No. Cliente";
-            this.NoCliente.MinimumWidth = 150;
-            this.NoCliente.Name = "NoCliente";
-            this.NoCliente.ReadOnly = true;
-            this.NoCliente.Width = 150;
-            // 
-            // NombreCliente
-            // 
-            this.NombreCliente.HeaderText = "NombreCliente";
-            this.NombreCliente.MinimumWidth = 400;
-            this.NombreCliente.Name = "NombreCliente";
-            this.NombreCliente.ReadOnly = true;
-            this.NombreCliente.Width = 400;
-            // 
-            // FechaDocumento
-            // 
-            this.FechaDocumento.HeaderText = "Fecha Documento";
-            this.FechaDocumento.MinimumWidth = 200;
-            this.FechaDocumento.Name = "FechaDocumento";
-            this.FechaDocumento.ReadOnly = true;
-            this.FechaDocumento.Width = 200;
-            // 
-            // Total
-            // 
-            this.Total.HeaderText = "Total";
-            this.Total.MinimumWidth = 200;
-            this.Total.Name = "Total";
-            this.Total.ReadOnly = true;
-            this.Total.Width = 200;
-            // 
-            // Moneda
-            // 
-            this.Moneda.HeaderText = "Moneda";
-            this.Moneda.MinimumWidth = 6;
-            this.Moneda.Name = "Moneda";
-            this.Moneda.ReadOnly = true;
-            this.Moneda.Width = 114;
-            // 
-            // Estatus
-            // 
-            this.Estatus.HeaderText = "Estatus";
-            this.Estatus.MinimumWidth = 6;
-            this.Estatus.Name = "Estatus";
-            this.Estatus.ReadOnly = true;
-            this.Estatus.Width = 105;
-            // 
-            // Seleccionar
-            // 
-            this.Seleccionar.HeaderText = "Acciones";
-            this.Seleccionar.MinimumWidth = 6;
-            this.Seleccionar.Name = "Seleccionar";
-            this.Seleccionar.ReadOnly = true;
-            this.Seleccionar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Seleccionar.Width = 102;
-            // 
             // pnlFooter
             // 
             this.pnlFooter.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
@@ -891,6 +891,109 @@
             this.pnlCotizacion.Name = "pnlCotizacion";
             this.pnlCotizacion.Size = new System.Drawing.Size(1522, 894);
             this.pnlCotizacion.TabIndex = 13;
+            // 
+            // pnlConfirmación
+            // 
+            this.pnlConfirmación.BackColor = System.Drawing.Color.DarkGray;
+            this.pnlConfirmación.Controls.Add(this.panel2);
+            this.pnlConfirmación.Location = new System.Drawing.Point(337, 228);
+            this.pnlConfirmación.Name = "pnlConfirmación";
+            this.pnlConfirmación.Size = new System.Drawing.Size(849, 439);
+            this.pnlConfirmación.TabIndex = 29;
+            this.pnlConfirmación.Visible = false;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.btnAdminCancelar);
+            this.panel2.Controls.Add(this.btnAceptarPass);
+            this.panel2.Controls.Add(this.passAdministradorConf);
+            this.panel2.Controls.Add(this.label6);
+            this.panel2.Location = new System.Drawing.Point(229, 103);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(458, 211);
+            this.panel2.TabIndex = 0;
+            // 
+            // btnAdminCancelar
+            // 
+            this.btnAdminCancelar.ActiveBorderThickness = 1;
+            this.btnAdminCancelar.ActiveCornerRadius = 20;
+            this.btnAdminCancelar.ActiveFillColor = System.Drawing.Color.Red;
+            this.btnAdminCancelar.ActiveForecolor = System.Drawing.Color.White;
+            this.btnAdminCancelar.ActiveLineColor = System.Drawing.Color.Red;
+            this.btnAdminCancelar.BackColor = System.Drawing.Color.White;
+            this.btnAdminCancelar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAdminCancelar.BackgroundImage")));
+            this.btnAdminCancelar.ButtonText = "Cancelar";
+            this.btnAdminCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAdminCancelar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdminCancelar.ForeColor = System.Drawing.Color.SeaGreen;
+            this.btnAdminCancelar.IdleBorderThickness = 1;
+            this.btnAdminCancelar.IdleCornerRadius = 20;
+            this.btnAdminCancelar.IdleFillColor = System.Drawing.Color.White;
+            this.btnAdminCancelar.IdleForecolor = System.Drawing.Color.Red;
+            this.btnAdminCancelar.IdleLineColor = System.Drawing.Color.Red;
+            this.btnAdminCancelar.Location = new System.Drawing.Point(243, 136);
+            this.btnAdminCancelar.Margin = new System.Windows.Forms.Padding(5);
+            this.btnAdminCancelar.Name = "btnAdminCancelar";
+            this.btnAdminCancelar.Size = new System.Drawing.Size(181, 41);
+            this.btnAdminCancelar.TabIndex = 3;
+            this.btnAdminCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnAdminCancelar.Click += new System.EventHandler(this.btnAdminCancelar_Click);
+            // 
+            // btnAceptarPass
+            // 
+            this.btnAceptarPass.ActiveBorderThickness = 1;
+            this.btnAceptarPass.ActiveCornerRadius = 20;
+            this.btnAceptarPass.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.btnAceptarPass.ActiveForecolor = System.Drawing.Color.White;
+            this.btnAceptarPass.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.btnAceptarPass.BackColor = System.Drawing.Color.White;
+            this.btnAceptarPass.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAceptarPass.BackgroundImage")));
+            this.btnAceptarPass.ButtonText = "Aceptar";
+            this.btnAceptarPass.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAceptarPass.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAceptarPass.ForeColor = System.Drawing.Color.SeaGreen;
+            this.btnAceptarPass.IdleBorderThickness = 1;
+            this.btnAceptarPass.IdleCornerRadius = 20;
+            this.btnAceptarPass.IdleFillColor = System.Drawing.Color.White;
+            this.btnAceptarPass.IdleForecolor = System.Drawing.Color.SeaGreen;
+            this.btnAceptarPass.IdleLineColor = System.Drawing.Color.SeaGreen;
+            this.btnAceptarPass.Location = new System.Drawing.Point(52, 136);
+            this.btnAceptarPass.Margin = new System.Windows.Forms.Padding(5);
+            this.btnAceptarPass.Name = "btnAceptarPass";
+            this.btnAceptarPass.Size = new System.Drawing.Size(181, 41);
+            this.btnAceptarPass.TabIndex = 2;
+            this.btnAceptarPass.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnAceptarPass.Click += new System.EventHandler(this.btnAceptarPass_Click_1);
+            // 
+            // passAdministradorConf
+            // 
+            this.passAdministradorConf.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.passAdministradorConf.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.passAdministradorConf.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.passAdministradorConf.HintForeColor = System.Drawing.Color.Gray;
+            this.passAdministradorConf.HintText = "password";
+            this.passAdministradorConf.isPassword = true;
+            this.passAdministradorConf.LineFocusedColor = System.Drawing.Color.Blue;
+            this.passAdministradorConf.LineIdleColor = System.Drawing.Color.Gray;
+            this.passAdministradorConf.LineMouseHoverColor = System.Drawing.Color.Blue;
+            this.passAdministradorConf.LineThickness = 3;
+            this.passAdministradorConf.Location = new System.Drawing.Point(52, 72);
+            this.passAdministradorConf.Margin = new System.Windows.Forms.Padding(4);
+            this.passAdministradorConf.Name = "passAdministradorConf";
+            this.passAdministradorConf.Size = new System.Drawing.Size(372, 44);
+            this.passAdministradorConf.TabIndex = 1;
+            this.passAdministradorConf.Text = "bunifuMaterialTextbox1";
+            this.passAdministradorConf.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(66, 34);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(253, 23);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "Contraseña del administrador";
             // 
             // btnCotLimpiar
             // 
@@ -1378,109 +1481,6 @@
             this.btnBuscarProd.Text = "F10 - Buscar";
             this.btnBuscarProd.UseVisualStyleBackColor = false;
             // 
-            // pnlConfirmación
-            // 
-            this.pnlConfirmación.BackColor = System.Drawing.Color.DarkGray;
-            this.pnlConfirmación.Controls.Add(this.panel2);
-            this.pnlConfirmación.Location = new System.Drawing.Point(337, 228);
-            this.pnlConfirmación.Name = "pnlConfirmación";
-            this.pnlConfirmación.Size = new System.Drawing.Size(849, 439);
-            this.pnlConfirmación.TabIndex = 29;
-            this.pnlConfirmación.Visible = false;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.btnAdminCancelar);
-            this.panel2.Controls.Add(this.btnAceptarPass);
-            this.panel2.Controls.Add(this.passAdministradorConf);
-            this.panel2.Controls.Add(this.label6);
-            this.panel2.Location = new System.Drawing.Point(229, 103);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(458, 211);
-            this.panel2.TabIndex = 0;
-            // 
-            // btnAdminCancelar
-            // 
-            this.btnAdminCancelar.ActiveBorderThickness = 1;
-            this.btnAdminCancelar.ActiveCornerRadius = 20;
-            this.btnAdminCancelar.ActiveFillColor = System.Drawing.Color.Red;
-            this.btnAdminCancelar.ActiveForecolor = System.Drawing.Color.White;
-            this.btnAdminCancelar.ActiveLineColor = System.Drawing.Color.Red;
-            this.btnAdminCancelar.BackColor = System.Drawing.Color.White;
-            this.btnAdminCancelar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAdminCancelar.BackgroundImage")));
-            this.btnAdminCancelar.ButtonText = "Cancelar";
-            this.btnAdminCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAdminCancelar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdminCancelar.ForeColor = System.Drawing.Color.SeaGreen;
-            this.btnAdminCancelar.IdleBorderThickness = 1;
-            this.btnAdminCancelar.IdleCornerRadius = 20;
-            this.btnAdminCancelar.IdleFillColor = System.Drawing.Color.White;
-            this.btnAdminCancelar.IdleForecolor = System.Drawing.Color.Red;
-            this.btnAdminCancelar.IdleLineColor = System.Drawing.Color.Red;
-            this.btnAdminCancelar.Location = new System.Drawing.Point(243, 136);
-            this.btnAdminCancelar.Margin = new System.Windows.Forms.Padding(5);
-            this.btnAdminCancelar.Name = "btnAdminCancelar";
-            this.btnAdminCancelar.Size = new System.Drawing.Size(181, 41);
-            this.btnAdminCancelar.TabIndex = 3;
-            this.btnAdminCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnAdminCancelar.Click += new System.EventHandler(this.btnAdminCancelar_Click);
-            // 
-            // btnAceptarPass
-            // 
-            this.btnAceptarPass.ActiveBorderThickness = 1;
-            this.btnAceptarPass.ActiveCornerRadius = 20;
-            this.btnAceptarPass.ActiveFillColor = System.Drawing.Color.SeaGreen;
-            this.btnAceptarPass.ActiveForecolor = System.Drawing.Color.White;
-            this.btnAceptarPass.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.btnAceptarPass.BackColor = System.Drawing.Color.White;
-            this.btnAceptarPass.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAceptarPass.BackgroundImage")));
-            this.btnAceptarPass.ButtonText = "Aceptar";
-            this.btnAceptarPass.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAceptarPass.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAceptarPass.ForeColor = System.Drawing.Color.SeaGreen;
-            this.btnAceptarPass.IdleBorderThickness = 1;
-            this.btnAceptarPass.IdleCornerRadius = 20;
-            this.btnAceptarPass.IdleFillColor = System.Drawing.Color.White;
-            this.btnAceptarPass.IdleForecolor = System.Drawing.Color.SeaGreen;
-            this.btnAceptarPass.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.btnAceptarPass.Location = new System.Drawing.Point(52, 136);
-            this.btnAceptarPass.Margin = new System.Windows.Forms.Padding(5);
-            this.btnAceptarPass.Name = "btnAceptarPass";
-            this.btnAceptarPass.Size = new System.Drawing.Size(181, 41);
-            this.btnAceptarPass.TabIndex = 2;
-            this.btnAceptarPass.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnAceptarPass.Click += new System.EventHandler(this.btnAceptarPass_Click_1);
-            // 
-            // passAdministradorConf
-            // 
-            this.passAdministradorConf.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.passAdministradorConf.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.passAdministradorConf.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.passAdministradorConf.HintForeColor = System.Drawing.Color.Gray;
-            this.passAdministradorConf.HintText = "password";
-            this.passAdministradorConf.isPassword = true;
-            this.passAdministradorConf.LineFocusedColor = System.Drawing.Color.Blue;
-            this.passAdministradorConf.LineIdleColor = System.Drawing.Color.Gray;
-            this.passAdministradorConf.LineMouseHoverColor = System.Drawing.Color.Blue;
-            this.passAdministradorConf.LineThickness = 3;
-            this.passAdministradorConf.Location = new System.Drawing.Point(52, 72);
-            this.passAdministradorConf.Margin = new System.Windows.Forms.Padding(4);
-            this.passAdministradorConf.Name = "passAdministradorConf";
-            this.passAdministradorConf.Size = new System.Drawing.Size(372, 44);
-            this.passAdministradorConf.TabIndex = 1;
-            this.passAdministradorConf.Text = "bunifuMaterialTextbox1";
-            this.passAdministradorConf.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(66, 34);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(253, 23);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "Contraseña del administrador";
-            // 
             // pnlBuscarSocio
             // 
             this.pnlBuscarSocio.BackColor = System.Drawing.Color.White;
@@ -1773,6 +1773,7 @@
             this.tablCotizaciones.ResumeLayout(false);
             this.tablCotizaciones.PerformLayout();
             this.pnlBodyCot.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.bdgCotizaciones)).EndInit();
             this.pnlPOAcciones.ResumeLayout(false);
             this.pnlPOAccion.ResumeLayout(false);
             this.pnlPOAccion.PerformLayout();
@@ -1784,10 +1785,12 @@
             this.pnlBusqNoCotizacion.PerformLayout();
             this.pnlBusqFechaInicio.ResumeLayout(false);
             this.pnlBusqFechaInicio.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bdgCotizaciones)).EndInit();
             this.tabNuevo.ResumeLayout(false);
             this.pnlCotizacion.ResumeLayout(false);
             this.pnlCotizacion.PerformLayout();
+            this.pnlConfirmación.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.bunifuGradientPanel2.ResumeLayout(false);
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
@@ -1796,9 +1799,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductosCotizacion)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.pnlConfirmación.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.pnlBuscarSocio.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgBuscarClientes)).EndInit();
             this.pnlbusquedaArticulo.ResumeLayout(false);

@@ -653,7 +653,7 @@
             this.pnlFooter.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlFooter.BackColor = System.Drawing.Color.White;
-            this.pnlFooter.Location = new System.Drawing.Point(8, 1143);
+            this.pnlFooter.Location = new System.Drawing.Point(8, 1151);
             this.pnlFooter.Margin = new System.Windows.Forms.Padding(8, 4, 8, 8);
             this.pnlFooter.MinimumSize = new System.Drawing.Size(1350, 41);
             this.pnlFooter.Name = "pnlFooter";
@@ -707,7 +707,7 @@
             this.bdgPedidos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.bdgPedidos.RowHeadersWidth = 51;
             this.bdgPedidos.RowTemplate.Height = 24;
-            this.bdgPedidos.Size = new System.Drawing.Size(1350, 652);
+            this.bdgPedidos.Size = new System.Drawing.Size(1350, 660);
             this.bdgPedidos.TabIndex = 24;
             this.bdgPedidos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.bdgPedidos_CellContentClick);
             // 
@@ -1841,7 +1841,6 @@
             this.btnCobrarCotizacion.TabIndex = 16;
             this.btnCobrarCotizacion.Text = "F12- Cobrar";
             this.btnCobrarCotizacion.UseVisualStyleBackColor = false;
-            this.btnCobrarCotizacion.Visible = false;
             this.btnCobrarCotizacion.Click += new System.EventHandler(this.btnCobrarCotizacion_Click);
             // 
             // txtTotal

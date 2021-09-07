@@ -11,6 +11,7 @@ using System.Net;
 using System.IO;
 using Newtonsoft.Json;
 using System.Configuration;
+using System.Drawing.Printing;
 
 namespace DRtail
 {
@@ -37,7 +38,10 @@ namespace DRtail
         #endregion
         public Pedidos()
         {
-
+            InitializeComponent();
+            GetData();
+            AutoCompletar(txtProducto, "DatosArticulos");
+            AutoCompletar(txtCliente, "DatosSocios");
         }
         public Pedidos(string impCliente, string docEntryCotizacion, string docNumCotizacion)
         {
@@ -56,8 +60,7 @@ namespace DRtail
                 txtCliente.Text = impCliente;
 
             }
-            AutoCompletar(txtProducto, "DatosArticulos");
-            AutoCompletar(txtCliente, "DatosSocios");
+          
         }
         public Pedidos(DatosCotizacion dc)
         {
@@ -452,7 +455,8 @@ namespace DRtail
 
         private void btnCobrarCobrareIticket_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Se ha mandado a imprimir correctamente");
+            PrintDocument pd = new PrintDocument();
+
             pnlPagos.Visible = false;
         }
 

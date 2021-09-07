@@ -154,7 +154,7 @@
             // pnlMain
             // 
             resources.ApplyResources(this.pnlMain, "pnlMain");
-            this.pnlMain.BackColor = System.Drawing.Color.White;
+            this.pnlMain.BackColor = System.Drawing.Color.Maroon;
             this.pnlMain.Name = "pnlMain";
             this.pnlMain.TabStop = true;
             // 

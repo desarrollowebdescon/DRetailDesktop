@@ -55,9 +55,10 @@ namespace DRtail
             getLine();
             btnRestore.Visible = true;
             btnMaxim.Visible = false;
-            wa = Screen.FromControl(this).WorkingArea;
-            this.MaximumSize = new Size(wa.Width, wa.Height);
-            this.SetStyle(ControlStyles.ResizeRedraw, true);
+            wa.Width = this.Size.Width;
+            wa.Height = this.Size.Height;
+            //this.MaximumSize = new Size(wa.Width, wa.Height);
+            //this.SetStyle(ControlStyles.ResizeRedraw, true);
             
 
          
@@ -66,14 +67,11 @@ namespace DRtail
 
         private void Conectar()
         {
-
             Task.Run(async() => 
             {
                 await Socket.Conectar();
                 
             });
-           
-           
             
         }
 
@@ -180,7 +178,7 @@ namespace DRtail
             pnlMain.Controls.Clear();
            
             Clientes clientes = new Clientes();
-            clientes.Size = new Size(wa.Width -90, wa.Height - 60);
+            clientes.Size = new Size(wa.Width, wa.Height );
             pnlMain.Controls.Add(clientes);
             SelectedLineMenu("pnlLineClientes");
             ForceToggleMenu();
