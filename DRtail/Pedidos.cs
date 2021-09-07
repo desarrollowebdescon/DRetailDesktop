@@ -317,7 +317,7 @@ namespace DRtail
                 pedido.Cliente = txtCliente.Text;
                 pedido.FechaContabilizacion = DateTime.Now;
                 pedido.FechaVencimiento = DateTime.Now.AddDays(3);
-                pedido.Moneda = "MXP";
+                pedido.Moneda = "MXN";
                 pedido.Comentarios = "Pedido generado desde DRtail";
 
                 foreach (DataGridViewRow dRow in dgvProductosPed.Rows)
