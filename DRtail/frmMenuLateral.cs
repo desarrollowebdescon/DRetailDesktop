@@ -163,10 +163,10 @@ namespace DRtail
         private void frmMenu_Load(object sender, EventArgs e)
         {
             this.Text = this.Text;// + " - " + dtos.nombreC;
-            frmMensaje mensaje = new frmMensaje();
-            mensaje.lblMensaje.Text = mensaje.lblMensaje.Text;// + " " + dtos.nombreC + "!!!";
+            //frmMensaje mensaje = new frmMensaje();
+            //mensaje.lblMensaje.Text = mensaje.lblMensaje.Text;// + " " + dtos.nombreC + "!!!";
                                                               // mensaje.menu = this;
-            mensaje.ShowDialog();
+            //mensaje.ShowDialog();
 
         }
 

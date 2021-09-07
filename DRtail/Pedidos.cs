@@ -67,7 +67,7 @@ namespace DRtail
 
                 foreach (DatosPedido dc in pedidosList)
                 {
-                    bdgPedidos.Rows.Add(dc.noPedido, dc.Cliente, dc.Nombre, dc.FechaDocumento.ToString("yyyy-MM-dd"), double.Parse(dc.Total).ToString("N2"), dc.Moneda, dc.Estatus, "...");
+                    bdgPedidos.Rows.Add(dc.docEntryPedido, dc.noPedido, dc.Cliente, dc.Nombre, dc.FechaDocumento.ToString("yyyy-MM-dd"), double.Parse(dc.Total).ToString("N2"), dc.Moneda, dc.Estatus, "...");
 
                 }
 
@@ -324,13 +324,19 @@ namespace DRtail
                 {
                     ArticulosPedido articulosPed = new ArticulosPedido();
                     articulosPed.Articulo = dRow.Cells[0].Value.ToString();
-                    articulosPed.Cantidad = double.Parse(dRow.Cells[5].Value.ToString());
+                    articulosPed.Cantidad = double.Parse(dRow.Cells["cantidad"].Value.ToString());
+                    articulosPed.Precio = double.Parse(dRow.Cells["CantidadVM"].Value.ToString());
                     pedido.articulosPedidos.Add(articulosPed);
                 }
 
                 if (CrearPedido(pedido))
                 {
-                    btnCobrarCotizacion.Visible = true;
+                    //btnCobrarCotizacion.Visible = true;
+                    dgvProductosPed.Rows.Clear();
+                    lblTotalProd.Text = "0";
+                    txtTotal.Text = "0.0";
+                    txtCliente.Focus();
+                    txtCliente.Text = "C-010132";
                 }
             }
             catch (Exception ex)
@@ -445,10 +451,10 @@ namespace DRtail
                 pnlPOAcciones.Visible = true;
                 pnlPOAcciones.BringToFront();
                 docEntrySeleccionado = bdgPedidos.Rows[e.RowIndex].Cells[0].Value.ToString();
-                lblNCliente.Text = bdgPedidos.Rows[e.RowIndex].Cells[1].Value.ToString();
-                lblNombre.Text = bdgPedidos.Rows[e.RowIndex].Cells[2].Value.ToString();
-                lblMontoAcciones.Text = bdgPedidos.Rows[e.RowIndex].Cells[4].Value.ToString();
-                lblNPedido.Text = bdgPedidos.Rows[e.RowIndex].Cells[0].Value.ToString();
+                lblNCliente.Text = bdgPedidos.Rows[e.RowIndex].Cells[2].Value.ToString();
+                lblNombre.Text = bdgPedidos.Rows[e.RowIndex].Cells[3].Value.ToString();
+                lblMontoAcciones.Text = bdgPedidos.Rows[e.RowIndex].Cells[5].Value.ToString();
+                lblNPedido.Text = bdgPedidos.Rows[e.RowIndex].Cells[1].Value.ToString();
 
             }
         }
@@ -477,7 +483,15 @@ namespace DRtail
 
         private void btnAccionesGPedido_Click(object sender, EventArgs e)
         {
+
             MessageBox.Show("Se ha generado correctamente");
+
+
+            Servicios.menuLateral.pnlMain.Controls.Clear();
+            Servicios.menuLateral.pnlMain.Controls.Add(new Facturacion(bdgPedidos.Rows[bdgPedidos.CurrentRow.Index].Cells[2].Value.ToString(), bdgPedidos.Rows[bdgPedidos.CurrentRow.Index].Cells[0].Value.ToString(), bdgPedidos.Rows[bdgPedidos.CurrentRow.Index].Cells[1].Value.ToString()));
+            Servicios.menuLateral.SelectedLineMenu();
+            Servicios.menuLateral.pnlLinePedidos.Visible = true;
+            Servicios.menuLateral.LblTitle.Text = "PEDIDOS";
         }
 
         public Boolean CrearPedido(DatosPedido pedido)

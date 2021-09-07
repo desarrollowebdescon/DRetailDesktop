@@ -118,6 +118,9 @@ namespace DRtail
 
         [JsonProperty("Cantidad")]
         public double Cantidad { get; set; }
+
+        [JsonProperty("Precio")]
+        public double Precio { get; set; }
     }
 
     public class DocEntryDocumento

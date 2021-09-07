@@ -40,65 +40,6 @@ namespace DRtail
         public frmLogin()
         {
             InitializeComponent();
-
-            //try
-            //{
-            //    graphics = this.CreateGraphics();
-            //    font = new Font("Times New Roman", 12, FontStyle.Bold, GraphicsUnit.Pixel);
-            //    DPFP.Capture.ReadersCollection coll = new DPFP.Capture.ReadersCollection();
-
-            //    regFeatures = new DPFP.FeatureSet[4];
-            //    for (int i = 0; i < 4; i++)
-            //        regFeatures[i] = new DPFP.FeatureSet();
-
-            //    verFeatures = new DPFP.FeatureSet();
-            //    createRegTemplate = new DPFP.Processing.Enrollment();
-
-            //    readers = new DPFP.Capture.ReadersCollection();
-
-            //    for (int i = 0; i <= 4; i++)
-            //    {
-            //        try
-            //        {
-            //            readerDescription = readers[i];
-            //            if ((readerDescription.Vendor == "Digital Persona, Inc.") || (readerDescription.Vendor == "DigitalPersona, Inc."))
-            //            {
-            //                try
-            //                {
-            //                    capturer = new DPFP.Capture.Capture(readerDescription.SerialNumber, DPFP.Capture.Priority.Normal);//CREAMOS UNA OPERACION DE CAPTURAS.
-            //                }
-            //                catch (Exception ex)
-            //                {
-            //                    MessageBox.Show("Error frmPrueba()" + ex.Message);
-            //                }
-            //                capturer.EventHandler = this;
-            //                //AQUI CAPTURAMOS LOS EVENTOS.
-
-            //                converter = new DPFP.Capture.SampleConversion();
-            //                try
-            //                {
-            //                    verify = new DPFP.Verification.Verification();
-            //                }
-            //                catch (Exception ex)
-            //                {
-            //                    MessageBox.Show("Ex: " + ex.ToString());
-            //                }
-            //                break;
-            //            }
-            //        }
-            //        catch
-            //        {
-            //            MessageBox.Show("LECTOR DESCONECTADO");
-            //        }
-
-            //    }
-            //}
-            //catch (Exception ex)
-            //{
-            //    //MessageBox.Show("Lector Desconectado!");
-            //}
-
-
         }
 
         private void pictBxHuella_Click(object sender, EventArgs e)
@@ -111,11 +52,9 @@ namespace DRtail
 
         private void frmLogin_Load(object sender, EventArgs e)
         {
-
-
             try
             {
-
+                txtUsaurio.Focus();
             }
             catch
             {

@@ -69,14 +69,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.pnlFooter = new System.Windows.Forms.Panel();
             this.bdgPedidos = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.NoPedido = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NoCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NombreCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FechaDocumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Moneda = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Estatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Seleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.pnlTabPedidos = new System.Windows.Forms.Panel();
             this.tabNuevo = new System.Windows.Forms.TabPage();
             this.pnlCotizacion = new System.Windows.Forms.Panel();
@@ -168,6 +160,15 @@
             this.dgBuscadorArticulo = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NombreArt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.docEntry = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NoPedido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NoCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NombreCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FechaDocumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Moneda = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Seleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.tabControlPedidos.SuspendLayout();
             this.tabPedidos.SuspendLayout();
             this.pnlBodyCot.SuspendLayout();
@@ -401,7 +402,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAccionesGPedido.BackColor = System.Drawing.Color.White;
             this.btnAccionesGPedido.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAccionesGPedido.BackgroundImage")));
-            this.btnAccionesGPedido.ButtonText = "Generar factura";
+            this.btnAccionesGPedido.ButtonText = "Copiar a factura";
             this.btnAccionesGPedido.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAccionesGPedido.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAccionesGPedido.ForeColor = System.Drawing.Color.SteelBlue;
@@ -653,7 +654,7 @@
             this.pnlFooter.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlFooter.BackColor = System.Drawing.Color.White;
-            this.pnlFooter.Location = new System.Drawing.Point(8, 1143);
+            this.pnlFooter.Location = new System.Drawing.Point(8, 1151);
             this.pnlFooter.Margin = new System.Windows.Forms.Padding(8, 4, 8, 8);
             this.pnlFooter.MinimumSize = new System.Drawing.Size(1350, 41);
             this.pnlFooter.Name = "pnlFooter";
@@ -685,6 +686,7 @@
             this.bdgPedidos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.bdgPedidos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.bdgPedidos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.docEntry,
             this.NoPedido,
             this.NoCliente,
             this.NombreCliente,
@@ -707,66 +709,9 @@
             this.bdgPedidos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.bdgPedidos.RowHeadersWidth = 51;
             this.bdgPedidos.RowTemplate.Height = 24;
-            this.bdgPedidos.Size = new System.Drawing.Size(1350, 652);
+            this.bdgPedidos.Size = new System.Drawing.Size(1350, 660);
             this.bdgPedidos.TabIndex = 24;
             this.bdgPedidos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.bdgPedidos_CellContentClick);
-            // 
-            // NoPedido
-            // 
-            this.NoPedido.HeaderText = "No. Pedido";
-            this.NoPedido.MinimumWidth = 6;
-            this.NoPedido.Name = "NoPedido";
-            this.NoPedido.ReadOnly = true;
-            // 
-            // NoCliente
-            // 
-            this.NoCliente.HeaderText = "No. Cliente";
-            this.NoCliente.MinimumWidth = 6;
-            this.NoCliente.Name = "NoCliente";
-            this.NoCliente.ReadOnly = true;
-            // 
-            // NombreCliente
-            // 
-            this.NombreCliente.HeaderText = "NombreCliente";
-            this.NombreCliente.MinimumWidth = 6;
-            this.NombreCliente.Name = "NombreCliente";
-            this.NombreCliente.ReadOnly = true;
-            // 
-            // FechaDocumento
-            // 
-            this.FechaDocumento.HeaderText = "Fecha Documento";
-            this.FechaDocumento.MinimumWidth = 6;
-            this.FechaDocumento.Name = "FechaDocumento";
-            this.FechaDocumento.ReadOnly = true;
-            // 
-            // Total
-            // 
-            this.Total.HeaderText = "Total";
-            this.Total.MinimumWidth = 6;
-            this.Total.Name = "Total";
-            this.Total.ReadOnly = true;
-            // 
-            // Moneda
-            // 
-            this.Moneda.HeaderText = "Moneda";
-            this.Moneda.MinimumWidth = 6;
-            this.Moneda.Name = "Moneda";
-            this.Moneda.ReadOnly = true;
-            // 
-            // Estatus
-            // 
-            this.Estatus.HeaderText = "Estatus";
-            this.Estatus.MinimumWidth = 6;
-            this.Estatus.Name = "Estatus";
-            this.Estatus.ReadOnly = true;
-            // 
-            // Seleccionar
-            // 
-            this.Seleccionar.HeaderText = "Acciones";
-            this.Seleccionar.MinimumWidth = 6;
-            this.Seleccionar.Name = "Seleccionar";
-            this.Seleccionar.ReadOnly = true;
-            this.Seleccionar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // pnlTabPedidos
             // 
@@ -2137,6 +2082,69 @@
             this.NombreArt.Name = "NombreArt";
             this.NombreArt.ReadOnly = true;
             // 
+            // docEntry
+            // 
+            this.docEntry.HeaderText = "docEntry";
+            this.docEntry.Name = "docEntry";
+            this.docEntry.ReadOnly = true;
+            // 
+            // NoPedido
+            // 
+            this.NoPedido.HeaderText = "No. Pedido";
+            this.NoPedido.MinimumWidth = 6;
+            this.NoPedido.Name = "NoPedido";
+            this.NoPedido.ReadOnly = true;
+            // 
+            // NoCliente
+            // 
+            this.NoCliente.HeaderText = "No. Cliente";
+            this.NoCliente.MinimumWidth = 6;
+            this.NoCliente.Name = "NoCliente";
+            this.NoCliente.ReadOnly = true;
+            // 
+            // NombreCliente
+            // 
+            this.NombreCliente.HeaderText = "NombreCliente";
+            this.NombreCliente.MinimumWidth = 6;
+            this.NombreCliente.Name = "NombreCliente";
+            this.NombreCliente.ReadOnly = true;
+            // 
+            // FechaDocumento
+            // 
+            this.FechaDocumento.HeaderText = "Fecha Documento";
+            this.FechaDocumento.MinimumWidth = 6;
+            this.FechaDocumento.Name = "FechaDocumento";
+            this.FechaDocumento.ReadOnly = true;
+            // 
+            // Total
+            // 
+            this.Total.HeaderText = "Total";
+            this.Total.MinimumWidth = 6;
+            this.Total.Name = "Total";
+            this.Total.ReadOnly = true;
+            // 
+            // Moneda
+            // 
+            this.Moneda.HeaderText = "Moneda";
+            this.Moneda.MinimumWidth = 6;
+            this.Moneda.Name = "Moneda";
+            this.Moneda.ReadOnly = true;
+            // 
+            // Estatus
+            // 
+            this.Estatus.HeaderText = "Estatus";
+            this.Estatus.MinimumWidth = 6;
+            this.Estatus.Name = "Estatus";
+            this.Estatus.ReadOnly = true;
+            // 
+            // Seleccionar
+            // 
+            this.Seleccionar.HeaderText = "Acciones";
+            this.Seleccionar.MinimumWidth = 6;
+            this.Seleccionar.Name = "Seleccionar";
+            this.Seleccionar.ReadOnly = true;
+            this.Seleccionar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
             // Pedidos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2211,14 +2219,6 @@
         private Bunifu.Framework.UI.BunifuThinButton2 btnBuscarCot;
         private System.Windows.Forms.Label label4;
         private Bunifu.Framework.UI.BunifuCustomDataGrid bdgPedidos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NoPedido;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NoCliente;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NombreCliente;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FechaDocumento;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Total;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Moneda;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Estatus;
-        private System.Windows.Forms.DataGridViewButtonColumn Seleccionar;
         private System.Windows.Forms.Panel pnlFooter;
         private System.Windows.Forms.Panel pnlPOAcciones;
         private System.Windows.Forms.Panel pnlPOAccion;
@@ -2324,5 +2324,14 @@
         private System.Windows.Forms.Panel pnlCobrarCambio;
         private System.Windows.Forms.Label lblCobrarCambioNum;
         private System.Windows.Forms.Label lblCobrarCambio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn docEntry;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NoPedido;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NoCliente;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NombreCliente;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FechaDocumento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Total;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Moneda;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Estatus;
+        private System.Windows.Forms.DataGridViewButtonColumn Seleccionar;
     }
 }
