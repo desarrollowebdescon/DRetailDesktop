@@ -216,8 +216,9 @@ namespace DRtail
                 factura.Cliente = txtCliente.Text;
                 factura.FechaContabilizacion = DateTime.Now;
                 factura.FechaVencimiento = DateTime.Now.AddDays(3);
+                factura.TotalFacturado = double.Parse(txtTotal.Text.Substring(1));
                 factura.Moneda = "MXN";
-                factura.Comentarios = "Factura generada desde DRtail";
+                factura.Comentarios = "Factura de: " + factura.tipo + " generada desde DRtail";
                 if (timbrar == 1)
                 {
                     factura.DatosFiscales.certificado = "2";
@@ -237,7 +238,7 @@ namespace DRtail
                     ArticulosFactura articulosFactura = new ArticulosFactura();
                     articulosFactura.Articulo = dRow.Cells[0].Value.ToString();
                     articulosFactura.Precio = double.Parse(dRow.Cells["CantidadVM"].Value.ToString());
-                    articulosFactura.Cantidad = 1;//double.Parse(dRow.Cells["cantidad"].Value.ToString());
+                    articulosFactura.Cantidad = dRow.Cells["cantidad"].Value.ToString();
                     factura.articulosFacturas.Add(articulosFactura);
                 }
                 string crearFact = CrearFactura(factura);

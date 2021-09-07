@@ -63,7 +63,7 @@ namespace DRtail
         public string Articulo { get; set; }
 
         [JsonProperty("Cantidad")]
-        public double Cantidad { get; set; }
+        public string Cantidad { get; set; }
 
         [JsonProperty("Precio")]
         public double Precio { get; set; }
