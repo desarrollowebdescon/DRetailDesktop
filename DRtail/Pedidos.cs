@@ -509,11 +509,11 @@ namespace DRtail
             MessageBox.Show("Se ha generado correctamente");
 
 
-            Servicios.menuLateral.pnlMain.Controls.Clear();
-            Servicios.menuLateral.pnlMain.Controls.Add(new Facturacion(bdgPedidos.Rows[bdgPedidos.CurrentRow.Index].Cells[2].Value.ToString(), bdgPedidos.Rows[bdgPedidos.CurrentRow.Index].Cells[0].Value.ToString(), bdgPedidos.Rows[bdgPedidos.CurrentRow.Index].Cells[1].Value.ToString()));
-            Servicios.menuLateral.SelectedLineMenu();
-            Servicios.menuLateral.pnlLinePedidos.Visible = true;
-            Servicios.menuLateral.LblTitle.Text = "PEDIDOS";
+            //Servicios.menuLateral.pnlMain.Controls.Clear();
+            //Servicios.menuLateral.pnlMain.Controls.Add(new Facturacion(bdgPedidos.Rows[bdgPedidos.CurrentRow.Index].Cells[2].Value.ToString(), bdgPedidos.Rows[bdgPedidos.CurrentRow.Index].Cells[0].Value.ToString(), bdgPedidos.Rows[bdgPedidos.CurrentRow.Index].Cells[1].Value.ToString()));
+            //Servicios.menuLateral.SelectedLineMenu();
+            //Servicios.menuLateral.pnlLinePedidos.Visible = true;
+            //Servicios.menuLateral.LblTitle.Text = "PEDIDOS";
         }
 
         public Boolean CrearPedido(DatosPedido pedido)

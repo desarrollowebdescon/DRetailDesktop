@@ -222,7 +222,7 @@ namespace DRtail
 
         private void btnAgregarDireccion_Click(object sender, EventArgs e)
         {
-            fpnalDir_1.Visible = true;
+            //fpnalDir_1.Visible = true;
         }
 
         private void bfgSocios_CellContentClick(object sender, DataGridViewCellEventArgs e)

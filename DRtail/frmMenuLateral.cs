@@ -178,7 +178,7 @@ namespace DRtail
             pnlMain.Controls.Clear();
            
             Clientes clientes = new Clientes();
-            clientes.Size = new Size(wa.Width, wa.Height );
+            clientes.Size = new Size(wa.Width + 70, wa.Height );
             pnlMain.Controls.Add(clientes);
             SelectedLineMenu("pnlLineClientes");
             ForceToggleMenu();
